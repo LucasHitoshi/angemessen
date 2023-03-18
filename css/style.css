@@ -4,3 +4,19 @@
     padding: 0%;
     margin: 0%;
 }
+
+.flex-container {
+    display: flex;
+}
+
+.pos-right {
+    margin: 0 auto 0 0;
+    justify-content: right;
+    text-align: right;
+}
+
+.pos-left {
+    margin: 0 0 0 auto;
+    justify-content: left;
+    text-align: left;
+}

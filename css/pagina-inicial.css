@@ -1,1 +1,62 @@
 /* Arquivo de css da página inicial */
+
+header {
+    padding: 25px 100px 25px 100px;
+    background-color: #91a9d0;
+    top: 0;
+    position: sticky;
+    font: 100% Arial black;
+}
+
+div.t-hor-space-filler {
+    width: 25px;
+}
+
+div.t-ver-space-filler {
+    height: 25px;
+}
+
+div.m-hor-space-filler {
+    width: 50px;
+}
+
+div.m-ver-space-filler {
+    height: 50px;
+}
+
+div.b-hor-space-filler {
+    width: 100px;
+}
+
+div.b-ver-space-filler {
+    height: 100px;
+}
+
+form.search-bar > div.bar {
+    background-color: #9eb9e4;
+    border: 1px solid #000;
+    border-radius: 5px;
+}
+
+form.search-bar > div > input {
+    padding: 5px;
+    background-color: #9eb9e4;
+    border: none;
+    border-radius: 5px;
+}
+
+form.search-bar > div > input::-webkit-input-placeholder {
+    color: #000;
+}
+
+.centered {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+img.icon {
+    padding: 2px;
+    width: 18px;
+    height: 18px;
+}
