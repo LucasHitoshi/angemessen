@@ -11,31 +11,32 @@
 </head>
 <body>
     <header class="flex-container spaced">
-        <div class="pos-right">
-            <!-- TODO: Substituir esse título (h1) pela logo -->
-            <h1>
-                ANGEMESSEN
-            </h1>
+        <div class="flex-container centered">
+            <img src="img/logo.png" alt="Angemessen Logo" class="centered">
         </div>
         <div class="flex-container pos-left centered">
             <!-- TODO: Adicionar conexão (action) com o backend -->
-            <form action="" class="search-bar">
-                <div class="flex-container bar centered">
-                    <input type="text" placeholder="Pesquisar">
-                    <img src="img/search.png" alt="Pesquisa" class="icon">
-                </div>
+            <form action="" class="search-bar b-spaced">
+                <label for="search">
+                    <div class="flex-container bar centered">
+                        <input type="text" id="search"  name="Search" placeholder="Pesquisar">
+                        <img src="img/search.png" alt="Pesquisa" class="small-icon">
+                    </div>
+                </label>
             </form>
-            <div class="t-hor-space-filler"></div>
-            <!-- TODO: Substituir essas duas divs com texto por ícones -->
-            <div>
-                <div>
-                    CARRINHO
+            <div class="flex-container">
+                <div class="s-spaced">
+                    <img src="img/market-cart-icon.png" alt="Carrinho" class="medium-icon">
                 </div>
-                <div>
-                    PERFIL
+                <div class="s-spaced">
+                    <img src="img/user-icon.png" alt="Usuário" class="medium-icon">
                 </div>
             </div>
         </div>
     </header>
+    <br>
+    <footer>
+        OPA FALAE
+    </footer>
 </body>
 </html>

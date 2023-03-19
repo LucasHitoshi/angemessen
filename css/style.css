@@ -9,6 +9,18 @@
     display: flex;
 }
 
+.flex-container > div.s-spaced {
+    margin: 0 6px 0 6px
+}
+
+.flex-container > div.m-spaced {
+    margin: 0 12px 0 12px
+}
+
+.flex-container > div.b-spaced {
+    margin: 0 25px 0 25px
+}
+
 .pos-right {
     margin: 0 auto 0 0;
     justify-content: right;
