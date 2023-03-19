@@ -1,11 +1,48 @@
 /* Arquivo de css da página inicial */
 
+@keyframes link-box {
+    from {
+        font-size: medium;
+    } to {
+        font-size: larger;
+    }
+}
+
 header {
-    padding: 25px 100px 25px 100px;
-    background-color: #91a9d0;
     top: 0;
     position: sticky;
-    font: 100% Arial black;
+}
+
+a {
+    text-decoration: none;
+}
+
+header > section.dominant {
+    padding: 25px 100px 25px 100px;
+    background-color: #91a9d0;
+}
+
+header > section.recessive {
+    height: 25px;
+    padding: 0 100px 0 100px;
+    background-color: #b6c7e4;
+}
+
+.link-box {
+    padding: 0 5px 0 5px;
+}
+
+div.link-box:hover {
+    animation-name: link-box;
+    animation-duration: 0.1s;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+}
+
+a.recessive-header:link {
+    color: #000;
+    font-family: Arial;
+    text-transform: uppercase;
 }
 
 footer {
@@ -15,14 +52,13 @@ footer {
 }
 
 form.search-bar > label > div.bar {
-    background-color: #9eb9e4;
-    border: 1px solid #000;
+    background-color: #b6c7e4;
     border-radius: 5px;
 }
 
 form.search-bar > label > div > input {
     padding: 5px;
-    background-color: #9eb9e4;
+    background-color: #b6c7e4;
     border: none;
     border-radius: 5px;
 }
@@ -35,6 +71,10 @@ form.search-bar > label > div > input::-webkit-input-placeholder {
     flex-direction: row;
     justify-content: center;
     align-items: center;
+}
+
+.even {
+    justify-content: space-evenly;
 }
 
 img.small-icon {

@@ -10,29 +10,59 @@
     <link rel="stylesheet" href="css/pagina-inicial.css">
 </head>
 <body>
-    <header class="flex-container spaced">
-        <div class="flex-container centered">
-            <img src="img/logo.png" alt="Angemessen Logo" class="centered">
-        </div>
-        <div class="flex-container pos-left centered">
-            <!-- TODO: Adicionar conexão (action) com o backend -->
-            <form action="" class="search-bar b-spaced">
-                <label for="search">
-                    <div class="flex-container bar centered">
-                        <input type="text" id="search"  name="Search" placeholder="Pesquisar">
-                        <img src="img/search.png" alt="Pesquisa" class="small-icon">
+    <header>
+        <section class="flex-container dominant spaced">
+            <div class="flex-container centered">
+                <img src="img/logo.png" alt="Angemessen Logo" class="centered">
+            </div>
+            <div class="flex-container pos-left centered">
+                <!-- TODO: Adicionar conexão (action) com o backend -->
+                <form action="" class="search-bar b-spaced">
+                    <label for="search">
+                        <div class="flex-container bar centered">
+                            <input type="text" id="search"  name="Search" placeholder="Pesquisar">
+                            <img src="img/search.png" alt="Pesquisa" class="small-icon">
+                        </div>
+                    </label>
+                </form>
+                <div class="flex-container">
+                    <!-- TODO: Implementar links para outras páginas -->
+                    <div class="s-spaced">
+                        <a href="market-cart.html">
+                            <img src="img/market-cart-icon.png" alt="Carrinho" class="medium-icon">
+                        </a>
                     </div>
-                </label>
-            </form>
-            <div class="flex-container">
-                <div class="s-spaced">
-                    <img src="img/market-cart-icon.png" alt="Carrinho" class="medium-icon">
-                </div>
-                <div class="s-spaced">
-                    <img src="img/user-icon.png" alt="Usuário" class="medium-icon">
+                    <div class="s-spaced">
+                        <a href="user-profile.html">
+                            <img src="img/user-icon.png" alt="Usuário" class="medium-icon">
+                        </a>
+                    </div>
                 </div>
             </div>
-        </div>
+        </section>
+        <!-- TODO: Implementar links para outras páginas -->
+        <section class="flex-container recessive centered even">
+            <div class="link-box cen">
+                <a href="not-found.html" class="recessive-header">
+                    Crie
+                </a>
+            </div>
+            <div class="link-box">
+                <a href="not-found.html" class="recessive-header">
+                    Coleções
+                </a>
+            </div>
+            <div class="link-box">
+                <a href="not-found.html" class="recessive-header">
+                    Produtos
+                </a>
+            </div>
+            <div class="link-box">
+                <a href="not-found.html" class="recessive-header">
+                    Sobre Nós
+                </a>
+            </div>
+        </section>
     </header>
     <br>
     <footer>
