@@ -28,6 +28,11 @@ header > section.recessive {
     background-color: #b6c7e4;
 }
 
+footer > section.recessive {
+    padding: 0 100px 0 100px;
+    background-color: #b6c7e4;
+}
+
 .link-box {
     padding: 0 5px 0 5px;
 }
@@ -39,7 +44,17 @@ div.link-box:hover {
     animation-timing-function: linear;
 }
 
-a.recessive-header:link {
+.topic-box {
+    padding: 0 5px 0 10px;
+    border-left: #91a9d0 solid 5px;
+}
+
+.topic-box > ul > li {
+    margin: 2px 0 2px 0;
+    list-style: none;
+}
+
+a.recessive-header:link, :visited {
     color: #000;
     font-family: Arial;
     text-transform: uppercase;
@@ -47,7 +62,7 @@ a.recessive-header:link {
 
 footer {
     padding: 25px 100px 25px 100px;
-    background-color: #91a9d0;
+    background-color: #b6c7e4;
     font: 100% Arial black;
 }
 
@@ -80,10 +95,12 @@ form.search-bar > label > div > input::-webkit-input-placeholder {
 img.small-icon {
     padding: 3px;
     width: 22px;
-    height: 22px;
 }
 
 img.medium-icon {
     width: 25px;
-    height: 25px;
+}
+
+div.limb {
+    height: 1500px;
 }

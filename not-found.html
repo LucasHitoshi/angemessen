@@ -4,10 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página inicial</title>
+    <title>404-não encontrado</title>
     <link rel="icon" type="image/x-icon" href="img/favicon.png">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/pagina-inicial.css">
+    <link rel="stylesheet" href="css/not-found.css">
+    
 </head>
 <body>
     <header>
@@ -67,7 +69,10 @@
             </div>
         </section>
     </header>
-    <br>
+    <div class="error-message">
+        <div class="erro">ERROR 404 ;(</div> 
+        <p>página não encontrada</p>
+    </div>
     <footer>
         <section class="flex-container recessive spaced">
             <div class="topic-box">
@@ -82,12 +87,14 @@
             </div>
             <div class="topic-box">
                 <ul>
+                    <!-- TODO: Implementar links para páginas de ajuda -->
                     <li><a href="not-found.html">Enfrentando algum problema?</a>
                     <li><a href="not-found.html">Possui uma sugestão?</a>
                     <li><a href="not-found.html">Encontrou um bug?</a>
                 </ul>
             </div>
         </section>
+        <div class="limb"></div>
     </footer>
 </body>
 </html>
