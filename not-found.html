@@ -15,8 +15,12 @@
     <header>
         <section class="flex-container dominant spaced">
             <div class="flex-container centered">
-                <img src="img/logo.png" alt="Angemessen Logo" class="centered">
-                <!--implementar botao em logo para retornar para a pagina inicial-->
+                <a href="index.html">
+                    <!-- <img src="img/logo.png" alt="Angemessen Logo" class="centered"> -->
+                    <p class="logo">
+                        Angemessen
+                    </p>
+                </a>
             </div>
             <div class="flex-container pos-left centered">
                 <!-- TODO: Adicionar conexão (action) com o backend -->
@@ -26,7 +30,9 @@
                             <input type="text" id="search"  name="Search" placeholder="Pesquisar">
                             <!-- Implementar botão de inicalização de busca -->
                             <!-- <input type="submit" value="search"> -->
-                            <img src="img/search.png" alt="Pesquisa" class="small-icon" >
+                            <button class="small-icon">
+                                <img src="img/search.png" alt="Pesquisa" class="small-icon" >
+                            </button>
                         </div>
                     </label>
                 </form>
@@ -38,7 +44,7 @@
                         </a>
                     </div>
                     <div class="s-spaced centered">
-                        <a href="user-profile.html">
+                        <a href="login.html">
                             <img src="img/user-icon.png" alt="Usuário" class="medium-icon">
                         </a>
                     </div>
@@ -69,10 +75,20 @@
             </div>
         </section>
     </header>
-    <div class="error-message">
-        <div class="erro">ERROR 404 ;(</div> 
-        <p>página não encontrada</p>
+
+
+    <div class="error-box">
+        <img src="./img/bola-erro-404.png" alt="Bola Erro 404" class="bola-erro-404">
+        <div class="error-message">
+            <div class="erro">ERROR 404</div> 
+            <p>página não encontrada</p>
+            <div class="voltar">
+            <a href="index.html">Voltar ao jogo</a>
+            </div>
+        </div>
     </div>
+
+
     <footer>
         <section class="flex-container recessive spaced">
             <div class="topic-box">
@@ -91,6 +107,7 @@
                     <li><a href="not-found.html">Enfrentando algum problema?</a>
                     <li><a href="not-found.html">Possui uma sugestão?</a>
                     <li><a href="not-found.html">Encontrou um bug?</a>
+                    <li><a href="not-found.html">Teve alguma dúvida?</a>
                 </ul>
             </div>
         </section>

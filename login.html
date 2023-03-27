@@ -8,6 +8,28 @@
     <link rel="icon" type="image/x-icon" href="img/favicon.png">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/pagina-inicial.css">
+    <style>
+        .box-log{
+            align-items: center;
+            display: flex;
+            
+        }
+        body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        background-color: #f0f2f5;
+        }
+
+        .login-container {
+        max-width: 400px;
+        margin: 100px auto;
+        background-color: #fff;
+        padding: 40px;
+        border-radius: 4px;
+        box-shadow
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -41,7 +63,7 @@
                         </a>
                     </div>
                     <div class="s-spaced centered">
-                        <a href="login.html">
+                        <a href="user-profile.html">
                             <img src="img/user-icon.png" alt="Usuário" class="medium-icon">
                         </a>
                     </div>
@@ -72,9 +94,34 @@
             </div>
         </section>
     </header>
-    <br>
+    <div>
+        <div class="box-log">
+            <div>
+                <p><h1>Fazer login</h1></p>
+                <div>
+                    <label for="email_ap">Digite seu email</label>
+                    <input type="email" name="E-mail" id="email_ap">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="login-container">
+        <div class="login-header">
+          <img src="" alt="logo">
+          <h1>Entrar</h1>
+        </div>
+        <form action="#" method="POST">
+          <label for="email">Endereço de e-mail ou telefone:</label>
+          <input type="text" id="email" name="email" required><br>
+          <label for="password">Senha:</label><br>
+          <input type="password" id="password" name="password" required><br>
+          <a href="#">Esqueceu sua senha?</a><br>
+          <input type="submit" value="Entrar">
+        </form>
+        <p>Novo no agmesen? <a href="#">Crie sua conta aqui.</a></p>
+      </div>
     <footer>
-        <section class="flex-container recessive spaced even">
+        <section class="flex-container recessive spaced">
             <div class="topic-box">
                 <ul>
                     <!-- TODO: Implementar links para redes sociais -->
@@ -87,12 +134,9 @@
             </div>
             <div class="topic-box">
                 <ul>
-                    <!-- TODO: Implementar links para páginas de ajuda -->
-                    <li><a href="not-found.html">Enfrentando algum problema?</a></li>
-                    <li><a href="not-found.html">Possui uma sugestão?</a></li>
-                    <li><a href="not-found.html">Encontrou um bug?</a></li>
-                    <li><a href="not-found.html">Teve alguma dúvida?</a></li>
-                    <li><a href="not-found.html">Deseja acessar o SAC?</a></li>
+                    <li><a href="not-found.html">Enfrentando algum problema?</a>
+                    <li><a href="not-found.html">Possui uma sugestão?</a>
+                    <li><a href="not-found.html">Encontrou um bug?</a>
                 </ul>
             </div>
         </section>

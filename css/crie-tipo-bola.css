@@ -1,0 +1,39 @@
+.principal {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+}
+
+.imagem-item {
+    background-color: #b6c7e4;
+}
+
+.imagem-item > img {
+    width: 100px;
+}
+
+.bola-escollha-input {
+    display: none;
+}
+
+.bola-escollha-flag {
+    top: 0px;
+    right: 0px;
+    width: 20px;
+    height: 20px;
+    background-color: red;
+}
+
+/* .bola-escollha-flag::before {
+    background-color: red;
+} */
+
+.bola-escollha-flag:checked {
+    top: 0px;
+    right: 0px;
+    width: 20px;
+    height: 20px;
+    background-color: green;
+}

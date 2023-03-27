@@ -5,6 +5,20 @@
     margin: 0%;
 }
 
+@font-face {
+    font-family: DMSans;
+    src: url("../fonts/DMSans/DMSans-Regular.ttf");
+}
+
+@font-face {
+    font-family: Naville;
+    src: url("../fonts/Naville/Naville-Regular.ttf");
+}
+
+body {
+    font-family: DMSans;
+}
+
 .flex-container {
     display: flex;
 }
@@ -31,4 +45,10 @@
     margin: 0 0 0 auto;
     justify-content: left;
     text-align: left;
+}
+.small-icon {
+    cursor: pointer;
+    border: 1px solid transparent;
+    background-color: transparent;
+    color: transparent;
 }

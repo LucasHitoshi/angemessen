@@ -52,18 +52,20 @@ div.link-box:hover {
 .topic-box > ul > li {
     margin: 2px 0 2px 0;
     list-style: none;
+    font-family: DMSans;
 }
 
 a.recessive-header:link, :visited {
     color: #000;
-    font-family: Arial;
+    font-family: DMSans;
     text-transform: uppercase;
 }
 
 footer {
     padding: 25px 100px 25px 100px;
     background-color: #b6c7e4;
-    font: 100% Arial black;
+    font-family: DMSans;
+    font-size: medium;
 }
 
 form.search-bar > label > div.bar {
@@ -103,4 +105,15 @@ img.medium-icon {
 
 div.limb {
     height: 1500px;
+}
+
+.logo {
+    font-family: Naville;
+    text-transform: uppercase;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+input {
+    outline: none;
 }
