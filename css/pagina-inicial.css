@@ -1,10 +1,28 @@
 /* Arquivo de css da página inicial */
 
+/*
+    Cores do Site
+
+    Dominante: #e29d07
+    Recessivo: #ddb04f
+*/
+
+
 @keyframes link-box {
     from {
         font-size: medium;
+        background-color: #ddb04f;
     } to {
         font-size: larger;
+        background-color: #e29d07;
+    }
+}
+
+@keyframes menu-arrow {
+    from {
+        transform: none;
+    } to {
+        transform: rotate(180deg);
     }
 }
 
@@ -19,34 +37,43 @@ a {
 
 header > section.dominant {
     padding: 25px 100px 25px 100px;
-    background-color: #91a9d0;
+    background-color: #ffd900;
 }
 
 header > section.recessive {
     height: 25px;
     padding: 0 100px 0 100px;
-    background-color: #b6c7e4;
+    background-color: #ffe44e;
 }
 
 footer > section.recessive {
     padding: 0 100px 0 100px;
-    background-color: #b6c7e4;
+    background-color: #ffe44e;
 }
 
 .link-box {
     padding: 0 5px 0 5px;
+    height: 100%;
 }
 
 div.link-box:hover {
     animation-name: link-box;
-    animation-duration: 0.1s;
+    animation-duration: 0.5s;
     animation-fill-mode: forwards;
-    animation-timing-function: linear;
+    animation-timing-function: ease;
 }
+
+div.link-box:hover > svg.menu-arrow {
+    animation-name: menu-arrow;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease;
+}
+
 
 .topic-box {
     padding: 0 5px 0 10px;
-    border-left: #91a9d0 solid 5px;
+    border-left: #ffd900 solid 5px;
 }
 
 .topic-box > ul > li {
@@ -59,23 +86,30 @@ a.recessive-header:link, :visited {
     color: #000;
     font-family: DMSans;
     text-transform: uppercase;
+    text-decoration: none;
+}
+
+a.footer {
+    color: #000;
+    font-family: DMSans;
+    text-decoration: none;
 }
 
 footer {
     padding: 25px 100px 25px 100px;
-    background-color: #b6c7e4;
+    background-color: #ffe44e;
     font-family: DMSans;
     font-size: medium;
 }
 
 form.search-bar > label > div.bar {
-    background-color: #b6c7e4;
+    background-color: #ffe44e;
     border-radius: 5px;
 }
 
 form.search-bar > label > div > input {
     padding: 5px;
-    background-color: #b6c7e4;
+    background-color: #ffe44e;
     border: none;
     border-radius: 5px;
 }
@@ -85,6 +119,7 @@ form.search-bar > label > div > input::-webkit-input-placeholder {
 }
 
 .centered {
+    display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
@@ -112,8 +147,13 @@ div.limb {
     text-transform: uppercase;
     font-size: 35px;
     font-weight: bold;
+    text-align: center;
 }
 
 input {
     outline: none;
+}
+
+.svg {
+    margin: 0 0 0 2.5px;
 }

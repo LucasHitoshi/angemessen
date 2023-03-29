@@ -25,6 +25,7 @@ html {
     font-weight: bold;
     text-align: center;
     position: absolute;
+    color: white;
 }
 
 .voltar{
@@ -32,9 +33,13 @@ html {
     text-decoration: underline;
 }
 
+a.voltar{
+    color: white;
+}
+
 img.bola-erro-404 {
-    opacity: 20%;
+    opacity: 40%;
     margin: 0 auto;
-    width: 450px;
-    padding: 50px 0 0 45%;
+    width: 500px;
+    padding: 50px 0 0 35%;
 }

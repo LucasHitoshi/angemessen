@@ -13,6 +13,13 @@
     <header>
         <section class="flex-container dominant spaced">
             <div class="flex-container centered">
+                <svg width="20px" height="20px" style="margin: 0 10px 0 0" class="centered">
+                    <path d="
+                        M0 0 L20 0 L20 2 L0 2
+                        M0 8.75 L20 8.75 L20 10.75 L0 10.75
+                        M0 18 L20 18 L20 20 L0 20 Z
+                    ">
+                </svg>
                 <a href="index.html">
                     <p class="logo">
                         Angemessen
@@ -25,8 +32,6 @@
                     <label for="search">
                         <div class="flex-container bar centered">
                             <input type="text" id="search"  name="Search" placeholder="Pesquisar">
-                            <!-- Implementar botão de inicalização de busca -->
-                            <!-- <input type="submit" value="search"> -->
                             <button class="small-icon">
                                 <img src="img/search.png" alt="Pesquisa" class="small-icon" >
                             </button>
@@ -34,9 +39,8 @@
                     </label>
                 </form>
                 <div class="flex-container">
-                    <!-- TODO: Implementar links para outras páginas -->
                     <div class="s-spaced">
-                        <a href="market-cart.html">
+                        <a href="carrinho.html">
                             <img src="img/market-cart-icon.png" alt="Carrinho" class="medium-icon">
                         </a>
                     </div>
@@ -50,31 +54,46 @@
         </section>
         <!-- TODO: Implementar links para outras páginas -->
         <section class="flex-container recessive centered even">
-            <div class="link-box cen">
+            <div class="link-box centered">
                 <a href="not-found.html" class="recessive-header">
                     Crie
                 </a>
+                <svg width="20" height="15" class="svg menu-arrow">
+                    <path d="M2 2 L10 11.5 L18 2 L19 3 L10 13.5 L1 3 Z" />
+                </svg>
             </div>
-            <div class="link-box">
+            <div class="link-box centered">
                 <a href="not-found.html" class="recessive-header">
                     Coleções
                 </a>
+                <svg width="20" height="15" class="svg menu-arrow">
+                    <path d="M2 2 L10 11.5 L18 2 L19 3 L10 13.5 L1 3 Z" />
+                </svg>
             </div>
-            <div class="link-box">
+            <div class="link-box centered">
                 <a href="not-found.html" class="recessive-header">
                     Produtos
                 </a>
+                <svg width="20" height="15" class="svg menu-arrow">
+                    <path d="M2 2 L10 11.5 L18 2 L19 3 L10 13.5 L1 3 Z" />
+                </svg>
             </div>
-            <div class="link-box">
+            <div class="link-box centered">
                 <a href="not-found.html" class="recessive-header">
                     Sobre Nós
                 </a>
+                <svg width="20" height="15" class="svg menu-arrow">
+                    <path d="M2 2 L10 11.5 L18 2 L19 3 L10 13.5 L1 3 Z" />
+                </svg>
             </div>
         </section>
     </header>
+    
+    <!-- Implementar JavaScript para mostrar o carrinho do usuário -->
     <br>
+
     <footer>
-        <section class="flex-container recessive spaced">
+        <section class="flex-container recessive spaced even">
             <div class="topic-box">
                 <ul>
                     <!-- TODO: Implementar links para redes sociais -->
@@ -87,9 +106,12 @@
             </div>
             <div class="topic-box">
                 <ul>
-                    <li><a href="not-found.html">Enfrentando algum problema?</a>
-                    <li><a href="not-found.html">Possui uma sugestão?</a>
-                    <li><a href="not-found.html">Encontrou um bug?</a>
+                    <!-- TODO: Implementar links para páginas de ajuda -->
+                    <li><a href="not-found.html">Enfrentando algum problema?</a></li>
+                    <li><a href="not-found.html">Possui uma sugestão?</a></li>
+                    <li><a href="not-found.html">Encontrou um bug?</a></li>
+                    <li><a href="not-found.html">Teve alguma dúvida?</a></li>
+                    <li><a href="not-found.html">Deseja acessar o SAC?</a></li>
                 </ul>
             </div>
         </section>

@@ -1,5 +1,13 @@
 /* Arquivo de css padronizado para todas as páginas */
 
+/*
+    Cores do Site
+
+    Dominante: #e29d07
+    Recessivo: #ddb04f
+*/
+
+
 * {
     padding: 0%;
     margin: 0%;
@@ -17,6 +25,7 @@
 
 body {
     font-family: DMSans;
+    background-color: #3d3d3d;
 }
 
 .flex-container {
