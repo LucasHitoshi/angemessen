@@ -61,3 +61,9 @@ body {
     background-color: transparent;
     color: transparent;
 }
+
+.local-link {
+    text-decoration: underline;
+    font-weight: bold;
+    color: #000;
+}

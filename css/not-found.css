@@ -6,6 +6,12 @@ html {
     height: 100%;
 }
 
+footer.fixed{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
 .erro {
     font-size: 50px;
     font-style: bold;
@@ -18,6 +24,13 @@ html {
     display: flex;
     flex-direction: row;
     align-items: center;
+    position: absolute;
+    vertical-align: middle;
+    top: 40%;
+    bottom: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
 }
 
 .error-message{
