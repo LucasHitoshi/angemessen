@@ -31,6 +31,7 @@ header {
 
 a {
     text-decoration: none;
+    color: #000;
 }
 
 header > section.dominant {
@@ -80,14 +81,12 @@ div.link-box:hover > svg.menu-arrow {
 }
 
 a.recessive-header:link, :visited {
-    color: #000;
     font-family: DMSans;
     text-transform: uppercase;
     text-decoration: none;
 }
 
 a.footer {
-    color: #000;
     font-family: DMSans;
     text-decoration: none;
 }
@@ -125,6 +124,10 @@ form.search-bar > label > div > input::-webkit-input-placeholder {
 
 .even {
     justify-content: space-evenly;
+}
+
+.spaced {
+    justify-content: space-between;
 }
 
 img.small-icon {
@@ -189,4 +192,38 @@ input {
 
 .left-button-carrossel {
     transform: rotate(90deg);
+}
+
+.main-box {
+    padding: 25px 100px;
+}
+
+h1.main-box-title {
+    font-family: DMSans;
+    color: #fff;
+    font-size: 40px;
+    border-bottom: solid #fff 5px;
+    width: 33vh;
+}
+
+.sub-box {
+    justify-content: space-evenly;
+    padding-left: 10px;
+    background-color: #003d3d;
+    height: 250px;
+    width: 50vw;
+}
+
+.sub-box-part {
+    margin: 10px 10px 10px 0;
+    /* background-color: #fff; */
+    width: 100%;
+    height: 100%;
+}
+
+.sub-box-button-part {
+    margin: 10px 10px 10px 0;
+    /* background-color: #fff; */
+    width: auto;
+    height: 100%;
 }

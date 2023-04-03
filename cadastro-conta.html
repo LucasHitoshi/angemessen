@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Log-In</title>
+    <link rel="icon" type="image/x-icon" href="img/favicon.png">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/pagina-inicial.css">
+    <style>
+        .box-log{
+            align-items: center;
+            display: flex;
+            
+            
+        }
+        body {
+        margin: 0;
+        padding: 0;
+        font-family: DMSans;
+        background-color: #3d3d3d;
+        }
+
+        .login-container {
+        max-width: 400px;
+        margin: 100px auto;
+        background-color: #fff;
+        padding: 40px;
+        border-radius: 4px;
+        box-shadow: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <section class="flex-container dominant spaced">
+            <div class="flex-container centered">
+                <svg width="20px" height="20px" style="margin: 0 10px 0 0" class="centered">
+                    <path d="M0 0 L20 0 L20 2 L0 2 M0 8.75 L20 8.75 L20 10.75 L0 10.75M0 18 L20 18 L20 20 L0 20 Z" />
+                </svg>
+                <a href="index.html">
+                    <p class="logo">
+                        Angemessen
+                    </p>
+                </a>
+            </div>
+            <button></button>
+            <div class="flex-container pos-left centered">
+                <!-- TODO: Adicionar conexão (action) com o backend -->
+                <form action="" class="search-bar b-spaced">
+                    <label for="search">
+                        <div class="flex-container bar centered">
+                            <input type="text" id="search"  name="Search" placeholder="Pesquisar">
+                            <button class="small-icon">
+                                <img src="img/search.png" alt="Pesquisa" class="small-icon" >
+                            </button>
+                        </div>
+                    </label>
+                </form>
+                <div class="flex-container">
+                    <div class="s-spaced">
+                        <a href="carrinho.html">
+                            <img src="img/market-cart-icon.png" alt="Carrinho" class="medium-icon">
+                        </a>
+                    </div>
+                    <div class="s-spaced centered">
+                        <a href="login.html">
+                            <img src="img/user-icon.png" alt="Usuário" class="medium-icon">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- TODO: Implementar links para outras páginas -->
+        <section class="flex-container recessive centered even">
+            <div class="link-box centered">
+                <a href="not-found.html" class="recessive-header">
+                    Crie
+                </a>
+                <svg width="20" height="15" class="svg menu-arrow">
+                    <path d="M2 2 L10 11.5 L18 2 L19 3 L10 13.5 L1 3 Z" />
+                </svg>
+            </div>
+            <div class="link-box centered">
+                <a href="not-found.html" class="recessive-header">
+                    Coleções
+                </a>
+                <svg width="20" height="15" class="svg menu-arrow">
+                    <path d="M2 2 L10 11.5 L18 2 L19 3 L10 13.5 L1 3 Z" />
+                </svg>
+            </div>
+            <div class="link-box centered">
+                <a href="not-found.html" class="recessive-header">
+                    Produtos
+                </a>
+                <svg width="20" height="15" class="svg menu-arrow">
+                    <path d="M2 2 L10 11.5 L18 2 L19 3 L10 13.5 L1 3 Z" />
+                </svg>
+            </div>
+            <div class="link-box centered">
+                <a href="not-found.html" class="recessive-header">
+                    Sobre Nós
+                </a>
+                <svg width="20" height="15" class="svg menu-arrow">
+                    <path d="M2 2 L10 11.5 L18 2 L19 3 L10 13.5 L1 3 Z" />
+                </svg>
+            </div>
+        </section>
+    </header>
+    
+    <div class="login-container">
+        <div class="login-header">
+            <a href="index.html">
+                <p class="logo">
+                    Angemessen
+                </p>
+            </a>
+            <br>
+            <h1>Entrar</h1>
+        </div>
+        <form action="#" method="POST">
+            <label for="email">Endereço de e-mail ou telefone:</label>
+            <input type="text" id="email" name="email" required><br>
+            <label for="password">Senha:</label><br>
+            <input type="password" id="password" name="password" required><br>
+            <a href="#" class="local-link">Problemas com o login?</a><br>
+            <input type="submit" value="Entrar">
+        </form>
+        <p>
+            Novo no Angemessen?
+            <a href="cadastro-conta.html" class="local-link">
+                Crie sua conta aqui.
+            </a>
+        </p>
+    </div>
+
+    <footer>
+        <section class="flex-container recessive spaced even">
+            <div class="topic-box">
+                <ul>
+                    <!-- TODO: Implementar links para redes sociais -->
+                    <li><a href="not-found.html"><img src="img/instagram-logo.png" alt="Instagram Angemessen" class="medium-icon"></a>
+                    <li><a href="not-found.html"><img src="img/twitter-logo.png" alt="Twitter Angemessen" class="medium-icon"></a>
+                    <li><a href="not-found.html"><img src="img/youtube-logo.png" alt="YouTube Angemessen" class="medium-icon"></a>
+                    <li><a href="not-found.html"><img src="img/whatsapp-logo.png" alt="Whatsapp Angemessen" class="medium-icon"></a>
+                    <li><a href="not-found.html"><img src="img/facebook-logo.png" alt="Facebook Angemessen" class="medium-icon"></a>
+                </ul>
+            </div>
+            <div class="topic-box">
+                <ul>
+                    <!-- TODO: Implementar links para páginas de ajuda -->
+                    <li><a href="not-found.html">Enfrentando algum problema?</a></li>
+                    <li><a href="not-found.html">Possui uma sugestão?</a></li>
+                    <li><a href="not-found.html">Encontrou um bug?</a></li>
+                    <li><a href="not-found.html">Teve alguma dúvida?</a></li>
+                    <li><a href="not-found.html">Deseja acessar o SAC?</a></li>
+                </ul>
+            </div>
+        </section>
+    </footer>
+</body>
+</html>

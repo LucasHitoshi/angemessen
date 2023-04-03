@@ -8,17 +8,19 @@
     <link rel="icon" type="image/x-icon" href="img/favicon.png">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/pagina-inicial.css">
+    <link rel="stylesheet" href="css/login.css">
     <style>
         .box-log{
             align-items: center;
             display: flex;
             
+            
         }
         body {
         margin: 0;
         padding: 0;
-        font-family: Arial, sans-serif;
-        background-color: #f0f2f5;
+        font-family: DMSans;
+        background-color: #3d3d3d;
         }
 
         .login-container {
@@ -28,6 +30,9 @@
         padding: 40px;
         border-radius: 4px;
         box-shadow: 10px;
+        }
+        .email{
+            background-color: transparent;
         }
     </style>
 </head>
@@ -119,16 +124,17 @@
             <h1>Entrar</h1>
         </div>
         <form action="#" method="POST">
-            <label for="email">Endereço de e-mail ou telefone:</label>
-            <input type="text" id="email" name="email" required><br>
+            <label for="email">E-mail ou telefone:</label><br>
+            <input class="text" type="" id="email" name="email" required><br>
             <label for="password">Senha:</label><br>
             <input type="password" id="password" name="password" required><br>
-            <a href="#" class="local-link">Esqueceu sua senha?</a><br>
+            <a href="#" class="local-link">Problemas com o login?</a><br>
             <input type="submit" value="Entrar">
         </form>
         <p>
+            <!--fazer um botao para criar a conta, em baixo da box do login-->
             Novo no Angemessen?
-            <a href="#" class="local-link">
+            <a href="cadastro-conta.html" class="local-link">
                 Crie sua conta aqui.
             </a>
         </p>
