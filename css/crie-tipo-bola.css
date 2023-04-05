@@ -1,9 +1,6 @@
 .principal {
-    padding: 10px;
     display: flex;
-    justify-content: center;
-    flex-direction: row;
-    align-items: center;
+    flex-wrap: wrap;
 }
 
 .bola-escollha-input {
@@ -11,29 +8,36 @@
     position: absolute;
 }
 
-div.pai {
+li.produtos {
+    display: inline-block;
+}
+
+.pai {
     position: relative;
+    justify-content: space-around;
+    width: 100%;
 }
 
 .absoluto {
     position: absolute;
 }
 
-label > div > div{
+label > div > div {
     top: 0px;
     right: 0px;
-    width: 10px;
-    height: 10px;
+    width: 3.5rem;
+    height: 3.5rem;
     border: solid;
     border-color: rgb(18, 177, 18);
     position: none;
     background-color: black;
     color: black;
     font-size: 10px;
+    border-radius: 1rem;
 }
 
 label > img{
-    padding: 5px;
+    padding: 0.5rem;
 }
 
 /* .bola-escollha-input[type="checkbox"]:checked + label > div > div{
@@ -46,8 +50,19 @@ label > img{
     background-color: rgb(18, 177, 18);
 }
 
-div.escolha-criar{
-    width: 980px;
+.bola-escollha-input[type="radio"]:checked + label > div > div > svg > path{
+    fill: white;
+}
+
+.escolha-criar{
+    width: 66vw;
     background-color: black;
     margin: 10px;
+}
+
+img.escolha{
+    background-color: white;
+    margin: 1rem;
+    width: 25rem;
+    /* min-width: 25rem; */
 }

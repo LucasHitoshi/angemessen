@@ -35,22 +35,21 @@ a {
 }
 
 header > section.dominant {
-    padding: 25px 100px 25px 100px;
+    height: 5rem;
+    padding: 4rem 10rem 4rem 10rem;
     background-color: #ffd900;
 }
 
 header > section.recessive {
-    padding: 0 100px 0 100px;
+    height: 5rem;
     background-color: #ffe44e;
 }
 
 footer > section.recessive {
-    padding: 0 100px 0 100px;
     background-color: #ffe44e;
 }
 
 .link-box {
-    padding: 0 5px 0 5px;
     height: 100%;
 }
 
@@ -68,20 +67,23 @@ div.link-box:hover > svg.menu-arrow {
     animation-timing-function: ease;
 }
 
+/* TODO: Fazer ao contrário */
 
 .topic-box {
-    padding: 0 5px 0 10px;
+    padding: 0 1.5rem 0 1.5rem;
     border-left: #ffd900 solid 5px;
 }
 
 .topic-box > ul > li {
-    margin: 2px 0 2px 0;
+    /* margin: 0.2rem 0 0.2rem 0; */
     list-style: none;
     font-family: DMSans;
+    font-size: 2rem;
 }
 
 a.recessive-header:link, :visited {
     font-family: DMSans;
+    font-size: 2rem;
     text-transform: uppercase;
     text-decoration: none;
 }
@@ -92,15 +94,14 @@ a.footer {
 }
 
 footer {
-    padding: 25px 100px 25px 100px;
+    padding: 4rem 0 4rem 0;
     background-color: #ffe44e;
     font-family: DMSans;
-    font-size: medium;
 }
 
 form.search-bar > label > div.bar {
     background-color: #ffe44e;
-    border-radius: 5px;
+    border-radius: 0.74rem;
 }
 
 form.search-bar > label > div > input {
@@ -132,11 +133,11 @@ form.search-bar > label > div > input::-webkit-input-placeholder {
 
 img.small-icon {
     padding: 3px;
-    width: 22px;
+    width: 2.75rem;
 }
 
 img.medium-icon {
-    width: 25px;
+    width: 3rem;
 }
 
 div.limb {
@@ -146,10 +147,10 @@ div.limb {
 .logo {
     font-family: Naville;
     text-transform: uppercase;
-    font-size: 35px;
+    font-size: 5vh;
     font-weight: bold;
     text-align: center;
-    padding-top: 7.5px;
+    padding-top: 1vh;
 }
 
 input {
@@ -160,15 +161,14 @@ input {
     margin: 0 0 0 2.5px;
 }
 
-.sub-menu {
-    height: 40px;
+.svg-hamburguer {
+    margin: 0 0 0 2.5px;
+    width: 3rem;
+    height: 2.7rem;
 }
 
-.horizontal-line {
-    background-color: #e29d07;
-    width: 3px;
-    height: 30px;
-    margin: 0 10px;
+.sub-menu {
+    height: 40px;
 }
 
 .button-carrossel {
@@ -208,22 +208,20 @@ h1.main-box-title {
 
 .sub-box {
     justify-content: space-evenly;
-    padding-left: 10px;
-    background-color: #003d3d;
+    background-color: #1b5555;
     height: 250px;
     width: 50vw;
+    /* gap: 20px; */
 }
 
 .sub-box-part {
     margin: 10px 10px 10px 0;
-    /* background-color: #fff; */
+    background-color: #56776c;
     width: 100%;
     height: 100%;
 }
 
 .sub-box-button-part {
-    margin: 10px 10px 10px 0;
-    /* background-color: #fff; */
     width: auto;
     height: 100%;
 }

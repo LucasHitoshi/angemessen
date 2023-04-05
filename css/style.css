@@ -11,6 +11,7 @@
 * {
     padding: 0%;
     margin: 0%;
+    font-size: 1vh;
 }
 
 @font-face {
@@ -32,7 +33,11 @@ body {
     display: flex;
 }
 
-.flex-container > div.s-spaced {
+.inline-block-container{
+    display: inline-block;
+}
+
+/* .flex-container > div.s-spaced {
     margin: 0 6px 0 6px
 }
 
@@ -54,7 +59,8 @@ body {
     margin: 0 0 0 auto;
     justify-content: left;
     text-align: left;
-}
+} */
+
 .small-icon {
     cursor: pointer;
     border: 1px solid transparent;
