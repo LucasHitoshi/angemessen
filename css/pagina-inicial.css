@@ -36,6 +36,7 @@ a {
 
 header > section.dominant {
     height: 5rem;
+    display: flex block;
     padding: 4rem 10rem 4rem 10rem;
     background-color: #ffd900;
 }

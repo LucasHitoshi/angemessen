@@ -1,3 +1,9 @@
+.container{
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+}
+
 .principal {
     display: flex;
     flex-wrap: wrap;
@@ -6,6 +12,7 @@
 .bola-escollha-input {
     display: none;
     position: absolute;
+    z-index: 2;
 }
 
 li.produtos {
@@ -58,6 +65,7 @@ label > img{
     width: 66vw;
     background-color: black;
     margin: 10px;
+    margin-top: 20rem;
 }
 
 img.escolha{
