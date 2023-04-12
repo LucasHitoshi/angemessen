@@ -41,36 +41,74 @@ label > div > div {
     color: black;
     font-size: 10px;
     border-radius: 1rem;
+    cursor: pointer;
+
 }
 
 label > img{
     padding: 0.5rem;
 }
 
-/* .bola-escollha-input[type="checkbox"]:checked + label > div > div{
-    border-color: rgb(18, 177, 18);
-    background-color: rgb(18, 177, 18);
-} */
 
 .bola-escollha-input[type="radio"]:checked + label > div > div{
     border-color: rgb(18, 177, 18);
     background-color: rgb(18, 177, 18);
+    cursor: pointer;
 }
 
 .bola-escollha-input[type="radio"]:checked + label > div > div > svg > path{
     fill: white;
 }
 
-.escolha-criar{
+.escolha-criar {
     width: 66vw;
     background-color: black;
     margin: 10px;
     margin-top: 20rem;
 }
 
-img.escolha{
+img.escolha {
     background-color: white;
     margin: 1rem;
     width: 25rem;
     /* min-width: 25rem; */
+    cursor: pointer;
+}
+
+.perfil-bola {
+    width: 33vw;
+    height: 38.1vw;
+    background-color: black;
+    margin: 10px;
+    display: flex;
+    justify-content: space-around;
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 20rem;
+}
+
+.bola-escolhida {
+    width: 20rem;
+    height: 20rem;
+    background-color: white;
+}
+
+.nome-bola {
+    color: white;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.price {
+    color: green;
+    text-align: center;
+    font-size: 3rem;
+}
+
+.nome-bola-escolhida{
+    width: 30vw;
+    height: 20rem;
+    background-color: gray;
+    margin: 2rem;
+
 }
