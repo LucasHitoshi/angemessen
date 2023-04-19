@@ -8,275 +8,476 @@
     <link rel="icon" type="image/x-icon" href="img/favicon.png">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/pagina-inicial.css">
-    <link rel="stylesheet" href="css/crie-tipo-bola.css">
+    <link rel="stylesheet" href="css/criar-bola.css">
     
 </head>
 <body>
-
-        <header class="container">
-            <section class="flex-container dominant spaced centered">
-                <div class="flex-container centered">
-                    <svg width="20px" height="18px" style="margin: 0 10px 0 0" class="centered">
-                        <path d="M0 0 L20 0 L20 2 L0 2 M0 8 L20 8 L20 10 L0 10 M0 16 L20 16 L20 18 L0 18 Z" />
-                    </svg>
-                    <a href="index.html">
-                        <p class="logo">
-                            Angemessen
-                        </p>
-                    </a>
-                </div>
-                <div class="flex-container pos-left centered">
-                    <!-- TODO: Adicionar conexão (action) com o backend -->
-                    <form action="" class="search-bar b-spaced">
-                        <label for="search">
-                            <div class="flex-container bar centered">
-                                <input type="text" id="search"  name="Search" placeholder="Pesquisar">
-                                <button class="small-icon">
-                                    <img src="img/search.png" alt="Pesquisa" class="small-icon" >
-                                </button>
-                            </div>
-                        </label>
-                    </form>
-                    <div class="flex-container">
-                        <!-- Trocar a imagem do carrinho, colocar algo mais simples mais clean :)-->
-                        <div class="s-spaced">
-                            <a href="carrinho.html">
-                                <img src="img/market-cart-icon.png" alt="Carrinho" class="medium-icon">
-                            </a>
+    <header class="container">
+        <section class="flex-container dominant spaced centered">
+            <div class="flex-container centered">
+                <svg width="20px" height="18px" style="margin: 0 10px 0 0" class="centered">
+                    <path d="M0 0 L20 0 L20 2 L0 2 M0 8 L20 8 L20 10 L0 10 M0 16 L20 16 L20 18 L0 18 Z" />
+                </svg>
+                <a href="index.html">
+                    <p class="logo">
+                        Angemessen
+                    </p>
+                </a>
+            </div>
+            <div class="flex-container pos-left centered">
+                <!-- TODO: Adicionar conexão (action) com o backend -->
+                <form action="" class="search-bar b-spaced">
+                    <label for="search">
+                        <div class="flex-container bar centered">
+                            <input type="text" id="search"  name="Search" placeholder="Pesquisar">
+                            <button class="small-icon">
+                                <img src="img/search.png" alt="Pesquisa" class="small-icon" >
+                            </button>
                         </div>
-                        <div class="s-spaced centered">
-                            <a href="login.html">
-                                <img src="img/user-icon.png" alt="Usuário" class="medium-icon">
-                            </a>
-                        </div>
+                    </label>
+                </form>
+                <div class="flex-container">
+                    <!-- Trocar a imagem do carrinho, colocar algo mais simples mais clean :)-->
+                    <div class="s-spaced">
+                        <a href="carrinho.html">
+                            <img src="img/market-cart-icon.png" alt="Carrinho" class="medium-icon">
+                        </a>
+                    </div>
+                    <div class="s-spaced centered">
+                        <a href="login.html">
+                            <img src="img/user-icon.png" alt="Usuário" class="medium-icon">
+                        </a>
                     </div>
                 </div>
-            </section>
-            <!-- TODO: Implementar links para outras páginas -->
-            <section class="flex-container recessive sub-menu  centered">
-                <div class="link-box centered">
-                    <a href="crie-tipo-bola.html" class="recessive-header">
-                        Crie
-                    </a>
-                    <svg width="20" height="15" class="svg menu-arrow">
-                        <path d="M2 2 L10 11.5 L18 2 L19 3 L10 13.5 L1 3 Z" />
-                    </svg>
-                </div>
-                <div class="horizontal-line"></div>
-                <div class="link-box centered">
-                    <a href="not-found.html" class="recessive-header">
-                        Coleções
-                    </a>
-                    <svg width="20" height="15" class="svg menu-arrow">
-                        <path d="M2 2 L10 11.5 L18 2 L19 3 L10 13.5 L1 3 Z" />
-                    </svg>
-                </div>
-                <div class="horizontal-line"></div>
-                <div class="link-box centered">
-                    <a href="not-found.html" class="recessive-header">
-                        Produtos
-                    </a>
-                    <svg width="20" height="15" class="svg menu-arrow">
-                        <path d="M2 2 L10 11.5 L18 2 L19 3 L10 13.5 L1 3 Z" />
-                    </svg>
-                </div>
-                <div class="horizontal-line"></div>
-                <div class="link-box centered">
-                    <a href="not-found.html" class="recessive-header">
-                        Sobre Nós
-                    </a>
-                    <svg width="20" height="15" class="svg menu-arrow">
-                        <path d="M2 2 L10 11.5 L18 2 L19 3 L10 13.5 L1 3 Z" />
-                    </svg>
-                </div>
-                <div class="horizontal-line"></div>
-                <div class="link-box centered">
-                    <a href="not-found.html" class="recessive-header">
-                        Promoções
-                    </a>
-                    <svg width="20" height="15" class="svg menu-arrow">
-                        <path d="M2 2 L10 11.5 L18 2 L19 3 L10 13.5 L1 3 Z" />
-                    </svg>
-                </div>
-            </section>
-        </header>
-
+            </div>
+        </section>
+        <!-- TODO: Implementar links para outras páginas -->
+        <section class="flex-container recessive sub-menu  centered">
+            <div class="link-box centered">
+                <a href="crie-tipo-bola.html" class="recessive-header">
+                    Crie
+                </a>
+                <svg width="20" height="15" class="svg menu-arrow">
+                    <path d="M2 2 L10 11.5 L18 2 L19 3 L10 13.5 L1 3 Z" />
+                </svg>
+            </div>
+            <div class="horizontal-line"></div>
+            <div class="link-box centered">
+                <a href="not-found.html" class="recessive-header">
+                    Coleções
+                </a>
+                <svg width="20" height="15" class="svg menu-arrow">
+                    <path d="M2 2 L10 11.5 L18 2 L19 3 L10 13.5 L1 3 Z" />
+                </svg>
+            </div>
+            <div class="horizontal-line"></div>
+            <div class="link-box centered">
+                <a href="not-found.html" class="recessive-header">
+                    Produtos
+                </a>
+                <svg width="20" height="15" class="svg menu-arrow">
+                    <path d="M2 2 L10 11.5 L18 2 L19 3 L10 13.5 L1 3 Z" />
+                </svg>
+            </div>
+            <div class="horizontal-line"></div>
+            <div class="link-box centered">
+                <a href="not-found.html" class="recessive-header">
+                    Sobre Nós
+                </a>
+                <svg width="20" height="15" class="svg menu-arrow">
+                    <path d="M2 2 L10 11.5 L18 2 L19 3 L10 13.5 L1 3 Z" />
+                </svg>
+            </div>
+            <div class="horizontal-line"></div>
+            <div class="link-box centered">
+                <a href="not-found.html" class="recessive-header">
+                    Promoções
+                </a>
+                <svg width="20" height="15" class="svg menu-arrow">
+                    <path d="M2 2 L10 11.5 L18 2 L19 3 L10 13.5 L1 3 Z" />
+                </svg>
+            </div>
+        </section>
+    </header>
+    <div class="limbo"></div>
+    <div class="progresso-criar-bola">
+        a
+    </div>
     <div class="flex-container">
         <div class="escolha-criar">
             <ul class="principal flex-container inline-block-container pai" width="100%">
                 <li class="produtos">
-                    <input type="radio" id="CBI" name="produto" class="bola-escollha-input">
-                    <label class="pai" for="CBI">
+                    <input type="radio" id="CBI1" name="produto" class="bola-escollha-input">
+                    <label class="pai" for="CBI1">
                         <div class="absoluto">
-                            <div class="centered">
+                            <div class="centered radio-bola">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" >
                                     <path d="M9 16.17l-3.59-3.58L4 14l5 5 10-10L19.41 7 9 16.17z"/>
                                 </svg>
                             </div>
                         </div>
                         <img src="./img/bola-futebol.png" alt="BOLA TESTES" class="escolha">
-                        <div class="nome-bola">Bola de futebol</div>
-                        <div class="price">R&#36;40,99</div>
+                        <div class="descricao-bola">
+                            <div class="nome-bola">Bola de futebol</div>
+                            <div>
+                                <div class="price-pequeno">à vista</div>
+                                <div class="price">R&#36;40,99</div>
+                            </div>
+                        </div>
                     </label>
                 </li>
                 <li class="produtos">
                     <input type="radio" id="CBI2" name="produto" class="bola-escollha-input">
                     <label class="pai" for="CBI2">
                         <div class="absoluto">
-                            <div class="centered">
+                            <div class="centered radio-bola">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" >
                                     <path d="M9 16.17l-3.59-3.58L4 14l5 5 10-10L19.41 7 9 16.17z"/>
                                 </svg>
                             </div>
                         </div>
                         <img src="./img/bola-futebol.png" alt="BOLA TESTES" class="escolha">
+                        <div class="descricao-bola">
+                            <div class="nome-bola">Bola de futebol</div>
+                            <div>
+                                <div class="price-pequeno">à vista</div>
+                                <div class="price">R&#36;40,99</div>
+                            </div>
+                        </div>
                     </label>
                 </li>
                 <li class="produtos">
                     <input type="radio" id="CBI3" name="produto" class="bola-escollha-input">
                     <label class="pai" for="CBI3">
                         <div class="absoluto">
-                            <div class="centered">
+                            <div class="centered radio-bola">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" >
                                     <path d="M9 16.17l-3.59-3.58L4 14l5 5 10-10L19.41 7 9 16.17z"/>
                                 </svg>
                             </div>
                         </div>
                         <img src="./img/bola-futebol.png" alt="BOLA TESTES" class="escolha">
-                    </label>
-                </li>
-            <!-- </div>
-
-            <div class="principal flex-container pai"> -->
-                <li class="produtos">
-                    <input type="radio" id="CBI4" name="produto" class="bola-escollha-input">
-                    <label class="pai" for="CBI4">
-                        <div class="absoluto">
-                            <div class="centered">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" >
-                                    <path d="M9 16.17l-3.59-3.58L4 14l5 5 10-10L19.41 7 9 16.17z"/>
-                                </svg>
+                        <div class="descricao-bola">
+                            <div class="nome-bola">Bola de futebol</div>
+                            <div>
+                                <div class="price-pequeno">à vista</div>
+                                <div class="price">R&#36;40,99</div>
                             </div>
                         </div>
-                        <img src="./img/bola-futebol.png" alt="BOLA TESTES" class="escolha">
                     </label>
                 </li>
                 <li class="produtos">
-                    <input type="radio" id="CBI5" name="produto" class="bola-escollha-input">
-                    <label class="pai" for="CBI5">
+                    <input type="radio" id="CBI2" name="produto" class="bola-escollha-input">
+                    <label class="pai" for="CBI2">
                         <div class="absoluto">
-                            <div class="centered">
+                            <div class="centered radio-bola">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" >
                                     <path d="M9 16.17l-3.59-3.58L4 14l5 5 10-10L19.41 7 9 16.17z"/>
                                 </svg>
                             </div>
                         </div>
                         <img src="./img/bola-futebol.png" alt="BOLA TESTES" class="escolha">
+                        <div class="descricao-bola">
+                            <div class="nome-bola">Bola de futebol</div>
+                            <div>
+                                <div class="price-pequeno">à vista</div>
+                                <div class="price">R&#36;40,99</div>
+                            </div>
+                        </div>
                     </label>
                 </li>
                 <li class="produtos">
-                    <input type="radio" id="CBI6" name="produto" class="bola-escollha-input">
-                    <label class="pai" for="CBI6">
+                    <input type="radio" id="CBI2" name="produto" class="bola-escollha-input">
+                    <label class="pai" for="CBI2">
                         <div class="absoluto">
-                            <div class="centered">
+                            <div class="centered radio-bola">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" >
                                     <path d="M9 16.17l-3.59-3.58L4 14l5 5 10-10L19.41 7 9 16.17z"/>
                                 </svg>
                             </div>
                         </div>
                         <img src="./img/bola-futebol.png" alt="BOLA TESTES" class="escolha">
+                        <div class="descricao-bola">
+                            <div class="nome-bola">Bola de futebol</div>
+                            <div>
+                                <div class="price-pequeno">à vista</div>
+                                <div class="price">R&#36;40,99</div>
+                            </div>
+                        </div>
                     </label>
                 </li>
                 <li class="produtos">
-                    <input type="radio" id="CBI7" name="produto" class="bola-escollha-input">
-                    <label class="pai" for="CBI7">
+                    <input type="radio" id="CBI2" name="produto" class="bola-escollha-input">
+                    <label class="pai" for="CBI2">
                         <div class="absoluto">
-                            <div class="centered">
+                            <div class="centered radio-bola">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" >
                                     <path d="M9 16.17l-3.59-3.58L4 14l5 5 10-10L19.41 7 9 16.17z"/>
                                 </svg>
                             </div>
                         </div>
                         <img src="./img/bola-futebol.png" alt="BOLA TESTES" class="escolha">
+                        <div class="descricao-bola">
+                            <div class="nome-bola">Bola de futebol</div>
+                            <div>
+                                <div class="price-pequeno">à vista</div>
+                                <div class="price">R&#36;40,99</div>
+                            </div>
+                        </div>
                     </label>
                 </li>
                 <li class="produtos">
-                    <input type="radio" id="CBI8" name="produto" class="bola-escollha-input">
-                    <label class="pai" for="CBI8">
+                    <input type="radio" id="CBI2" name="produto" class="bola-escollha-input">
+                    <label class="pai" for="CBI2">
                         <div class="absoluto">
-                            <div class="centered">
+                            <div class="centered radio-bola">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" >
                                     <path d="M9 16.17l-3.59-3.58L4 14l5 5 10-10L19.41 7 9 16.17z"/>
                                 </svg>
                             </div>
                         </div>
                         <img src="./img/bola-futebol.png" alt="BOLA TESTES" class="escolha">
+                        <div class="descricao-bola">
+                            <div class="nome-bola">Bola de futebol</div>
+                            <div>
+                                <div class="price-pequeno">à vista</div>
+                                <div class="price">R&#36;40,99</div>
+                            </div>
+                        </div>
                     </label>
                 </li>
                 <li class="produtos">
-                    <input type="radio" id="CBI9" name="produto" class="bola-escollha-input">
-                    <label class="pai" for="CBI9">
+                    <input type="radio" id="CBI2" name="produto" class="bola-escollha-input">
+                    <label class="pai" for="CBI2">
                         <div class="absoluto">
-                            <div class="centered">
+                            <div class="centered radio-bola">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" >
                                     <path d="M9 16.17l-3.59-3.58L4 14l5 5 10-10L19.41 7 9 16.17z"/>
                                 </svg>
                             </div>
                         </div>
                         <img src="./img/bola-futebol.png" alt="BOLA TESTES" class="escolha">
+                        <div class="descricao-bola">
+                            <div class="nome-bola">Bola de futebol</div>
+                            <div>
+                                <div class="price-pequeno">à vista</div>
+                                <div class="price">R&#36;40,99</div>
+                            </div>
+                        </div>
                     </label>
                 </li>
                 <li class="produtos">
-                    <input type="radio" id="CBI10" name="produto" class="bola-escollha-input">
-                    <label class="pai" for="CBI10">
+                    <input type="radio" id="CBI2" name="produto" class="bola-escollha-input">
+                    <label class="pai" for="CBI2">
                         <div class="absoluto">
-                            <div class="centered">
+                            <div class="centered radio-bola">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" >
                                     <path d="M9 16.17l-3.59-3.58L4 14l5 5 10-10L19.41 7 9 16.17z"/>
                                 </svg>
                             </div>
                         </div>
                         <img src="./img/bola-futebol.png" alt="BOLA TESTES" class="escolha">
+                        <div class="descricao-bola">
+                            <div class="nome-bola">Bola de futebol</div>
+                            <div>
+                                <div class="price-pequeno">à vista</div>
+                                <div class="price">R&#36;40,99</div>
+                            </div>
+                        </div>
                     </label>
                 </li>
                 <li class="produtos">
-                    <input type="radio" id="CBI10" name="produto" class="bola-escollha-input">
-                    <label class="pai" for="CBI10">
+                    <input type="radio" id="CBI2" name="produto" class="bola-escollha-input">
+                    <label class="pai" for="CBI2">
                         <div class="absoluto">
-                            <div class="centered">
+                            <div class="centered radio-bola">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" >
                                     <path d="M9 16.17l-3.59-3.58L4 14l5 5 10-10L19.41 7 9 16.17z"/>
                                 </svg>
                             </div>
                         </div>
                         <img src="./img/bola-futebol.png" alt="BOLA TESTES" class="escolha">
+                        <div class="descricao-bola">
+                            <div class="nome-bola">Bola de futebol</div>
+                            <div>
+                                <div class="price-pequeno">à vista</div>
+                                <div class="price">R&#36;40,99</div>
+                            </div>
+                        </div>
                     </label>
                 </li>
                 <li class="produtos">
-                    <input type="radio" id="CBI10" name="produto" class="bola-escollha-input">
-                    <label class="pai" for="CBI10">
+                    <input type="radio" id="CBI2" name="produto" class="bola-escollha-input">
+                    <label class="pai" for="CBI2">
                         <div class="absoluto">
-                            <div class="centered">
+                            <div class="centered radio-bola">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" >
                                     <path d="M9 16.17l-3.59-3.58L4 14l5 5 10-10L19.41 7 9 16.17z"/>
                                 </svg>
                             </div>
                         </div>
                         <img src="./img/bola-futebol.png" alt="BOLA TESTES" class="escolha">
+                        <div class="descricao-bola">
+                            <div class="nome-bola">Bola de futebol</div>
+                            <div>
+                                <div class="price-pequeno">à vista</div>
+                                <div class="price">R&#36;40,99</div>
+                            </div>
+                        </div>
                     </label>
                 </li>
-                
+                <li class="produtos">
+                    <input type="radio" id="CBI2" name="produto" class="bola-escollha-input">
+                    <label class="pai" for="CBI2">
+                        <div class="absoluto">
+                            <div class="centered radio-bola">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" >
+                                    <path d="M9 16.17l-3.59-3.58L4 14l5 5 10-10L19.41 7 9 16.17z"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <img src="./img/bola-futebol.png" alt="BOLA TESTES" class="escolha">
+                        <div class="descricao-bola">
+                            <div class="nome-bola">Bola de futebol</div>
+                            <div>
+                                <div class="price-pequeno">à vista</div>
+                                <div class="price">R&#36;40,99</div>
+                            </div>
+                        </div>
+                    </label>
+                </li>
+                <li class="produtos">
+                    <input type="radio" id="CBI2" name="produto" class="bola-escollha-input">
+                    <label class="pai" for="CBI2">
+                        <div class="absoluto">
+                            <div class="centered radio-bola">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" >
+                                    <path d="M9 16.17l-3.59-3.58L4 14l5 5 10-10L19.41 7 9 16.17z"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <img src="./img/bola-futebol.png" alt="BOLA TESTES" class="escolha">
+                        <div class="descricao-bola">
+                            <div class="nome-bola">Bola de futebol</div>
+                            <div>
+                                <div class="price-pequeno">à vista</div>
+                                <div class="price">R&#36;40,99</div>
+                            </div>
+                        </div>
+                    </label>
+                </li>
+                <li class="produtos">
+                    <input type="radio" id="CBI2" name="produto" class="bola-escollha-input">
+                    <label class="pai" for="CBI2">
+                        <div class="absoluto">
+                            <div class="centered radio-bola">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" >
+                                    <path d="M9 16.17l-3.59-3.58L4 14l5 5 10-10L19.41 7 9 16.17z"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <img src="./img/bola-futebol.png" alt="BOLA TESTES" class="escolha">
+                        <div class="descricao-bola">
+                            <div class="nome-bola">Bola de futebol</div>
+                            <div>
+                                <div class="price-pequeno">à vista</div>
+                                <div class="price">R&#36;40,99</div>
+                            </div>
+                        </div>
+                    </label>
+                </li>
+                <li class="produtos">
+                    <input type="radio" id="CBI2" name="produto" class="bola-escollha-input">
+                    <label class="pai" for="CBI2">
+                        <div class="absoluto">
+                            <div class="centered radio-bola">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" >
+                                    <path d="M9 16.17l-3.59-3.58L4 14l5 5 10-10L19.41 7 9 16.17z"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <img src="./img/bola-futebol.png" alt="BOLA TESTES" class="escolha">
+                        <div class="descricao-bola">
+                            <div class="nome-bola">Bola de futebol</div>
+                            <div>
+                                <div class="price-pequeno">à vista</div>
+                                <div class="price">R&#36;40,99</div>
+                            </div>
+                        </div>
+                    </label>
+                </li>
+                <li class="produtos">
+                    <input type="radio" id="CBI2" name="produto" class="bola-escollha-input">
+                    <label class="pai" for="CBI2">
+                        <div class="absoluto">
+                            <div class="centered radio-bola">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" >
+                                    <path d="M9 16.17l-3.59-3.58L4 14l5 5 10-10L19.41 7 9 16.17z"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <img src="./img/bola-futebol.png" alt="BOLA TESTES" class="escolha">
+                        <div class="descricao-bola">
+                            <div class="nome-bola">Bola de futebol</div>
+                            <div>
+                                <div class="price-pequeno">à vista</div>
+                                <div class="price">R&#36;40,99</div>
+                            </div>
+                        </div>
+                    </label>
+                </li>
+                <li class="produtos">
+                    <input type="radio" id="CBI2" name="produto" class="bola-escollha-input">
+                    <label class="pai" for="CBI2">
+                        <div class="absoluto">
+                            <div class="centered radio-bola">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" >
+                                    <path d="M9 16.17l-3.59-3.58L4 14l5 5 10-10L19.41 7 9 16.17z"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <img src="./img/bola-futebol.png" alt="BOLA TESTES" class="escolha">
+                        <div class="descricao-bola">
+                            <div class="nome-bola">Bola de futebol</div>
+                            <div>
+                                <div class="price-pequeno">à vista</div>
+                                <div class="price">R&#36;40,99</div>
+                            </div>
+                        </div>
+                    </label>
+                </li>
+                <li class="produtos">
+                    <input type="radio" id="CBI2" name="produto" class="bola-escollha-input">
+                    <label class="pai" for="CBI2">
+                        <div class="absoluto">
+                            <div class="centered radio-bola">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" >
+                                    <path d="M9 16.17l-3.59-3.58L4 14l5 5 10-10L19.41 7 9 16.17z"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <img src="./img/bola-futebol.png" alt="BOLA TESTES" class="escolha">
+                        <div class="descricao-bola">
+                            <div class="nome-bola">Bola de futebol</div>
+                            <div>
+                                <div class="price-pequeno">à vista</div>
+                                <div class="price">R&#36;40,99</div>
+                            </div>
+                        </div>
+                    </label>
+                </li>
             </ul>
         </div>
-
-        <div class="perfil-bola">
-            <div class="nome-bola-escolhida">
-                <div class="bola-escolhida">Bola</div>
+        <div class="escolha-avancar">
+            <div class="avancar"></div>
+            <div class="lateral-criar">
+                <div class="nome-bola-escolhida">
+                    <div class="bola-escolhida">Bola</div>
+                </div>
             </div>
         </div>
-
+        
     </div>
-    
 
     <footer>
         <section class="flex-container recessive spaced even">

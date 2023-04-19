@@ -126,6 +126,8 @@ form.search-bar > label > div > input {
 form.search-bar > label > div > input::-webkit-input-placeholder {
     color: #000;
     font-family: DMSans;
+    font-size: 1.5vh;
+    text-transform: uppercase;
 }
 
 .centered {
@@ -218,8 +220,8 @@ input {
 h1.main-box-title {
     font-family: DMSans;
     color: #fff;
-    font-size: 40px;
-    border-bottom: solid #fff 5px;
+    font-size: 5vh;
+    text-transform: uppercase;
     width: 33vh;
 }
 
@@ -254,7 +256,13 @@ h1.main-box-title {
 }
 
 .showcase-menu-text {
-    /* gap: 20rem; */
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.showcase-menu-text > h1 {
+    text-transform: uppercase;
 }
 
 .showcase-title {
@@ -268,19 +276,19 @@ h1.main-box-title {
 }
 
 .showcase {
-    padding: 5rem;
+    padding: 1rem;
     display: grid;
     grid-template-rows: 1fr 1fr;
     grid-template-columns: 1fr 1fr;
-    background-color: #fff;
+    background-color: #e29d07;
     width: 55rem;
-    height: 50rem;
-    gap: 4rem;
+    gap: 1rem;
 }
 
 .showcase > .small {
     display: flex;
-    background-color: rgb(0, 0, 0, 0.25);
+    /* background-color: rgb(0, 0, 0, 0.25); */
+    background-color: #fff;
     justify-content: center;
     height: 25rem;
 }
@@ -288,7 +296,8 @@ h1.main-box-title {
 .showcase > .big {
     display: flex;
     grid-column: 1 / span 2;
-    background-color: rgb(0, 0, 0, 0.25);
+    /* background-color: rgb(0, 0, 0, 0.25); */
+    background-color: #fff;
     justify-content: center;
     height: 25rem;
 }
@@ -306,4 +315,54 @@ img.small {
 img.big {
     width: 50rem;
     height: 25rem;
+}
+
+.collections-showcase {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.collection-options {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 50%;
+}
+
+.collection {
+    display: flow-root;
+    background-color: #aaa;
+    border-radius: 3rem;
+    padding: 2rem;
+    
+}
+
+.collection > .img-collection {
+    background-color: #fff;
+    margin: 0 0 2rem 0;
+    padding: 2rem;
+    border: #677 solid 1px;
+    border-radius: 2rem;
+    width: inherit;
+    width: 20rem;
+    height: 20rem;  
+}
+
+.ball-name {
+    color: white;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.price {
+    color: green;
+    text-align: center;
+    font-size: 4rem;
+}
+
+.small-price {
+    color: green;
+    text-align: center;
+    font-size: 2rem;
 }

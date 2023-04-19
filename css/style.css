@@ -11,7 +11,8 @@
 * {
     padding: 0%;
     margin: 0%;
-    font-size: 1vh;
+    /* font-size: 1vh; */
+    font-size: 7px;
 }
 
 @font-face {
@@ -48,4 +49,8 @@ body {
     text-decoration: underline;
     font-weight: bold;
     color: #000;
+}
+
+.limbo {
+    height: 21rem;
 }
