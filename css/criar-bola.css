@@ -45,7 +45,7 @@ label > div > div.radio-bola {
 
 }
 
-label > img{
+label > img {
     padding: 0.5rem;
 }
 
@@ -61,7 +61,7 @@ label > img{
 }
 
 .escolha-criar {
-    width: 76vw;
+    max-width: 1000px;
     background-color: black;
     margin: 10px;
 }
@@ -86,7 +86,7 @@ img.escolha {
     position: sticky;
     top: 20rem;
     height: 1px;
-    margin-bottom: 40rem;
+    bottom: 40rem;
 }
 
 .lateral-criar {
@@ -96,14 +96,14 @@ img.escolha {
     margin: 10px;
     display: flex;
     justify-content: space-around;
-    top: 30rem;
 }
 
-.bola-escolhida {
+.imagem-bola-escolhida {
     width: 15rem;
     height: 15rem;
     background-color: white;
-    margin: 2rem;
+    /* margin: 2rem; */
+    float: left;
 }
 
 .nome-bola {
@@ -133,10 +133,11 @@ img.escolha {
 
 .nome-bola-escolhida{
     width: 30vw;
-    height: 20rem;
+    height: fit-content;
     background-color: gray;
     margin: 3rem;
-    display: flow-root;
+    padding: 2rem;
+    font-size: 3rem;
 }
 
 .progresso-criar-bola{
@@ -144,4 +145,10 @@ img.escolha {
     width: calc(97.5vw - 3px);
     height: 20rem;
     margin: 0 auto;
+}
+
+.place-holder{
+    background-color: white;
+    width: 10rem;
+    height: 10rem;
 }

@@ -31,7 +31,6 @@
 
     header > section.dominant {
         justify-content: center;
-
     }
 }
 
@@ -110,6 +109,10 @@ footer {
     padding: 4rem 0 4rem 0;
     background-color: #ffe44e;
     font-family: DMSans;
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    
 }
 
 form.search-bar > label > div.bar {
@@ -187,7 +190,7 @@ input {
 }
 
 .sub-menu {
-    height: 40px;
+    height: 6rem;
 }
 
 .button-carrossel {
@@ -225,12 +228,19 @@ h1.main-box-title {
     width: 33vh;
 }
 
-.sub-box {
+h1.free-title {
+    font-family: DMSans;
+    color: #fff;
+    font-size: 5vh;
+    text-transform: uppercase;
+}
+
+/* .sub-box {
     justify-content: space-evenly;
     background-color: #1b5555;
     height: 250px;
     width: 50vw;
-    /* gap: 20px; */
+     gap: 20px; 
 }
 
 .sub-box-part {
@@ -243,7 +253,58 @@ h1.main-box-title {
 .sub-box-button-part {
     width: auto;
     height: 100%;
+} */
+
+.collections-carrossel {
+    display: flex;
+    background-color: rgb(141, 108, 108);
+    margin: 0 auto;
+    width: 90%;
 }
+
+.collections-carrossel-button-left {
+    position: absolute;
+    left: 0;
+    background-color: rgb(121, 76, 76);
+    width: 90%;
+}
+
+.collections-carrossel-button-right {
+    position: absolute;
+    right: 0;
+    background-color: rgb(121, 76, 76);
+    width: 90%;
+}
+
+.collections-carrossel-button-left > input[type="button"] + label > .icon {
+    rotate: 90deg;
+}
+
+/* .collections-carrossel-button-left > input[type="button"] + label > .icon {
+    rotate: 90deg;
+} */
+
+.collections-carrossel-button-right > input[type="button"] + label > .icon {
+    rotate: 270deg;
+}
+
+/* .collections-carrossel-button-right > input[type="button"] + label > .icon {
+    rotate: 270deg;
+} */
+
+/* .collections-carrossel-button::before {
+    position: absolute;
+    left: 0;
+    background-color: rgb(121, 76, 76);
+    content: ;
+}
+
+.collections-carrossel-button::after {
+    position: absolute;
+    right: 0;
+    background-color: rgb(121, 76, 76);
+    content: 's';
+} */
 
 .showcase-menu {
     padding: 0 12.5%;
@@ -251,7 +312,7 @@ h1.main-box-title {
     position: relative;
     align-items: center;
     grid-template-columns: 1fr 1fr;
-    height: 85rem;
+    height: calc(100vh - 11rem);
     gap: 10rem;
 }
 
@@ -273,6 +334,12 @@ h1.main-box-title {
 .showcase-subtitle {
     font-size: 2vh;
     text-align: right;
+}
+
+.collections-subtitle {
+    font-size: 2vh;
+    color: #fff;
+    text-transform: uppercase;
 }
 
 .showcase {
@@ -319,30 +386,31 @@ img.big {
 
 .collections-showcase {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
+    gap: 5rem;
+    margin: 10rem 0
 }
 
 .collection-options {
     display: flex;
-    justify-content: space-between;
     flex-wrap: wrap;
-    width: 50%;
+    gap: 2.5rem 5rem;
+    width: 90%;
 }
 
 .collection {
     display: flow-root;
-    background-color: #aaa;
+    background-color: #2e2d2d;
     border-radius: 3rem;
     padding: 2rem;
-    
 }
 
 .collection > .img-collection {
     background-color: #fff;
     margin: 0 0 2rem 0;
     padding: 2rem;
-    border: #677 solid 1px;
+    border: rgb(105, 103, 103) solid 1px;
     border-radius: 2rem;
     width: inherit;
     width: 20rem;
@@ -361,8 +429,32 @@ img.big {
     font-size: 4rem;
 }
 
-.small-price {
-    color: green;
+.price-pro {
+    text-decoration: line-through;
+    color: rgb(206, 75, 35);
     text-align: center;
-    font-size: 2rem;
+    font-size: 2.5rem;
+    font-style: italic;
+}
+
+.price-pro::before {
+    text-decoration: none;
+    color: rgb(206, 75, 35);
+    text-align: center;
+    font-size: 2.5rem;
+    content: "de ";
+    font-style: italic;
+}
+
+.price-pro::after {
+    text-decoration: none;
+    color: rgb(206, 75, 35);
+    text-align: center;
+    font-size: 2.5rem;
+    content: " por";
+    font-style: italic;
+}
+
+.small-price {
+
 }
