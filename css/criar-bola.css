@@ -42,7 +42,6 @@ label > div > div.radio-bola {
     font-size: 10px;
     border-radius: 1rem;
     cursor: pointer;
-
 }
 
 label > img {
@@ -50,20 +49,22 @@ label > img {
 }
 
 
-.bola-escollha-input[type="radio"]:checked + label > div > div.radio-bola{
+.bola-escollha-input[type="radio"]:checked + label > div > div.radio-bola {
     border-color: rgb(18, 177, 18);
     background-color: rgb(18, 177, 18);
     cursor: pointer;
 }
 
-.bola-escollha-input[type="radio"]:checked + label > div > div > svg > path{
+.bola-escollha-input[type="radio"]:checked + label > div > div > svg > path {
     fill: white;
 }
 
 .escolha-criar {
     max-width: 1000px;
-    background-color: black;
+    background-color: #242424;
     margin: 10px;
+    border-radius: 2rem;
+    padding: 1rem;
 }
 
 img.escolha {
@@ -72,6 +73,7 @@ img.escolha {
     width: 25rem;
     /* min-width: 25rem; */
     cursor: pointer;
+    border-radius: 2rem;
 }
 
 .avancar{
@@ -79,6 +81,7 @@ img.escolha {
     width: 23vw;
     height: 10rem;
     margin: 10px;
+    border-radius: 2rem;
 }
 
 .escolha-avancar{
@@ -92,10 +95,11 @@ img.escolha {
 .lateral-criar {
     width: 23vw;
     height: 30.1vw;
-    background-color: black;
+    background-color: #242424;
     margin: 10px;
     display: flex;
     justify-content: space-around;
+    border-radius: 2rem;
 }
 
 .imagem-bola-escolhida {
@@ -104,6 +108,7 @@ img.escolha {
     background-color: white;
     /* margin: 2rem; */
     float: left;
+    border-radius: 2rem;
 }
 
 .nome-bola {
@@ -125,7 +130,7 @@ img.escolha {
     font-size: 4rem;
 }
 
-.price-pequeno {
+.small-price {
     color: green;
     text-align: center;
     font-size: 2rem;
@@ -138,17 +143,35 @@ img.escolha {
     margin: 3rem;
     padding: 2rem;
     font-size: 3rem;
+    border-radius: 2rem;
 }
 
 .progresso-criar-bola{
-    background-color: black;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    align-items: center;
+    gap: 5rem;
+    background-color: #242424;
     width: calc(97.5vw - 3px);
     height: 20rem;
     margin: 0 auto;
+    border-radius: 2rem;
 }
 
-.place-holder{
+.place-holder {
     background-color: white;
     width: 10rem;
     height: 10rem;
+    border-radius: 50%;
+    margin: 0 auto;
 }
+
+/* .progresso-linha{
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+    gap: 5rem;
+    width: calc(97.5vw - 3px);
+
+} */
