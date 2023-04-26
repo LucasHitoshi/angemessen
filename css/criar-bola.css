@@ -15,9 +15,10 @@
     z-index: 2;
 }
 
-li.produtos {
+.principal > li {
     display: inline-block;
 }
+
 
 .pai {
     position: relative;
@@ -46,16 +47,21 @@ label > div > div.radio-bola {
 
 label > img {
     padding: 0.5rem;
+    background-color: white;
+    margin: 1rem;
+    width: 25rem;
+    /* min-width: 25rem; */
+    cursor: pointer;
+    border-radius: 2rem;
 }
 
-
-.bola-escollha-input[type="radio"]:checked + label > div > div.radio-bola {
+li > input[type="radio"]:checked + label > div > div.radio-bola {
     border-color: rgb(18, 177, 18);
     background-color: rgb(18, 177, 18);
     cursor: pointer;
 }
 
-.bola-escollha-input[type="radio"]:checked + label > div > div > svg > path {
+li > input[type="radio"]:checked + label > div > div > svg > path {
     fill: white;
 }
 
@@ -67,14 +73,6 @@ label > img {
     padding: 1rem;
 }
 
-img.escolha {
-    background-color: white;
-    margin: 1rem;
-    width: 25rem;
-    /* min-width: 25rem; */
-    cursor: pointer;
-    border-radius: 2rem;
-}
 
 .avancar{
     background-color: green;
@@ -102,7 +100,7 @@ img.escolha {
     border-radius: 2rem;
 }
 
-.imagem-bola-escolhida {
+.lateral-criar > div > div {
     width: 15rem;
     height: 15rem;
     background-color: white;
@@ -136,7 +134,7 @@ img.escolha {
     font-size: 2rem;
 }
 
-.nome-bola-escolhida{
+.lateral-criar > div{
     width: 30vw;
     height: fit-content;
     background-color: gray;

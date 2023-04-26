@@ -9,6 +9,17 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/pagina-inicial.css">
     <style>
+        @keyframes changeBackgroundColor {
+
+            
+            0%{
+                background-color: #ffd900;
+            }
+            100% {
+                background-color: #e29d07;
+            }
+        }
+
         .box-log{
             align-items: center;
             display: flex;
@@ -16,22 +27,22 @@
             
         }
         body {
-        margin: 0;
-        padding: 0;
-        font-family: DMSans;
-        background-color: #3d3d3d;
+            margin: 0;
+            padding: 0;
+            font-family: DMSans;
+            background-color: #3d3d3d;
         }
 
         .login-container {
-        max-width: 400px;
-        margin: 10rem auto;
-        background-color: #fff;
-        padding: 40px;
-        border-radius: 4px;
-        box-shadow: 10px;
-        align-items: center;
-        display: flex;
-        flex-direction: column;
+            max-width: 400px;
+            margin: 10rem auto;
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 4px;
+            box-shadow: 10px;
+            align-items: center;
+            display: flex;
+            flex-direction: column;
         }
 
         .nsei {
@@ -39,13 +50,37 @@
             flex-direction: column;
             padding: 5px;
             max-width: 200px;
-            font-family: Arial, Helvetica, sans-serif;
+            /* font-family: Arial, Helvetica, sans-serif; */
+            font-family: DMSans;
         }
+        
         .termos-criar-conta > a{
             color: blue;
         }
+        
         .text {
-            font-size: 1.8vh;
+            font-size: 2vh;
+        }
+
+        .box-login{
+            height: 2rem;
+            border: none;
+            border-bottom-style: solid;
+            font-family: DMSans;
+        }
+
+        .button-criar-conta{
+            font-size: 1.9vh;
+            font-size: DMSans;
+            background-color: #ffd900;
+            cursor: pointer;
+            border-radius: 2vh;
+        }
+
+        .button-criar-conta:hover {
+            background-color: #e29d07;
+            animation: changeBackgroundColor;
+            animation-duration: 0.8s;
         }
     </style>
 </head>
@@ -133,24 +168,24 @@
                 </p>
             </a>
             <br>
-            <h1>Entrar</h1>
+            <!-- <h1>Entrar</h1> -->
         </div>
         <div>
             <form action="#" method="POST" class="nsei"><br>
-                <label for="email"><p class="text">Digite um email que deseje utilizar</p></label>
-                <input type="text" id="email" name="email" required><br>
+                <label for="email"><p class="text">Email:</p></label>
+                <input type="text" id="email" name="email" required class="box-login"><br>
 
                 <label for="nome"><p class="text">Nome:</p></label>
-                <input type="text" id="nome" name="Nome" required><br>
+                <input type="text" id="nome" name="Nome" required class="box-login"><br>
                 <label for="sobrenome"><p class="text">Sobrenome:</p></label>
-                <input type="text" id="sobrenome" name="Sobrenome" required><br>
+                <input type="text" id="sobrenome" name="Sobrenome" required class="box-login"><br>
 
-                <label for="password"><p class="text">Escolha sua senha:</p></label>
-                <input type="password" id="password" name="password" required><br>
+                <label for="password"><p class="text">Crie uma senha:</p></label>
+                <input type="password" id="password" name="password" required class="box-login"><br>
                 
 
                 <label for="password"><p class="text">Repita sua senha:</p></label>
-                <input type="password" id="confirm-password" name="password" required><br>
+                <input type="password" id="confirm-password" name="password" required class="box-login"><br>
 
                 <label for=""></label>
 
@@ -166,7 +201,7 @@
                         <a href="">Notificação de Anúncios Baseados em Interesse</a>
                         .
                     </div>
-                <input type="submit" value="Criar conta"> 
+                <input type="submit" value="Criar conta" class="button-criar-conta"> 
             </form>
         </div>
     </div>

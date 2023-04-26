@@ -24,6 +24,22 @@
     }
 }
 
+@keyframes bg-balls {
+    from {
+        filter: blur(2.5rem);
+    } to {
+        filter: blur(0.25rem);
+    }
+}
+
+@keyframes quit-bg-balls {
+    from {
+        filter: blur(0.25rem);
+    } to {
+        filter: blur(2.5rem);
+    }
+}
+
 @media(max-width: 1300px) {
     div.nav-bar {
         display: none;
@@ -236,6 +252,7 @@ h1.free-title {
     font-family: DMSans;
     color: #fff;
     font-size: 5vh;
+    line-height: 92.5%;
     text-transform: uppercase;
 }
 
@@ -384,6 +401,36 @@ img.small {
 img.big {
     width: 50rem;
     height: 25rem;
+}
+
+.background-about-us {
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+    z-index: 10;
+}
+
+.background-about-us > figure {
+    width: 100rem;
+}
+
+.background-about-us > figure > img {
+    filter: blur(2.5rem);
+    width: 100rem;
+}
+
+.background-about-us > figure > img:hover {
+    animation-name: bg-balls;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+}
+
+.background-about-us > figure > img:not(:hover) {
+    animation-name: quit-bg-balls;
+    animation-duration: 0.75s;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
 }
 
 .about-us-1 {

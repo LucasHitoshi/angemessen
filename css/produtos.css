@@ -1,3 +1,17 @@
 .side-bar{
-    width: 5vw;
+    width: 10vw;
+    background-color: #00f;
+    height: calc(100vh - 20rem);
+    margin-right: 5rem;
+}
+
+.produtos{
+    gap: 3rem;
+    max-width: 1200px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.produtos > div{
+    display: inline-block
 }
