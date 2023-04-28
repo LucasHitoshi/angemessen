@@ -58,3 +58,15 @@ h1 {
 .limbo {
     height: 20.2rem;
 }
+
+.price {
+    color: green;
+    text-align: center;
+    font-size: 4rem;
+}
+
+.small-price {
+    color: green;
+    text-align: center;
+    font-size: 2rem;
+}
