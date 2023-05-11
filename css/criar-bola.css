@@ -122,18 +122,6 @@ li > input[type="radio"]:checked + label > div > div > svg > path {
     gap: 10px;
 }
 
-.price {
-    color: green;
-    text-align: center;
-    font-size: 4rem;
-}
-
-.small-price {
-    color: green;
-    text-align: center;
-    font-size: 2rem;
-}
-
 .lateral-criar > div{
     width: 30vw;
     height: fit-content;
