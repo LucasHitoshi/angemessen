@@ -146,7 +146,7 @@ li > input[type="radio"]:checked + label > div > div > svg > path {
 
 .progresso-criar-bola{
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(6, 1fr);
     align-items: center;
     gap: 5rem;
     background-color: #242424;

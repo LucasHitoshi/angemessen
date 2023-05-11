@@ -1,0 +1,30 @@
+.pai{
+    margin: 4rem 0 4rem 12rem;
+}
+
+.img-bola{
+    width: 40rem;
+    background-color: white;
+    border-radius: 2rem;
+}
+
+.img-lateral{
+    height: 40rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-right: 2rem;
+}
+
+.small-img-bola{
+    width: 7rem;
+    background-color: white;
+    border-radius: 1rem;
+    cursor: pointer;
+}
+
+.nome-produto{
+    font-size: 4rem;
+    color: white;
+    margin-left: 2rem;
+}

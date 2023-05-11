@@ -96,6 +96,10 @@ footer > section.recessive {
     background-color: #ffe44e;
 }
 
+.bg-transparent {
+    background-color: transparent;
+}
+
 .link-box {
     height: 100%;
     gap: 0.30rem;
@@ -278,31 +282,20 @@ h1.main-box-title {
 
 h1.free-title {
     font-family: DMSans;
-    color: #fff;
-    font-size: 5vh;
+    color: #ffe44e;
+    font-size: 5rem;
     line-height: 92.5%;
     text-transform: uppercase;
 }
 
-/* .sub-box {
-    justify-content: space-evenly;
-    background-color: #1b5555;
-    height: 250px;
-    width: 50vw;
-     gap: 20px; 
+.sub-free-title {
+    font-family: DMSans;
+    color: #ffd900;
+    font-size: 6rem;
+    font-weight: bold;
+    line-height: 92.5%;
+    text-transform: uppercase;
 }
-
-.sub-box-part {
-    margin: 10px 10px 10px 0;
-    background-color: #56776c;
-    width: 100%;
-    height: 100%;
-}
-
-.sub-box-button-part {
-    width: auto;
-    height: 100%;
-} */
 
 .collections-carrossel {
     display: flex;
@@ -329,31 +322,9 @@ h1.free-title {
     rotate: 90deg;
 }
 
-/* .collections-carrossel-button-left > input[type="button"] + label > .icon {
-    rotate: 90deg;
-} */
-
 .collections-carrossel-button-right > input[type="button"] + label > .icon {
     rotate: 270deg;
 }
-
-/* .collections-carrossel-button-right > input[type="button"] + label > .icon {
-    rotate: 270deg;
-} */
-
-/* .collections-carrossel-button::before {
-    position: absolute;
-    left: 0;
-    background-color: rgb(121, 76, 76);
-    content: ;
-}
-
-.collections-carrossel-button::after {
-    position: absolute;
-    right: 0;
-    background-color: rgb(121, 76, 76);
-    content: 's';
-} */
 
 .showcase-menu {
     padding: 0 12.5%;
@@ -432,13 +403,17 @@ img.big {
 }
 
 .background-about-us {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 5rem;
     position: absolute;
+    margin: 10rem auto;
     z-index: 10;
 }
 
 .background-about-us > figure {
+    display: flex;
     width: 100rem;
 }
 
@@ -463,6 +438,39 @@ img.big {
 
 .about-us-1 {
     height: 160vh;
+    display: flex;
+    justify-content: center;
+}
+
+.about-us-1-content {
+    top: 0;
+    display: flex;
+    gap: 10rem;
+    position: absolute;
+    z-index: 20;
+    text-shadow: 0 2px 0.5rem #000;
+    padding: 27.5rem 0;
+}
+
+.about-us-wrapper > figure {
+    position: absolute;
+    z-index: 10;
+}
+
+.about-us-wrapper > figure > img {
+    height: 70rem;
+}
+
+.about-us-wrapper {
+    top: 0;
+    position: sticky;
+    width: 50%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 10rem 0;
 }
 
 .about-us-box-1 {
@@ -471,18 +479,61 @@ img.big {
     display: flex;
     justify-content: center;
     gap: 15rem;
+    z-index: 20;
 }
 
 .text-about-us-1 {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    text-align: right;
+    width: 50rem;
+}
+
+.text-about-us-2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
     width: 50rem;
 }
 
 .p-about-us-1 {
     font-size: 2rem;
     color: #fff;
+}
+
+.about-us-3 {
+    height: 150vh;
+}
+
+.about-us-3-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.about-us-3-wrapper > figure {
+    
+}
+
+.about-us-3-wrapper > figure > img {
+    height: 70rem;
+}
+
+.about-us-3-wrapper {
+    top: 0;
+    position: sticky;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    gap: 10rem;
+    margin: 10rem 0;
+}
+
+.text-about-us-2 {
+    
 }
 
 .ator-1 {

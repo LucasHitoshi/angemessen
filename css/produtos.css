@@ -1,17 +1,36 @@
-.side-bar{
+.side-bar {
     width: 10vw;
     background-color: #00f;
     height: calc(100vh - 20rem);
     margin-right: 5rem;
 }
 
-.produtos{
-    gap: 3rem;
+.produtos {
+    gap: 6rem;
     max-width: 1200px;
     display: flex;
     flex-wrap: wrap;
+    cursor: pointer;
 }
 
-.produtos > div{
-    display: inline-block
+.produtos > div {
+    display: inline-block;
+}
+
+.img-produto > img {
+    width: 20rem;
+    background-color: white;
+    border-radius: 1rem;
+}
+
+.img-produto {
+    padding: 1rem;
+    background-color: white;
+    border-radius: 1rem;
+}
+
+.showcase {
+    padding: 1rem;
+    background-color: white;
+    border-radius: 1rem;
 }
