@@ -120,6 +120,27 @@ div.link-box:hover > svg.menu-arrow {
     animation-timing-function: ease;
 }
 
+/*
+ * teste de menu drop down
+ */
+
+/* .dropdown-child { 
+    display: none;
+    background-color: skyblue;
+    min-width: 200px;
+}
+
+.dropdown-child a {
+    color: blue;
+    padding: 20px;
+    text-decoration: none;
+    display: block;
+}
+
+.div.link-box:hover .dropdown-child {
+    display: block;
+} */
+
 div.link-box:not(:hover) {
     animation-name: quit-link-box;
     animation-duration: 0.25s;
@@ -446,7 +467,6 @@ img.big {
     top: 0;
     display: flex;
     gap: 10rem;
-    position: absolute;
     z-index: 20;
     text-shadow: 0 2px 0.5rem #000;
     padding: 27.5rem 0;
@@ -458,7 +478,7 @@ img.big {
 }
 
 .about-us-wrapper > figure > img {
-    height: 70rem;
+    height: 70vh;
 }
 
 .about-us-wrapper {
@@ -480,6 +500,11 @@ img.big {
     justify-content: center;
     gap: 15rem;
     z-index: 20;
+}
+
+.about-us-box-1 > figure {
+    height: 90vh;
+    position: relative;
 }
 
 .text-about-us-1 {
@@ -504,17 +529,24 @@ img.big {
 }
 
 .about-us-3 {
-    height: 150vh;
+    background: url("./../img/background/background2.jpg");
+    height: 120vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: repeat;
+    background-size: cover;
 }
 
 .about-us-3-content {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    gap: 10rem;
 }
 
 .about-us-3-wrapper > figure {
-    
+    display: flex;
+    align-items: center;
 }
 
 .about-us-3-wrapper > figure > img {
@@ -533,12 +565,15 @@ img.big {
 }
 
 .text-about-us-2 {
-    
+    display: flex;
+    gap: 1.5rem;
 }
 
 .ator-1 {
     width: 50rem;
     margin: 15rem 0 0 0;
+    position: sticky;
+    bottom: 0;
 }
 
 .collections-showcase {

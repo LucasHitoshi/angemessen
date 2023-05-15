@@ -3,14 +3,19 @@
     background-color: #00f;
     height: calc(100vh - 20rem);
     margin-right: 5rem;
+    margin-top: 2rem;
+    padding: 14px;
+    font-size:16px;
 }
 
 .produtos {
     gap: 6rem;
     max-width: 1200px;
+    height: 50px;
     display: flex;
     flex-wrap: wrap;
     cursor: pointer;
+    margin-top: 2rem;
 }
 
 .produtos > div {
@@ -33,4 +38,10 @@
     padding: 1rem;
     background-color: white;
     border-radius: 1rem;
+}
+
+.nome-produto{
+    color: white;
+    text-align: center;
+    font-size: 18px;
 }
