@@ -156,12 +156,20 @@ div.link-box:not(:hover) > svg.menu-arrow {
 }
 
 .topic-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
     padding: 0 1.5rem 0 1.5rem;
     border-left: #ffd900 solid 5px;
+    height: 15rem;
 }
 
-.topic-box > ul > li {
+
+li {
     list-style: none;
+}
+
+.topic-box > li {
     font-family: DMSans;
     font-size: 2rem;
 }
@@ -176,16 +184,21 @@ a.recessive-header:link, :visited {
 a.footer {
     font-family: DMSans;
     text-decoration: none;
+    font-size: 2rem;
 }
 
 footer {
-    padding: 4rem 0 4rem 0;
+    padding: 4rem 10vw;
     background-color: #ffe44e;
     font-family: DMSans;
     position: absolute;
     z-index: 2;
-    width: 100%;
-    
+    width: 78.72vw;
+}
+
+.footer-container {
+    display: flex;
+    gap: 5vw;
 }
 
 form.search-bar > label > div.bar {
@@ -258,12 +271,94 @@ input {
 }
 
 .svg-arrow {
-    width: 2rem;
-    height: 1.5rem;
+    width: 3rem;
+    height: 2rem;
 }
 
 .sub-menu {
     height: 6rem;
+}
+
+.carousel-wrapper {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.carousel-wrapper > #left-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 10rem;
+    height: 10rem;
+    background-color: #fff;
+    border: #000 solid 1px;
+    border-radius: 5rem;
+    position: absolute;
+    left: 0px;
+    z-index: 20;
+    opacity: 0.5;
+    rotate: 90deg;
+}
+
+.carousel-wrapper > #right-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 10rem;
+    height: 10rem;
+    background-color: #fff;
+    border: #000 solid 1px;
+    border-radius: 5rem;
+    position: absolute;
+    right: 0px;
+    z-index: 20;
+    opacity: 0.5;
+    rotate: 270deg;
+}
+
+.carousel-wrapper > #left-button:hover {
+    opacity: 1;
+}
+
+.carousel-wrapper > #right-button:hover {
+    opacity: 1;
+}
+
+#carousel {
+    margin: 0 auto;
+    position: relative;
+    width: 80vw;
+    aspect-ratio: 10 / 2.5;
+}
+
+#carousel > img {
+    width: 80vw;
+    height: 40vh;
+    vertical-align: top;
+    margin: auto;
+    position: absolute;
+}
+
+#carousel > input {
+    display: none;
+}
+
+#carousel > label {
+    background-color: #fff;
+    width: 3rem;
+    height: 100%;
+    cursor: pointer;
+    position: absolute;
+    z-index: 10;
+    display: block;
+}
+
+.text-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
 }
 
 .button-carrossel {
@@ -275,18 +370,6 @@ input {
     justify-content: center;
     flex-direction: row;
     align-items: center;
-}
-
-.button-carrossel-input[type="checkbox"]:checked + label > div {
-    background-color: #3d3d3d;
-}
-
-.right-button-carrossel {
-    transform: rotate(270deg);
-}
-
-.left-button-carrossel {
-    transform: rotate(90deg);
 }
 
 .main-box {
@@ -424,6 +507,7 @@ img.big {
 }
 
 .background-about-us {
+    height: 100rem;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
@@ -458,9 +542,10 @@ img.big {
 }
 
 .about-us-1 {
-    height: 160vh;
+    height: 100vh;
     display: flex;
     justify-content: center;
+    overflow: hidden;
 }
 
 .about-us-1-content {
@@ -544,6 +629,16 @@ img.big {
     gap: 10rem;
 }
 
+.about-us-3-wrapper {
+    top: 0;
+    position: sticky;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    gap: 10rem;
+}
+
 .about-us-3-wrapper > figure {
     display: flex;
     align-items: center;
@@ -553,15 +648,12 @@ img.big {
     height: 70rem;
 }
 
-.about-us-3-wrapper {
-    top: 0;
-    position: sticky;
-    width: 100%;
-    height: 100vh;
+.about-us-4 {
     display: flex;
-    justify-content: center;
-    gap: 10rem;
-    margin: 10rem 0;
+    flex-direction: column;
+    gap: 5rem;
+    align-items: center;
+    padding: 5rem 0;
 }
 
 .text-about-us-2 {

@@ -9,7 +9,8 @@
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/pagina-inicial.css">
     <link rel="stylesheet" href="./css/crie-bola.css">
-    <script src="./js/script.js" type="text/javascript"></script>
+    <script src="./js/script.js" type="text/javascript" defer></script>
+    <script src="./js/carousel.js" type="text/javascript" defer></script>
 </head>
 <body>
     <header>
@@ -94,30 +95,13 @@
                 </svg>
             </div>
         </section>
-        <!-- <section class="recessive showcase-menu">
-            <div class="showcase-menu-text">
-                <h1 class="showcase-subtitle">
-                    OBSERVE: VOCÊ NUNCA MAIS SERÁ O MESMO
-                </h1>
-                <h1 class="showcase-title">
-                    TESTE DE LAYOUT DE SHOWCASE DA HOMEPAGE
-                </h1>
-                <h1  class="showcase-subtitle">
-                    JÁ OBSERVOU?
-                </h1>
-            </div>
-            <div class="showcase">
-                <div class="small"><img src="./img/bola-futebol.png" alt="" class="showcase-img small"></div>
-                <div class="small"><img src="./img/cilindro-de-basquete.png" alt="" class="showcase-img small"></div>
-                <div class="big"><img src="./img/bola-futebol.png" alt="" class="showcase-img big"></div>
-            </div>
-        </section> -->
     </header>
 
     
-    <main>
+
+    <main class="main-wrapper">
         <section class="main-section about-us-1">
-            <div class="background-about-us">
+            <!-- <div class="background-about-us">
                 <figure class="ball-1">
                     <img src="./img/bola-3d-amarela.png" alt="Bola de fundo" id="ball-1" onload="getRandomBallSize(1)">
                 </figure>
@@ -136,7 +120,7 @@
                 <figure class="ball-6">
                     <img src="./img/bola-3d-amarela.png" alt="Bola de fundo" id="ball-6" onload="getRandomBallSize(6)">
                 </figure>
-            </div>
+            </div> -->
             <div class="about-us-box-1">
                 <div class="text-about-us-1">
                     <h1 class="free-title">
@@ -148,11 +132,11 @@
                     </p>
                 </div>
                 <figure>
-                    <img src="./img/ator-1.png" alt="Ator segurando uma bola" class="ator-1">
+                    <img src="./assets/ator-1.svg" alt="Ator segurando uma bola" class="ator-1">
                 </figure>
             </div>
         </section>
-        <section class="about-us-1">
+        <section class="main-section about-us-1">
             <div class="about-us-wrapper">
                 <figure>
                     <img src="./img/bola-futebol.png" alt="Bola de Futebol">
@@ -179,7 +163,7 @@
                 </div>
             </div>
         </section>
-        <section class="about-us-3">
+        <section class="main-section about-us-3">
             <div class="about-us-3-wrapper">
                 <figure>
                     <img src="./img/bola-futebol.png" alt="Bola de Futebol">
@@ -200,29 +184,6 @@
                 </div>
             </div>
         </section>
-        <!-- <section class="collections-carrossel">
-            <div class="collections-carrossel-button-left">
-                <input type="button" id="left-button">
-                <label for="left-button">
-                    <svg width="20" height="15" class="left-button-carrossel">
-                        <path d="M2 2 L10 11.5 L18 2 L19 3 L10 13.5 L1 3 Z" />
-                    </svg>
-                </label>
-            </div>
-            <div class="carrossel">
-                <div>
-                    a
-                </div>
-            </div>
-            <div class="collections-carrossel-button-right">
-                <input type="button" id="right-button">
-                <label for="right-button">
-                    <svg width="20" height="15" class="left-button-carrossel">
-                        <path d="M2 2 L10 11.5 L18 2 L19 3 L10 13.5 L1 3 Z" />
-                    </svg>
-                </label>
-            </div>
-        </section> -->
         <section class="main-section collections-showcase">
             <div class="inline-flex-container">
                 <h1 class="free-title">
@@ -348,6 +309,29 @@
                 </div>
             </div>
         </section>
+        <section class="main-section about-us-4">
+            <div class="text-box">
+                <h1 class="free-title">
+                    Veja Nossas Coleções
+                </h1>
+                <h1 class="sub-free-title">
+                    Recém Lançadas
+                </h1>
+            </div>
+            <div class="carousel-wrapper">
+                <button id="left-button">
+                    <img src="./assets/arrow.svg" alt="Botão Esquerdo Carrossel" class="svg svg-arrow">
+                </button>
+                <button id="right-button">
+                    <img src="./assets/arrow.svg" alt="Botão Direito Carrossel" class="svg svg-arrow">
+                </button>
+                <ul id="carousel">
+                    <img src="./img/background/background1.jpg" alt="bg-teste" class="carousel-img">
+                    <img src="./img/background/background2.jpg" alt="bg-teste" class="carousel-img">
+                    <img src="./img/background/background3.jpg" alt="bg-teste" class="carousel-img">
+                </ul>
+            </div>
+        </section>
     </main>
 
 
@@ -416,31 +400,25 @@
         </div>
     </div> -->
 
-    <br>
-
-    <footer>
-        <section class="flex-container recessive even" style="overflow: hidden;">
-            <div class="topic-box" style="overflow: auto;">
-                <ul>
-                    <!-- TODO: Implementar links para redes sociais -->
-                    <li><a href="not-found.html"><img src="img/instagram-logo.png" alt="Instagram Angemessen" class="medium-icon"></a>
-                    <li><a href="not-found.html"><img src="img/twitter-logo.png" alt="Twitter Angemessen" class="medium-icon"></a>
-                    <li><a href="not-found.html"><img src="img/youtube-logo.png" alt="YouTube Angemessen" class="medium-icon"></a>
-                    <li><a href="not-found.html"><img src="img/whatsapp-logo.png" alt="Whatsapp Angemessen" class="medium-icon"></a>
-                    <li><a href="not-found.html"><img src="img/facebook-logo.png" alt="Facebook Angemessen" class="medium-icon"></a>
-                </ul>
-            </div>
-            <div class="topic-box" style="overflow: auto;">
-                <ul>
-                    <!-- TODO: Implementar links para páginas de ajuda -->
-                    <li><a href="not-found.html" class="footer">Enfrentando algum problema?</a></li>
-                    <li><a href="not-found.html" class="footer">Possui uma sugestão?</a></li>
-                    <li><a href="not-found.html" class="footer">Encontrou um bug?</a></li>
-                    <li><a href="not-found.html" class="footer">Teve alguma dúvida?</a></li>
-                    <li><a href="not-found.html" class="footer">Deseja acessar o SAC?</a></li>
-                </ul>
-            </div>
-        </section>
+    <footer class="footer-container flex-container recessive">
+        <div class="topic-box" style="overflow: auto;">
+            <ul>
+                <!-- TODO: Implementar links para redes sociais -->
+                <li><a href="not-found.html"><img src="img/instagram-logo.png" alt="Instagram Angemessen" class="medium-icon"></a>
+                <li><a href="not-found.html"><img src="img/twitter-logo.png" alt="Twitter Angemessen" class="medium-icon"></a>
+                <li><a href="not-found.html"><img src="img/youtube-logo.png" alt="YouTube Angemessen" class="medium-icon"></a>
+                <li><a href="not-found.html"><img src="img/whatsapp-logo.png" alt="Whatsapp Angemessen" class="medium-icon"></a>
+                <li><a href="not-found.html"><img src="img/facebook-logo.png" alt="Facebook Angemessen" class="medium-icon"></a>
+            </ul>
+        </div>
+        <ul class="topic-box" style="overflow: auto;">
+            <!-- TODO: Implementar links para páginas de ajuda -->
+            <li><a href="not-found.html" class="footer">Enfrentando algum problema?</a></li>
+            <li><a href="not-found.html" class="footer">Possui uma sugestão?</a></li>
+            <li><a href="not-found.html" class="footer">Encontrou um bug?</a></li>
+            <li><a href="not-found.html" class="footer">Teve alguma dúvida?</a></li>
+            <li><a href="not-found.html" class="footer">Deseja acessar o SAC?</a></li>
+        </ul>
     </footer>
 </body>
 </html>

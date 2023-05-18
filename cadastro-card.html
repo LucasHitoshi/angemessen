@@ -4,21 +4,98 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carrinho</title>
+    <title>Página de Log-In</title>
     <link rel="icon" type="image/x-icon" href="img/favicon.png">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/pagina-inicial.css">
+    <style>
+        @keyframes changeBackgroundColor {
+            0%{
+                background-color: #ffd900;
+            }
+            100% {
+                background-color: #e29d07;
+            }
+        }
+
+        .box-log{
+            align-items: center;
+            display: flex;
+            
+            
+        }
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: DMSans;
+            background-color: #3d3d3d;
+        }
+
+        .login-container {
+            max-width: 60vh;
+            margin: 10rem auto;
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 4px;
+            box-shadow: 10px;
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .nsei {
+            display: flex;
+            flex-direction: column;
+            padding: 5px;
+            max-width: 38vh;
+            /* font-family: Arial, Helvetica, sans-serif; */
+            font-family: DMSans;
+        }
+        
+        .termos-criar-conta > a{
+            color: blue;
+        }
+        
+        .text {
+            font-size: 2vh;
+        }
+
+        .box-login{
+            height: 2rem;
+            border: none;
+            border-bottom-style: solid;
+            font-family: DMSans;
+        }
+
+        .button-criar-conta{
+            font-size: 1.9vh;
+            font-size: DMSans;
+            background-color: #ffd900;
+            cursor: pointer;
+            border-radius: 2vh;
+        }
+
+        .button-criar-conta:hover {
+            background-color: #e29d07;
+            animation: changeBackgroundColor;
+            animation-duration: 0.8s;
+        }
+        
+        .double-check{
+            display: flex;
+        }
+
+        .double-check2{
+            margin-right: 3vh;
+        }
+    </style>
 </head>
 <body>
     <header>
         <section class="flex-container dominant spaced">
             <div class="flex-container centered">
                 <svg width="20px" height="20px" style="margin: 0 10px 0 0" class="centered">
-                    <path d="
-                        M0 0 L20 0 L20 2 L0 2
-                        M0 8.75 L20 8.75 L20 10.75 L0 10.75
-                        M0 18 L20 18 L20 20 L0 20 Z
-                    ">
+                    <path d="M0 0 L20 0 L20 2 L0 2 M0 8.75 L20 8.75 L20 10.75 L0 10.75M0 18 L20 18 L20 20 L0 20 Z" />
                 </svg>
                 <a href="index.html">
                     <p class="logo">
@@ -89,8 +166,70 @@
         </section>
     </header>
     
-    <!-- Implementar JavaScript para mostrar o carrinho do usuário -->
-    <br>
+    <div class="login-container">
+        <div class="login-header">
+            <a href="index.html">
+                <p class="logo">
+                    Angemessen
+                </p>
+            </a>
+            <br>
+            <!-- <h1>Entrar</h1> -->
+        </div>
+        <div>
+            <form action="#" method="POST" class="nsei"><br>
+                <label for="nome"><p class="text">Nome impresso no cartão: </p></label>
+                <input type="text" id="nome" name="Nome" required class="box-login"><br>
+
+                <label for="number"><p class="text">Numero do cartão: </p></label>
+                <input type="number" id="number" name="Number" required class="box-login"><br>
+                
+                <div class="double-check">
+                    <div class="double-check2">
+                        <label for="validade"><p class="text">Validade: </p></label>
+                        <input type="week" id="validade" name="Validade" required class="box-login">
+                    </div>
+                    <div class="double-check2">
+                        <label for="CVV"><p class="text">CVV: </p></label>
+                        <input type="number" id="CVV" name="CVV" required class="box-login">
+                    </div>
+                </div><br>
+
+                <label for="CPF"><p class="text">CPF: </p></label>
+                <input type="CPF" id="CPF" name="CPF" required class="box-login" placeholder="000.000.000-00"><br>
+                
+                <div class="double-check">
+                    <div class="double-check2">
+                        <label for="telefone"><p class="text">telefone:</p></label>
+                        <input type="tel" id="telefone" name="Telefone" required class="box-login" placeholder="(00) 00000-0000">
+                    </div>
+                    <div class="double-check2">
+                        <label for="data-nasc"><p class="text">Data de Nascimento:</p></label>
+                        <input type="date" id="data-nasc" name="Data-nasc" required class="box-login">
+                    </div>
+                </div><br>
+
+                <label for="parcelas"><p class="text">Parcelas: </p></label>
+                <input type="text" id="parcelas" name="Parcelas" required class="box-login"><br>
+
+                <label for=""></label>
+
+                    <div class="termos-criar-conta">
+                        Ao criar uma conta, você concorda com as 
+                        <a href="">Condições de Uso da agemessen</a>
+                        . 
+                        Por favor verifique a 
+                        <a href="">Notificação de Privacidade</a>
+                        , 
+                        <a href="">Notificação de Cookies</a>
+                        e a 
+                        <a href="">Notificação de Anúncios Baseados em Interesse</a>
+                        .
+                    </div>
+                <input type="submit" value="Criar conta" class="button-criar-conta"> 
+            </form>
+        </div>
+    </div>
 
     <footer class="footer-container flex-container recessive">
         <div class="topic-box" style="overflow: auto;">
@@ -114,3 +253,4 @@
     </footer>
 </body>
 </html>
+

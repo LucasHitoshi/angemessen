@@ -109,7 +109,7 @@ li > input[type="radio"]:checked + label > div > div > svg > path {
     border-radius: 2rem;
 }
 
-.nome-bola {
+.nome-bola-escolha {
     color: white;
     text-align: center;
     font-size: 2rem;
