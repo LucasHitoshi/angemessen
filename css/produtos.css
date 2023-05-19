@@ -1,21 +1,23 @@
 .side-bar {
     width: 10vw;
-    background-color: #00f;
+    background-color: #242424;
     height: calc(100vh - 20rem);
     margin-right: 5rem;
     margin-top: 2rem;
     padding: 14px;
     font-size:13px;
+    border-radius: 10px;
+    margin-left: 2rem;
 }
 
-.produtos {
-    gap: 6rem;
-    max-width: 1200px;
-    height: 50px;
+.produto {
+    border-radius: 10px;
+    padding: 14px;
     display: flex;
     flex-wrap: wrap;
     cursor: pointer;
     margin-top: 2rem;
+    background-color: #242424;
 }
 
 .span{
@@ -23,26 +25,34 @@
     font-size: 14px;
 }
 
-.produtos > div {
+/* .showcase > div {
     display: inline-block;
-}
+} */
 
 .img-produto > img {
     width: 20rem;
     background-color: white;
     border-radius: 1rem;
+    cursor: pointer;
 }
 
 .img-produto {
     padding: 1rem;
     background-color: white;
     border-radius: 1rem;
+    cursor: pointer;
 }
 
 .showcase {
-    padding: 1rem;
-    background-color: white;
-    border-radius: 1rem;
+    padding: 14px;
+    width: 1200px;
+    gap: 6rem;
+    margin-top: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #242424;
+    justify-content: space-between;
+    border-radius: 2rem;
 }
 
 .nome-produto{
