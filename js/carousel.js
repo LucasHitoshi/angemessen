@@ -1,6 +1,10 @@
+/** @type {HTMLElement} */
 const carousel = document.getElementById("carousel");
+/** @type {HTMLElement} */
 const carouselLeftButton = document.getElementById("left-button");
+/** @type {HTMLElement} */
 const carouselRightButton = document.getElementById("right-button");
+/** @type {HTMLElement[]} */
 const carouselImages = document.getElementsByClassName("carousel-img");
 var carouselCount = 0;
 

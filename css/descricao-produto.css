@@ -23,8 +23,38 @@
     cursor: pointer;
 }
 
-.nome-produto{
+#ball-information {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+#ball-name {
     font-size: 4rem;
     color: white;
     margin-left: 2rem;
+}
+
+#ball-description {
+    width: 80rem;
+    font-size: 1.75rem;
+    color: white;
+    margin-left: 2rem;
+    line-height: 1.65rem;
+}
+
+#ball-price {
+    font-size: 3.5rem;
+    color: green;
+    margin-left: 2rem;
+}
+
+#ball-price::before {
+    font-size: 2rem;
+    content: "POR ";
+}
+
+#ball-price::after {
+    font-size: 2rem;
+    content: " R$";
 }

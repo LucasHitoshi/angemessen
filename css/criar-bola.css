@@ -74,15 +74,20 @@ li > input[type="radio"]:checked + label > div > div > svg > path {
 }
 
 
-.avancar{
+.button-avancar{
     background-color: green;
     width: 23vw;
     height: 10rem;
     margin: 10px;
     border-radius: 2rem;
+    font-size: 22px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.escolha-avancar{
+.avancar{
     position: -webkit-sticky; /* Safari */
     position: sticky;
     top: 20rem;
@@ -134,7 +139,7 @@ li > input[type="radio"]:checked + label > div > div > svg > path {
 
 .progresso-criar-bola{
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     align-items: center;
     gap: 5rem;
     background-color: #242424;
@@ -161,3 +166,16 @@ li > input[type="radio"]:checked + label > div > div > svg > path {
     width: calc(97.5vw - 3px);
 
 } */
+
+.title-creation {
+    font-size: 28px;
+    color: white;
+    height: calc(10rem + 10px);
+    display: flex;
+    align-items: center;
+    margin-left: 11px;
+}
+
+.next-simbol {
+    width: 30px;
+}

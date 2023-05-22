@@ -30,6 +30,10 @@ body {
     background-color: #141313;
 }
 
+input, option, select {
+    outline: none;
+}
+
 h1 {
     font-weight: normal;
 }

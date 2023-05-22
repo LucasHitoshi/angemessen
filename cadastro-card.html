@@ -67,6 +67,7 @@
             font-family: DMSans;
         }
 
+
         .button-criar-conta{
             font-size: 1.9vh;
             font-size: DMSans;
@@ -88,6 +89,11 @@
         .double-check2{
             margin-right: 3vh;
         }
+
+        .optii{
+            font-size: 2vh;
+        }
+
     </style>
 </head>
 <body>
@@ -190,7 +196,7 @@
                         <input type="week" id="validade" name="Validade" required class="box-login">
                     </div>
                     <div class="double-check2">
-                        <label for="CVV"><p class="text">CVV: </p></label>
+                        <label for="CVV" class="CVV"><p class="text">CVV: </p></label>
                         <input type="number" id="CVV" name="CVV" required class="box-login">
                     </div>
                 </div><br>
@@ -200,7 +206,7 @@
                 
                 <div class="double-check">
                     <div class="double-check2">
-                        <label for="telefone"><p class="text">telefone:</p></label>
+                        <label for="telefone"><p class="text">Telefone:</p></label>
                         <input type="tel" id="telefone" name="Telefone" required class="box-login" placeholder="(00) 00000-0000">
                     </div>
                     <div class="double-check2">
@@ -210,7 +216,21 @@
                 </div><br>
 
                 <label for="parcelas"><p class="text">Parcelas: </p></label>
-                <input type="text" id="parcelas" name="Parcelas" required class="box-login"><br>
+                <!-- <input type="text" id="parcelas" name="Parcelas" required class="box-login"><br> -->
+                    <select name="Parcelas" class="text">
+                        <option class="optii" value="valor1" selected>1x de R$___,__ sem juros</option>
+                        <option class="optii" value="valor2">2x de R$___,__ sem juros</option>
+                        <option class="optii" value="valor3">3x de R$___,__ sem juros</option>
+                        <option class="optii" value="valor4">4x de R$___,__ sem juros</option>
+                        <option class="optii" value="valor5">5x de R$___,__ sem juros</option>
+                        <option class="optii" value="valor6">6x de R$___,__ sem juros</option>
+                        <option class="optii" value="valor7">7x de R$___,__ sem juros</option>
+                        <option class="optii" value="valor8">8x de R$___,__ sem juros</option>
+                        <option class="optii" value="valor9">9x de R$___,__ sem juros</option>
+                        <option class="optii" value="valor10">10x de R$___,__ sem juros</option>
+                        <option class="optii" value="valor11">11x de R$___,__ sem juros</option>
+                        <option class="optii" value="valor12">12x de R$___,__ sem juros</option>
+                    </select>
 
                 <label for=""></label>
 
