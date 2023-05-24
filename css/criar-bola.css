@@ -150,9 +150,9 @@ li > input[type="radio"]:checked + label > div > div > svg > path {
 }
 
 .place-holder {
-    background-color: white;
-    width: 10rem;
-    height: 10rem;
+    background-color: #535353;
+    width: 80px;
+    height: 80px;
     border-radius: 50%;
     margin: 0 auto;
 }
@@ -178,4 +178,23 @@ li > input[type="radio"]:checked + label > div > div > svg > path {
 
 .next-simbol {
     width: 30px;
+}
+
+.showcase-lista{
+    max-width: 1000px;
+    background-color: #242424;
+    margin: 10px;
+    border-radius: 2rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.showcase-cor {
+    width: calc(74.25vw / 3);
+    
+}
+
+.preview {
+    width: 200px;
 }

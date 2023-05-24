@@ -9,6 +9,21 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/pagina-inicial.css">
     <style>
+        @keyframes changeBackgroundColor {
+            0%{
+                background-color: #ffd900;
+            }
+            100% {
+                background-color: #e29d07;
+            }
+        }
+
+        .box-log{
+            align-items: center;
+            display: flex;
+            
+            
+        }
         body {
             margin: 0;
             padding: 0;
@@ -16,18 +31,54 @@
             background-color: #3d3d3d;
         }
 
-        .box-log{
-            align-items: center;
-            display: flex;
-        }
-
         .login-container {
             max-width: 400px;
-            margin: 100px auto;
+            margin: 10rem auto;
             background-color: #fff;
             padding: 40px;
             border-radius: 4px;
             box-shadow: 10px;
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .nsei {
+            display: flex;
+            flex-direction: column;
+            padding: 5px;
+            max-width: 200px;
+            /* font-family: Arial, Helvetica, sans-serif; */
+            font-family: DMSans;
+        }
+        
+        .termos-criar-conta > a{
+            color: blue;
+        }
+        
+        .text {
+            font-size: 2vh;
+        }
+
+        .box-login{
+            height: 2rem;
+            border: none;
+            border-bottom-style: solid;
+            font-family: DMSans;
+        }
+
+        .button-criar-conta{
+            font-size: 1.9vh;
+            font-size: DMSans;
+            background-color: #ffd900;
+            cursor: pointer;
+            border-radius: 2vh;
+        }
+
+        .button-criar-conta:hover {
+            background-color: #e29d07;
+            animation: changeBackgroundColor;
+            animation-duration: 0.8s;
         }
     </style>
 </head>
@@ -44,7 +95,6 @@
                     </p>
                 </a>
             </div>
-            <button></button>
             <div class="flex-container pos-left centered">
                 <!-- TODO: Adicionar conexão (action) com o backend -->
                 <form action="" class="search-bar b-spaced">
@@ -116,25 +166,42 @@
                 </p>
             </a>
             <br>
-            <h1>Entrar</h1>
+            <!-- <h1>Entrar</h1> -->
         </div>
-        <form action="#" method="POST">
-            <label for="email">Endereço de e-mail ou telefone:</label>
-            <input type="text" id="email" name="email" required><br>
-            <label for="password">Senha:</label><br>
-            <input type="password" id="password" name="password" required><br>
-            <a href="#" class="local-link">Problemas com o login?</a><br>
-            <input type="submit" value="Entrar">
-        </form>
-        <p>
-            Novo no Angemessen?
-            <a href="cadastro-conta.html" class="local-link">
-                Crie sua conta aqui.
-            </a>
-            <a href="cadastro-conta2.html" class="local-link">
-                Crie sua conta aqui-teste.
-            </a>
-        </p>
+        <div>
+            <form action="#" method="POST" class="nsei"><br>
+                <label for="email"><p class="text">Email:</p></label>
+                <input type="text" id="email" name="email" required class="box-login"><br>
+
+                <label for="nome"><p class="text">Nome:</p></label>
+                <input type="text" id="nome" name="Nome" required class="box-login"><br>
+                <label for="sobrenome"><p class="text">Sobrenome:</p></label>
+                <input type="text" id="sobrenome" name="Sobrenome" required class="box-login"><br>
+
+                <label for="password"><p class="text">Crie uma senha:</p></label>
+                <input type="password" id="password" name="password" required class="box-login"><br>
+                
+
+                <label for="password"><p class="text">Repita sua senha:</p></label>
+                <input type="password" id="confirm-password" name="password" required class="box-login"><br>
+
+                <label for=""></label>
+
+                    <div class="termos-criar-conta">
+                        Ao criar uma conta, você concorda com as 
+                        <a href="">Condições de Uso da agemessen</a>
+                        . 
+                        Por favor verifique a 
+                        <a href="">Notificação de Privacidade</a>
+                        , 
+                        <a href="">Notificação de Cookies</a>
+                        e a 
+                        <a href="">Notificação de Anúncios Baseados em Interesse</a>
+                        .
+                    </div>
+                <input type="submit" value="Criar conta" class="button-criar-conta"> 
+            </form>
+        </div>
     </div>
 
     <footer class="footer-container flex-container recessive">
@@ -159,3 +226,4 @@
     </footer>
 </body>
 </html>
+

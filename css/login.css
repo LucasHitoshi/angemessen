@@ -1,21 +1,96 @@
-.box-log{
+.box-log {
     align-items: center;
     display: flex;
-    
-    
+
+
 }
+
 body {
-margin: 0;
-padding: 0;
-font-family: DMSans;
-background-color: #3d3d3d;
+    margin: 0;
+    padding: 0;
+    font-family: DMSans;
+    background-color: #3d3d3d;
 }
 
 .login-container {
-max-width: 400px;
-margin: 100px auto;
-background-color: #fff;
-padding: 40px;
-border-radius: 4px;
-box-shadow: 10px;
+    max-width: 400px;
+    margin: 100px auto;
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 4px;
+    box-shadow: 10px;
+}
+
+@keyframes changeBackgroundColor {
+    0% {
+        background-color: #ffd900;
+    }
+
+    100% {
+        background-color: #e29d07;
+    }
+}
+
+.box-log {
+    align-items: center;
+    display: flex;
+
+
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: DMSans;
+    background-color: #3d3d3d;
+}
+
+.login-container {
+    max-width: 400px;
+    margin: 10rem auto;
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 4px;
+    box-shadow: 10px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.nsei {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    max-width: 200px;
+    /* font-family: Arial, Helvetica, sans-serif; */
+    font-family: DMSans;
+}
+
+.termos-criar-conta>a {
+    color: blue;
+}
+
+.text {
+    font-size: 2vh;
+}
+
+.box-login {
+    height: 2rem;
+    border: none;
+    border-bottom-style: solid;
+    font-family: DMSans;
+}
+
+.button-criar-conta {
+    font-size: 1.9vh;
+    font-size: DMSans;
+    background-color: #ffd900;
+    cursor: pointer;
+    border-radius: 2vh;
+}
+
+.button-criar-conta:hover {
+    background-color: #e29d07;
+    animation: changeBackgroundColor;
+    animation-duration: 0.8s;
 }

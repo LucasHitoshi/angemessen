@@ -1,22 +1,25 @@
-.pai{
+.container {
+    display: flex;
+    gap: 3rem;
+    flex-wrap: wrap;
     margin: 4rem 0 4rem 12rem;
 }
 
-.img-bola{
+.img-ball {
     width: 40rem;
+    height: 40rem;
     background-color: white;
     border-radius: 2rem;
 }
 
-.img-lateral{
+.img-lateral {
     height: 40rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin-right: 2rem;
 }
 
-.small-img-bola{
+.small-img-bola {
     width: 7rem;
     background-color: white;
     border-radius: 1rem;
@@ -32,21 +35,18 @@
 #ball-name {
     font-size: 4rem;
     color: white;
-    margin-left: 2rem;
 }
 
 #ball-description {
     width: 80rem;
-    font-size: 1.75rem;
+    font-size: 2.5rem;
     color: white;
-    margin-left: 2rem;
-    line-height: 1.65rem;
+    line-height: 2.5rem;
 }
 
 #ball-price {
     font-size: 3.5rem;
     color: green;
-    margin-left: 2rem;
 }
 
 #ball-price::before {
@@ -57,4 +57,65 @@
 #ball-price::after {
     font-size: 2rem;
     content: " R$";
+}
+
+#stars-classification {
+    display: inline;
+}
+
+#stars-classification > img {
+    width: 1.75rem;
+    height: 1.75rem;
+}
+
+#buy-button {
+    background-color: transparent;
+    border: green solid 1px;
+    border-radius: 3rem;
+    width: 15rem;
+    height: 6rem;
+    color: green;
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+
+#kart-button {
+    background-color: transparent;
+    border: orangered solid 1px;
+    border-radius: 3rem;
+    width: 15rem;
+    height: 6rem;
+    color: orangered;
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+
+#buy-button:hover {
+    background-color: green;
+    color: #ffffff;
+}
+
+#kart-button:hover {
+    background-color: orangered;
+    color: #ffffff;
+}
+
+#ball-specifications {
+    color: #ffffff;
+    border-bottom: #ffffff solid 1px;
+    border-top: #ffffff solid 1px;
+}
+
+#ball-specifications > li {
+    border-bottom: #ffffff solid 1px;
+    border-top: #ffffff solid 1px;
+    padding: 1.25rem 1.5rem;
+}
+
+#ball-specifications > li > h1 {
+    font-size: 3rem;
+} 
+
+#ball-specifications > li > p {
+    font-size: 1.75rem;
 }
