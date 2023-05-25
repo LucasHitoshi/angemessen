@@ -18,6 +18,53 @@
         background-color: white;
     }
 
+    .small-img-bola-carrinho{
+        height: 40px;
+        width: 40px;
+    }
+
+    .itens-carrinho{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .produto-carrinho{
+        margin-left: 4vh;
+    }
+
+    .imagem-bola-carrinho{
+        margin: 2vh;
+    }
+
+    .produto-no-carrinho{
+        display: flex;
+    }
+
+    .descricao-produto-carrinho{
+        margin-top: 2vh;
+    }
+    
+    .jss286 {
+    padding: 0.5rem;
+    padding-top: 0.5rem;
+    padding-right: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-left: 0.5rem;
+    font-size: 2.5rem;
+}
+
+.jss284 {
+    top: 10px;
+    color: #C22820;
+    right: 10px;
+    border: 1px solid lightgray;
+    cursor: pointer;
+    z-index: 1;
+    position: absolute;
+    background: white;
+    border-radius: 50px;
+}
+
 
 </style>
 <body>
@@ -100,6 +147,8 @@
         </section>
     </header>
     
+                                            <!-- Box do carrinho -->
+
     <div class="box-carrinho">
         <div>
             <a href="index.html">
@@ -108,14 +157,36 @@
                 </p>
             </a><br>
         </div>
-        <div class="itens">
-            <div class="produto">
+        <div class="itens-carrinho">
+            <div class="produto-carrinho">
                 <p>Aqui vai ser o nome do produto (to sem ideia de algum produto para colocar aqui).</p>
 
             </div>
+            <div class="produto-no-carrinho">
+                <div class="imagem-bola-carrinho">
+                    <img src="./img/bola-futebol.png" alt="bola de futebol" class="small-img-bola-carrinho">
+                </div>
+                <div class="descricao-produto-carrinho">
+                    descrição do produto
+                </div>
+                <div>
+                    <svg class="MuiSvgIcon-root jss284 jss286" focusable="false" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M16.5 3c-1.74 0-3.41.81-4.5 2.09C10.91 3.81 9.24 3 7.5 3 4.42 3 2 
+                        5.42 2 8.5c0 3.78 3.4 6.86 8.55 11.54L12 21.35l1.45-1.32C18.6 15.36 22 12.28 
+                        22 8.5 22 5.42 19.58 3 16.5 3zm-4.4 15.55l-.1.1-.1-.1C7.14 14.24 4 11.39 4 
+                        8.5 4 6.5 5.5 5 7.5 5c1.54 0 3.04.99 3.57 2.36h1.87C13.46 5.99 14.96 5 16.5 
+                        5c2 0 3.5 1.5 3.5 3.5 0 2.89-3.14 5.74-7.9 10.05z">
+                        </path>
+                    </svg>
+                </div>
+            </div>
+            <button>botao pra alguma coisa</button>
         </div>
     </div>
     
+
+
+
     <!-- Implementar JavaScript para mostrar o carrinho do usuário -->
     <br>
 

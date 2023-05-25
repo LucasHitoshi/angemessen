@@ -31,8 +31,8 @@
 }
 
 label > div > div.radio-bola {
-    top: 0px;
-    right: 0px;
+    top: 0;
+    right: 0;
     width: 3.5rem;
     height: 3.5rem;
     border: solid;
@@ -40,7 +40,7 @@ label > div > div.radio-bola {
     position: none;
     background-color: black;
     color: black;
-    font-size: 10px;
+    font-size: 3.33rem;
     border-radius: 1rem;
     cursor: pointer;
 }
@@ -66,9 +66,9 @@ li > input[type="radio"]:checked + label > div > div > svg > path {
 }
 
 .escolha-criar {
-    max-width: 1000px;
+    max-width: 142.85rem;
     background-color: #242424;
-    margin: 10px;
+    margin: 3.33rem;
     border-radius: 2rem;
     padding: 1rem;
 }
@@ -76,11 +76,11 @@ li > input[type="radio"]:checked + label > div > div > svg > path {
 
 .button-avancar{
     background-color: green;
-    width: 23vw;
+    width: 44.88rem;
     height: 10rem;
-    margin: 10px;
+    margin: 3.33rem;
     border-radius: 2rem;
-    font-size: 22px;
+    font-size: 3.14rem;
     color: white;
     display: flex;
     justify-content: center;
@@ -91,15 +91,15 @@ li > input[type="radio"]:checked + label > div > div > svg > path {
     position: -webkit-sticky; /* Safari */
     position: sticky;
     top: 20rem;
-    height: 1px;
+    height: 0.33rem;
     bottom: 40rem;
 }
 
 .lateral-criar {
-    width: 23vw;
-    height: 30.1vw;
+    width: 44.88rem;
+    height: 58.73rem;
     background-color: #242424;
-    margin: 10px;
+    margin: 3.33rem;
     display: flex;
     justify-content: space-around;
     border-radius: 2rem;
@@ -124,11 +124,11 @@ li > input[type="radio"]:checked + label > div > div > svg > path {
     display: flex;
     cursor: pointer;
     flex-direction: column;
-    gap: 10px;
+    gap: 3.33rem;
 }
 
 .lateral-criar > div{
-    width: 30vw;
+    width: 58.54rem;
     height: fit-content;
     background-color: gray;
     margin: 3rem;
@@ -138,12 +138,13 @@ li > input[type="radio"]:checked + label > div > div > svg > path {
 }
 
 .progresso-criar-bola{
+    /* display: flex; */
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     align-items: center;
     gap: 5rem;
     background-color: #242424;
-    width: calc(97.5vw - 3px);
+    width: calc(190.26rem - 3px);
     height: 20rem;
     margin: 0 auto;
     border-radius: 2rem;
@@ -151,8 +152,8 @@ li > input[type="radio"]:checked + label > div > div > svg > path {
 
 .place-holder {
     background-color: #535353;
-    width: 80px;
-    height: 80px;
+    width: 11.42rem;
+    height: 11.42rem;
     border-radius: 50%;
     margin: 0 auto;
 }
@@ -168,33 +169,123 @@ li > input[type="radio"]:checked + label > div > div > svg > path {
 } */
 
 .title-creation {
-    font-size: 28px;
+    font-size: 4rem;
     color: white;
-    height: calc(10rem + 10px);
+    height: calc(10rem + 3.33rem);
     display: flex;
     align-items: center;
-    margin-left: 11px;
+    margin-left: 3.33rem;
 }
 
 .next-simbol {
-    width: 30px;
+    width: 4.28rem;
 }
 
-.showcase-lista{
-    max-width: 1000px;
+/* .option-wrapper {
+    border-radius: 2rem;
+} */
+
+.main-wrapper {
+    display: flex;
+    gap: 1.75rem;
+}
+
+.template-cor {
+    display: flex;
+    gap: 5rem;
+}
+
+.showcase-icon-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.showcase-cor {
+    /* width: calc((74.25vw / 3) - 2.3333rem);  */
+    width: min-content;
+    display: flex;
+    flex-direction: column;
+    gap: 3.33rem;
+    padding: 2rem;
+    border: #ffe44e solid 1px;
+    border-radius: 1.5rem;
+}
+
+.preview {
+    width: 28.57rem;
+}
+
+.template-cor {
+    border-radius: 2rem;
+    display: flex;
+    margin: 0 0 3.33rem 3.33rem;
+}
+
+.title-cor {
+    background-color: #ffe44e;
+    border-radius: 1rem;
+    width: 28.57rem;
+    color: #242424;
+    font-size: 2.85rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title-cor-recessive {
+    width: 28.57rem;
+    color: white;
+    font-size: 1.42rem;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+.space {
+    width: 28.57rem;
+    height: 28.57rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 3rem;
+}
+
+#color-picker { 
+    width: 28.57rem;
+    height: 18.57rem;
+}
+
+.bola-plana {
+    width: 28.57rem;
+}
+
+.select {
+    
+    width: 34rem;
+    /* width: calc((74.25vw / 3) - 2.3333rem);  */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3.33rem;
+    background-color: #ffe44e;
+    border-radius: 1rem;
+}
+
+.showcase-final{
+    width: calc(195rem - 60.64rem);
+    height: 40rem;
     background-color: #242424;
-    margin: 10px;
+    margin: 3.33rem;
     border-radius: 2rem;
     padding: 1rem;
     display: flex;
     flex-direction: column;
+    gap: 4rem;
 }
 
-.showcase-cor {
-    width: calc(74.25vw / 3);
-    
-}
-
-.preview {
-    width: 200px;
+.text-final {
+    color: white;
+    font-size: 2.5rem;
 }

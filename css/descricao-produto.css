@@ -6,6 +6,7 @@
 }
 
 .img-ball {
+    cursor: pointer;
     width: 40rem;
     height: 40rem;
     background-color: white;
@@ -29,7 +30,7 @@
 #ball-information {
     display: flex;
     flex-direction: column;
-    gap: 1.25rem;
+    gap: 1.75rem;
 }
 
 #ball-name {
@@ -44,7 +45,76 @@
     line-height: 2.5rem;
 }
 
+.interaction-menu {
+    display: flex;
+    gap: 2rem;
+}
+
+.numeric-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.interaction-buttons {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.prices {
+    display: flex;
+    flex-direction: column;
+    /* gap: 0.5rem; */
+}
+
+#old-ball-price {
+    font-weight: 500;
+    font-size: 2.5rem;
+    color: red;
+}
+
+#old-ball-price::before {
+    font-size: 1.25rem;
+    content: "DE ";
+}
+
+#old-ball-price::after {
+    font-size: 1.25rem;
+    content: " R$";
+}
+
+#stars-classification {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+#stars-classification > ul {
+    display: flex;
+    gap: 0.3rem;
+}
+
+#stars-classification > ul > li {
+    cursor: pointer;
+    width: 2rem;
+    height: 2rem;   
+    background-color: #ffcc00;
+    border-radius: 1rem;
+}
+
+#qnt-classifications {
+    position: relative;
+    top: 0.1rem;
+    font-size: 1.5rem;
+    color: #ffffff;
+}
+
+#qnt-classifications::after {
+    content: " avaliações";
+}
+
 #ball-price {
+    font-weight: 600;
     font-size: 3.5rem;
     color: green;
 }
@@ -59,16 +129,8 @@
     content: " R$";
 }
 
-#stars-classification {
-    display: inline;
-}
-
-#stars-classification > img {
-    width: 1.75rem;
-    height: 1.75rem;
-}
-
 #buy-button {
+    cursor: pointer;
     background-color: transparent;
     border: green solid 1px;
     border-radius: 3rem;
@@ -80,6 +142,7 @@
 }
 
 #kart-button {
+    cursor: pointer;
     background-color: transparent;
     border: orangered solid 1px;
     border-radius: 3rem;

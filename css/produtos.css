@@ -4,15 +4,15 @@
     height: calc(100vh - 20rem);
     margin-right: 5rem;
     margin-top: 2rem;
-    padding: 14px;
-    font-size:13px;
-    border-radius: 10px;
+    padding: 2rem;
+    font-size: 1.85rem;
+    border-radius: 1.42rem;
     margin-left: 2rem;
 }
 
 .produto {
-    border-radius: 10px;
-    padding: 14px;
+    border-radius: 1.42rem;
+    padding: 2rem;
     display: flex;
     flex-wrap: wrap;
     cursor: pointer;
@@ -22,7 +22,7 @@
 
 .span{
     color: white;
-    font-size: 14px;
+    font-size: 2rem;
 }
 
 /* .showcase > div {
@@ -44,8 +44,8 @@
 }
 
 .showcase {
-    padding: 14px;
-    width: 1200px;
+    padding: 2rem;
+    width: 171.42rem;
     gap: 6rem;
     margin-top: 2rem;
     display: flex;
@@ -58,5 +58,5 @@
 .nome-produto{
     color: white;
     text-align: center;
-    font-size: 18px;
+    font-size: 2.57rem;
 }
