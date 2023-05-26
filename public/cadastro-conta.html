@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>. 
+<head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,11 +8,8 @@
     <link rel="icon" type="image/x-icon" href="img/favicon.png">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/pagina-inicial.css">
-    <link rel="stylesheet" href="css/login.css">
     <style>
         @keyframes changeBackgroundColor {
-
-            
             0%{
                 background-color: #ffd900;
             }
@@ -83,14 +80,6 @@
             animation: changeBackgroundColor;
             animation-duration: 0.8s;
         }
-        
-        .criar-cont-link{
-            display: flex;
-            height: 2vh;
-            width: 15vh;
-            background-color: black;
-
-        }
     </style>
 </head>
 <body>
@@ -135,18 +124,9 @@
         <!-- TODO: Implementar links para outras páginas -->
         <section class="flex-container recessive centered even">
             <div class="link-box centered">
-                <button>
                 <a href="not-found.html" class="recessive-header">
                     Crie
                 </a>
-                </button>
-                <div class="dropdown-child">
-                    <a href="http://wwww.yourdomain.com/page1.html">Sub Menu 1</a>
-                    <a href="http://wwww.yourdomain.com/page2.html">Sub Menu 2</a>
-                    <a href="http://wwww.yourdomain.com/page3.html">Sub Menu 3</a>
-                    <a href="http://wwww.yourdomain.com/page4.html">Sub Menu 4</a>
-                    <a href="http://wwww.yourdomain.com/page5.html">Sub Menu 5</a>
-                  </div>
                 <svg width="20" height="15" class="svg menu-arrow">
                     <path d="M2 2 L10 11.5 L18 2 L19 3 L10 13.5 L1 3 Z" />
                 </svg>
@@ -188,14 +168,22 @@
             <br>
             <!-- <h1>Entrar</h1> -->
         </div>
-
         <div>
-            <form action="#" method="POST" class="nsei"><br>
-                <label for="email"><p class="text">Email ou telefone:</p></label>
+            <form action="sign" method="POST" class="nsei"><br>
+                <label for="email"><p class="text">Email:</p></label>
                 <input type="text" id="email" name="email" required class="box-login"><br>
 
-                <label for="password"><p class="text">Senha:</p></label>
+                <label for="nome"><p class="text">Nome:</p></label>
+                <input type="text" id="nome" name="Nome" required class="box-login"><br>
+                <label for="sobrenome"><p class="text">Sobrenome:</p></label>
+                <input type="text" id="sobrenome" name="Sobrenome" required class="box-login"><br>
+
+                <label for="password"><p class="text">Crie uma senha:</p></label>
                 <input type="password" id="password" name="password" required class="box-login"><br>
+                
+
+                <label for="password"><p class="text">Repita sua senha:</p></label>
+                <input type="password" id="confirm_password" name="password" required class="box-login"><br>
 
                 <label for=""></label>
 
@@ -211,12 +199,8 @@
                         <a href="">Notificação de Anúncios Baseados em Interesse</a>
                         .
                     </div>
-
-                <input type="submit" value="Entrar" class="button-criar-conta">
+                <input type="submit" value="Criar conta" class="button-criar-conta"> 
             </form>
-
-            <a href="cadastro-conta.html" style="color: blue;">Não tenho uma conta.</a>
-
         </div>
     </div>
 
@@ -242,3 +226,4 @@
     </footer>
 </body>
 </html>
+

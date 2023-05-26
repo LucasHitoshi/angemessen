@@ -1,4 +1,9 @@
-# Ignorando a demonstração de assets + svg do Matheus
-assets/teste.svg
-# Ignorando testes
-*/*.teste.*
+# git anotado
+#
+# Função: Arquivo de configuração de conexão com o banco de dados
+# Motivo: Contém credenciais de acesso ao banco de dados no Atlas
+config/connection.js
+#
+# Função: Guardar os arquivos das dependências
+# Motivo: Não é necessário enviar a pasta, pois quem clonar o repositório pode instalar por conta própria
+node_modules/*
