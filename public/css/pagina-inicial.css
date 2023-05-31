@@ -276,52 +276,60 @@ input {
 }
 
 .svg-arrow {
-    width: 3rem;
-    height: 2rem;
+    width: 21px;
+    height: 14px;
 }
 
 .sub-menu {
-    height: 6rem;
+    height: 42px;
 }
 
 .carousel-wrapper {
     display: flex;
     align-items: center;
     position: relative;
+    cursor: pointer;
+    width: 1466px;
 }
 
 .carousel-wrapper > #left-button {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 10rem;
-    height: 10rem;
+    width: 42px;
+    height: 42px;
     background-color: #fff;
     margin: 1.5rem;
-    border: #000 solid 1px;
-    border-radius: 5rem;
+    /* border: #000 solid 1px; */
+    border-radius: 35px;
+    /* background-color: rgba(0, 0, 0, 0); */
+    border-color: rgba(0, 0, 0, 0);
     position: absolute;
     left: 0px;
     z-index: 20;
     opacity: 0.5;
     rotate: 90deg;
+    cursor: pointer;
 }
 
 .carousel-wrapper > #right-button {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 10rem;
-    height: 10rem;
+    width: 42px;
+    height: 42px;
     background-color: #fff;
     margin: 1.5rem;
-    border: #000 solid 1px;
-    border-radius: 5rem;
+    /* border: #000 solid 1px; */
+    border-radius: 35px;
+    /* background-color: rgba(0, 0, 0, 0); */
+    border-color: rgba(0, 0, 0, 0);
     position: absolute;
     right: 0px;
     z-index: 20;
     opacity: 0.5;
     rotate: 270deg;
+    cursor: pointer;
 }
 
 .carousel-wrapper > #left-button:hover {
@@ -333,17 +341,17 @@ input {
 }
 
 #carousel {
-    margin: 0 auto;
+    /* margin: 0 auto; */
     position: relative;
     width: 80vw;
+    height: 320px;
     aspect-ratio: 10 / 2.5;
 }
 
 #carousel > img {
-    width: 80vw;
-    height: 40vh;
+    width: 1349px;
+    height: 320px;
     vertical-align: top;
-    margin: auto;
     position: absolute;
 }
 
@@ -651,10 +659,11 @@ img.big {
 
 .about-us-4 {
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column; */
     gap: 5rem;
     align-items: center;
-    padding: 5rem 0;
+    /* padding: 5rem 0; */
+    
 }
 
 .text-about-us-2 {
@@ -738,4 +747,12 @@ img.big {
     font-size: 2.5rem;
     content: " por";
     font-style: italic;
+}
+
+.showcase-index {
+    width: 1300px;
+    height: 1000px;
+    background-color: #242424;
+    border-radius: 10px;
+    margin: 21px;
 }

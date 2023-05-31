@@ -12,19 +12,19 @@
     
 </head>
 <body>
-    <header class="container">
-        <section class="flex-container dominant spaced centered">
-            <div class="flex-container centered">
-                <svg width="20px" height="18px" style="margin: 0 10px 0 0" class="centered">
-                    <path d="M0 0 L20 0 L20 2 L0 2 M0 8 L20 8 L20 10 L0 10 M0 16 L20 16 L20 18 L0 18 Z" />
+    <header>
+        <section class="flex-container dominant centered">
+            <div class="flex-container centered gapped">
+                <svg viewbox="0 0 20 18" xmlns="http://www.w3.org/2000/svg" class="centered svg-hamburguer">
+                    <path d="M0 0 L20 0 L20 2 L0 2 M0 8 L20 8 L20 10 L0 10 M0 16 L20 16 L20 18 L0 18 Z"/>
                 </svg>
-                <a href="index.html">
+                <a href="/">
                     <p class="logo">
                         Angemessen
                     </p>
                 </a>
             </div>
-            <div class="flex-container pos-left centered">
+            <div class="flex-container pos-left centered nav-bar gapped">
                 <!-- TODO: Adicionar conexão (action) com o backend -->
                 <form action="" class="search-bar b-spaced">
                     <label for="search">
@@ -36,8 +36,8 @@
                         </div>
                     </label>
                 </form>
-                <div class="flex-container">
-                    <!-- Trocar a imagem do carrinho, colocar algo mais simples mais clean :)-->
+                <div class="flex-container icon-box gapped">
+                    <!-- TODO: Trocar a imagem do carrinho, colocar algo mais simples mais clean :) -->
                     <div class="s-spaced">
                         <a href="carrinho.html">
                             <img src="img/market-cart-icon.png" alt="Carrinho" class="medium-icon">
@@ -54,7 +54,7 @@
         <!-- TODO: Implementar links para outras páginas -->
         <section class="flex-container recessive sub-menu even">
             <div class="link-box centered">
-                <a href="crie-bola.html" class="recessive-header">
+                <a href="create.html" class="recessive-header">
                     Crie
                 </a>
                 <svg viewbox="0 0 19 13.5" xmlns="http://www.w3.org/2000/svg" class="svg svg-arrow menu-arrow">
@@ -79,15 +79,15 @@
             </div>
             <div class="link-box centered">
                 <a href="not-found.html" class="recessive-header">
-                    Sobre Nós
+                    Promoções
                 </a>
                 <svg viewbox="0 0 19 13.5" xmlns="http://www.w3.org/2000/svg" class="svg svg-arrow menu-arrow">
                     <path d="M2 2 L10 11.5 L18 2 L19 3 L10 13.5 L1 3 Z" />
                 </svg>
             </div>
             <div class="link-box centered">
-                <a href="not-found.html" class="recessive-header">
-                    Promoções
+                <a href="aboutus.html" class="recessive-header">
+                    Sobre Nós
                 </a>
                 <svg viewbox="0 0 19 13.5" xmlns="http://www.w3.org/2000/svg" class="svg svg-arrow menu-arrow">
                     <path d="M2 2 L10 11.5 L18 2 L19 3 L10 13.5 L1 3 Z" />
@@ -98,8 +98,8 @@
     <div class="limbo"></div>
     <div>
         <div class="progresso-criar-bola">
-            <a href="../crie-bola.html"><div class="place-holder" style="background-color: #ffe44e;"></div></a>
-            <a href="crie-bola-material.html"><div class="place-holder" style="background-color: #ffe44e;"></div></a>
+            <a href="../create.html"><div class="place-holder" style="background-color: #ffe44e;"></div></a>
+            <a href="create-material.html"><div class="place-holder" style="background-color: #ffe44e;"></div></a>
             <div class="place-holder" style="background-color: #ffd900;"></div>
             <div class="place-holder"></div>
             <div class="place-holder"></div>
@@ -231,7 +231,7 @@
                 </ul>
             </div>
         </div>
-        <a href="crie-bola-cor.html"><div class="avancar">
+        <a href="create-cor.html"><div class="avancar">
             <div class="button-avancar"><img src="./assets/seta-avancar.svg" class="next-simbol">AVANÇAR
             </div></a>
             <div class="lateral-criar">

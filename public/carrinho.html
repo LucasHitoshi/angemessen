@@ -43,6 +43,20 @@
     .descricao-produto-carrinho{
         margin-top: 2vh;
     }
+
+    .favorite-icon-carrinho1{
+        display: flex;
+        flex-direction: row-reverse;
+        margin-right: 3vh;
+        margin-bottom: 1vh;
+    }
+
+    .favorite-icon-carrinho2{
+        background-color: red;
+        width: 3vh;
+        height: 3vh;
+
+    }
     
     .jss286 {
     padding: 0.5rem;
@@ -69,22 +83,18 @@
 </style>
 <body>
     <header>
-        <section class="flex-container dominant spaced">
-            <div class="flex-container centered">
-                <svg width="20px" height="20px" style="margin: 0 10px 0 0" class="centered">
-                    <path d="
-                        M0 0 L20 0 L20 2 L0 2
-                        M0 8.75 L20 8.75 L20 10.75 L0 10.75
-                        M0 18 L20 18 L20 20 L0 20 Z
-                    ">
+        <section class="flex-container dominant centered">
+            <div class="flex-container centered gapped">
+                <svg viewbox="0 0 20 18" xmlns="http://www.w3.org/2000/svg" class="centered svg-hamburguer">
+                    <path d="M0 0 L20 0 L20 2 L0 2 M0 8 L20 8 L20 10 L0 10 M0 16 L20 16 L20 18 L0 18 Z"/>
                 </svg>
-                <a href="index.html">
+                <a href="/">
                     <p class="logo">
                         Angemessen
                     </p>
                 </a>
             </div>
-            <div class="flex-container pos-left centered">
+            <div class="flex-container pos-left centered nav-bar gapped">
                 <!-- TODO: Adicionar conexão (action) com o backend -->
                 <form action="" class="search-bar b-spaced">
                     <label for="search">
@@ -96,7 +106,8 @@
                         </div>
                     </label>
                 </form>
-                <div class="flex-container">
+                <div class="flex-container icon-box gapped">
+                    <!-- TODO: Trocar a imagem do carrinho, colocar algo mais simples mais clean :) -->
                     <div class="s-spaced">
                         <a href="carrinho.html">
                             <img src="img/market-cart-icon.png" alt="Carrinho" class="medium-icon">
@@ -111,12 +122,12 @@
             </div>
         </section>
         <!-- TODO: Implementar links para outras páginas -->
-        <section class="flex-container recessive centered even">
+        <section class="flex-container recessive sub-menu even">
             <div class="link-box centered">
-                <a href="not-found.html" class="recessive-header">
+                <a href="create.html" class="recessive-header">
                     Crie
                 </a>
-                <svg width="20" height="15" class="svg menu-arrow">
+                <svg viewbox="0 0 19 13.5" xmlns="http://www.w3.org/2000/svg" class="svg svg-arrow menu-arrow">
                     <path d="M2 2 L10 11.5 L18 2 L19 3 L10 13.5 L1 3 Z" />
                 </svg>
             </div>
@@ -124,23 +135,31 @@
                 <a href="not-found.html" class="recessive-header">
                     Coleções
                 </a>
-                <svg width="20" height="15" class="svg menu-arrow">
+                <svg viewbox="0 0 19 13.5" xmlns="http://www.w3.org/2000/svg" class="svg svg-arrow menu-arrow">
                     <path d="M2 2 L10 11.5 L18 2 L19 3 L10 13.5 L1 3 Z" />
                 </svg>
             </div>
             <div class="link-box centered">
-                <a href="not-found.html" class="recessive-header">
+                <a href="produtos.html" class="recessive-header">
                     Produtos
                 </a>
-                <svg width="20" height="15" class="svg menu-arrow">
+                <svg viewbox="0 0 19 13.5" xmlns="http://www.w3.org/2000/svg" class="svg svg-arrow menu-arrow">
                     <path d="M2 2 L10 11.5 L18 2 L19 3 L10 13.5 L1 3 Z" />
                 </svg>
             </div>
             <div class="link-box centered">
                 <a href="not-found.html" class="recessive-header">
+                    Promoções
+                </a>
+                <svg viewbox="0 0 19 13.5" xmlns="http://www.w3.org/2000/svg" class="svg svg-arrow menu-arrow">
+                    <path d="M2 2 L10 11.5 L18 2 L19 3 L10 13.5 L1 3 Z" />
+                </svg>
+            </div>
+            <div class="link-box centered">
+                <a href="aboutus.html" class="recessive-header">
                     Sobre Nós
                 </a>
-                <svg width="20" height="15" class="svg menu-arrow">
+                <svg viewbox="0 0 19 13.5" xmlns="http://www.w3.org/2000/svg" class="svg svg-arrow menu-arrow">
                     <path d="M2 2 L10 11.5 L18 2 L19 3 L10 13.5 L1 3 Z" />
                 </svg>
             </div>
@@ -169,8 +188,13 @@
                 <div class="descricao-produto-carrinho">
                     descrição do produto
                 </div>
-                <div class="svg-favorite-icon-carrinho">
-                    <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="2vh" height="2vh"
+            </div>
+            <div class="favorite-icon-carrinho1">
+                <!-- <button> -->
+
+                    <img src="./img/fav-icon-back.png" alt="coracaocarrinho" class="favorite-icon-carrinho2">
+
+                    <!-- <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="2vh" height="2vh"
                         viewBox="0 0 512.0 512.0" preserveAspectRatio="xMidYMid meet">
 
                         <g transform="translate(0.0,512.0) scale(0.1,-0.1)" fill="#0"
@@ -187,8 +211,8 @@
                             -1171 -1015 -1180 -1015 -10 0 -952 811 -1180 1015 -715 641 -997 1041 -1065
                             1510 -44 303 19 629 172 886 230 387 678 599 1109 524z" />
                         </g>
-                    </svg>
-                </div>
+                    </svg> -->
+                <!-- </button> -->
             </div>
             <button>botao pra alguma coisa</button>
         </div>

@@ -12,19 +12,19 @@
     
 </head>
 <body>
-    <header class="container">
-        <section class="flex-container dominant spaced centered">
-            <div class="flex-container centered">
-                <svg width="20px" height="18px" style="margin: 0 10px 0 0" class="centered">
-                    <path d="M0 0 L20 0 L20 2 L0 2 M0 8 L20 8 L20 10 L0 10 M0 16 L20 16 L20 18 L0 18 Z" />
+    <header>
+        <section class="flex-container dominant centered">
+            <div class="flex-container centered gapped">
+                <svg viewbox="0 0 20 18" xmlns="http://www.w3.org/2000/svg" class="centered svg-hamburguer">
+                    <path d="M0 0 L20 0 L20 2 L0 2 M0 8 L20 8 L20 10 L0 10 M0 16 L20 16 L20 18 L0 18 Z"/>
                 </svg>
-                <a href="index.html">
+                <a href="/">
                     <p class="logo">
                         Angemessen
                     </p>
                 </a>
             </div>
-            <div class="flex-container pos-left centered">
+            <div class="flex-container pos-left centered nav-bar gapped">
                 <!-- TODO: Adicionar conexão (action) com o backend -->
                 <form action="" class="search-bar b-spaced">
                     <label for="search">
@@ -36,8 +36,8 @@
                         </div>
                     </label>
                 </form>
-                <div class="flex-container">
-                    <!-- Trocar a imagem do carrinho, colocar algo mais simples mais clean :)-->
+                <div class="flex-container icon-box gapped">
+                    <!-- TODO: Trocar a imagem do carrinho, colocar algo mais simples mais clean :) -->
                     <div class="s-spaced">
                         <a href="carrinho.html">
                             <img src="img/market-cart-icon.png" alt="Carrinho" class="medium-icon">
@@ -54,7 +54,7 @@
         <!-- TODO: Implementar links para outras páginas -->
         <section class="flex-container recessive sub-menu even">
             <div class="link-box centered">
-                <a href="crie-bola.html" class="recessive-header">
+                <a href="create.html" class="recessive-header">
                     Crie
                 </a>
                 <svg viewbox="0 0 19 13.5" xmlns="http://www.w3.org/2000/svg" class="svg svg-arrow menu-arrow">
@@ -79,15 +79,15 @@
             </div>
             <div class="link-box centered">
                 <a href="not-found.html" class="recessive-header">
-                    Sobre Nós
+                    Promoções
                 </a>
                 <svg viewbox="0 0 19 13.5" xmlns="http://www.w3.org/2000/svg" class="svg svg-arrow menu-arrow">
                     <path d="M2 2 L10 11.5 L18 2 L19 3 L10 13.5 L1 3 Z" />
                 </svg>
             </div>
             <div class="link-box centered">
-                <a href="not-found.html" class="recessive-header">
-                    Promoções
+                <a href="aboutus.html" class="recessive-header">
+                    Sobre Nós
                 </a>
                 <svg viewbox="0 0 19 13.5" xmlns="http://www.w3.org/2000/svg" class="svg svg-arrow menu-arrow">
                     <path d="M2 2 L10 11.5 L18 2 L19 3 L10 13.5 L1 3 Z" />
@@ -98,11 +98,11 @@
     <div class="limbo"></div>
     <div>
         <div class="progresso-criar-bola">
-            <a href="../crie-bola.html"><div class="place-holder" style="background-color: #ffe44e;"></div></a>
-            <a href="crie-bola-material.html"><div class="place-holder" style="background-color: #ffe44e;"></div></a>
-            <a href="crie-bola-gomos.html"><div class="place-holder" style="background-color: #ffe44e;"></div></a>
-            <a href="crie-bola-cor.html"><div class="place-holder" style="background-color: #ffe44e;"></div></a>
+            <a href="../create.html"><div class="place-holder" style="background-color: #ffe44e;"></div></a>
+            <a href="create-material.html"><div class="place-holder" style="background-color: #ffe44e;"></div></a>
+            <a href="create-gomos.html"><div class="place-holder" style="background-color: #ffe44e;"></div></a>
             <div class="place-holder" style="background-color: #ffd900;"></div>
+            <div class="place-holder"></div>
         </div>
         <div class="progresso-linha">
             <svg viewBox="83.621 55.172 225.862 0.862" xmlns="http://www.w3.org/2000/svg">
@@ -115,71 +115,82 @@
                 <rect x="83.621" y="55.172" width="225.862" height="0.862" style="fill: #ffe44e; stroke: #ffe44e;"/>
             </svg>
             <svg viewBox="83.621 55.172 225.862 0.862" xmlns="http://www.w3.org/2000/svg">
-                <rect x="83.621" y="55.172" width="225.862" height="0.862" style="fill: #ffe44e; stroke: #ffe44e"/>
+                <rect x="83.621" y="55.172" width="225.862" height="0.862" style="fill: #535353; stroke: #535353;"/>
             </svg>
         </div>
     </div>
 
-
-    <div class="flex-container">
+    
+    <div class="main-wrapper">
         <div class="option-wrapper">
             <div class="title-creation">
-                Revisão
+                Cor
             </div>
+            <div class="template-cor">
+                <div class="showcase-icon-container">
+                    <div class="showcase-cor"> <!--Preview da bola-->
+                        <div class="title-cor">Preview</div>
+                        <img src="./../img/mano.png" alt="preview" class="preview">
+                    </div>
+                    
+                    <div class="showcase-cor"> <!--Upload de imagem e selecionador de cor-->
+                        <div>
+                            <div class="title-cor">Upload de imagem</div>
+                            <div class="title-cor-recessive">.png .jpg .jpeg</div>
+                            <div class="space">Arraste aqui</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="select"> <!--Selecionador de gomo-->
+                    <div class="title-cor">Selecionar</div>
+                    <img src="./../assets/bola-planificada.svg" alt="" class="bola-plana">
 
-            <div class="showcase-final">
-                <div class="text-final"> <!--Esporte-->
-                    Bola de futebol
-                </div>
-                    
-                <div class="text-final"> <!--Tamanho-->
-                    Médio
-                </div>
-                    
-                <div class="text-final"> <!--Material-->
-                    Couro
-                </div>
-                    
-                <div class="text-final"> <!--Gomos-->
-                    Pentágonos e Hexágonos
+                    <div class="title-cor">Cores</div>
+                    <input type="color" name="ball-color" id="color-picker">
                 </div>
             </div>
-
         </div>
-    
-        <a href="../carrinho.html"><div class="avancar">
-        <div class="button-avancar"><img src="./assets/seta-avancar.svg" class="next-simbol">Finalizar
-        </div></a>
-        <div class="lateral-criar">
-            <div id="nome-bola">
-                nome bola
-                <div id="imagem-bola">imagem Bola</div>
+        
+        <a href="create-final.html">
+            <div class="avancar">
+                <div class="button-avancar">
+                    <img src="./../assets/seta-avancar.svg" class="next-simbol">
+                    AVANÇAR
+                </div>
+            </a>
+            <div class="lateral-criar">
+                <div id="nome-bola">
+                    nome bola
+                    <div id="imagem-bola">
+                        imagem Bola
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-</div>
-
-
+    
     <footer class="footer-container flex-container recessive">
         <div class="topic-box" style="overflow: auto;">
             <ul>
                 <!-- TODO: Implementar links para redes sociais -->
-                <li><a href="not-found.html"><img src="img/instagram-logo.png" alt="Instagram Angemessen" class="medium-icon"></a>
-                <li><a href="not-found.html"><img src="img/twitter-logo.png" alt="Twitter Angemessen" class="medium-icon"></a>
-                <li><a href="not-found.html"><img src="img/youtube-logo.png" alt="YouTube Angemessen" class="medium-icon"></a>
-                <li><a href="not-found.html"><img src="img/whatsapp-logo.png" alt="Whatsapp Angemessen" class="medium-icon"></a>
-                <li><a href="not-found.html"><img src="img/facebook-logo.png" alt="Facebook Angemessen" class="medium-icon"></a>
-            </ul>
-        </div>
-        <ul class="topic-box" style="overflow: auto;">
-            <!-- TODO: Implementar links para páginas de ajuda -->
-            <li><a href="not-found.html" class="footer">Enfrentando algum problema?</a></li>
-            <li><a href="not-found.html" class="footer">Possui uma sugestão?</a></li>
-            <li><a href="not-found.html" class="footer">Encontrou um bug?</a></li>
-            <li><a href="not-found.html" class="footer">Teve alguma dúvida?</a></li>
-            <li><a href="not-found.html" class="footer">Deseja acessar o SAC?</a></li>
-        </ul>
-    </footer>
-    <div class="limbo"></div>
-</body>
-</html>
+                <li><a href="not-found.html"><img src="./../img/instagram-logo.png" alt="Instagram Angemessen" class="medium-icon"></a>
+                    <li><a href="not-found.html"><img src="./../img/twitter-logo.png" alt="Twitter Angemessen" class="medium-icon"></a>
+                        <li><a href="not-found.html"><img src="./../img/youtube-logo.png" alt="YouTube Angemessen" class="medium-icon"></a>
+                            <li><a href="not-found.html"><img src="./../img/whatsapp-logo.png" alt="Whatsapp Angemessen" class="medium-icon"></a>
+                                <li><a href="not-found.html"><img src="./../img/facebook-logo.png" alt="Facebook Angemessen" class="medium-icon"></a>
+                                </ul>
+                            </div>
+                            <ul class="topic-box" style="overflow: auto;">
+                                <!-- TODO: Implementar links para páginas de ajuda -->
+                                <li><a href="not-found.html" class="footer">Enfrentando algum problema?</a></li>
+                                <li><a href="not-found.html" class="footer">Possui uma sugestão?</a></li>
+                                <li><a href="not-found.html" class="footer">Encontrou um bug?</a></li>
+                                <li><a href="not-found.html" class="footer">Teve alguma dúvida?</a></li>
+                                <li><a href="not-found.html" class="footer">Deseja acessar o SAC?</a></li>
+                            </ul>
+                        </footer>
+                        <div class="limbo"></div>
+                    </body>
+                    </html>
+                    

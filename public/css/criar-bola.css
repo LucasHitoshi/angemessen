@@ -68,7 +68,7 @@ li > input[type="radio"]:checked + label > div > div > svg > path {
 .escolha-criar {
     max-width: 142.85rem;
     background-color: #242424;
-    margin: 3.33rem;
+    margin: 0 21px 0 21px;
     border-radius: 2rem;
     padding: 1rem;
 }
@@ -77,8 +77,8 @@ li > input[type="radio"]:checked + label > div > div > svg > path {
 .button-avancar{
     background-color: green;
     width: 44.88rem;
-    height: 10rem;
-    margin: 3.33rem;
+    height: 70px;
+    /* margin: 21px 21px 0 21px; */
     border-radius: 2rem;
     font-size: 3.14rem;
     color: white;
@@ -90,16 +90,20 @@ li > input[type="radio"]:checked + label > div > div > svg > path {
 .avancar{
     position: -webkit-sticky; /* Safari */
     position: sticky;
-    top: 20rem;
-    height: 0.33rem;
-    bottom: 40rem;
+    top: 20px;
+    height: 481.11px;
+    bottom: 20rem;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    margin: 21px;
+    gap: 10.5px;
 }
 
 .lateral-criar {
-    width: 44.88rem;
-    height: 58.73rem;
+    width: 314.16px;
+    height: 411.11px;
     background-color: #242424;
-    margin: 3.33rem;
     display: flex;
     justify-content: space-around;
     border-radius: 2rem;
@@ -171,10 +175,10 @@ li > input[type="radio"]:checked + label > div > div > svg > path {
 .title-creation {
     font-size: 4rem;
     color: white;
-    height: calc(10rem + 3.33rem);
+    height: 100px;
     display: flex;
     align-items: center;
-    margin-left: 3.33rem;
+    margin-left: 21px;
 }
 
 .next-simbol {
