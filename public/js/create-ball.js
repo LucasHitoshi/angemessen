@@ -11,4 +11,8 @@ var ballConfig = {
     tamanho: undefined
 }
 
+function next(){
+    
+}
+
 
