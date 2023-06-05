@@ -686,6 +686,10 @@ img.big {
     padding: 10rem;
 }
 
+.collection-titles {
+    
+}
+
 .collection-options {
     display: flex;
     flex-wrap: wrap;
@@ -756,3 +760,30 @@ img.big {
     border-radius: 10px;
     margin: 21px;
 }
+
+.hidden {
+    opacity: 0;
+    transition: all 2.5s;
+    filter: blur(5px);
+    /* transform: translateX(-100%); */
+}
+
+.hidden-left {
+    opacity: 0;
+    transition: all 2.5s;
+    transform: translateX(-100%);
+}
+
+.hidden-right {
+    opacity: 0;
+    transition: all 2.5s;
+    transform: translateX(100%);
+}
+
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+
+

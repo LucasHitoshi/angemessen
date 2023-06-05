@@ -1,13 +1,16 @@
 .side-bar {
-    width: 10vw;
+    width: 40rem;
     background-color: #242424;
     height: calc(100vh - 20rem);
     margin-right: 5rem;
     margin-top: 2rem;
-    padding: 2rem;
+    padding: 2.5rem;
     font-size: 1.85rem;
     border-radius: 1.42rem;
     margin-left: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.65rem;
 }
 
 .produto {
@@ -20,9 +23,31 @@
     background-color: #242424;
 }
 
+.filter-checkbox {
+    display: none;
+}
+
+.filter-checkbox-label {
+    display: inline-block;
+    border: white solid 2px;
+    border-radius: 0.85rem;
+    background-color: #fff;
+    width: 1.7rem;
+    height: 1.7rem;
+}
+
+.filter-checkbox-label:checked {
+    background-color: #242424;
+}
+
+.filter-title {
+    color: white;
+    font-size: 3rem;
+}
+
 .span{
     color: white;
-    font-size: 2rem;
+    font-size: 1.9rem;
 }
 
 /* .showcase > div {

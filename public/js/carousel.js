@@ -11,10 +11,12 @@ var carouselCount = 0;
 carouselLeftButton.addEventListener("click", () => {
     if (carouselCount === 0) return;
     carouselCount--;
+    console.log(carouselCount);
 });
 
 carouselRightButton.addEventListener("click", () => {
     if (carouselCount === carouselImages.length - 1) return;
+    console.log(carouselCount);
     carouselCount++;
 });
 

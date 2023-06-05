@@ -85,6 +85,7 @@ li > input[type="radio"]:checked + label > div > div > svg > path {
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 }
 
 .avancar{
@@ -171,6 +172,10 @@ li > input[type="radio"]:checked + label > div > div > svg > path {
     width: calc(97.5vw - 3px);
 
 } */
+
+.create{
+    display: none;
+}
 
 .title-creation {
     font-size: 4rem;

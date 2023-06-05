@@ -51,11 +51,14 @@
         margin-bottom: 1vh;
     }
 
-    .favorite-icon-carrinho2{
-        background-color: red;
+    #favorite-icon-carrinho21{
+        background-color: none;
         width: 3vh;
         height: 3vh;
+    }
 
+    .liked{
+        background-color: red;
     }
     
     .jss286 {
@@ -78,9 +81,16 @@
     background: white;
     border-radius: 50px;
 }
-
-
 </style>
+
+<script>
+    let favicon = document.getElementById('favorite-icon-carrinho21');
+
+    favicon.addEventListener('click', function() {
+        favicon.classList.add("liked")
+    });
+</script>
+
 <body>
     <header>
         <section class="flex-container dominant centered">
@@ -191,10 +201,10 @@
             </div>
             <div class="favorite-icon-carrinho1">
                 <!-- <button> -->
+                    <img src="./img/fav-icon-back.png" alt="coracaocarrinho" id="favorite-icon-carrinho21">
+                    <!-- <img src="./img/fav-icon.png" alt="coracaocarrinho" class="favorite-icon-carrinho21"> -->
 
-                    <img src="./img/fav-icon-back.png" alt="coracaocarrinho" class="favorite-icon-carrinho2">
-
-                    <!-- <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="2vh" height="2vh"
+                    <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="2vh" height="2vh"
                         viewBox="0 0 512.0 512.0" preserveAspectRatio="xMidYMid meet">
 
                         <g transform="translate(0.0,512.0) scale(0.1,-0.1)" fill="#0"
@@ -211,8 +221,8 @@
                             -1171 -1015 -1180 -1015 -10 0 -952 811 -1180 1015 -715 641 -997 1041 -1065
                             1510 -44 303 19 629 172 886 230 387 678 599 1109 524z" />
                         </g>
-                    </svg> -->
-                <!-- </button> -->
+                    </svg>
+                    <!-- </button>
             </div>
             <button>botao pra alguma coisa</button>
         </div>
