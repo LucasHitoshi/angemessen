@@ -9,7 +9,8 @@ const connection = require("./config/connection");
 const produtosRouter = require("./src/routes/products");
 const aboutUsRouter = require("./src/routes/aboutus");
 const productDescRouter = require("./src/routes/product-description");
-const notFoundRouter = require("./src/routes/404")
+const notFoundRouter = require("./src/routes/404");
+const cartRouter = require("./src/routes/cart");
 const app = require("./src/apps/app");
 const port = 3000;
 
@@ -25,6 +26,7 @@ app.use(produtosRouter);
 app.use(aboutUsRouter);
 app.use(productDescRouter);
 app.use(notFoundRouter);
+app.use(cartRouter);
 
 app.listen(port, () => {
     console.log(`SERVIDOR DE PÉ NA PORTA ${port}.\n`);

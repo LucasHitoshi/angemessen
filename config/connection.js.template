@@ -1,19 +1,16 @@
 const mongoose = require("mongoose");
 const { exit } = require("process");
 const connectionString = "<YOUR_CONNECTION_STRING>";
-var connection
 
 try {
-    connection = mongoose.connect(connectionString).then(
-        (connection) => {
-            console.log("CONECTAMOS COM SUCESSO AO MONGO\n");
-            return connection;
-        }
-    );
+    mongoose.connect(connectionString);
 } catch (error) {
     console.log(error);
     exit(1);
+} finnaly {
+    mongoose.connection.once("open", () => {
+        console.log("CONECTADO AO MONGO COM SUCESSO");
+    })
 }
 
-
-module.exports = connection;
+module.exports = mongoose.connection;

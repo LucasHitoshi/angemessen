@@ -713,6 +713,7 @@ img.big {
     width: inherit;
     width: 20rem;
     height: 20rem;  
+    cursor: pointer;
 }
 
 .ball-name {
