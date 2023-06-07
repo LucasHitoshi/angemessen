@@ -11,84 +11,82 @@
 </head>
 <style>
 
-    .box-carrinho{
-        margin: 0 auto;
-        width: 80vh;
+    .bloco-carrinho-geral{
+        justify-content: center;
+        display: block;
         height: auto;
-        background-color: white;
+        display: flex;
+        margin-top: 2vh;
+        
     }
 
-    .small-img-bola-carrinho{
-        height: 40px;
-        width: 40px;
-    }
-
-    .itens-carrinho{
+    .bloco-items-cupom{
         display: flex;
         flex-direction: column;
+        margin-right: 2vh;
+        background-color: white;
+        width: 65%;
+        height: auto;
+        font-family: DMSans;
     }
 
-    .produto-carrinho{
-        margin-left: 4vh;
-    }
-
-    .imagem-bola-carrinho{
-        margin: 2vh;
-    }
-
-    .produto-no-carrinho{
+    .items-carrinho{
         display: flex;
-    }
-
-    .descricao-produto-carrinho{
-        margin-top: 2vh;
-    }
-
-    .favorite-icon-carrinho1{
-        display: flex;
-        flex-direction: row-reverse;
-        margin-right: 3vh;
-        margin-bottom: 1vh;
-    }
-
-    #favorite-icon-carrinho21{
-        background-color: none;
-        width: 3vh;
-        height: 3vh;
-    }
-
-    .liked{
+        flex-direction: column;
+        align-items: center;
+        max-height: 78vh;
+        margin: 1vh;
         background-color: red;
     }
-    
-    .jss286 {
-    padding: 0.5rem;
-    padding-top: 0.5rem;
-    padding-right: 0.5rem;
-    padding-bottom: 0.5rem;
-    padding-left: 0.5rem;
-    font-size: 2.5rem;
-}
 
-.jss284 {
-    top: 10px;
-    color: #C22820;
-    right: 10px;
-    border: 1px solid lightgray;
-    cursor: pointer;
-    z-index: 1;
-    position: absolute;
-    background: white;
-    border-radius: 50px;
-}
+    .cupom-desconto-carrinho{
+        margin: 1vh;
+        background-color: green;
+    }
+
+    .resumo-total-itens{
+        margin-left: 2vh;
+        background-color: blue;
+        width: 25%;
+    }
+
+    .item-carrinho-{
+        max-height: 15vh;
+        min-height: 15vh;
+    }
+
+    .aplicar-cupom{
+        margin: 1vh;
+        margin-left: 2vh;
+        font-size: 2rem;
+        padding: 3px;
+    }
+
+    .cupom-title{
+        font-size: 3rem;
+        margin-left: 1vh;
+        color: white;
+    }
+
+    .cupom-txt{
+        font-size: 2vh;
+        padding: 3px;
+    }
+
+    .title-resumo{
+        display: flex;
+        font-size: 4.2rem;
+        justify-content: center;
+        color: white;
+    }
+        
+
+
+
 </style>
 
 <script>
-    let favicon = document.getElementById('favorite-icon-carrinho21');
-
-    favicon.addEventListener('click', function() {
-        favicon.classList.add("liked")
-    });
+    
 </script>
 
 <body>
@@ -178,53 +176,30 @@
     
                                             <!-- Box do carrinho -->
 
-    <div class="box-carrinho">
-        <div>
-            <a href="index.html">
-                <p class="logo">
-                    Angemessen
-                </p>
-            </a><br>
+
+    <div class="bloco-carrinho-geral">a
+        <div class="bloco-items-cupom">b
+            <div class="items-carrinho">c
+                <div class="item-carrinho-">1</div>
+                <div class="item-carrinho-">2</div>
+                <div class="item-carrinho-">3</div>
+                <div class="item-carrinho-">4</div>
+                <div class="item-carrinho-">5</div>
+                <div class="item-carrinho-">6</div>
+                <div class="item-carrinho-">7</div>
+                <div class="item-carrinho-">8</div>
+            </div>
+            <div class="cupom-desconto-carrinho">
+                <p class="cupom-title">Cupom de desconto: </p>
+                <div class="aplicar-cupom-form">
+                    <button class="aplicar-cupom">Aplicar</button>
+                    <input type="text" class="cupom-txt" id="cupom" name="Cupom" placeholder="Cupom">
+                </div>
+            </div>
+
         </div>
-        <div class="itens-carrinho">
-            <div class="produto-carrinho">
-                <p>Aqui vai ser o nome do produto (to sem ideia de algum produto para colocar aqui).</p>
-
-            </div>
-            <div class="produto-no-carrinho">
-                <div class="imagem-bola-carrinho">
-                    <img src="./img/bola-futebol.png" alt="bola de futebol" class="small-img-bola-carrinho">
-                </div>
-                <div class="descricao-produto-carrinho">
-                    descrição do produto
-                </div>
-            </div>
-            <div class="favorite-icon-carrinho1">
-                <!-- <button> -->
-                    <img src="./img/fav-icon-back.png" alt="coracaocarrinho" id="favorite-icon-carrinho21">
-                    <!-- <img src="./img/fav-icon.png" alt="coracaocarrinho" class="favorite-icon-carrinho21"> -->
-
-                    <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="2vh" height="2vh"
-                        viewBox="0 0 512.0 512.0" preserveAspectRatio="xMidYMid meet">
-
-                        <g transform="translate(0.0,512.0) scale(0.1,-0.1)" fill="#0"
-                            stroke="none">
-                            <path d="M1262 4830 c-319 -40 -586 -171 -812 -399 -203 -204 -325 -420 -395
-                            -701 -124 -487 -34 -967 264 -1418 191 -289 438 -554 891 -958 288 -257 1167
-                            -1007 1210 -1032 40 -24 55 -27 140 -27 85 0 100 3 140 27 43 25 924 776 1210
-                            1032 455 406 700 670 891 958 298 451 388 931 264 1418 -70 281 -192 497 -395
-                            701 -202 203 -418 320 -701 380 -142 30 -404 33 -528 5 -346 -75 -611 -248
-                            -853 -556 l-28 -35 -27 35 c-239 302 -500 475 -833 551 -99 23 -327 33 -438
-                            19z m334 -305 c284 -50 529 -214 723 -485 33 -47 74 -103 90 -126 74 -104 228
-                            -104 302 0 16 23 57 79 90 126 265 370 634 544 1036 489 446 -61 794 -373 927
-                            -832 105 -363 59 -744 -132 -1087 -160 -287 -427 -588 -892 -1005 -225 -201
-                            -1171 -1015 -1180 -1015 -10 0 -952 811 -1180 1015 -715 641 -997 1041 -1065
-                            1510 -44 303 19 629 172 886 230 387 678 599 1109 524z" />
-                        </g>
-                    </svg>
-                    <!-- </button>
-            </div>
-            <button>botao pra alguma coisa</button>
+        <div class="resumo-total-itens">
+            <p class="title-resumo">Resumo</p>
         </div>
     </div>
     

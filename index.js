@@ -11,6 +11,7 @@ const aboutUsRouter = require("./src/routes/aboutus");
 const productDescRouter = require("./src/routes/product-description");
 const notFoundRouter = require("./src/routes/404");
 const cartRouter = require("./src/routes/cart");
+const imagesApiRouter = require("./src/api/images");
 const app = require("./src/apps/app");
 const port = 3000;
 
@@ -27,6 +28,7 @@ app.use(aboutUsRouter);
 app.use(productDescRouter);
 app.use(notFoundRouter);
 app.use(cartRouter);
+app.use(imagesApiRouter);
 
 app.listen(port, () => {
     console.log(`SERVIDOR DE PÉ NA PORTA ${port}.\n`);

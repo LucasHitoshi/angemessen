@@ -1,16 +1,21 @@
+.main-wrapper {
+    display: flex;
+}
+
 .side-bar {
-    width: 40rem;
+    width: fit-content;
     background-color: #242424;
-    height: calc(100vh - 20rem);
+    /* height: calc(100vh - 20rem); */
+    height: fit-content;
     margin-right: 5rem;
     margin-top: 2rem;
-    padding: 2.5rem;
+    padding: 2.5rem 4rem;
     font-size: 1.85rem;
     border-radius: 1.42rem;
     margin-left: 2rem;
     display: flex;
     flex-direction: column;
-    gap: 0.65rem;
+    gap: 1.5rem;
 }
 
 .produto {
@@ -28,15 +33,23 @@
 }
 
 .filter-checkbox-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.2rem;
+}
+
+.filter-checkbox-label > figure {
     display: inline-block;
+    align-items: center;
     border: white solid 2px;
     border-radius: 0.85rem;
     background-color: #fff;
     width: 1.7rem;
     height: 1.7rem;
+    transition: all 0.125s;
 }
 
-.filter-checkbox-label:checked {
+.filter-checkbox:checked + .filter-checkbox-label > figure {
     background-color: #242424;
 }
 
@@ -45,7 +58,7 @@
     font-size: 3rem;
 }
 
-.span{
+.span {
     color: white;
     font-size: 1.9rem;
 }
@@ -71,6 +84,9 @@
 .showcase {
     padding: 2rem;
     width: 171.42rem;
+    min-width: 800px;
+    max-height: 1100px;
+    overflow: hidden;
     gap: 6rem;
     margin-top: 2rem;
     display: flex;

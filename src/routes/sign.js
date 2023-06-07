@@ -2,16 +2,7 @@ const path = require("path");
 const express = require("express");
 const signRouter = express.Router();
 const userModel = require("./../database/models/user");
-
-const validatePassword = (
-    /** @type {string} */ password,
-    /** @type {string} */ confirmedPassword
-) => {
-    if (password.length < 6) return false;
-    if (password === password.toLowerCase()) return false;
-    if (password === password.toUpperCase()) return false;
-    return password === confirmedPassword;
-}
+const validatePassword = require("./../validation/password");
 
 signRouter.post("/sign", async (req, res) => {
     try {
@@ -29,12 +20,3 @@ signRouter.post("/sign", async (req, res) => {
 });
 
 module.exports = signRouter;
-
-
-
-"MANo" === "MANo".toLocaleLowerCase(); // false
-"MANo" === "MANo".toLocaleUpperCase(); // false
-
-
-
-

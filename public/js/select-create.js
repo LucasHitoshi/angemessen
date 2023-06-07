@@ -5,7 +5,3 @@ for (const /** @type {HTMLInputElement} */ checkbox of checkboxes) {
         "faz algo ai galaio";
     }
 }
-
-function escolha() {
-    
-}
