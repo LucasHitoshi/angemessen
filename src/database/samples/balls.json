@@ -1,0 +1,37 @@
+[
+    {
+        "tipo": "futebol",
+        "material": "couro",
+        "tamanho": "",
+        "preco": 0,
+        "imagem": "/api/images?ball_type=random"
+    },
+    {
+        "tipo": "basquete",
+        "material": "couro",
+        "tamanho": "",
+        "preco": 0,
+        "imagem": "/api/images?ball_type=random"
+    },
+    {
+        "tipo": "volei",
+        "material": "plástico",
+        "tamanho": "",
+        "preco": 0,
+        "imagem": "/api/images?ball_type=random"
+    },
+    {
+        "tipo": "golfe",
+        "material": "plástico",
+        "tamanho": "",
+        "preco": 0,
+        "imagem": "/api/images?ball_type=random"
+    },
+    {
+        "tipo": "bocha",
+        "material": "cerâmica",
+        "tamanho": "",
+        "preco": 0,
+        "imagem": "/api/images?ball_type=random"
+    }
+]

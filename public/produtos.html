@@ -9,7 +9,8 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/pagina-inicial.css">
     <link rel="stylesheet" href="css/produtos.css">
-    
+    <script src="./js/product-generator.js" defer></script>
+    <script src="./js/product-filter.js" defer></script>
 </head>
 <body>
     <header>
@@ -103,10 +104,25 @@
                 FILTROS
             </h1>
             <div class="filter">
+                <label for="search-product">
+                    <div class="filter-title">
+                        Pesquisar
+                    </div>
+                </label>
+                <input type="text" name="search-product" id="search-product">
+            </div>
+            <div class="filter">
                 <h1 class="filter-title">
                     Esporte
                 </h1>
                 <ul>
+                    <li>
+                        <input type="radio" name="sport_filter" class="filter-checkbox" id="all_sports" checked>
+                        <label for="all_sports" class="filter-checkbox-label">
+                            <figure></figure>
+                            <span class="span">Todos</span>
+                        </label>
+                    </li>
                     <li>
                         <input type="radio" name="sport_filter" class="filter-checkbox" id="basquete">
                         <label for="basquete" class="filter-checkbox-label">
@@ -129,8 +145,8 @@
                         </label>
                     </li>
                     <li>
-                        <input type="radio" name="sport_filter" class="filter-checkbox" id="voleibol">
-                        <label for="voleibol" class="filter-checkbox-label">
+                        <input type="radio" name="sport_filter" class="filter-checkbox" id="volei">
+                        <label for="volei" class="filter-checkbox-label">
                             <figure></figure>
                             <span class="span">Voleibol</span>
                         </label>
@@ -143,6 +159,13 @@
                 </h1>
                 <ul>
                     <li>
+                        <input type="radio" name="material_filter" class="filter-checkbox" id="all_materials" checked>
+                        <label for="all_materials" class="filter-checkbox-label">
+                            <figure></figure>
+                            <span class="span">Todos</span>
+                        </label>
+                    </li>
+                    <li>
                         <input type="radio" name="material_filter" class="filter-checkbox" id="couro">
                         <label for="couro" class="filter-checkbox-label">
                             <figure></figure>
@@ -150,8 +173,8 @@
                         </label>
                     </li>
                     <li>
-                        <input type="radio" name="material_filter" class="filter-checkbox" id="plastico">
-                        <label for="plastico" class="filter-checkbox-label">
+                        <input type="radio" name="material_filter" class="filter-checkbox" id="plástico">
+                        <label for="plástico" class="filter-checkbox-label">
                             <figure></figure>
                             <span class="span">Plástico</span>
                         </label>
@@ -177,6 +200,13 @@
                     Marcas
                 </h1>
                 <ul>
+                    <li>
+                        <input type="radio" name="brand_filter" class="filter-checkbox" id="all_brands" checked>
+                        <label for="all_brands" class="filter-checkbox-label">
+                            <figure></figure>
+                            <span class="span">Todas</span>
+                        </label>
+                    </li>
                     <li>
                         <input type="radio" name="brand_filter" class="filter-checkbox" id="angemessen">
                         <label for="angemessen" class="filter-checkbox-label">
@@ -210,158 +240,29 @@
         </div>
 
         <div class="showcase">
-            <div>
-                <div class="img-produto">
-                    <img src="./api/images?ball_type=random" alt="" class="">
-                </div>
-                <div class="nome-produto">Bola de futebol</div>
+            <div id="product-card-template" class="product-card hide-product">
+                <div class="product-sport"></div>
+                <a href="#" class="to-product-page">
+                    <div href="" class="img-produto">
+                        <img src="" alt="" class="product-image">
+                    </div>
+                </a>
+                <div class="nome-produto"></div>
+                <div class="product-material"></div>
+                <div class="product-brand"></div>
                 <div>
-                    <div class="small-price">à vista</div>
-                    <div class="price">R&#36;39,99</div>
+                    <div class="small-price">à vista:</div>
+                    <div class="price"></div>
                 </div>
             </div>
-            <div>
-                <div class="img-produto">
-                    <img src="./api/images?ball_type=random" alt="" class="">
-                </div>
-                <div class="nome-produto">Bola de futebol</div>
-                <div>
-                    <div class="small-price">à vista</div>
-                    <div class="price">R&#36;39,99</div>
-                </div>
-            </div>
-            <div>
-                <div class="img-produto">
-                    <img src="./api/images?ball_type=random" alt="" class="">
-                </div>
-                <div class="nome-produto">Bola de futebol</div>
-                <div>
-                    <div class="small-price">à vista</div>
-                    <div class="price">R&#36;39,99</div>
-                </div>
-            </div>
-            <div>
-                <div class="img-produto">
-                    <img src="./api/images?ball_type=random" alt="" class="">
-                </div>
-                <div class="nome-produto">Bola de futebol</div>
-                <div>
-                    <div class="small-price">à vista</div>
-                    <div class="price">R&#36;39,99</div>
-                </div>
-            </div>
-            <div>
-                <div class="img-produto">
-                    <img src="./api/images?ball_type=random" alt="" class="">
-                </div>
-                <div class="nome-produto">Bola de futebol</div>
-                <div>
-                    <div class="small-price">à vista</div>
-                    <div class="price">R&#36;39,99</div>
-                </div>
-            </div>
-            <div>
-                <div class="img-produto">
-                    <img src="./api/images?ball_type=random" alt="" class="">
-                </div>
-                <div class="nome-produto">Bola de futebol</div>
-                <div>
-                    <div class="small-price">à vista</div>
-                    <div class="price">R&#36;39,99</div>
-                </div>
-            </div>
-            <div>
-                <div class="img-produto">
-                    <img src="./api/images?ball_type=random" alt="" class="">
-                </div>
-                <div class="nome-produto">Bola de futebol</div>
-                <div>
-                    <div class="small-price">à vista</div>
-                    <div class="price">R&#36;39,99</div>
-                </div>
-            </div>
-            <div>
-                <div class="img-produto">
-                    <img src="./api/images?ball_type=random" alt="" class="">
-                </div>
-                <div class="nome-produto">Bola de futebol</div>
-                <div>
-                    <div class="small-price">à vista</div>
-                    <div class="price">R&#36;39,99</div>
-                </div>
-            </div>
-            <div>
-                <div class="img-produto">
-                    <img src="./api/images?ball_type=random" alt="" class="">
-                </div>
-                <div class="nome-produto">Bola de futebol</div>
-                <div>
-                    <div class="small-price">à vista</div>
-                    <div class="price">R&#36;39,99</div>
-                </div>
-            </div>
-            <div>
-                <div class="img-produto">
-                    <img src="./api/images?ball_type=random" alt="" class="">
-                </div>
-                <div class="nome-produto">Bola de futebol</div>
-                <div>
-                    <div class="small-price">à vista</div>
-                    <div class="price">R&#36;39,99</div>
-                </div>
-            </div>
-            <div>
-                <div class="img-produto">
-                    <img src="./api/images?ball_type=random" alt="" class="">
-                </div>
-                <div class="nome-produto">Bola de futebol</div>
-                <div>
-                    <div class="small-price">à vista</div>
-                    <div class="price">R&#36;39,99</div>
-                </div>
-            </div>
-            <div>
-                <div class="img-produto">
-                    <img src="./api/images?ball_type=random" alt="" class="">
-                </div>
-                <div class="nome-produto">Bola de futebol</div>
-                <div>
-                    <div class="small-price">à vista</div>
-                    <div class="price">R&#36;39,99</div>
-                </div>
-            </div>
-            <div>
-                <div class="img-produto">
-                    <img src="./api/images?ball_type=random" alt="" class="">
-                </div>
-                <div class="nome-produto">Bola de futebol</div>
-                <div>
-                    <div class="small-price">à vista</div>
-                    <div class="price">R&#36;39,99</div>
-                </div>
-            </div>
-            <div>
-                <div class="img-produto">
-                    <img src="./api/images?ball_type=random" alt="" class="">
-                </div>
-                <div class="nome-produto">Bola de futebol</div>
-                <div>
-                    <div class="small-price">à vista</div>
-                    <div class="price">R&#36;39,99</div>
-                </div>
-            </div>
-            <div>
-                <div class="img-produto">
-                    <img src="./api/images?ball_type=random" alt="" class="">
-                </div>
-                <div class="nome-produto">Bola de futebol</div>
-                <div>
-                    <div class="small-price">à vista</div>
-                    <div class="price">R&#36;39,99</div>
-                </div>
+            <div class="bottom-shadow">
+                <input type="button" class="hidden" id="show-more-products">
+                <label class="internal-wrapper" for="show-more-products">
+                    <img src="./assets/yellow-arrow.png" alt="arrow-see-more">
+                    <span>Ver mais Produtos...</span>
+                </label>
             </div>
         </div>
-
     </div>
 
     <footer class="footer-container flex-container recessive">
@@ -384,6 +285,5 @@
             <li><a href="not-found.html" class="footer">Deseja acessar o SAC?</a></li>
         </ul>
     </footer>
-    <div class="limbo"></div>
 </body>
 </html>

@@ -1,4 +1,4 @@
-module.exports = [
+[
 	{
 		"nome": "Chadwick Briggs",
 		"email": "chadwickbriggs2674@ange.messen",
@@ -999,4 +999,4 @@ module.exports = [
 		"email": "zeniaperkins7790@ange.messen",
 		"telefone": "(51) 93265-5451"
 	}
-];
+]

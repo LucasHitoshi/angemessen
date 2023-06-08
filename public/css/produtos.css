@@ -1,11 +1,16 @@
 .main-wrapper {
     display: flex;
+    justify-content: center;
+}
+
+.side-bar-wrapper {
+    height: 100%;
+    position: relative;
 }
 
 .side-bar {
     width: fit-content;
     background-color: #242424;
-    /* height: calc(100vh - 20rem); */
     height: fit-content;
     margin-right: 5rem;
     margin-top: 2rem;
@@ -16,6 +21,12 @@
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
+    position: sticky;
+    top: 2rem;
+}
+
+.product-card {
+    width: 22rem;
 }
 
 .produto {
@@ -26,6 +37,47 @@
     cursor: pointer;
     margin-top: 2rem;
     background-color: #242424;
+}
+
+.hide-product {
+    display: none;
+}
+
+.hide-product-type {
+    display: none;
+}
+
+.hide-product-material {
+    display: none;
+}
+
+.hide-product-brand {
+    display: none;
+}
+
+#search-product {
+    width: 15rem;
+    height: 3.25rem;
+    padding: 0 0.5rem;
+    border: #aaa solid 1px;
+    border-radius: 1rem;
+    font-size: 1.75rem;
+    font-family: DMSans;
+    color: #fff;
+    background-color: #444;
+}
+
+#search-product:target-within {
+    background-color: aqua;
+}
+#search-product::target-text {
+    background-color: aqua;
+}
+#search-product::selection {
+    background-color: aqua;
+}
+#search-product::selection {
+    background-color: aqua;
 }
 
 .filter-checkbox {
@@ -82,13 +134,14 @@
 }
 
 .showcase {
+    position: relative;
     padding: 2rem;
     width: 171.42rem;
     min-width: 800px;
-    max-height: 1100px;
+    max-height: 100px;
     overflow: hidden;
     gap: 6rem;
-    margin-top: 2rem;
+    margin: 2rem 0 2rem 0;
     display: flex;
     flex-wrap: wrap;
     background-color: #242424;
@@ -96,8 +149,107 @@
     border-radius: 2rem;
 }
 
+.bottom-shadow {
+    width: 100%;
+    height: 15rem;
+    background: linear-gradient(
+        rgba(0, 0, 0, 0),
+        rgba(0, 0, 0)
+    );
+    position: absolute;
+    bottom: 0;
+    margin: 0 0 0 -2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.internal-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    width: fit-content;
+    height: fit-content;
+    padding: 2rem 0 0 0;
+    cursor: pointer;
+}
+
+.internal-wrapper > img {
+    margin: 2rem 0 2rem 2rem;
+    width: 3.5rem;
+    height: 2rem;
+}
+
+.internal-wrapper > span {
+    margin: 2rem 2rem 2rem 0;
+    font-size: 3.25rem;
+    color: #fff;
+}
+
 .nome-produto{
+    padding: 0.5rem 0 0 0;
+    line-height: 1;
     color: white;
     text-align: center;
-    font-size: 2.57rem;
+    font-size: 3rem;
+}
+
+.product-material{
+    color: #aaa;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1.8rem;
+}
+
+.product-sport{
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 3rem;
+}
+
+.product-brand{
+    color: #aaa;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.price {
+    line-height: 3.75rem;
+    color: green;
+    text-align: center;
+    font-size: 4rem;
+}
+
+.price-pro {
+    text-decoration: line-through;
+    color: rgb(206, 75, 35);
+    text-align: center;
+    font-size: 2.5rem;
+    font-style: italic;
+}
+
+.price-pro::before {
+    text-decoration: none;
+    color: rgb(206, 75, 35);
+    text-align: center;
+    font-size: 2.5rem;
+    content: "de ";
+    font-style: italic;
+}
+
+.price-pro::after {
+    text-decoration: none;
+    color: rgb(206, 75, 35);
+    text-align: center;
+    font-size: 2.5rem;
+    content: " por";
+    font-style: italic;
+}
+
+.price::before {
+    font-size: 2.5rem;
+    content: "R$ ";
 }

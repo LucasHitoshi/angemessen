@@ -289,7 +289,8 @@ input {
     align-items: center;
     position: relative;
     cursor: pointer;
-    width: 1466px;
+    /* width: 1466px; */
+    width: 100%;
 }
 
 .carousel-wrapper > #left-button {
@@ -600,7 +601,8 @@ img.big {
     flex-direction: column;
     justify-content: center;
     text-align: right;
-    width: 45rem;
+    width: 50rem;
+    gap: 1.5rem;
 }
 
 .text-about-us-1 > figure {
@@ -615,6 +617,7 @@ img.big {
     justify-content: center;
     text-align: left;
     width: 50rem;
+    gap: 1.5rem;
 }
 
 .p-about-us-1 {
@@ -659,16 +662,8 @@ img.big {
 
 .about-us-4 {
     display: flex;
-    /* flex-direction: column; */
     gap: 5rem;
     align-items: center;
-    /* padding: 5rem 0; */
-    
-}
-
-.text-about-us-2 {
-    display: flex;
-    gap: 1.5rem;
 }
 
 .ator-1 {
@@ -718,44 +713,16 @@ img.big {
     font-size: 2rem;
 }
 
-.price {
-    color: green;
-    text-align: center;
-    font-size: 4rem;
-}
-
-.price-pro {
-    text-decoration: line-through;
-    color: rgb(206, 75, 35);
-    text-align: center;
-    font-size: 2.5rem;
-    font-style: italic;
-}
-
-.price-pro::before {
-    text-decoration: none;
-    color: rgb(206, 75, 35);
-    text-align: center;
-    font-size: 2.5rem;
-    content: "de ";
-    font-style: italic;
-}
-
-.price-pro::after {
-    text-decoration: none;
-    color: rgb(206, 75, 35);
-    text-align: center;
-    font-size: 2.5rem;
-    content: " por";
-    font-style: italic;
-}
-
 .showcase-index {
-    width: 1300px;
+    width: 96%;
     height: 1000px;
     background-color: #242424;
     border-radius: 10px;
-    margin: 21px;
+    margin: 2%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 2rem;
 }
 
 .hidden {
@@ -781,6 +748,10 @@ img.big {
     opacity: 1;
     filter: blur(0);
     transform: translateX(0);
+}
+
+.product {
+    width: 28rem;
 }
 
 

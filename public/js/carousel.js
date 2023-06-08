@@ -9,15 +9,21 @@ const carouselImages = document.getElementsByClassName("carousel-img");
 var carouselCount = 0;
 
 carouselLeftButton.addEventListener("click", () => {
-    if (carouselCount === 0) return;
+    // if (carouselCount < 0) return;
     carouselCount--;
     console.log(carouselCount);
+    if(carouselCount<0) {
+        carouselCount=carouselImages.length - 1;
+    }
 });
 
 carouselRightButton.addEventListener("click", () => {
-    if (carouselCount === carouselImages.length - 1) return;
+    // if (carouselCount > carouselImages.length - 1) return;
     console.log(carouselCount);
     carouselCount++;
+    if(carouselCount==carouselImages.length) {
+        carouselCount=0;
+    }
 });
 
 setInterval(() => {

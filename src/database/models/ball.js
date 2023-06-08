@@ -2,12 +2,14 @@ const { Schema, model } = require("mongoose");
 
 const ballSchema = new Schema(
     {
-        tipo: { type: String, required: true },
-        composicao: { type: String, required: true },
-        tamanho: { type: String, required: true },
-        pronta: { type: String },
-        preco: { type: String, required: true },
-        imagem: { type: String, required: true }
+        type: { type: String, required: true },
+        material: { type: String, required: true },
+        sport: { type: String, required: true },
+        brand: { type: String, required: true },
+        size: { type: String, required: true },
+        complete: { type: String },
+        price: { type: String, required: true },
+        image: { type: String, required: true }
     }
 )
 

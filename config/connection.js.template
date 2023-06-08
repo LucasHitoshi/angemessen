@@ -7,9 +7,9 @@ try {
 } catch (error) {
     console.log(error);
     exit(1);
-} finnaly {
+} finally {
     mongoose.connection.once("open", () => {
-        console.log("CONECTADO AO MONGO COM SUCESSO");
+        console.log("CONECTADO AO MONGO COM SUCESSO.\n");
     })
 }
 

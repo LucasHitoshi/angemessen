@@ -4,6 +4,7 @@ const imagesApiRouter = express.Router();
 
 imagesApiRouter.get("/api/images", (req, res) => {
     try {
+        // TODO: Trocar o 'req.param' por algo bom de vdd
         const ball = req.param("ball_type");
         const balls = {
             "basquete": "basketball.png",
