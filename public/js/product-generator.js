@@ -1,4 +1,4 @@
-const apiURI = "./api/balls?ball_name=random";
+const apiURI = "./api/balls?ball_name=random";  // TODO: Trocar 'ball_name' por 'ball_id'
 const productCardTemplate = document.getElementById("product-card-template");
 const showcaseArea = document.querySelector(".showcase");
 const showMoreProducts = document.getElementById("show-more-products");
@@ -21,12 +21,27 @@ const loadMoreProducts = (numberOfProducts) => {
                 fetch(productImageRequest)  // <- MT OP TBM
                     .then((response) => response.blob())
                     .then((blob) => {
-                        newProduct.querySelector(".product-image").src = URL.createObjectURL(blob);
+                        /** @type {HTMLImageElement} */
+                        const newProductImage = newProduct.querySelector(".product-image");
+                        const newProductLoadingEffect = newProduct.querySelector(".loading");
+                        newProductImage.src = URL.createObjectURL(blob);
+
+                        const loaded = () => {
+                            newProductImage.style.visibility = "visible";
+                            newProductLoadingEffect.style.display = "none";
+                        }
+
+                        if (newProductImage.complete) {
+                            loaded();
+                        } else {
+                            newProductImage.addEventListener("load", loaded);
+                        }
                     });
     
                 newProduct.id = "";
                 newProduct.classList.remove("hide-product");
                 newProduct.querySelector(".nome-produto").innerHTML = response.type;
+                newProduct.querySelector(".product-image").src = response.image;
                 newProduct.querySelector(".product-material").innerHTML = response.material;
                 newProduct.querySelector(".product-sport").innerHTML = response.sport;
                 newProduct.querySelector(".product-brand").innerHTML = response.brand;
@@ -36,6 +51,7 @@ const loadMoreProducts = (numberOfProducts) => {
                 showcaseArea.appendChild(newProduct);
             })
     }
+
     currShowcaseSize = +showcaseArea.style.maxHeight.replace("px", "");
     showcaseArea.style.maxHeight = `${currShowcaseSize + 1100}px`;
 }
