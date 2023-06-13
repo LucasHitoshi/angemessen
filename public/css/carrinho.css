@@ -1,0 +1,68 @@
+.bloco-carrinho-geral{
+    justify-content: center;
+    display: block;
+    height: auto;
+    display: flex;
+    margin-top: 2vh;
+    
+}
+
+.bloco-items-cupom{
+    display: flex;
+    flex-direction: column;
+    margin-right: 2vh;
+    background-color: white;
+    width: 65%;
+    height: auto;
+    font-family: DMSans;
+}
+
+.items-carrinho{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-height: 78vh;
+    margin: 1vh;
+    background-color: red;
+}
+
+.cupom-desconto-carrinho{
+    margin: 1vh;
+    background-color: green;
+}
+
+.resumo-total-itens{
+    margin-left: 2vh;
+    background-color: blue;
+    width: 25%;
+}
+
+.item-carrinho-{
+    max-height: 15vh;
+    min-height: 15vh;
+}
+
+.aplicar-cupom{
+    margin: 1vh;
+    margin-left: 2vh;
+    font-size: 2rem;
+    padding: 3px;
+}
+
+.cupom-title{
+    font-size: 3rem;
+    margin-left: 1vh;
+    color: white;
+}
+
+.cupom-txt{
+    font-size: 2vh;
+    padding: 3px;
+}
+
+.title-resumo{
+    display: flex;
+    font-size: 4.2rem;
+    justify-content: center;
+    color: white;
+}

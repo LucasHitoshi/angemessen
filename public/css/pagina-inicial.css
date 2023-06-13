@@ -291,6 +291,8 @@ input {
     cursor: pointer;
     /* width: 1466px; */
     width: 100%;
+    max-width: 1275px;
+    /* aspect-ratio: 10 / 1; */
 }
 
 .carousel-wrapper > #left-button {
@@ -350,8 +352,9 @@ input {
 }
 
 #carousel > img {
-    width: 100%;
-    height: 300px;
+    width: inherit;
+    aspect-ratio: 10 / 2;
+    /* height: 300px; */
     vertical-align: top;
     position: absolute;
 }
@@ -663,6 +666,7 @@ img.big {
 .about-us-4 {
     display: flex;
     gap: 5rem;
+    justify-content: center;
     align-items: center;
 }
 

@@ -7,6 +7,12 @@ ballsApiRouter.get("/api/balls", async (req, res) => {
     try {
         // TODO: Trocar o 'req.param' por algo bom de vdd
         const ball = req.param("ball_name");
+        // const quantity = req.param("qb");
+        // const queries = req.param("q")
+        //     .split("-")
+        //     .map(query => {
+        //         query = query.split(":")
+        //     });
 
         if (ball === "random") {
             const possibleBalls = await ballModel.find({ });
