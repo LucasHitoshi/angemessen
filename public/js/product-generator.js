@@ -1,65 +1,69 @@
-const apiURI = "./api/balls?ball_name=random";  // TODO: Trocar 'ball_name' por 'ball_id'
+const apiURI = "./api/balls?ball_name=random&ball_qtty=24";  // TODO: Trocar 'ball_name' por 'ball_id'
 const productCardTemplate = document.getElementById("product-card-template");
 const showcaseArea = document.querySelector(".showcase");
 const showMoreProducts = document.getElementById("show-more-products");
 
-const loadMoreProducts = (numberOfProducts) => {
-    for (let i = 0; i < numberOfProducts; i++) {
+const loadMoreProducts = (/* numberOfProducts */) => {
+    // for (let i = 0; i < numberOfProducts; i++) {
         const newProduct = productCardTemplate.cloneNode(true);
     
         const productInfoRequest = new Request(apiURI, { method: "GET" });
         fetch(productInfoRequest)  // <- MT OP
             .then((response) => {
                 if (response.status === 200) {
+                    console.log(response);
                     return response.json();
                 } else {
                     throw new Error("Something went wrong on API server!");
                 }
             })
             .then((response) => {
-                const productImageRequest = new Request(response.image, { method: "GET" });
-                fetch(productImageRequest)  // <- MT OP TBM
-                    .then((response) => response.blob())
-                    .then((blob) => {
-                        /** @type {HTMLImageElement} */
-                        const newProductImage = newProduct.querySelector(".product-image");
-                        const newProductLoadingEffect = newProduct.querySelector(".loading");
-                        newProductImage.src = URL.createObjectURL(blob);
-
-                        const loaded = () => {
-                            newProductImage.style.visibility = "visible";
-                            newProductLoadingEffect.style.display = "none";
-                        }
-
-                        if (newProductImage.complete) {
-                            loaded();
-                        } else {
-                            newProductImage.addEventListener("load", loaded);
-                        }
-                    });
+                console.log(response);
+                response.forEach(product => {
+                    const productImageRequest = new Request(product.image, { method: "GET" });
+                    fetch(productImageRequest)  // <- MT OP TBM
+                        .then((product) => product.blob())
+                        .then((blob) => {
+                            /** @type {HTMLImageElement} */
+                            const newProductImage = newProduct.querySelector(".product-image");
+                            const newProductLoadingEffect = newProduct.querySelector(".loading");
+                            newProductImage.src = URL.createObjectURL(blob);
     
-                newProduct.id = "";
-                newProduct.classList.remove("hide-product");
-                newProduct.querySelector(".nome-produto").innerHTML = response.type;
-                newProduct.querySelector(".product-image").src = response.image;
-                newProduct.querySelector(".product-material").innerHTML = response.material;
-                newProduct.querySelector(".product-sport").innerHTML = response.sport;
-                newProduct.querySelector(".product-brand").innerHTML = response.brand;
-                newProduct.querySelector(".price").innerHTML = response.price;
-                newProduct.querySelector(".to-product-page").href = `./produtos/desc?id=${response._id}`;
-                
-                showcaseArea.appendChild(newProduct);
+                            const loaded = () => {
+                                newProductImage.style.visibility = "visible";
+                                newProductLoadingEffect.style.display = "none";
+                            }
+    
+                            if (newProductImage.complete) {
+                                loaded();
+                            } else {
+                                newProductImage.addEventListener("load", loaded);
+                            }
+                        });
+        
+                    newProduct.id = "";
+                    newProduct.classList.remove("hide-product");
+                    newProduct.querySelector(".nome-produto").innerHTML = product.type;
+                    newProduct.querySelector(".product-image").src = product.image;
+                    newProduct.querySelector(".product-material").innerHTML = product.material;
+                    newProduct.querySelector(".product-sport").innerHTML = product.sport;
+                    newProduct.querySelector(".product-brand").innerHTML = product.brand;
+                    newProduct.querySelector(".price").innerHTML = product.price;
+                    newProduct.querySelector(".to-product-page").href = `./produtos/desc?id=${product._id}`;
+                    
+                    showcaseArea.appendChild(newProduct);
+                });
             })
-    }
+    // }
 
     currShowcaseSize = +showcaseArea.style.maxHeight.replace("px", "");
     showcaseArea.style.maxHeight = `${currShowcaseSize + 1100}px`;
 }
 
-loadMoreProducts(24);
+loadMoreProducts();
 
 showMoreProducts.addEventListener("click", () => {
-    loadMoreProducts(18);
+    loadMoreProducts();
 })
 
 

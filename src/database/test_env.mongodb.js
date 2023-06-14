@@ -13,50 +13,52 @@
 use('TESTE');
 
 // Insert a few documents into the BALLS collection.
-db.getCollection('ballmodels').insertMany([
-    {
-        "type": "Mano",
-        "material": "couro",
-        "brand": "angemessen",
-        "sport": "futebol",
-        "size": "",
-        "price": 0.01,
-        "image": "/api/images?ball_type=random"
-    },
-    {
-        "type": "Ball is Quete",
-        "material": "couro",
-        "brand": "angemessen",
-        "sport": "basquete",
-        "size": "",
-        "price": 23.51,
-        "image": "/api/images?ball_type=random"
-    },
-    {
-        "type": "Bola de Ed. Física",
-        "material": "plástico",
-        "brand": "angemessen",
-        "sport": "volei",
-        "size": "",
-        "price": 15.01,
-        "image": "/api/images?ball_type=random"
-    },
-    {
-        "type": "Bola de Golfe Grande",
-        "material": "plástico",
-        "brand": "angemessen",
-        "sport": "golfe",
-        "size": "",
-        "price": 40.23,
-        "image": "/api/images?ball_type=random"
-    },
-    {
-        "type": "El Bocha",
-        "material": "cerâmica",
-        "brand": "angemessen",
-        "sport": "bocha",
-        "size": "",
-        "price": 130.88,
-        "image": "/api/images?ball_type=random"
-    }
-]);
+// db.getCollection('ballmodels').insertMany([
+//     {
+//         "type": "Mano",
+//         "material": "couro",
+//         "brand": "angemessen",
+//         "sport": "futebol",
+//         "size": "",
+//         "price": 0.01,
+//         "image": "/api/images?ball_type=random"
+//     },
+//     {
+//         "type": "Ball is Quete",
+//         "material": "couro",
+//         "brand": "angemessen",
+//         "sport": "basquete",
+//         "size": "",
+//         "price": 23.51,
+//         "image": "/api/images?ball_type=random"
+//     },
+//     {
+//         "type": "Bola de Ed. Física",
+//         "material": "plástico",
+//         "brand": "angemessen",
+//         "sport": "volei",
+//         "size": "",
+//         "price": 15.01,
+//         "image": "/api/images?ball_type=random"
+//     },
+//     {
+//         "type": "Bola de Golfe Grande",
+//         "material": "plástico",
+//         "brand": "angemessen",
+//         "sport": "golfe",
+//         "size": "",
+//         "price": 40.23,
+//         "image": "/api/images?ball_type=random"
+//     },
+//     {
+//         "type": "El Bocha",
+//         "material": "cerâmica",
+//         "brand": "angemessen",
+//         "sport": "bocha",
+//         "size": "",
+//         "price": 130.88,
+//         "image": "/api/images?ball_type=random"
+//     }
+// ]);
+
+console.log(JSON.stringify(db.getCollection("ballmodels").find({ })));

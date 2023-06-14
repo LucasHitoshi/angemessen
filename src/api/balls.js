@@ -5,19 +5,29 @@ const ballsApiRouter = express.Router();
 
 ballsApiRouter.get("/api/balls", async (req, res) => {
     try {
-        // TODO: Trocar o 'req.param' por algo bom de vdd
-        const ball = req.param("ball_name");
-        // const quantity = req.param("qb");
-        // const queries = req.param("q")
-        //     .split("-")
-        //     .map(query => {
-        //         query = query.split(":")
-        //     });
+        const queries = req.query;
+        const ball = queries.ball_name;
+        const numberOfBalls = queries.ball_qtty
+            // ? queries.ball_qtty
+            // : 1;
+        const filters = queries.q
+            ? queries.q
+                .split(' ')
+                .map(query => {
+                    return JSON.parse(`{"${query.replace('-', '":"')}"}`);
+                })
+            : undefined;
+        
+        console.log(filters, numberOfBalls);
 
         if (ball === "random") {
-            const possibleBalls = await ballModel.find({ });
+            const possibleBalls = await ballModel
+                .find({ })
+                // .limit(numberOfBalls)
+                // .sort();
             const randomBall = Math.floor(Math.random() * (possibleBalls.length));
             const result = possibleBalls[randomBall];
+            console.log(result)
             res.type("json");
             res.send(result);
         } else {

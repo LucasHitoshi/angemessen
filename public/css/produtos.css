@@ -38,7 +38,7 @@
 }
 
 .product-card {
-    width: 22rem;
+    width: 33rem;
 }
 
 .produto {
@@ -135,6 +135,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 33rem;
     padding: 1rem;
     background-color: white;
     border-radius: 1rem;
@@ -224,13 +225,13 @@
     padding: 0.5rem 0 0 0;
     line-height: 1;
     color: white;
-    text-align: center;
+    /* text-align: center; */
     font-size: 3rem;
 }
 
 .product-material{
     color: #aaa;
-    text-align: center;
+    /* text-align: center; */
     text-transform: uppercase;
     font-size: 1.8rem;
 }
@@ -238,21 +239,21 @@
 .product-sport{
     color: #fff;
     text-transform: uppercase;
-    text-align: center;
+    /* text-align: center; */
     font-size: 3rem;
 }
 
 .product-brand{
     color: #aaa;
     text-transform: uppercase;
-    text-align: center;
+    /* text-align: center; */
     font-size: 1.2rem;
 }
 
 .price {
     line-height: 3.75rem;
     color: green;
-    text-align: center;
+    /* text-align: center; */
     font-size: 4rem;
 }
 

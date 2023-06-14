@@ -66,13 +66,13 @@ h1 {
 
 .price {
     color: green;
-    text-align: center;
+    /* text-align: center; */
     font-size: 4rem;
 }
 
 .small-price {
     color: green;
-    text-align: center;
+    /* text-align: center; */
     font-size: 2rem;
 }
 

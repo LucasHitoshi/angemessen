@@ -1,5 +1,6 @@
 const path = require("path");
 const express = require("express");
+const queryStringParser = require('qs');
 const mainRouter = require("./src/routes/main");
 const testRouter = require("./src/routes/test");
 const createRouter = require("./src/routes/create");
@@ -19,6 +20,7 @@ const port = 3000;
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, "/public")));
+app.set("query parser", (str) => queryStringParser.parse(str));
 app.use(mainRouter);
 app.use(testRouter);
 app.use(createRouter);
