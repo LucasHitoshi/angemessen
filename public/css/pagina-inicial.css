@@ -297,6 +297,7 @@ input {
     /* width: 1466px; */
     width: 100%;
     max-width: 1920px;
+    min-width: 700px;
     /* aspect-ratio: 10 / 1; */
 }
 

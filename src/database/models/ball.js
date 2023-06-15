@@ -7,11 +7,15 @@ const ballSchema = new Schema(
         sport: { type: String, required: true },
         brand: { type: String, required: true },
         size: { type: String, required: true },
-        complete: { type: String },
+        complete: { type: Boolean },
         price: { type: String, required: true },
-        image: { type: String, required: true }
+        image: { type: String, required: true },
+        specifications: [
+            { name: { type: String },
+              desc: { type: String } }
+        ]
     }
-)
+);
 
 const ballModel = model("ballModel", ballSchema);
 

@@ -4,33 +4,274 @@
         "material": "couro",
         "tamanho": "",
         "preco": 0,
-        "imagem": "/api/images?ball_type=random"
+        "imagem": "/api/images?ball_type=basquete"
     },
     {
         "tipo": "basquete",
         "material": "couro",
         "tamanho": "",
         "preco": 0,
-        "imagem": "/api/images?ball_type=random"
+        "imagem": "/api/images?ball_type=futebol"
     },
     {
         "tipo": "volei",
         "material": "plástico",
-        "tamanho": "",
+        "tamanho": "pequeno",
         "preco": 0,
-        "imagem": "/api/images?ball_type=random"
+        "imagem": "/api/images?ball_type=volei"
     },
+    {
+        "tipo": "volei",
+        "material": "cerâmica",
+        "tamanho": "pequeno",
+        "preco": 0,
+        "imagem": "/api/images?ball_type=volei"
+    },
+    {
+        "tipo": "volei",
+        "material": "borracha",
+        "tamanho": "pequeno",
+        "preco": 0,
+        "imagem": "/api/images?ball_type=volei"
+    },
+    {
+        "tipo": "volei",
+        "material": "eva",
+        "tamanho": "pequeno",
+        "preco": 0,
+        "imagem": "/api/images?ball_type=volei"
+    },
+    {
+        "tipo": "volei",
+        "material": "couro",
+        "tamanho": "pequeno",
+        "preco": 0,
+        "imagem": "/api/images?ball_type=volei"
+    },
+    {
+        "tipo": "volei",
+        "material": "vidro",
+        "tamanho": "pequeno",
+        "preco": 0,
+        "imagem": "/api/images?ball_type=volei"
+    },
+    {
+        "tipo": "volei",
+        "material": "madeira",
+        "tamanho": "pequeno",
+        "preco": 0,
+        "imagem": "/api/images?ball_type=volei"
+    },
+
+
+    {
+        "tipo": "volei",
+        "material": "plástico",
+        "tamanho": "padrão",
+        "preco": 0,
+        "imagem": "/api/images?ball_type=volei"
+    },
+    {
+        "tipo": "volei",
+        "material": "cerâmica",
+        "tamanho": "padrão",
+        "preco": 0,
+        "imagem": "/api/images?ball_type=volei"
+    },
+    {
+        "tipo": "volei",
+        "material": "borracha",
+        "tamanho": "padrão",
+        "preco": 0,
+        "imagem": "/api/images?ball_type=volei"
+    },
+    {
+        "tipo": "volei",
+        "material": "eva",
+        "tamanho": "padrão",
+        "preco": 0,
+        "imagem": "/api/images?ball_type=volei"
+    },
+    {
+        "tipo": "volei",
+        "material": "couro",
+        "tamanho": "padrão",
+        "preco": 0,
+        "imagem": "/api/images?ball_type=volei"
+    },
+    {
+        "tipo": "volei",
+        "material": "vidro",
+        "tamanho": "padrão",
+        "preco": 0,
+        "imagem": "/api/images?ball_type=volei"
+    },
+    {
+        "tipo": "volei",
+        "material": "madeira",
+        "tamanho": "padrão",
+        "preco": 0,
+        "imagem": "/api/images?ball_type=volei"
+    },
+
+
+    {
+        "tipo": "volei",
+        "material": "plástico",
+        "tamanho": "grande",
+        "preco": 0,
+        "imagem": "/api/images?ball_type=volei"
+    },
+    {
+        "tipo": "volei",
+        "material": "cerâmica",
+        "tamanho": "grande",
+        "preco": 0,
+        "imagem": "/api/images?ball_type=volei"
+    },
+    {
+        "tipo": "volei",
+        "material": "borracha",
+        "tamanho": "grande",
+        "preco": 0,
+        "imagem": "/api/images?ball_type=volei"
+    },
+    {
+        "tipo": "volei",
+        "material": "eva",
+        "tamanho": "grande",
+        "preco": 0,
+        "imagem": "/api/images?ball_type=volei"
+    },
+    {
+        "tipo": "volei",
+        "material": "couro",
+        "tamanho": "grande",
+        "preco": 0,
+        "imagem": "/api/images?ball_type=volei"
+    },
+    {
+        "tipo": "volei",
+        "material": "vidro",
+        "tamanho": "grande",
+        "preco": 0,
+        "imagem": "/api/images?ball_type=volei"
+    },
+    {
+        "tipo": "volei",
+        "material": "madeira",
+        "tamanho": "grande",
+        "preco": 0,
+        "imagem": "/api/images?ball_type=volei"
+    },
+
+
     {
         "tipo": "golfe",
         "material": "plástico",
-        "tamanho": "",
+        "tamanho": "pequeno",
+        "preco": 0,
+        "imagem": "/api/images?ball_type=random"
+    },
+
+
+    {
+        "tipo": "bocha",
+        "material": "cerâmica",
+        "tamanho": "pequeno",
         "preco": 0,
         "imagem": "/api/images?ball_type=random"
     },
     {
         "tipo": "bocha",
+        "material": "vidro",
+        "tamanho": "pequeno",
+        "preco": 0,
+        "imagem": "/api/images?ball_type=random"
+    },
+    {
+        "tipo": "bocha",
+        "material": "couro",
+        "tamanho": "pequeno",
+        "preco": 0,
+        "imagem": "/api/images?ball_type=random"
+    },
+    {
+        "tipo": "bocha",
+        "material": "plástico",
+        "tamanho": "pequeno",
+        "preco": 0,
+        "imagem": "/api/images?ball_type=random"
+    },
+    {
+        "tipo": "bocha",
+        "material": "madeira",
+        "tamanho": "pequeno",
+        "preco": 0,
+        "imagem": "/api/images?ball_type=random"
+    },
+    {
+        "tipo": "bocha",
+        "material": "eva",
+        "tamanho": "pequeno",
+        "preco": 0,
+        "imagem": "/api/images?ball_type=random"
+    },
+    {
+        "tipo": "bocha",
+        "material": "borracha",
+        "tamanho": "pequeno",
+        "preco": 0,
+        "imagem": "/api/images?ball_type=random"
+    },
+
+    
+    {
+        "tipo": "bocha",
         "material": "cerâmica",
-        "tamanho": "",
+        "tamanho": "padrão",
+        "preco": 0,
+        "imagem": "/api/images?ball_type=random"
+    },
+    {
+        "tipo": "bocha",
+        "material": "vidro",
+        "tamanho": "padrão",
+        "preco": 0,
+        "imagem": "/api/images?ball_type=random"
+    },
+    {
+        "tipo": "bocha",
+        "material": "couro",
+        "tamanho": "padrão",
+        "preco": 0,
+        "imagem": "/api/images?ball_type=random"
+    },
+    {
+        "tipo": "bocha",
+        "material": "plástico",
+        "tamanho": "padrão",
+        "preco": 0,
+        "imagem": "/api/images?ball_type=random"
+    },
+    {
+        "tipo": "bocha",
+        "material": "madeira",
+        "tamanho": "padrão",
+        "preco": 0,
+        "imagem": "/api/images?ball_type=random"
+    },
+    {
+        "tipo": "bocha",
+        "material": "eva",
+        "tamanho": "padrão",
+        "preco": 0,
+        "imagem": "/api/images?ball_type=random"
+    },
+    {
+        "tipo": "bocha",
+        "material": "borracha",
+        "tamanho": "padrão",
         "preco": 0,
         "imagem": "/api/images?ball_type=random"
     }

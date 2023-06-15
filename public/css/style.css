@@ -65,15 +65,21 @@ h1 {
 }
 
 .price {
-    color: green;
+    color: #ffe44e;
     /* text-align: center; */
     font-size: 4rem;
 }
 
 .small-price {
-    color: green;
+    color: #ffe44e;
     /* text-align: center; */
     font-size: 2rem;
+}
+
+.price-box {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
 }
 
 .hidden {

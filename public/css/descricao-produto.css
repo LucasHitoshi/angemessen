@@ -116,7 +116,7 @@
 #ball-price {
     font-weight: 600;
     font-size: 3.5rem;
-    color: green;
+    color: #ffe44e;
 }
 
 #ball-price::before {

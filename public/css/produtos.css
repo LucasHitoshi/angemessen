@@ -252,8 +252,7 @@
 
 .price {
     line-height: 3.75rem;
-    color: green;
-    /* text-align: center; */
+    color: #ffe44e;
     font-size: 4rem;
 }
 
