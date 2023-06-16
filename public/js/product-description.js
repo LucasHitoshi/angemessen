@@ -10,8 +10,16 @@ const ballQttyClassifications = document.getElementById("qtty-classifications");
 const ballSpecifications = document.getElementById("ball-specifications");
 const ballSpecificationTemplate = document.getElementById("ball-specification-template");
 const productID = document.URL.split('/')[document.URL.split('/').length - 2];
-const productAPI_URL = `./api/balls?q=_id-${productID}`;
+const productAPI_URL = `./../../api/ball/${productID}`;
 
-const productInfoRequest = new Request()
+const productInfoRequest = new Request(productAPI_URL, { method: "GET" });
+fetch(productInfoRequest)
+    .then(response => response.json())
+    .then(productInfo => {
+        ballName.innerHTML = productInfo.type;
+        ballPrice.innerHTML = productInfo.price;
+        // ballQttyClassifications.innerHTML = productInfo.ballQttyClassifications;
+        ballPrice.innerHTML = productInfo.price;
+    })
 
 // const productInfo = 

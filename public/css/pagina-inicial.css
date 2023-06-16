@@ -207,7 +207,9 @@ footer {
 }
 
 .footer-container {
+    height: 25rem;
     display: flex;
+    align-items: center;
     gap: 5vw;
 }
 

@@ -1,278 +1,843 @@
 [
     {
-        "tipo": "futebol",
+        "sport": "futebol",
+        "name": "Bola de futebol",
         "material": "couro",
-        "tamanho": "",
-        "preco": 0,
-        "imagem": "/api/images?ball_type=basquete"
+        "size": "pequeno",
+        "price": 0,
+        "image": "/api/images?ball_type=futebol"
     },
     {
-        "tipo": "basquete",
-        "material": "couro",
-        "tamanho": "",
-        "preco": 0,
-        "imagem": "/api/images?ball_type=futebol"
-    },
-    {
-        "tipo": "volei",
+        "sport": "futebol",
+        "name": "Bola de futebol",
         "material": "plástico",
-        "tamanho": "pequeno",
-        "preco": 0,
-        "imagem": "/api/images?ball_type=volei"
+        "size": "pequeno",
+        "price": 0,
+        "image": "/api/images?ball_type=futebol"
     },
     {
-        "tipo": "volei",
-        "material": "cerâmica",
-        "tamanho": "pequeno",
-        "preco": 0,
-        "imagem": "/api/images?ball_type=volei"
-    },
-    {
-        "tipo": "volei",
+        "sport": "futebol",
+        "name": "Bola de futebol",
         "material": "borracha",
-        "tamanho": "pequeno",
-        "preco": 0,
-        "imagem": "/api/images?ball_type=volei"
+        "size": "pequeno",
+        "price": 0,
+        "image": "/api/images?ball_type=futebol"
     },
     {
-        "tipo": "volei",
-        "material": "eva",
-        "tamanho": "pequeno",
-        "preco": 0,
-        "imagem": "/api/images?ball_type=volei"
-    },
-    {
-        "tipo": "volei",
-        "material": "couro",
-        "tamanho": "pequeno",
-        "preco": 0,
-        "imagem": "/api/images?ball_type=volei"
-    },
-    {
-        "tipo": "volei",
-        "material": "vidro",
-        "tamanho": "pequeno",
-        "preco": 0,
-        "imagem": "/api/images?ball_type=volei"
-    },
-    {
-        "tipo": "volei",
-        "material": "madeira",
-        "tamanho": "pequeno",
-        "preco": 0,
-        "imagem": "/api/images?ball_type=volei"
-    },
-
-
-    {
-        "tipo": "volei",
-        "material": "plástico",
-        "tamanho": "padrão",
-        "preco": 0,
-        "imagem": "/api/images?ball_type=volei"
-    },
-    {
-        "tipo": "volei",
+        "sport": "futebol",
+        "name": "Bola de futebol",
         "material": "cerâmica",
-        "tamanho": "padrão",
-        "preco": 0,
-        "imagem": "/api/images?ball_type=volei"
+        "size": "pequeno",
+        "price": 0,
+        "image": "/api/images?ball_type=futebol"
     },
     {
-        "tipo": "volei",
-        "material": "borracha",
-        "tamanho": "padrão",
-        "preco": 0,
-        "imagem": "/api/images?ball_type=volei"
-    },
-    {
-        "tipo": "volei",
-        "material": "eva",
-        "tamanho": "padrão",
-        "preco": 0,
-        "imagem": "/api/images?ball_type=volei"
-    },
-    {
-        "tipo": "volei",
-        "material": "couro",
-        "tamanho": "padrão",
-        "preco": 0,
-        "imagem": "/api/images?ball_type=volei"
-    },
-    {
-        "tipo": "volei",
+        "sport": "futebol",
+        "name": "Bola de futebol",
         "material": "vidro",
-        "tamanho": "padrão",
-        "preco": 0,
-        "imagem": "/api/images?ball_type=volei"
+        "size": "pequeno",
+        "price": 0,
+        "image": "/api/images?ball_type=futebol"
     },
     {
-        "tipo": "volei",
+        "sport": "futebol",
+        "name": "Bola de futebol",
         "material": "madeira",
-        "tamanho": "padrão",
-        "preco": 0,
-        "imagem": "/api/images?ball_type=volei"
+        "size": "pequeno",
+        "price": 0,
+        "image": "/api/images?ball_type=futebol"
+    },
+    {
+        "sport": "futebol",
+        "name": "Bola de futebol",
+        "material": "eva",
+        "size": "pequeno",
+        "price": 0,
+        "image": "/api/images?ball_type=futebol"
     },
 
-
     {
-        "tipo": "volei",
+        "sport": "futebol",
+        "name": "Bola de futebol",
+        "material": "couro",
+        "size": "padrão",
+        "price": 0,
+        "image": "/api/images?ball_type=futebol"
+    },
+    {
+        "sport": "futebol",
+        "name": "Bola de futebol",
         "material": "plástico",
-        "tamanho": "grande",
-        "preco": 0,
-        "imagem": "/api/images?ball_type=volei"
+        "size": "padrão",
+        "price": 0,
+        "image": "/api/images?ball_type=futebol"
     },
     {
-        "tipo": "volei",
+        "sport": "futebol",
+        "name": "Bola de futebol",
+        "material": "borracha",
+        "size": "padrão",
+        "price": 0,
+        "image": "/api/images?ball_type=futebol"
+    },
+    {
+        "sport": "futebol",
+        "name": "Bola de futebol",
         "material": "cerâmica",
-        "tamanho": "grande",
-        "preco": 0,
-        "imagem": "/api/images?ball_type=volei"
+        "size": "padrão",
+        "price": 0,
+        "image": "/api/images?ball_type=futebol"
     },
     {
-        "tipo": "volei",
-        "material": "borracha",
-        "tamanho": "grande",
-        "preco": 0,
-        "imagem": "/api/images?ball_type=volei"
-    },
-    {
-        "tipo": "volei",
-        "material": "eva",
-        "tamanho": "grande",
-        "preco": 0,
-        "imagem": "/api/images?ball_type=volei"
-    },
-    {
-        "tipo": "volei",
-        "material": "couro",
-        "tamanho": "grande",
-        "preco": 0,
-        "imagem": "/api/images?ball_type=volei"
-    },
-    {
-        "tipo": "volei",
+        "sport": "futebol",
+        "name": "Bola de futebol",
         "material": "vidro",
-        "tamanho": "grande",
-        "preco": 0,
-        "imagem": "/api/images?ball_type=volei"
+        "size": "padrão",
+        "price": 0,
+        "image": "/api/images?ball_type=futebol"
     },
     {
-        "tipo": "volei",
+        "sport": "futebol",
+        "name": "Bola de futebol",
         "material": "madeira",
-        "tamanho": "grande",
-        "preco": 0,
-        "imagem": "/api/images?ball_type=volei"
+        "size": "padrão",
+        "price": 0,
+        "image": "/api/images?ball_type=futebol"
     },
-
-
     {
-        "tipo": "golfe",
+        "sport": "futebol",
+        "name": "Bola de futebol",
+        "material": "eva",
+        "size": "padrão",
+        "price": 0,
+        "image": "/api/images?ball_type=futebol"
+    },
+    {
+        "sport": "futebol",
+        "name": "Bola de futebol",
+        "material": "couro",
+        "size": "grande",
+        "price": 0,
+        "image": "/api/images?ball_type=futebol"
+    },
+    {
+        "sport": "futebol",
+        "name": "Bola de futebol",
         "material": "plástico",
-        "tamanho": "pequeno",
-        "preco": 0,
-        "imagem": "/api/images?ball_type=random"
+        "size": "grande",
+        "price": 0,
+        "image": "/api/images?ball_type=futebol"
     },
-
-
     {
-        "tipo": "bocha",
+        "sport": "futebol",
+        "name": "Bola de futebol",
+        "material": "borracha",
+        "size": "grande",
+        "price": 0,
+        "image": "/api/images?ball_type=futebol"
+    },
+    {
+        "sport": "futebol",
+        "name": "Bola de futebol",
         "material": "cerâmica",
-        "tamanho": "pequeno",
-        "preco": 0,
-        "imagem": "/api/images?ball_type=random"
+        "size": "grande",
+        "price": 0,
+        "image": "/api/images?ball_type=futebol"
     },
     {
-        "tipo": "bocha",
+        "sport": "futebol",
+        "name": "Bola de futebol",
         "material": "vidro",
-        "tamanho": "pequeno",
-        "preco": 0,
-        "imagem": "/api/images?ball_type=random"
+        "size": "grande",
+        "price": 0,
+        "image": "/api/images?ball_type=futebol"
     },
     {
-        "tipo": "bocha",
-        "material": "couro",
-        "tamanho": "pequeno",
-        "preco": 0,
-        "imagem": "/api/images?ball_type=random"
-    },
-    {
-        "tipo": "bocha",
-        "material": "plástico",
-        "tamanho": "pequeno",
-        "preco": 0,
-        "imagem": "/api/images?ball_type=random"
-    },
-    {
-        "tipo": "bocha",
+        "sport": "futebol",
+        "name": "Bola de futebol",
         "material": "madeira",
-        "tamanho": "pequeno",
-        "preco": 0,
-        "imagem": "/api/images?ball_type=random"
+        "size": "grande",
+        "price": 0,
+        "image": "/api/images?ball_type=futebol"
     },
     {
-        "tipo": "bocha",
+        "sport": "futebol",
+        "name": "Bola de futebol",
         "material": "eva",
-        "tamanho": "pequeno",
-        "preco": 0,
-        "imagem": "/api/images?ball_type=random"
+        "size": "grande",
+        "price": 0,
+        "image": "/api/images?ball_type=futebol"
     },
     {
-        "tipo": "bocha",
+        "sport": "basquete",
+        "name": "Bola de basquete",
+        "material": "couro",
+        "size": "pequeno",
+        "price": 0,
+        "image": "/api/images?ball_type=basquete"
+    },
+    {
+        "sport": "basquete",
+        "name": "Bola de basquete",
+        "material": "plástico",
+        "size": "pequeno",
+        "price": 0,
+        "image": "/api/images?ball_type=basquete"
+    },
+    {
+        "sport": "basquete",
+        "name": "Bola de basquete",
         "material": "borracha",
-        "tamanho": "pequeno",
-        "preco": 0,
-        "imagem": "/api/images?ball_type=random"
+        "size": "pequeno",
+        "price": 0,
+        "image": "/api/images?ball_type=basquete"
     },
-
-    
     {
-        "tipo": "bocha",
+        "sport": "basquete",
+        "name": "Bola de basquete",
         "material": "cerâmica",
-        "tamanho": "padrão",
-        "preco": 0,
-        "imagem": "/api/images?ball_type=random"
+        "size": "pequeno",
+        "price": 0,
+        "image": "/api/images?ball_type=basquete"
     },
     {
-        "tipo": "bocha",
+        "sport": "basquete",
+        "name": "Bola de basquete",
         "material": "vidro",
-        "tamanho": "padrão",
-        "preco": 0,
-        "imagem": "/api/images?ball_type=random"
+        "size": "pequeno",
+        "price": 0,
+        "image": "/api/images?ball_type=basquete"
     },
     {
-        "tipo": "bocha",
-        "material": "couro",
-        "tamanho": "padrão",
-        "preco": 0,
-        "imagem": "/api/images?ball_type=random"
-    },
-    {
-        "tipo": "bocha",
-        "material": "plástico",
-        "tamanho": "padrão",
-        "preco": 0,
-        "imagem": "/api/images?ball_type=random"
-    },
-    {
-        "tipo": "bocha",
+        "sport": "basquete",
+        "name": "Bola de basquete",
         "material": "madeira",
-        "tamanho": "padrão",
-        "preco": 0,
-        "imagem": "/api/images?ball_type=random"
+        "size": "pequeno",
+        "price": 0,
+        "image": "/api/images?ball_type=basquete"
     },
     {
-        "tipo": "bocha",
+        "sport": "basquete",
+        "name": "Bola de basquete",
         "material": "eva",
-        "tamanho": "padrão",
-        "preco": 0,
-        "imagem": "/api/images?ball_type=random"
+        "size": "pequeno",
+        "price": 0,
+        "image": "/api/images?ball_type=basquete"
     },
     {
-        "tipo": "bocha",
+        "sport": "basquete",
+        "name": "Bola de basquete",
+        "material": "couro",
+        "size": "padrão",
+        "price": 0,
+        "image": "/api/images?ball_type=basquete"
+    },
+    {
+        "sport": "basquete",
+        "name": "Bola de basquete",
+        "material": "plástico",
+        "size": "padrão",
+        "price": 0,
+        "image": "/api/images?ball_type=basquete"
+    },
+    {
+        "sport": "basquete",
+        "name": "Bola de basquete",
         "material": "borracha",
-        "tamanho": "padrão",
-        "preco": 0,
-        "imagem": "/api/images?ball_type=random"
+        "size": "padrão",
+        "price": 0,
+        "image": "/api/images?ball_type=basquete"
+    },
+    {
+        "sport": "basquete",
+        "name": "Bola de basquete",
+        "material": "cerâmica",
+        "size": "padrão",
+        "price": 0,
+        "image": "/api/images?ball_type=basquete"
+    },
+    {
+        "sport": "basquete",
+        "name": "Bola de basquete",
+        "material": "vidro",
+        "size": "padrão",
+        "price": 0,
+        "image": "/api/images?ball_type=basquete"
+    },
+    {
+        "sport": "basquete",
+        "name": "Bola de basquete",
+        "material": "madeira",
+        "size": "padrão",
+        "price": 0,
+        "image": "/api/images?ball_type=basquete"
+    },
+    {
+        "sport": "basquete",
+        "name": "Bola de basquete",
+        "material": "eva",
+        "size": "padrão",
+        "price": 0,
+        "image": "/api/images?ball_type=basquete"
+    },
+    {
+        "sport": "basquete",
+        "name": "Bola de basquete",
+        "material": "couro",
+        "size": "grande",
+        "price": 0,
+        "image": "/api/images?ball_type=basquete"
+    },
+    {
+        "sport": "basquete",
+        "name": "Bola de basquete",
+        "material": "plástico",
+        "size": "grande",
+        "price": 0,
+        "image": "/api/images?ball_type=basquete"
+    },
+    {
+        "sport": "basquete",
+        "name": "Bola de basquete",
+        "material": "borracha",
+        "size": "grande",
+        "price": 0,
+        "image": "/api/images?ball_type=basquete"
+    },
+    {
+        "sport": "basquete",
+        "name": "Bola de basquete",
+        "material": "cerâmica",
+        "size": "grande",
+        "price": 0,
+        "image": "/api/images?ball_type=basquete"
+    },
+    {
+        "sport": "basquete",
+        "name": "Bola de basquete",
+        "material": "vidro",
+        "size": "grande",
+        "price": 0,
+        "image": "/api/images?ball_type=basquete"
+    },
+    {
+        "sport": "basquete",
+        "name": "Bola de basquete",
+        "material": "madeira",
+        "size": "grande",
+        "price": 0,
+        "image": "/api/images?ball_type=basquete"
+    },
+    {
+        "sport": "basquete",
+        "name": "Bola de basquete",
+        "material": "eva",
+        "size": "grande",
+        "price": 0,
+        "image": "/api/images?ball_type=basquete"
+    },
+    {
+        "sport": "volei",
+        "name": "Bola de vôlei",
+        "material": "plástico",
+        "size": "pequeno",
+        "price": 0,
+        "image": "/api/images?ball_type=volei"
+    },
+    {
+        "sport": "volei",
+        "name": "Bola de vôlei",
+        "material": "cerâmica",
+        "size": "pequeno",
+        "price": 0,
+        "image": "/api/images?ball_type=volei"
+    },
+    {
+        "sport": "volei",
+        "name": "Bola de vôlei",
+        "material": "borracha",
+        "size": "pequeno",
+        "price": 0,
+        "image": "/api/images?ball_type=volei"
+    },
+    {
+        "sport": "volei",
+        "name": "Bola de vôlei",
+        "material": "eva",
+        "size": "pequeno",
+        "price": 0,
+        "image": "/api/images?ball_type=volei"
+    },
+    {
+        "sport": "volei",
+        "name": "Bola de vôlei",
+        "material": "couro",
+        "size": "pequeno",
+        "price": 0,
+        "image": "/api/images?ball_type=volei"
+    },
+    {
+        "sport": "volei",
+        "name": "Bola de vôlei",
+        "material": "vidro",
+        "size": "pequeno",
+        "price": 0,
+        "image": "/api/images?ball_type=volei"
+    },
+    {
+        "sport": "volei",
+        "name": "Bola de vôlei",
+        "material": "madeira",
+        "size": "pequeno",
+        "price": 0,
+        "image": "/api/images?ball_type=volei"
+    },
+    {
+        "sport": "volei",
+        "name": "Bola de vôlei",
+        "material": "plástico",
+        "size": "padrão",
+        "price": 0,
+        "image": "/api/images?ball_type=volei"
+    },
+    {
+        "sport": "volei",
+        "name": "Bola de vôlei",
+        "material": "cerâmica",
+        "size": "padrão",
+        "price": 0,
+        "image": "/api/images?ball_type=volei"
+    },
+    {
+        "sport": "volei",
+        "name": "Bola de vôlei",
+        "material": "borracha",
+        "size": "padrão",
+        "price": 0,
+        "image": "/api/images?ball_type=volei"
+    },
+    {
+        "sport": "volei",
+        "name": "Bola de vôlei",
+        "material": "eva",
+        "size": "padrão",
+        "price": 0,
+        "image": "/api/images?ball_type=volei"
+    },
+    {
+        "sport": "volei",
+        "name": "Bola de vôlei",
+        "material": "couro",
+        "size": "padrão",
+        "price": 0,
+        "image": "/api/images?ball_type=volei"
+    },
+    {
+        "sport": "volei",
+        "name": "Bola de vôlei",
+        "material": "vidro",
+        "size": "padrão",
+        "price": 0,
+        "image": "/api/images?ball_type=volei"
+    },
+    {
+        "sport": "volei",
+        "name": "Bola de vôlei",
+        "material": "madeira",
+        "size": "padrão",
+        "price": 0,
+        "image": "/api/images?ball_type=volei"
+    },
+    {
+        "sport": "volei",
+        "name": "Bola de vôlei",
+        "material": "plástico",
+        "size": "grande",
+        "price": 0,
+        "image": "/api/images?ball_type=volei"
+    },
+    {
+        "sport": "volei",
+        "name": "Bola de vôlei",
+        "material": "cerâmica",
+        "size": "grande",
+        "price": 0,
+        "image": "/api/images?ball_type=volei"
+    },
+    {
+        "sport": "volei",
+        "name": "Bola de vôlei",
+        "material": "borracha",
+        "size": "grande",
+        "price": 0,
+        "image": "/api/images?ball_type=volei"
+    },
+    {
+        "sport": "volei",
+        "name": "Bola de vôlei",
+        "material": "eva",
+        "size": "grande",
+        "price": 0,
+        "image": "/api/images?ball_type=volei"
+    },
+    {
+        "sport": "volei",
+        "name": "Bola de vôlei",
+        "material": "couro",
+        "size": "grande",
+        "price": 0,
+        "image": "/api/images?ball_type=volei"
+    },
+    {
+        "sport": "volei",
+        "name": "Bola de vôlei",
+        "material": "vidro",
+        "size": "grande",
+        "price": 0,
+        "image": "/api/images?ball_type=volei"
+    },
+    {
+        "sport": "volei",
+        "name": "Bola de vôlei",
+        "material": "madeira",
+        "size": "grande",
+        "price": 220.20,
+        "image": "/api/images?ball_type=volei"
+    },
+    {
+        "sport": "golfe",
+        "name": "Bola de golfe",
+        "material": "couro",
+        "size": "padrão",
+        "price": 0,
+        "image": "/api/images?ball_type=golfe"
+    },
+    {
+        "sport": "golfe",
+        "name": "Bola de golfe",
+        "material": "plástico",
+        "size": "padrão",
+        "price": 0,
+        "image": "/api/images?ball_type=golfe"
+    },
+    {
+        "sport": "golfe",
+        "name": "Bola de golfe",
+        "material": "borracha",
+        "size": "padrão",
+        "price": 0,
+        "image": "/api/images?ball_type=golfe"
+    },
+    {
+        "sport": "golfe",
+        "name": "Bola de golfe",
+        "material": "cerâmica",
+        "size": "padrão",
+        "price": 0,
+        "image": "/api/images?ball_type=golfe"
+    },
+    {
+        "sport": "golfe",
+        "name": "Bola de golfe",
+        "material": "vidro",
+        "size": "padrão",
+        "price": 0,
+        "image": "/api/images?ball_type=golfe"
+    },
+    {
+        "sport": "golfe",
+        "name": "Bola de golfe",
+        "material": "madeira",
+        "size": "padrão",
+        "price": 0,
+        "image": "/api/images?ball_type=golfe"
+    },
+    {
+        "sport": "golfe",
+        "name": "Bola de golfe",
+        "material": "eva",
+        "size": "padrão",
+        "price": 0,
+        "image": "/api/images?ball_type=golfe"
+    },
+    {
+        "sport": "golfe",
+        "name": "Bola de golfe",
+        "material": "couro",
+        "size": "médio",
+        "price": 0,
+        "image": "/api/images?ball_type=golfe"
+    },
+    {
+        "sport": "golfe",
+        "name": "Bola de golfe",
+        "material": "plástico",
+        "size": "médio",
+        "price": 0,
+        "image": "/api/images?ball_type=golfe"
+    },
+    {
+        "sport": "golfe",
+        "name": "Bola de golfe",
+        "material": "borracha",
+        "size": "médio",
+        "price": 0,
+        "image": "/api/images?ball_type=golfe"
+    },
+    {
+        "sport": "golfe",
+        "name": "Bola de golfe",
+        "material": "cerâmica",
+        "size": "médio",
+        "price": 0,
+        "image": "/api/images?ball_type=golfe"
+    },
+    {
+        "sport": "golfe",
+        "name": "Bola de golfe",
+        "material": "vidro",
+        "size": "médio",
+        "price": 0,
+        "image": "/api/images?ball_type=golfe"
+    },
+    {
+        "sport": "golfe",
+        "name": "Bola de golfe",
+        "material": "madeira",
+        "size": "médio",
+        "price": 0,
+        "image": "/api/images?ball_type=golfe"
+    },
+    {
+        "sport": "golfe",
+        "name": "Bola de golfe",
+        "material": "eva",
+        "size": "médio",
+        "price": 0,
+        "image": "/api/images?ball_type=golfe"
+    },
+    {
+        "sport": "golfe",
+        "name": "Bola de golfe",
+        "material": "couro",
+        "size": "grande",
+        "price": 0,
+        "image": "/api/images?ball_type=golfe"
+    },
+    {
+        "sport": "golfe",
+        "name": "Bola de golfe",
+        "material": "plástico",
+        "size": "grande",
+        "price": 0,
+        "image": "/api/images?ball_type=golfe"
+    },
+    {
+        "sport": "golfe",
+        "name": "Bola de golfe",
+        "material": "borracha",
+        "size": "grande",
+        "price": 0,
+        "image": "/api/images?ball_type=golfe"
+    },
+    {
+        "sport": "golfe",
+        "name": "Bola de golfe",
+        "material": "cerâmica",
+        "size": "grande",
+        "price": 0,
+        "image": "/api/images?ball_type=golfe"
+    },
+    {
+        "sport": "golfe",
+        "name": "Bola de golfe",
+        "material": "vidro",
+        "size": "grande",
+        "price": 0,
+        "image": "/api/images?ball_type=golfe"
+    },
+    {
+        "sport": "golfe",
+        "name": "Bola de golfe",
+        "material": "madeira",
+        "size": "grande",
+        "price": 0,
+        "image": "/api/images?ball_type=golfe"
+    },
+    {
+        "sport": "golfe",
+        "name": "Bola de golfe",
+        "material": "eva",
+        "size": "grande",
+        "price": 0,
+        "image": "/api/images?ball_type=golfe"
+    },
+    {
+        "sport": "bocha",
+        "name": "Bola de bocha",
+        "material": "cerâmica",
+        "size": "padrão",
+        "price": 0,
+        "image": "/api/images?ball_type=bocha"
+    },
+    {
+        "sport": "bocha",
+        "name": "Bola de bocha",
+        "material": "vidro",
+        "size": "padrão",
+        "price": 0,
+        "image": "/api/images?ball_type=bocha"
+    },
+    {
+        "sport": "bocha",
+        "name": "Bola de bocha",
+        "material": "couro",
+        "size": "padrão",
+        "price": 0,
+        "image": "/api/images?ball_type=bocha"
+    },
+    {
+        "sport": "bocha",
+        "name": "Bola de bocha",
+        "material": "plástico",
+        "size": "padrão",
+        "price": 0,
+        "image": "/api/images?ball_type=bocha"
+    },
+    {
+        "sport": "bocha",
+        "name": "Bola de bocha",
+        "material": "madeira",
+        "size": "padrão",
+        "price": 0,
+        "image": "/api/images?ball_type=bocha"
+    },
+    {
+        "sport": "bocha",
+        "name": "Bola de bocha",
+        "material": "eva",
+        "size": "padrão",
+        "price": 0,
+        "image": "/api/images?ball_type=bocha"
+    },
+    {
+        "sport": "bocha",
+        "name": "Bola de bocha",
+        "material": "borracha",
+        "size": "padrão",
+        "price": 0,
+        "image": "/api/images?ball_type=bocha"
+    },
+    {
+        "sport": "bocha",
+        "name": "Bola de bocha",
+        "material": "cerâmica",
+        "size": "médio",
+        "price": 0,
+        "image": "/api/images?ball_type=bocha"
+    },
+    {
+        "sport": "bocha",
+        "name": "Bola de bocha",
+        "material": "vidro",
+        "size": "médio",
+        "price": 0,
+        "image": "/api/images?ball_type=bocha"
+    },
+    {
+        "sport": "bocha",
+        "name": "Bola de bocha",
+        "material": "couro",
+        "size": "médio",
+        "price": 0,
+        "image": "/api/images?ball_type=bocha"
+    },
+    {
+        "sport": "bocha",
+        "name": "Bola de bocha",
+        "material": "plástico",
+        "size": "médio",
+        "price": 0,
+        "image": "/api/images?ball_type=bocha"
+    },
+    {
+        "sport": "bocha",
+        "name": "Bola de bocha",
+        "material": "madeira",
+        "size": "médio",
+        "price": 0,
+        "image": "/api/images?ball_type=bocha"
+    },
+    {
+        "sport": "bocha",
+        "name": "Bola de bocha",
+        "material": "eva",
+        "size": "médio",
+        "price": 0,
+        "image": "/api/images?ball_type=bocha"
+    },
+    {
+        "sport": "bocha",
+        "name": "Bola de bocha",
+        "material": "borracha",
+        "size": "médio",
+        "price": 0,
+        "image": "/api/images?ball_type=bocha"
+    },
+    {
+        "sport": "bocha",
+        "name": "Bola de bocha",
+        "material": "cerâmica",
+        "size": "grande",
+        "price": 0,
+        "image": "/api/images?ball_type=bocha"
+    },
+    {
+        "sport": "bocha",
+        "name": "Bola de bocha",
+        "material": "vidro",
+        "size": "grande",
+        "price": 0,
+        "image": "/api/images?ball_type=bocha"
+    },
+    {
+        "sport": "bocha",
+        "name": "Bola de bocha",
+        "material": "couro",
+        "size": "grande",
+        "price": 0,
+        "image": "/api/images?ball_type=bocha"
+    },
+    {
+        "sport": "bocha",
+        "name": "Bola de bocha",
+        "material": "plástico",
+        "size": "grande",
+        "price": 0,
+        "image": "/api/images?ball_type=bocha"
+    },
+    {
+        "sport": "bocha",
+        "name": "Bola de bocha",
+        "material": "madeira",
+        "size": "grande",
+        "price": 0,
+        "image": "/api/images?ball_type=bocha"
+    },
+    {
+        "sport": "bocha",
+        "name": "Bola de bocha",
+        "material": "eva",
+        "size": "grande",
+        "price": 0,
+        "image": "/api/images?ball_type=bocha"
+    },
+    {
+        "sport": "bocha",
+        "name": "Bola de bocha",
+        "material": "borracha",
+        "size": "grande",
+        "price": 0,
+        "image": "/api/images?ball_type=bocha"
     }
 ]

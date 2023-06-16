@@ -85,3 +85,20 @@ h1 {
 .hidden {
     display: none;
 }
+
+.fixed {
+    display: block;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+}
+
+.fixed::before {
+    content: "a";
+    height: 25rem;
+    background-color: aqua;
+    display: block;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+}

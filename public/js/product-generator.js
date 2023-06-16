@@ -48,7 +48,7 @@ const loadMoreProducts = (/* numberOfProducts */) => {
                 newProduct.querySelector(".product-sport").innerHTML = product.sport;
                 newProduct.querySelector(".product-brand").innerHTML = product.brand;
                 newProduct.querySelector(".price").innerHTML = product.price;
-                newProduct.querySelector(".to-product-page").href = `./produtos/${product._id}/desc/`;
+                newProduct.querySelector(".to-product-page").href = `./produtos/${product._id}/desc`;
                 
                 showcaseArea.appendChild(newProduct);
             });
