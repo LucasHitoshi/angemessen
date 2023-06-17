@@ -11,15 +11,26 @@ const ballSpecifications = document.getElementById("ball-specifications");
 const ballSpecificationTemplate = document.getElementById("ball-specification-template");
 const productID = document.URL.split('/')[document.URL.split('/').length - 2];
 const productAPI_URL = `./../../api/ball/${productID}`;
+const ballSmallImages = document.querySelectorAll(".small-img-bola")
+const ballImages = document.querySelector(".img-ball")
 
 const productInfoRequest = new Request(productAPI_URL, { method: "GET" });
 fetch(productInfoRequest)
     .then(response => response.json())
     .then(productInfo => {
-        ballName.innerHTML = productInfo.type;
-        ballPrice.innerHTML = productInfo.price;
+        ballName.innerHTML = productInfo.name;
+        ballPrice.innerHTML = `${productInfo.price.value.int},${productInfo.price.value.cent}`;
         // ballQttyClassifications.innerHTML = productInfo.ballQttyClassifications;
-        ballPrice.innerHTML = productInfo.price;
+        // ballPrice.innerHTML = productInfo.price.value.cent;
+        ballImages.src = productInfo.image;
+        // ballSmallImages.src = productInfo.image;
+        ballDescription.innerHTML = productInfo.description
+        ballOldPrice.innerHTML = `${productInfo.price.value.int + 30},${productInfo.price.value.cent}`
+
+        for (const ballImage of ballSmallImages) {
+            console.log(ballImage)
+            ballImage.src = productInfo.image;
+        }
     })
 
 // const productInfo = 

@@ -38,7 +38,32 @@
 }
 
 .product-card {
-    width: 33rem;
+    background-color: #444;
+    width: 35rem;
+    padding: 1.5rem;
+    border: #aaa solid 1px;
+    border-radius: 0 4rem 4rem 4rem;
+}
+
+.product-card:hover > .product-material {
+    opacity: 1;
+}
+
+.product-card:hover > .product-brand {
+    opacity: 1;
+}
+
+.product-card:hover > .price-box {
+    margin: 0 0 0 0;
+}
+/* 
+.product-card:hover > .img-produto {
+    margin: 0 0 0 0;
+} */
+
+.to-product-page {
+    width: fit-content;
+    height: fit-content;
 }
 
 .produto {
@@ -132,10 +157,12 @@
 } */
 
 .img-produto {
+    transition: all 0.25s ease-out;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 33rem;
+    width: 33rem;
+    aspect-ratio: 1 / 1;
     padding: 1rem;
     background-color: white;
     border-radius: 1rem;
@@ -174,7 +201,7 @@
     min-width: 800px;
     max-height: 100px;
     overflow: hidden;
-    gap: 6rem;
+    gap: 2rem;
     margin: 2rem 0 2rem 0;
     display: flex;
     flex-wrap: wrap;
@@ -230,6 +257,8 @@
 }
 
 .product-material{
+    transition: all 0.25s ease-out;
+    opacity: 0;
     color: #aaa;
     /* text-align: center; */
     text-transform: uppercase;
@@ -244,6 +273,8 @@
 }
 
 .product-brand{
+    transition: all 0.25s ease-out;
+    opacity: 0;
     color: #aaa;
     text-transform: uppercase;
     /* text-align: center; */
@@ -277,12 +308,13 @@
     text-decoration: none;
     color: rgb(206, 75, 35);
     text-align: center;
-    font-size: 2.5rem;
+    font-size: 3rem;
     content: " por";
     font-style: italic;
 }
 
-.price::before {
-    font-size: 2.5rem;
-    content: "R$ ";
+.money-sign {
+    font-size: 3rem;
+    color: #ffe44e;
+    /* content: "R$ "; */
 }

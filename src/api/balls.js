@@ -48,7 +48,7 @@ ballsApiRouter.get("/api/balls", async (req, res) => {
                     // { "_id": _id }
                     { }
                     )
-                // .limit(numberOfBalls)
+                .limit(24)
                 // .sort();
             // const randomBall = Math.floor(Math.random() * (possibleBalls.length));
             const result = possibleBalls//[randomBall];

@@ -1,29 +1,22 @@
 /* global use, db */
-// MongoDB Playground
-// To disable this template go to Settings | MongoDB | Use Default Template For Playground.
-// Make sure you are connected to enable completions and to be able to run a playground.
-// Use Ctrl+Space inside a snippet or a string literal to trigger completions.
-// The result of the last command run in a playground is shown on the results panel.
-// By default the first 20 documents will be returned with a cursor.
-// Use 'console.log()' to print to the debug output.
-// For more documentation on playgrounds please refer to
-// https://www.mongodb.com/docs/mongodb-vscode/playgrounds/
 
-// Select the database to use.
 use('TESTE');
 
-db.getCollection('ballModels').insertMany(
+// db.drop('ballmodels');
+// db.drop('ballModels');
+
+db.getCollection('ballmodels').insertMany(
     [
         {
             "sport": "futebol",
-                "brand": "angemessen"
+            "brand": "angemessen",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
             "name": "Bola de futebol",
             "material": "couro",
             "size": "pequeno",
             "price": {
                 "sign": "R$",
-                "abcde": {
+                "value": {
                     "int": 89,
                     "cent": 90
                 }
@@ -33,14 +26,14 @@ db.getCollection('ballModels').insertMany(
         },
         {
             "sport": "futebol",
-                "brand": "angemessen"
+            "brand": "angemessen",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
             "name": "Bola de futebol",
             "material": "plástico",
             "size": "pequeno",
             "price": {
                 "sign": "R$",
-                "abcde": {
+                "value": {
                     "int": 39,
                     "cent": 90
                 }
@@ -50,14 +43,14 @@ db.getCollection('ballModels').insertMany(
         },
         {
             "sport": "futebol",
-                "brand": "angemessen"
+            "brand": "angemessen",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
             "name": "Bola de futebol",
             "material": "borracha",
             "size": "pequeno",
             "price": {
                 "sign": "R$",
-                "abcde": {
+                "value": {
                     "int": 49,
                     "cent": 90
                 }
@@ -67,14 +60,14 @@ db.getCollection('ballModels').insertMany(
         },
         {
             "sport": "futebol",
-                "brand": "angemessen"
+            "brand": "angemessen",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
             "name": "Bola de futebol",
             "material": "cerâmica",
             "size": "pequeno",
             "price": {
                 "sign": "R$",
-                "abcde": {
+                "value": {
                     "int": 89,
                     "cent": 90
                 }
@@ -84,14 +77,14 @@ db.getCollection('ballModels').insertMany(
         },
         {
             "sport": "futebol",
-                "brand": "angemessen"
+            "brand": "angemessen",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
             "name": "Bola de futebol",
             "material": "vidro",
             "size": "pequeno",
             "price": {
                 "sign": "R$",
-                "abcde": {
+                "value": {
                     "int": 99,
                     "cent": 90
                 }
@@ -101,14 +94,14 @@ db.getCollection('ballModels').insertMany(
         },
         {
             "sport": "futebol",
-                "brand": "angemessen"
+            "brand": "angemessen",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
             "name": "Bola de futebol",
             "material": "madeira",
             "size": "pequeno",
             "price": {
                 "sign": "R$",
-                "abcde": {
+                "value": {
                     "int": 79,
                     "cent": 90
                 }
@@ -118,14 +111,14 @@ db.getCollection('ballModels').insertMany(
         },
         {
             "sport": "futebol",
-                "brand": "angemessen"
+            "brand": "angemessen",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
             "name": "Bola de futebol",
             "material": "eva",
             "size": "pequeno",
             "price": {
                 "sign": "R$",
-                "abcde": {
+                "value": {
                     "int": 49,
                     "cent": 90
                 }
@@ -135,14 +128,14 @@ db.getCollection('ballModels').insertMany(
         },
         {
             "sport": "futebol",
-                "brand": "angemessen"
+            "brand": "angemessen",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
             "name": "Bola de futebol",
             "material": "couro",
             "size": "padrão",
             "price": {
                 "sign": "R$",
-                "abcde": {
+                "value": {
                     "int": 129,
                     "cent": 90
                 }
@@ -152,14 +145,14 @@ db.getCollection('ballModels').insertMany(
         },
         {
             "sport": "futebol",
-                "brand": "angemessen"
+            "brand": "angemessen",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
             "name": "Bola de futebol",
             "material": "plástico",
             "size": "padrão",
             "price": {
                 "sign": "R$",
-                "abcde": {
+                "value": {
                     "int": 39,
                     "cent": 90
                 }
@@ -169,14 +162,14 @@ db.getCollection('ballModels').insertMany(
         },
         {
             "sport": "futebol",
-                "brand": "angemessen"
+            "brand": "angemessen",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
             "name": "Bola de futebol",
             "material": "borracha",
             "size": "padrão",
             "price": {
                 "sign": "R$",
-                "abcde": {
+                "value": {
                     "int": 89,
                     "cent": 90
                 }
@@ -186,14 +179,14 @@ db.getCollection('ballModels').insertMany(
         },
         {
             "sport": "futebol",
-                "brand": "angemessen"
+            "brand": "angemessen",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
             "name": "Bola de futebol",
             "material": "cerâmica",
             "size": "padrão",
             "price": {
                 "sign": "R$",
-                "abcde": {
+                "value": {
                     "int": 99,
                     "cent": 90
                 }
@@ -203,14 +196,14 @@ db.getCollection('ballModels').insertMany(
         },
         {
             "sport": "futebol",
-                "brand": "angemessen"
+            "brand": "angemessen",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
             "name": "Bola de futebol",
             "material": "vidro",
             "size": "padrão",
             "price": {
                 "sign": "R$",
-                "abcde": {
+                "value": {
                     "int": 139,
                     "cent": 90
                 }
@@ -220,14 +213,14 @@ db.getCollection('ballModels').insertMany(
         },
         {
             "sport": "futebol",
-                "brand": "angemessen"
+            "brand": "angemessen",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
             "name": "Bola de futebol",
             "material": "madeira",
             "size": "padrão",
             "price": {
                 "sign": "R$",
-                "abcde": {
+                "value": {
                     "int": 99,
                     "cent": 90
                 }
@@ -237,14 +230,14 @@ db.getCollection('ballModels').insertMany(
         },
         {
             "sport": "futebol",
-                "brand": "angemessen"
+            "brand": "angemessen",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
             "name": "Bola de futebol",
             "material": "eva",
             "size": "padrão",
             "price": {
                 "sign": "R$",
-                "abcde": {
+                "value": {
                     "int": 59,
                     "cent": 90
                 }
@@ -254,14 +247,14 @@ db.getCollection('ballModels').insertMany(
         },
         {
             "sport": "futebol",
-                "brand": "angemessen"
+            "brand": "angemessen",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
             "name": "Bola de futebol",
             "material": "couro",
             "size": "grande",
             "price": {
                 "sign": "R$",
-                "abcde": {
+                "value": {
                     "int": 129,
                     "cent": 90
                 }
@@ -271,14 +264,14 @@ db.getCollection('ballModels').insertMany(
         },
         {
             "sport": "futebol",
-                "brand": "angemessen"
+            "brand": "angemessen",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
             "name": "Bola de futebol",
             "material": "plástico",
             "size": "grande",
             "price": {
                 "sign": "R$",
-                "abcde": {
+                "value": {
                     "int": 39,
                     "cent": 90
                 }
@@ -288,14 +281,14 @@ db.getCollection('ballModels').insertMany(
         },
         {
             "sport": "futebol",
-                "brand": "angemessen"
+            "brand": "angemessen",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
             "name": "Bola de futebol",
             "material": "borracha",
             "size": "grande",
             "price": {
                 "sign": "R$",
-                "abcde": {
+                "value": {
                     "int": 89,
                     "cent": 90
                 }
@@ -305,14 +298,14 @@ db.getCollection('ballModels').insertMany(
         },
         {
             "sport": "futebol",
-                "brand": "angemessen"
+            "brand": "angemessen",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
             "name": "Bola de futebol",
             "material": "cerâmica",
             "size": "grande",
             "price": {
                 "sign": "R$",
-                "abcde": {
+                "value": {
                     "int": 159,
                     "cent": 90
                 }
@@ -322,14 +315,14 @@ db.getCollection('ballModels').insertMany(
         },
         {
             "sport": "futebol",
-                "brand": "angemessen"
+            "brand": "angemessen",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
             "name": "Bola de futebol",
             "material": "vidro",
             "size": "grande",
             "price": {
                 "sign": "R$",
-                "abcde": {
+                "value": {
                     "int": 239,
                     "cent": 90
                 }
@@ -339,14 +332,14 @@ db.getCollection('ballModels').insertMany(
         },
         {
             "sport": "futebol",
-                "brand": "angemessen"
+            "brand": "angemessen",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
             "name": "Bola de futebol",
             "material": "madeira",
             "size": "grande",
             "price": {
                 "sign": "R$",
-                "abcde": {
+                "value": {
                     "int": 139,
                     "cent": 90
                 }
@@ -356,14 +349,14 @@ db.getCollection('ballModels').insertMany(
         },
         {
             "sport": "futebol",
-                "brand": "angemessen"
+            "brand": "angemessen",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
             "name": "Bola de futebol",
             "material": "eva",
             "size": "grande",
             "price": {
                 "sign": "R$",
-                "abcde": {
+                "value": {
                     "int": 99,
                     "cent": 90
                 }
@@ -372,15 +365,15 @@ db.getCollection('ballModels').insertMany(
             "image": "/api/images?ball_type=futebol"
         },
         {
-            "sport": "basquete"
-                "brand": "angemessen"
+            "sport": "basquete",
+            "brand": "angemessen",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
             "name": "Bola de basquete",
             "material": "couro",
             "size": "pequeno",
             "price": {
                 "sign": "R$",
-                "abcde": {
+                "value": {
                     "int": 89,
                     "cent": 90
                 }
@@ -389,15 +382,15 @@ db.getCollection('ballModels').insertMany(
             "image": "/api/images?ball_type=basquete"
         },
         {
-            "sport": "basquete"
-                "brand": "angemessen"
+            "sport": "basquete",
+            "brand": "angemessen",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
             "name": "Bola de basquete",
             "material": "plástico",
             "size": "pequeno",
             "price": {
                 "sign": "R$",
-                "abcde": {
+                "value": {
                     "int": 39,
                     "cent": 90
                 }
@@ -406,15 +399,15 @@ db.getCollection('ballModels').insertMany(
             "image": "/api/images?ball_type=basquete"
         },
         {
-            "sport": "basquete"
-                "brand": "angemessen"
+            "sport": "basquete",
+            "brand": "angemessen",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
             "name": "Bola de basquete",
             "material": "borracha",
             "size": "pequeno",
             "price": {
                 "sign": "R$",
-                "abcde": {
+                "value": {
                     "int": 49,
                     "cent": 90
                 }
@@ -423,15 +416,15 @@ db.getCollection('ballModels').insertMany(
             "image": "/api/images?ball_type=basquete"
         },
         {
-            "sport": "basquete"
-                "brand": "angemessen"
+            "sport": "basquete",
+            "brand": "angemessen",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
             "name": "Bola de basquete",
             "material": "cerâmica",
             "size": "pequeno",
             "price": {
                 "sign": "R$",
-                "abcde": {
+                "value": {
                     "int": 89,
                     "cent": 90
                 }
@@ -440,15 +433,15 @@ db.getCollection('ballModels').insertMany(
             "image": "/api/images?ball_type=basquete"
         },
         {
-            "sport": "basquete"
-                "brand": "angemessen"
+            "sport": "basquete",
+            "brand": "angemessen",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
             "name": "Bola de basquete",
             "material": "vidro",
             "size": "pequeno",
             "price": {
                 "sign": "R$",
-                "abcde": {
+                "value": {
                     "int": 99,
                     "cent": 90
                 }
@@ -457,15 +450,15 @@ db.getCollection('ballModels').insertMany(
             "image": "/api/images?ball_type=basquete"
         },
         {
-            "sport": "basquete"
-                "brand": "angemessen"
+            "sport": "basquete",
+            "brand": "angemessen",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
             "name": "Bola de basquete",
             "material": "madeira",
             "size": "pequeno",
             "price": {
                 "sign": "R$",
-                "abcde": {
+                "value": {
                     "int": 79,
                     "cent": 90
                 }
@@ -474,15 +467,15 @@ db.getCollection('ballModels').insertMany(
             "image": "/api/images?ball_type=basquete"
         },
         {
-            "sport": "basquete"
-                "brand": "angemessen"
+            "sport": "basquete",
+            "brand": "angemessen",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
             "name": "Bola de basquete",
             "material": "eva",
             "size": "pequeno",
             "price": {
                 "sign": "R$",
-                "abcde": {
+                "value": {
                     "int": 49,
                     "cent": 90
                 }
@@ -491,15 +484,15 @@ db.getCollection('ballModels').insertMany(
             "image": "/api/images?ball_type=basquete"
         },
         {
-            "sport": "basquete"
-                "brand": "angemessen"
+            "sport": "basquete",
+            "brand": "angemessen",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
             "name": "Bola de basquete",
             "material": "couro",
             "size": "padrão",
             "price": {
                 "sign": "R$",
-                "abcde": {
+                "value": {
                     "int": 129,
                     "cent": 90
                 }
@@ -508,15 +501,15 @@ db.getCollection('ballModels').insertMany(
             "image": "/api/images?ball_type=basquete"
         },
         {
-            "sport": "basquete"
-                "brand": "angemessen"
+            "sport": "basquete",
+            "brand": "angemessen",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
             "name": "Bola de basquete",
             "material": "plástico",
             "size": "padrão",
             "price": {
                 "sign": "R$",
-                "abcde": {
+                "value": {
                     "int": 39,
                     "cent": 90
                 }
@@ -525,15 +518,15 @@ db.getCollection('ballModels').insertMany(
             "image": "/api/images?ball_type=basquete"
         },
         {
-            "sport": "basquete"
-                "brand": "angemessen"
+            "sport": "basquete",
+            "brand": "angemessen",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
             "name": "Bola de basquete",
             "material": "borracha",
             "size": "padrão",
             "price": {
                 "sign": "R$",
-                "abcde": {
+                "value": {
                     "int": 89,
                     "cent": 90
                 }
@@ -542,15 +535,15 @@ db.getCollection('ballModels').insertMany(
             "image": "/api/images?ball_type=basquete"
         },
         {
-            "sport": "basquete"
-                "brand": "angemessen"
+            "sport": "basquete",
+            "brand": "angemessen",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
             "name": "Bola de basquete",
             "material": "cerâmica",
             "size": "padrão",
             "price": {
                 "sign": "R$",
-                "abcde": {
+                "value": {
                     "int": 99,
                     "cent": 90
                 }
@@ -559,15 +552,15 @@ db.getCollection('ballModels').insertMany(
             "image": "/api/images?ball_type=basquete"
         },
         {
-            "sport": "basquete"
-                "brand": "angemessen"
+            "sport": "basquete",
+            "brand": "angemessen",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
             "name": "Bola de basquete",
             "material": "vidro",
             "size": "padrão",
             "price": {
                 "sign": "R$",
-                "abcde": {
+                "value": {
                     "int": 139,
                     "cent": 90
                 }
@@ -576,15 +569,15 @@ db.getCollection('ballModels').insertMany(
             "image": "/api/images?ball_type=basquete"
         },
         {
-            "sport": "basquete"
-                "brand": "angemessen"
+            "sport": "basquete",
+            "brand": "angemessen",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
             "name": "Bola de basquete",
             "material": "madeira",
             "size": "padrão",
             "price": {
                 "sign": "R$",
-                "abcde": {
+                "value": {
                     "int": 99,
                     "cent": 90
                 }
@@ -593,15 +586,15 @@ db.getCollection('ballModels').insertMany(
             "image": "/api/images?ball_type=basquete"
         },
         {
-            "sport": "basquete"
-                "brand": "angemessen"
+            "sport": "basquete",
+            "brand": "angemessen",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
             "name": "Bola de basquete",
             "material": "eva",
             "size": "padrão",
             "price": {
                 "sign": "R$",
-                "abcde": {
+                "value": {
                     "int": 59,
                     "cent": 90
                 }
@@ -610,15 +603,15 @@ db.getCollection('ballModels').insertMany(
             "image": "/api/images?ball_type=basquete"
         },
         {
-            "sport": "basquete"
-                "brand": "angemessen"
+            "sport": "basquete",
+            "brand": "angemessen",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
             "name": "Bola de basquete",
             "material": "couro",
             "size": "grande",
             "price": {
                 "sign": "R$",
-                "abcde": {
+                "value": {
                     "int": 129,
                     "cent": 90
                 }
@@ -627,15 +620,15 @@ db.getCollection('ballModels').insertMany(
             "image": "/api/images?ball_type=basquete"
         },
         {
-            "sport": "basquete"
-                "brand": "angemessen"
+            "sport": "basquete",
+            "brand": "angemessen",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
             "name": "Bola de basquete",
             "material": "plástico",
             "size": "grande",
             "price": {
                 "sign": "R$",
-                "abcde": {
+                "value": {
                     "int": 39,
                     "cent": 90
                 }
@@ -644,15 +637,15 @@ db.getCollection('ballModels').insertMany(
             "image": "/api/images?ball_type=basquete"
         },
         {
-            "sport": "basquete"
-                "brand": "angemessen"
+            "sport": "basquete",
+            "brand": "angemessen",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
             "name": "Bola de basquete",
             "material": "borracha",
             "size": "grande",
             "price": {
                 "sign": "R$",
-                "abcde": {
+                "value": {
                     "int": 89,
                     "cent": 90
                 }
@@ -661,15 +654,15 @@ db.getCollection('ballModels').insertMany(
             "image": "/api/images?ball_type=basquete"
         },
         {
-            "sport": "basquete"
-                "brand": "angemessen"
+            "sport": "basquete",
+            "brand": "angemessen",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
             "name": "Bola de basquete",
             "material": "cerâmica",
             "size": "grande",
             "price": {
                 "sign": "R$",
-                "abcde": {
+                "value": {
                     "int": 159,
                     "cent": 90
                 }
@@ -678,15 +671,15 @@ db.getCollection('ballModels').insertMany(
             "image": "/api/images?ball_type=basquete"
         },
         {
-            "sport": "basquete"
-                "brand": "angemessen"
+            "sport": "basquete",
+            "brand": "angemessen",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
             "name": "Bola de basquete",
             "material": "vidro",
             "size": "grande",
             "price": {
                 "sign": "R$",
-                "abcde": {
+                "value": {
                     "int": 239,
                     "cent": 90
                 }
@@ -695,15 +688,15 @@ db.getCollection('ballModels').insertMany(
             "image": "/api/images?ball_type=basquete"
         },
         {
-            "sport": "basquete"
-                "brand": "angemessen"
+            "sport": "basquete",
+            "brand": "angemessen",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
             "name": "Bola de basquete",
             "material": "madeira",
             "size": "grande",
             "price": {
                 "sign": "R$",
-                "abcde": {
+                "value": {
                     "int": 139,
                     "cent": 90
                 }
@@ -712,15 +705,15 @@ db.getCollection('ballModels').insertMany(
             "image": "/api/images?ball_type=basquete"
         },
         {
-            "sport": "basquete"
-                "brand": "angemessen"
+            "sport": "basquete",
+            "brand": "angemessen",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
             "name": "Bola de basquete",
             "material": "eva",
             "size": "grande",
             "price": {
                 "sign": "R$",
-                "abcde": {
+                "value": {
                     "int": 99,
                     "cent": 90
                 }
@@ -730,14 +723,14 @@ db.getCollection('ballModels').insertMany(
         },
         {
             "sport": "volei",
-            "brand": "angemessen"
- 
-            "description": { type: String, required: true },           "name,
+            "brand": "angemessen",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            "name": "Bola de vôlei",
             "material": "plástico",
             "size": "pequeno",
             "price": {
                 "sign": "R$",
-                "abcde": {
+                "value": {
                     "int": 39,
                     "cent": 90
                 }
@@ -747,14 +740,14 @@ db.getCollection('ballModels').insertMany(
         },
         {
             "sport": "volei",
-            "brand": "angemessen"
- 
-            "description": { type: String, required: true },           "name,
+            "brand": "angemessen",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            "name": "Bola de vôlei",
             "material": "cerâmica",
             "size": "pequeno",
             "price": {
                 "sign": "R$",
-                "abcde": {
+                "value": {
                     "int": 89,
                     "cent": 90
                 }
@@ -764,14 +757,14 @@ db.getCollection('ballModels').insertMany(
         },
         {
             "sport": "volei",
-            "brand": "angemessen"
- 
-            "description": { type: String, required: true },           "name,
+            "brand": "angemessen",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            "name": "Bola de vôlei",
             "material": "borracha",
             "size": "pequeno",
             "price": {
                 "sign": "R$",
-                "abcde": {
+                "value": {
                     "int": 49,
                     "cent": 90
                 }
@@ -781,14 +774,14 @@ db.getCollection('ballModels').insertMany(
         },
         {
             "sport": "volei",
-            "brand": "angemessen"
- 
-            "description": { type: String, required: true },           "name,
+            "brand": "angemessen",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            "name": "Bola de vôlei",
             "material": "eva",
             "size": "pequeno",
             "price": {
                 "sign": "R$",
-                "abcde": {
+                "value": {
                     "int": 49,
                     "cent": 90
                 }
@@ -798,14 +791,14 @@ db.getCollection('ballModels').insertMany(
         },
         {
             "sport": "volei",
-            "brand": "angemessen"
- 
-            "description": { type: String, required: true },           "name,
+            "brand": "angemessen",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            "name": "Bola de vôlei",
             "material": "couro",
             "size": "pequeno",
             "price": {
                 "sign": "R$",
-                "abcde": {
+                "value": {
                     "int": 89,
                     "cent": 90
                 }
@@ -815,14 +808,14 @@ db.getCollection('ballModels').insertMany(
         },
         {
             "sport": "volei",
-            "brand": "angemessen"
- 
-            "description": { type: String, required: true },           "name,
+            "brand": "angemessen",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            "name": "Bola de vôlei",
             "material": "vidro",
             "size": "pequeno",
             "price": {
                 "sign": "R$",
-                "abcde": {
+                "value": {
                     "int": 99,
                     "cent": 90
                 }
@@ -832,14 +825,14 @@ db.getCollection('ballModels').insertMany(
         },
         {
             "sport": "volei",
-            "brand": "angemessen"
- 
-            "description": { type: String, required: true },           "name,
+            "brand": "angemessen",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            "name": "Bola de vôlei",
             "material": "madeira",
             "size": "pequeno",
             "price": {
                 "sign": "R$",
-                "abcde": {
+                "value": {
                     "int": 79,
                     "cent": 90
                 }
@@ -849,14 +842,14 @@ db.getCollection('ballModels').insertMany(
         },
         {
             "sport": "volei",
-            "brand": "angemessen"
- 
-            "description": { type: String, required: true },           "name,
+            "brand": "angemessen",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            "name": "Bola de vôlei",
             "material": "plástico",
             "size": "padrão",
             "price": {
                 "sign": "R$",
-                "abcde": {
+                "value": {
                     "int": 39,
                     "cent": 90
                 }
@@ -866,14 +859,14 @@ db.getCollection('ballModels').insertMany(
         },
         {
             "sport": "volei",
-            "brand": "angemessen"
- 
-            "description": { type: String, required: true },           "name,
+            "brand": "angemessen",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            "name": "Bola de vôlei",
             "material": "cerâmica",
             "size": "padrão",
             "price": {
                 "sign": "R$",
-                "abcde": {
+                "value": {
                     "int": 99,
                     "cent": 90
                 }
@@ -883,14 +876,14 @@ db.getCollection('ballModels').insertMany(
         },
         {
             "sport": "volei",
-            "brand": "angemessen"
- 
-            "description": { type: String, required: true },           "name,
+            "brand": "angemessen",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            "name": "Bola de vôlei",
             "material": "borracha",
             "size": "padrão",
             "price": {
                 "sign": "R$",
-                "abcde": {
+                "value": {
                     "int": 89,
                     "cent": 90
                 }
@@ -900,14 +893,14 @@ db.getCollection('ballModels').insertMany(
         },
         {
             "sport": "volei",
-            "brand": "angemessen"
- 
-            "description": { type: String, required: true },           "name,
+            "brand": "angemessen",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            "name": "Bola de vôlei",
             "material": "eva",
             "size": "padrão",
             "price": {
                 "sign": "R$",
-                "abcde": {
+                "value": {
                     "int": 59,
                     "cent": 90
                 }
@@ -917,14 +910,14 @@ db.getCollection('ballModels').insertMany(
         },
         {
             "sport": "volei",
-            "brand": "angemessen"
- 
-            "description": { type: String, required: true },           "name,
+            "brand": "angemessen",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            "name": "Bola de vôlei",
             "material": "couro",
             "size": "padrão",
             "price": {
                 "sign": "R$",
-                "abcde": {
+                "value": {
                     "int": 129,
                     "cent": 90
                 }
@@ -934,14 +927,14 @@ db.getCollection('ballModels').insertMany(
         },
         {
             "sport": "volei",
-            "brand": "angemessen"
- 
-            "description": { type: String, required: true },           "name,
+            "brand": "angemessen",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            "name": "Bola de vôlei",
             "material": "vidro",
             "size": "padrão",
             "price": {
                 "sign": "R$",
-                "abcde": {
+                "value": {
                     "int": 139,
                     "cent": 90
                 }
@@ -951,14 +944,14 @@ db.getCollection('ballModels').insertMany(
         },
         {
             "sport": "volei",
-            "brand": "angemessen"
- 
-            "description": { type: String, required: true },           "name,
+            "brand": "angemessen",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            "name": "Bola de vôlei",
             "material": "madeira",
             "size": "padrão",
             "price": {
                 "sign": "R$",
-                "abcde": {
+                "value": {
                     "int": 99,
                     "cent": 90
                 }
@@ -968,14 +961,14 @@ db.getCollection('ballModels').insertMany(
         },
         {
             "sport": "volei",
-            "brand": "angemessen"
- 
-            "description": { type: String, required: true },           "name,
+            "brand": "angemessen",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            "name": "Bola de vôlei",
             "material": "plástico",
             "size": "grande",
             "price": {
                 "sign": "R$",
-                "abcde": {
+                "value": {
                     "int": 39,
                     "cent": 90
                 }
@@ -985,14 +978,14 @@ db.getCollection('ballModels').insertMany(
         },
         {
             "sport": "volei",
-            "brand": "angemessen"
- 
-            "description": { type: String, required: true },           "name,
+            "brand": "angemessen",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            "name": "Bola de vôlei",
             "material": "cerâmica",
             "size": "grande",
             "price": {
                 "sign": "R$",
-                "abcde": {
+                "value": {
                     "int": 159,
                     "cent": 90
                 }
@@ -1002,14 +995,14 @@ db.getCollection('ballModels').insertMany(
         },
         {
             "sport": "volei",
-            "brand": "angemessen"
- 
-            "description": { type: String, required: true },           "name,
+            "brand": "angemessen",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            "name": "Bola de vôlei",
             "material": "borracha",
             "size": "grande",
             "price": {
                 "sign": "R$",
-                "abcde": {
+                "value": {
                     "int": 89,
                     "cent": 90
                 }
@@ -1019,14 +1012,14 @@ db.getCollection('ballModels').insertMany(
         },
         {
             "sport": "volei",
-            "brand": "angemessen"
- 
-            "description": { type: String, required: true },           "name,
+            "brand": "angemessen",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            "name": "Bola de vôlei",
             "material": "eva",
             "size": "grande",
             "price": {
                 "sign": "R$",
-                "abcde": {
+                "value": {
                     "int": 99,
                     "cent": 90
                 }
@@ -1036,14 +1029,14 @@ db.getCollection('ballModels').insertMany(
         },
         {
             "sport": "volei",
-            "brand": "angemessen"
- 
-            "description": { type: String, required: true },           "name,
+            "brand": "angemessen",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            "name": "Bola de vôlei",
             "material": "couro",
             "size": "grande",
             "price": {
                 "sign": "R$",
-                "abcde": {
+                "value": {
                     "int": 129,
                     "cent": 90
                 }
@@ -1053,14 +1046,14 @@ db.getCollection('ballModels').insertMany(
         },
         {
             "sport": "volei",
-            "brand": "angemessen"
- 
-            "description": { type: String, required: true },           "name,
+            "brand": "angemessen",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            "name": "Bola de vôlei",
             "material": "vidro",
             "size": "grande",
             "price": {
                 "sign": "R$",
-                "abcde": {
+                "value": {
                     "int": 239,
                     "cent": 90
                 }
@@ -1070,14 +1063,14 @@ db.getCollection('ballModels').insertMany(
         },
         {
             "sport": "volei",
-            "brand": "angemessen"
- 
-            "description": { type: String, required: true },           "name,
+            "brand": "angemessen",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            "name": "Bola de vôlei",
             "material": "madeira",
             "size": "grande",
             "price": {
                 "sign": "R$",
-                "abcde": {
+                "value": {
                     "int": 239,
                     "cent": 90
                 }
@@ -1087,14 +1080,14 @@ db.getCollection('ballModels').insertMany(
         },
         {
             "sport": "golfe",
-            "brand": "angemessen"
- 
-            "description": { type: String, required: true },           "name,
+            "brand": "angemessen",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            "name": "Bola de golfe",
             "material": "couro",
             "size": "padrão",
             "price": {
                 "sign": "R$",
-                "abcde": {
+                "value": {
                     "int": 129,
                     "cent": 90
                 }
@@ -1104,14 +1097,14 @@ db.getCollection('ballModels').insertMany(
         },
         {
             "sport": "golfe",
-            "brand": "angemessen"
- 
-            "description": { type: String, required: true },           "name,
+            "brand": "angemessen",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            "name": "Bola de golfe",
             "material": "plástico",
             "size": "padrão",
             "price": {
                 "sign": "R$",
-                "abcde": {
+                "value": {
                     "int": 39,
                     "cent": 90
                 }
@@ -1121,14 +1114,14 @@ db.getCollection('ballModels').insertMany(
         },
         {
             "sport": "golfe",
-            "brand": "angemessen"
- 
-            "description": { type: String, required: true },           "name,
+            "brand": "angemessen",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            "name": "Bola de golfe",
             "material": "borracha",
             "size": "padrão",
             "price": {
                 "sign": "R$",
-                "abcde": {
+                "value": {
                     "int": 89,
                     "cent": 90
                 }
@@ -1138,14 +1131,14 @@ db.getCollection('ballModels').insertMany(
         },
         {
             "sport": "golfe",
-            "brand": "angemessen"
- 
-            "description": { type: String, required: true },           "name,
+            "brand": "angemessen",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            "name": "Bola de golfe",
             "material": "cerâmica",
             "size": "padrão",
             "price": {
                 "sign": "R$",
-                "abcde": {
+                "value": {
                     "int": 99,
                     "cent": 90
                 }
@@ -1155,14 +1148,14 @@ db.getCollection('ballModels').insertMany(
         },
         {
             "sport": "golfe",
-            "brand": "angemessen"
- 
-            "description": { type: String, required: true },           "name,
+            "brand": "angemessen",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            "name": "Bola de golfe",
             "material": "vidro",
             "size": "padrão",
             "price": {
                 "sign": "R$",
-                "abcde": {
+                "value": {
                     "int": 139,
                     "cent": 90
                 }
@@ -1172,14 +1165,14 @@ db.getCollection('ballModels').insertMany(
         },
         {
             "sport": "golfe",
-            "brand": "angemessen"
- 
-            "description": { type: String, required: true },           "name,
+            "brand": "angemessen",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            "name": "Bola de golfe",
             "material": "madeira",
             "size": "padrão",
             "price": {
                 "sign": "R$",
-                "abcde": {
+                "value": {
                     "int": 99,
                     "cent": 90
                 }
@@ -1189,14 +1182,14 @@ db.getCollection('ballModels').insertMany(
         },
         {
             "sport": "golfe",
-            "brand": "angemessen"
- 
-            "description": { type: String, required: true },           "name,
+            "brand": "angemessen",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            "name": "Bola de golfe",
             "material": "eva",
             "size": "padrão",
             "price": {
                 "sign": "R$",
-                "abcde": {
+                "value": {
                     "int": 59,
                     "cent": 90
                 }
@@ -1206,14 +1199,14 @@ db.getCollection('ballModels').insertMany(
         },
         {
             "sport": "golfe",
-            "brand": "angemessen"
- 
-            "description": { type: String, required: true },           "name,
+            "brand": "angemessen",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            "name": "Bola de golfe",
             "material": "couro",
             "size": "médio",
             "price": {
                 "sign": "R$",
-                "abcde": {
+                "value": {
                     "int": 129,
                     "cent": 90
                 }
@@ -1223,14 +1216,14 @@ db.getCollection('ballModels').insertMany(
         },
         {
             "sport": "golfe",
-            "brand": "angemessen"
- 
-            "description": { type: String, required: true },           "name,
+            "brand": "angemessen",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            "name": "Bola de golfe",
             "material": "plástico",
             "size": "médio",
             "price": {
                 "sign": "R$",
-                "abcde": {
+                "value": {
                     "int": 39,
                     "cent": 90
                 }
@@ -1240,14 +1233,14 @@ db.getCollection('ballModels').insertMany(
         },
         {
             "sport": "golfe",
-            "brand": "angemessen"
- 
-            "description": { type: String, required: true },           "name,
+            "brand": "angemessen",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            "name": "Bola de golfe",
             "material": "borracha",
             "size": "médio",
             "price": {
                 "sign": "R$",
-                "abcde": {
+                "value": {
                     "int": 89,
                     "cent": 90
                 }
@@ -1257,14 +1250,14 @@ db.getCollection('ballModels').insertMany(
         },
         {
             "sport": "golfe",
-            "brand": "angemessen"
- 
-            "description": { type: String, required: true },           "name,
+            "brand": "angemessen",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            "name": "Bola de golfe",
             "material": "cerâmica",
             "size": "médio",
             "price": {
                 "sign": "R$",
-                "abcde": {
+                "value": {
                     "int": 119,
                     "cent": 90
                 }
@@ -1274,14 +1267,14 @@ db.getCollection('ballModels').insertMany(
         },
         {
             "sport": "golfe",
-            "brand": "angemessen"
- 
-            "description": { type: String, required: true },           "name,
+            "brand": "angemessen",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            "name": "Bola de golfe",
             "material": "vidro",
             "size": "médio",
             "price": {
                 "sign": "R$",
-                "abcde": {
+                "value": {
                     "int": 159,
                     "cent": 90
                 }
@@ -1291,14 +1284,14 @@ db.getCollection('ballModels').insertMany(
         },
         {
             "sport": "golfe",
-            "brand": "angemessen"
- 
-            "description": { type: String, required: true },           "name,
+            "brand": "angemessen",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            "name": "Bola de golfe",
             "material": "madeira",
             "size": "médio",
             "price": {
                 "sign": "R$",
-                "abcde": {
+                "value": {
                     "int": 129,
                     "cent": 90
                 }
@@ -1308,14 +1301,14 @@ db.getCollection('ballModels').insertMany(
         },
         {
             "sport": "golfe",
-            "brand": "angemessen"
- 
-            "description": { type: String, required: true },           "name,
+            "brand": "angemessen",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            "name": "Bola de golfe",
             "material": "eva",
             "size": "médio",
             "price": {
                 "sign": "R$",
-                "abcde": {
+                "value": {
                     "int": 69,
                     "cent": 90
                 }
@@ -1325,14 +1318,14 @@ db.getCollection('ballModels').insertMany(
         },
         {
             "sport": "golfe",
-            "brand": "angemessen"
- 
-            "description": { type: String, required: true },           "name,
+            "brand": "angemessen",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            "name": "Bola de golfe",
             "material": "couro",
             "size": "grande",
             "price": {
                 "sign": "R$",
-                "abcde": {
+                "value": {
                     "int": 129,
                     "cent": 90
                 }
@@ -1342,14 +1335,14 @@ db.getCollection('ballModels').insertMany(
         },
         {
             "sport": "golfe",
-            "brand": "angemessen"
- 
-            "description": { type: String, required: true },           "name,
+            "brand": "angemessen",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            "name": "Bola de golfe",
             "material": "plástico",
             "size": "grande",
             "price": {
                 "sign": "R$",
-                "abcde": {
+                "value": {
                     "int": 39,
                     "cent": 90
                 }
@@ -1359,14 +1352,14 @@ db.getCollection('ballModels').insertMany(
         },
         {
             "sport": "golfe",
-            "brand": "angemessen"
- 
-            "description": { type: String, required: true },           "name,
+            "brand": "angemessen",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            "name": "Bola de golfe",
             "material": "borracha",
             "size": "grande",
             "price": {
                 "sign": "R$",
-                "abcde": {
+                "value": {
                     "int": 89,
                     "cent": 90
                 }
@@ -1376,14 +1369,14 @@ db.getCollection('ballModels').insertMany(
         },
         {
             "sport": "golfe",
-            "brand": "angemessen"
- 
-            "description": { type: String, required: true },           "name,
+            "brand": "angemessen",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            "name": "Bola de golfe",
             "material": "cerâmica",
             "size": "grande",
             "price": {
                 "sign": "R$",
-                "abcde": {
+                "value": {
                     "int": 159,
                     "cent": 90
                 }
@@ -1393,14 +1386,14 @@ db.getCollection('ballModels').insertMany(
         },
         {
             "sport": "golfe",
-            "brand": "angemessen"
- 
-            "description": { type: String, required: true },           "name,
+            "brand": "angemessen",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            "name": "Bola de golfe",
             "material": "vidro",
             "size": "grande",
             "price": {
                 "sign": "R$",
-                "abcde": {
+                "value": {
                     "int": 239,
                     "cent": 90
                 }
@@ -1410,14 +1403,14 @@ db.getCollection('ballModels').insertMany(
         },
         {
             "sport": "golfe",
-            "brand": "angemessen"
- 
-            "description": { type: String, required: true },           "name,
+            "brand": "angemessen",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            "name": "Bola de golfe",
             "material": "madeira",
             "size": "grande",
             "price": {
                 "sign": "R$",
-                "abcde": {
+                "value": {
                     "int": 139,
                     "cent": 90
                 }
@@ -1427,14 +1420,14 @@ db.getCollection('ballModels').insertMany(
         },
         {
             "sport": "golfe",
-            "brand": "angemessen"
- 
-            "description": { type: String, required: true },           "name,
+            "brand": "angemessen",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            "name": "Bola de golfe",
             "material": "eva",
             "size": "grande",
             "price": {
                 "sign": "R$",
-                "abcde": {
+                "value": {
                     "int": 99,
                     "cent": 90
                 }
@@ -1444,14 +1437,14 @@ db.getCollection('ballModels').insertMany(
         },
         {
             "sport": "bocha",
-            "brand": "angemessen"
- 
-            "description": { type: String, required: true },           "name,
+            "brand": "angemessen",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            "name": "Bola de bocha",
             "material": "cerâmica",
             "size": "padrão",
             "price": {
                 "sign": "R$",
-                "abcde": {
+                "value": {
                     "int": 99,
                     "cent": 90
                 }
@@ -1461,14 +1454,14 @@ db.getCollection('ballModels').insertMany(
         },
         {
             "sport": "bocha",
-            "brand": "angemessen"
- 
-            "description": { type: String, required: true },           "name,
+            "brand": "angemessen",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            "name": "Bola de bocha",
             "material": "vidro",
             "size": "padrão",
             "price": {
                 "sign": "R$",
-                "abcde": {
+                "value": {
                     "int": 139,
                     "cent": 90
                 }
@@ -1478,14 +1471,14 @@ db.getCollection('ballModels').insertMany(
         },
         {
             "sport": "bocha",
-            "brand": "angemessen"
- 
-            "description": { type: String, required: true },           "name,
+            "brand": "angemessen",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            "name": "Bola de bocha",
             "material": "couro",
             "size": "padrão",
             "price": {
                 "sign": "R$",
-                "abcde": {
+                "value": {
                     "int": 129,
                     "cent": 90
                 }
@@ -1495,14 +1488,14 @@ db.getCollection('ballModels').insertMany(
         },
         {
             "sport": "bocha",
-            "brand": "angemessen"
- 
-            "description": { type: String, required: true },           "name,
+            "brand": "angemessen",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            "name": "Bola de bocha",
             "material": "plástico",
             "size": "padrão",
             "price": {
                 "sign": "R$",
-                "abcde": {
+                "value": {
                     "int": 39,
                     "cent": 90
                 }
@@ -1512,31 +1505,31 @@ db.getCollection('ballModels').insertMany(
         },
         {
             "sport": "bocha",
-            "brand": "angemessen"
- 
-            "description": { type: String, required: true },           "name,
+            "brand": "angemessen",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            "name": "Bola de bocha",
             "material": "madeira",
             "size": "padrão",
             "price": {
                 "sign": "R$",
-                "abcde": {
+                "value": {
                     "int": 99,
                     "cent": 9
                 }
-            }0
+            },
             "avaliation": 4,
             "image": "/api/images?ball_type=bocha"
         },
         {
             "sport": "bocha",
-            "brand": "angemessen"
- 
-            "description": { type: String, required: true },           "name,
+            "brand": "angemessen",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            "name": "Bola de bocha",
             "material": "eva",
             "size": "padrão",
             "price": {
                 "sign": "R$",
-                "abcde": {
+                "value": {
                     "int": 59,
                     "cent": 90
                 }
@@ -1546,14 +1539,14 @@ db.getCollection('ballModels').insertMany(
         },
         {
             "sport": "bocha",
-            "brand": "angemessen"
- 
-            "description": { type: String, required: true },           "name,
+            "brand": "angemessen",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            "name": "Bola de bocha",
             "material": "borracha",
             "size": "padrão",
             "price": {
                 "sign": "R$",
-                "abcde": {
+                "value": {
                     "int": 89,
                     "cent": 90
                 }
@@ -1563,14 +1556,14 @@ db.getCollection('ballModels').insertMany(
         },
         {
             "sport": "bocha",
-            "brand": "angemessen"
- 
-            "description": { type: String, required: true },           "name,
+            "brand": "angemessen",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            "name": "Bola de bocha",
             "material": "cerâmica",
             "size": "médio",
             "price": {
                 "sign": "R$",
-                "abcde": {
+                "value": {
                     "int": 119,
                     "cent": 90
                 }
@@ -1580,14 +1573,14 @@ db.getCollection('ballModels').insertMany(
         },
         {
             "sport": "bocha",
-            "brand": "angemessen"
- 
-            "description": { type: String, required: true },           "name,
+            "brand": "angemessen",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            "name": "Bola de bocha",
             "material": "vidro",
             "size": "médio",
             "price": {
                 "sign": "R$",
-                "abcde": {
+                "value": {
                     "int": 159,
                     "cent": 90
                 }
@@ -1597,14 +1590,14 @@ db.getCollection('ballModels').insertMany(
         },
         {
             "sport": "bocha",
-            "brand": "angemessen"
- 
-            "description": { type: String, required: true },           "name,
+            "brand": "angemessen",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            "name": "Bola de bocha",
             "material": "couro",
             "size": "médio",
             "price": {
                 "sign": "R$",
-                "abcde": {
+                "value": {
                     "int": 129,
                     "cent": 90
                 }
@@ -1614,14 +1607,14 @@ db.getCollection('ballModels').insertMany(
         },
         {
             "sport": "bocha",
-            "brand": "angemessen"
- 
-            "description": { type: String, required: true },           "name,
+            "brand": "angemessen",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            "name": "Bola de bocha",
             "material": "plástico",
             "size": "médio",
             "price": {
                 "sign": "R$",
-                "abcde": {
+                "value": {
                     "int": 39,
                     "cent": 90
                 }
@@ -1631,14 +1624,14 @@ db.getCollection('ballModels').insertMany(
         },
         {
             "sport": "bocha",
-            "brand": "angemessen"
- 
-            "description": { type: String, required: true },           "name,
+            "brand": "angemessen",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            "name": "Bola de bocha",
             "material": "madeira",
             "size": "médio",
             "price": {
                 "sign": "R$",
-                "abcde": {
+                "value": {
                     "int": 129,
                     "cent": 90
                 }
@@ -1648,14 +1641,14 @@ db.getCollection('ballModels').insertMany(
         },
         {
             "sport": "bocha",
-            "brand": "angemessen"
- 
-            "description": { type: String, required: true },           "name,
+            "brand": "angemessen",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            "name": "Bola de bocha",
             "material": "eva",
             "size": "médio",
             "price": {
                 "sign": "R$",
-                "abcde": {
+                "value": {
                     "int": 69,
                     "cent": 90
                 }
@@ -1665,14 +1658,14 @@ db.getCollection('ballModels').insertMany(
         },
         {
             "sport": "bocha",
-            "brand": "angemessen"
- 
-            "description": { type: String, required: true },           "name,
+            "brand": "angemessen",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            "name": "Bola de bocha",
             "material": "borracha",
             "size": "médio",
             "price": {
                 "sign": "R$",
-                "abcde": {
+                "value": {
                     "int": 89,
                     "cent": 90
                 }
@@ -1682,14 +1675,14 @@ db.getCollection('ballModels').insertMany(
         },
         {
             "sport": "bocha",
-            "brand": "angemessen"
- 
-            "description": { type: String, required: true },           "name,
+            "brand": "angemessen",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            "name": "Bola de bocha",
             "material": "cerâmica",
             "size": "grande",
             "price": {
                 "sign": "R$",
-                "abcde": {
+                "value": {
                     "int": 159,
                     "cent": 90
                 }
@@ -1699,14 +1692,14 @@ db.getCollection('ballModels').insertMany(
         },
         {
             "sport": "bocha",
-            "brand": "angemessen"
- 
-            "description": { type: String, required: true },           "name,
+            "brand": "angemessen",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            "name": "Bola de bocha",
             "material": "vidro",
             "size": "grande",
             "price": {
                 "sign": "R$",
-                "abcde": {
+                "value": {
                     "int": 239,
                     "cent": 90
                 }
@@ -1716,14 +1709,14 @@ db.getCollection('ballModels').insertMany(
         },
         {
             "sport": "bocha",
-            "brand": "angemessen"
- 
-            "description": { type: String, required: true },           "name,
+            "brand": "angemessen",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            "name": "Bola de bocha",
             "material": "couro",
             "size": "grande",
             "price": {
                 "sign": "R$",
-                "abcde": {
+                "value": {
                     "int": 129,
                     "cent": 90
                 }
@@ -1733,14 +1726,14 @@ db.getCollection('ballModels').insertMany(
         },
         {
             "sport": "bocha",
-            "brand": "angemessen"
- 
-            "description": { type: String, required: true },           "name,
+            "brand": "angemessen",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            "name": "Bola de bocha",
             "material": "plástico",
             "size": "grande",
             "price": {
                 "sign": "R$",
-                "abcde": {
+                "value": {
                     "int": 39,
                     "cent": 90
                 }
@@ -1750,14 +1743,14 @@ db.getCollection('ballModels').insertMany(
         },
         {
             "sport": "bocha",
-            "brand": "angemessen"
- 
-            "description": { type: String, required: true },           "name,
+            "brand": "angemessen",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            "name": "Bola de bocha",
             "material": "madeira",
             "size": "grande",
             "price": {
                 "sign": "R$",
-                "abcde": {
+                "value": {
                     "int": 139,
                     "cent": 90
                 }
@@ -1767,14 +1760,14 @@ db.getCollection('ballModels').insertMany(
         },
         {
             "sport": "bocha",
-            "brand": "angemessen"
- 
-            "description": { type: String, required: true },           "name,
+            "brand": "angemessen",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            "name": "Bola de bocha",
             "material": "eva",
             "size": "grande",
             "price": {
                 "sign": "R$",
-                "abcde": {
+                "value": {
                     "int": 99,
                     "cent": 90
                 }
@@ -1784,14 +1777,14 @@ db.getCollection('ballModels').insertMany(
         },
         {
             "sport": "bocha",
-            "brand": "angemessen"
- 
-            "description": { type: String, required: true },           "name,
+            "brand": "angemessen",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            "name": "Bola de bocha",
             "material": "borracha",
             "size": "grande",
             "price": {
                 "sign": "R$",
-                "abcde": {
+                "value": {
                     "int": 89,
                     "cent": 90
                 }
@@ -1801,94 +1794,3 @@ db.getCollection('ballModels').insertMany(
         }
     ]
 )
-
-// Insert a few documents into the BALLS collection.
-// db.getCollection('ballmodels').insertMany([
-//     {
-//         "type": "Mano",
-//         "material": "couro",
-//         "brand": ""angemessen"",
-//         "sport": "futeb129.
-    "brand": "angemessen"
-            "description": { type: ,
-//         "size": "",
-//         "price": {
-    "sign": "R$",
-    "abcde": {
-        "int": 0,
- 01        "cent":
-    ,
-"avaliation": 4,
-//         "image": "/api/images?ball_type=random"
-//     },
-//     {
-//         "type": "Ball is Quete",
-//         "material": "couro",
-//         "brand": ""angemessen"",
-//         "sport": "basqu129.
-                "brand": "angemessen"
-            "description": { type: ,
-//         "size": "",
-//         "price": {
-    "sign": "R$",
-    "abcde": {
-        "int": 23, 51
-        "cent":
-    ,
-"avaliation": 4,
-//         "image": "/api/images?ball_type=random"
-//     },
-//     {
-//         "type": "Bola de Ed. Física",
-//         "material": "plástico",
-//         "brand": ""angemessen"",
-//         "sport": "volei39.9
-                "brand": "angemessen"
-            "description": { ,
-//         "size": "",
-//         "price": {
-    "sign": "R$",
-    "abcde": {
-        "int": 15, 01
-        "cent":
-    ,
-"avaliation": 4,
-//         "image": "/api/images?ball_type=random"
-//     },
-//     {
-//         "type": "Bola de Golfe Grande",
-//         "material": "plástico",
-//         "brand": ""angemessen"",
-//         "sport": "golfe39.9
-                "brand": "angemessen"
-            "description": { ,
-//         "size": "",
-//         "price": {
-    "sign": "R$",
-    "abcde": {
-        "int": 40, 23
-        "cent":
-    ,
-"avaliation": 4,
-//         "image": "/api/images?ball_type=random"
-//     },
-//     {
-//         "type": "El Bocha",
-//         "material": "cerâmica",
-//         "brand": ""angemessen"",
-//         "sport": "bocha",
-/   "brand": "angemessen"
-
-            "description": { type: String, required: ,
-//         "price": {
-    "sign": "R$",
-    "abcde": {
-        "int": 130 88,
-        "cent":
-    ,
-"avaliation": 4,
-//         "image": "/api/images?ball_type=random"
-//     }
-// ]);
-
-console.log(JSON.stringify(db.getCollection("ballmodels").find({ })));

@@ -4,7 +4,6 @@ const showcaseArea = document.querySelector(".showcase");
 const showMoreProducts = document.getElementById("show-more-products");
 
 const loadMoreProducts = (/* numberOfProducts */) => {
-    
     const productInfoRequest = new Request(apiURI, { method: "GET" });
     fetch(productInfoRequest)  // <- MT OP
         .then((response) => {
@@ -42,12 +41,13 @@ const loadMoreProducts = (/* numberOfProducts */) => {
     
                 newProduct.id = "";
                 newProduct.classList.remove("hide-product");
-                newProduct.querySelector(".nome-produto").innerHTML = product.type;
+                newProduct.querySelector(".nome-produto").innerHTML = product.name;
                 newProduct.querySelector(".product-image").src = product.image;
                 newProduct.querySelector(".product-material").innerHTML = product.material;
                 newProduct.querySelector(".product-sport").innerHTML = product.sport;
                 newProduct.querySelector(".product-brand").innerHTML = product.brand;
-                newProduct.querySelector(".price").innerHTML = product.price;
+                newProduct.querySelector(".price").innerHTML = `${product.price.value.int},${product.price.value.cent}`;
+                newProduct.querySelector(".money-sign").innerHTML = product.price.sign;
                 newProduct.querySelector(".to-product-page").href = `./produtos/${product._id}/desc`;
                 
                 showcaseArea.appendChild(newProduct);
@@ -63,7 +63,6 @@ loadMoreProducts();
 showMoreProducts.addEventListener("click", () => {
     loadMoreProducts();
 })
-
 
 // Victor: *Simbologias estranhas*
 // Lucas: q isso vitin
