@@ -1,0 +1,31 @@
+const express = require("express");
+const path = require("path");
+const mainRouter = require(path.join(__dirname, "..", "routes/main"));
+const testRouter = require(path.join(__dirname, "..", "routes/test"));
+const createRouter = require(path.join(__dirname, "..", "routes/create"));
+const loginRouter = require(path.join(__dirname, "..", "routes/login"));
+const signRouter = require(path.join(__dirname, "..", "routes/sign"));
+const produtosRouter = require(path.join(__dirname, "..", "routes/products"));
+const aboutUsRouter = require(path.join(__dirname, "..", "routes/aboutus"));
+const productDescRouter = require(path.join(__dirname, "..", "routes/product-description"));
+const notFoundRouter = require(path.join(__dirname, "..", "routes/404"));
+const cartRouter = require(path.join(__dirname, "..", "routes/cart"));
+
+const appHTTP = express();
+
+appHTTP.use(express.json());
+appHTTP.use(express.urlencoded({ extended: true }));
+appHTTP.use(express.static(path.join(__dirname, "../..", "/public")));
+appHTTP.set("query parser", (str) => queryStringParser.parse(str));
+appHTTP.use(mainRouter);
+appHTTP.use(testRouter);
+appHTTP.use(createRouter);
+appHTTP.use(loginRouter);
+appHTTP.use(signRouter);
+appHTTP.use(produtosRouter);
+appHTTP.use(aboutUsRouter);
+appHTTP.use(productDescRouter);
+appHTTP.use(notFoundRouter);
+appHTTP.use(cartRouter);
+
+module.exports = appHTTP;

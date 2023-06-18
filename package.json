@@ -1,19 +1,22 @@
 {
-  "name": "CRUD",
+  "name": "angemessen",
   "version": "1.0.0",
-  "description": "",
+  "description": "Projeto da SA de Programação de Aplicativos",
   "main": "index.js",
   "directories": {
     "doc": "docs",
     "example": "examples"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "cd tests && node index.test.js",
+    "build": "npm i && type nul > .env",
+    "dev": "node index.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "dotenv": "^16.3.1",
     "express": "^4.18.2",
     "mongoose": "^7.2.2",
     "nodemailer": "^6.9.3",

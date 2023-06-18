@@ -1,16 +1,17 @@
+require("dotenv").config({ "path": require("path").join(__dirname, "../..", ".env") });
 const nodemailer = require("nodemailer");
 
 const validateEmail = (
     /** @type {string} */ email
 ) => {
-    if (!email.includes('@')) return false;
-    if (email.split('@').length !== 2) return false;
+    const local = email.split('@')[0];
+    const domain = email.split('@')[1];
 
-
-    // if (password.length < 6) return false;
-    // if (password === password.toLowerCase()) return false;
-    // if (password === password.toUpperCase()) return false;
-    // return password === confirmedPassword;
+    if (!local || !domain) return false;
+    if (email.replace(/[^@]/g, '').length !== email.length - 1) return false;
+    if (email[0] === '.') return false;
+    if (email[email.length - 1] === '.') return false;
+    if (email.includes("..")) return false;
 }
 
 const sendValidationEmail = (
@@ -19,16 +20,16 @@ const sendValidationEmail = (
 ) => {
     const transporter = nodemailer.createTransport(
         {
-            service: "gmail",
+            service: "hotmail",
             auth: {
-                user: "angemessen@gmail.com",
-                pass: "OKzUv3ZR9DxrS2rljDRRrSws1CbkRY5vB7m8cQutTbuHkiREtk"
+                user: process.env.EMAIL_ADDRESS,
+                pass: process.env.EMAIL_PASSWORD
             }
         }
     )
 
     var message = {
-        from: 'angemessen@gmail.com',
+        from: process.env.EMAIL_ADDRESS,
         to: email,
         subject: 'Entre no jogo, entre na Angemessen!',
         text: validationLink
@@ -43,9 +44,19 @@ const sendValidationEmail = (
     });
 }
 
-sendValidationEmail("lucasogawarec@gmail.com", "http://localhost:3000/homepage");
+const main = () => {
+    console.log(validateEmail("ronaldin..trollador@ultrahotmail.com"));
+    console.log(validateEmail("lucasogawarec@gmail.com"));
+    console.log(validateEmail("lucas_ogawa@estudante.sesisenai.org.br"));
+    console.log(validateEmail("balls.angemessen@hotmail.com"));
+    console.log(validateEmail(".env@node.com"));
+    console.log(validateEmail("quem_conta_um_conto_aumenta_um_.@gmail.com"));
 
-// module.exports = { validatePassword, sendValidationEmail };
+    // sendValidationEmail("lucasogawarec@gmail.com", "http://localhost:3000/homepage");
+}
 
-// 183802051844-2boa0fsrdler6s850idnmem5ecv0tu9k.apps.googleusercontent.com
-// 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
+if (!module.parent) {
+    main();
+} else {
+    module.exports = { validateEmail, sendValidationEmail };
+}
