@@ -19,13 +19,13 @@ fetch(productInfoRequest)
     .then(response => response.json())
     .then(productInfo => {
         ballName.innerHTML = productInfo.name;
-        ballPrice.innerHTML = `${productInfo.price.value.int},${productInfo.price.value.cent}`;
+        ballPrice.innerHTML = `${Math.floor(productInfo.price.value.int*0.6)},${productInfo.price.value.cent}`;
         // ballQttyClassifications.innerHTML = productInfo.ballQttyClassifications;
         // ballPrice.innerHTML = productInfo.price.value.cent;
         ballImages.src = productInfo.image;
         // ballSmallImages.src = productInfo.image;
         ballDescription.innerHTML = productInfo.description
-        ballOldPrice.innerHTML = `${productInfo.price.value.int + 30},${productInfo.price.value.cent}`
+        ballOldPrice.innerHTML = `${productInfo.price.value.int},${productInfo.price.value.cent}`
 
         for (const ballImage of ballSmallImages) {
             console.log(ballImage)

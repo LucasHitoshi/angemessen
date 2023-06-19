@@ -178,21 +178,33 @@
             <!-- <h1>Entrar</h1> -->
         </div>
         <div>
-            <form action="sign" method="POST" class="nsei"><br>
+            <!-- 
+
+                {
+                    "email": email_do_cara,
+                    "nome": nome_do_cara,
+                    "sobrenome": sobrenome_do_cara,
+                    "password": password_do_cara,
+                    "confirm_password": confirm_password
+                }
+
+             -->
+            <form action="/sign" method="POST" class="nsei"><br>
                 <label for="email"><p class="text">Email:</p></label>
                 <input type="text" id="email" name="email" required class="box-login"><br>
 
                 <label for="nome"><p class="text">Nome:</p></label>
-                <input type="text" id="nome" name="Nome" required class="box-login"><br>
+                <input type="text" id="nome" name="nome" required class="box-login"><br>
+
                 <label for="sobrenome"><p class="text">Sobrenome:</p></label>
-                <input type="text" id="sobrenome" name="Sobrenome" required class="box-login"><br>
+                <input type="text" id="sobrenome" name="sobrenome" required class="box-login"><br>
 
                 <label for="password"><p class="text">Crie uma senha:</p></label>
                 <input type="password" id="password" name="password" required class="box-login"><br>
                 
 
-                <label for="password"><p class="text">Repita sua senha:</p></label>
-                <input type="password" id="confirm_password" name="password" required class="box-login"><br>
+                <label for="confirm_password"><p class="text">Repita sua senha:</p></label>
+                <input type="password" id="confirm_password" name="confirm_password" required class="box-login"><br>
 
                 <label for=""></label>
 

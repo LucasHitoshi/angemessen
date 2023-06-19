@@ -1,23 +1,19 @@
-require("dotenv").config({ "path": require("path").join(__dirname, "../..", ".env") });
+require("dotenv").config({ "path": require("path").join(__dirname, "..", ".env") });
 const nodemailer = require("nodemailer");
-const mongoose = require("mongoose");
 
 const validateEmail = (
     /** @type {string} */ email
 ) => {
     const local = email.split('@')[0];
     const domain = email.split('@')[1];
-    
+
     if (!local || !domain) return false;
-    if (email.replace(/[^@]/g, '').length !== 1) return false;
-    if (local[0] === '.') return false;
-    if (local[local.length - 1] === '.') return false;
+    if (email.replace(/[^@]/g, '').length !== email.length - 1) return false;
+    if (email[0] === '.') return false;
+    if (email[email.length - 1] === '.') return false;
     if (email.includes("..")) return false;
-
-    return true;
 }
-
-const sendValidationEmail = (
+const sendValidationEmail = async (
     /** @type {string} */ email,
     /** @type {string} */ validationLink,
     /** @type {object} */ emailContent
@@ -59,19 +55,20 @@ const sendValidationEmail = (
 }
 
 const main = () => {
-    console.log("\nValidating email:\n");
     console.log(validateEmail("ronaldin..trollador@ultrahotmail.com"));
     console.log(validateEmail("lucasogawarec@gmail.com"));
     console.log(validateEmail("lucas_ogawa@estudante.sesisenai.org.br"));
     console.log(validateEmail("balls.angemessen@hotmail.com"));
     console.log(validateEmail(".env@node.com"));
     console.log(validateEmail("quem_conta_um_conto_aumenta_um_.@gmail.com"));
+
+    const emails = [
+        "lucasogawarec@gmail.com",
+        "victor_vaz@estudante.sesisenai.org.br",
+        "thiago_percyak@estudante.sesisenai.org.br"
+    ];
     
-    console.log("\nValidating oid:\n");
-    console.log(mongoose.isValidObjectId("ggutygcygnucnugy"));
-    console.log(mongoose.isValidObjectId("648da07d3d5cbc5ab938ab6e"));
-    console.log(mongoose.isValidObjectId("7ync356tbn4796tb5cn645nt"));
-    // sendValidationEmail("lucasogawarec@gmail.com", "http://localhost:3000/homepage");
+    sendValidationEmail("victor_vaz@estudante.sesisenai.org.br", "http://localhost:3000/homepage", { "name": "Vitin" });
 }
 
 if (!module.parent) {
