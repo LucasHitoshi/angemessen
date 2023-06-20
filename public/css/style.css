@@ -96,14 +96,4 @@ h1 {
     bottom: 0;
 }
 
-html::after {
-    position: absolute;
-    z-index: 5;
-    display: block;
-    content: "a";
-    height: 25rem;
-    background-color: rgb(0, 0, 0, 0);
-    display: block;
-    width: 100%;
-    bottom: 0;
-}
+/*  */

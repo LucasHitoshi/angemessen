@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="./css/criar-bola.css">
     <script src="./js/script.js" type="text/javascript" defer></script>
     <script src="./js/carousel.js" type="text/javascript" defer></script>
+    <script src="./js/product-generator-home.js" defer></script>
 </head>
 <body>
     <header>
@@ -114,58 +115,34 @@
     </section>
 
     <main class="main-wrapper">
-        <ul class="showcase-index">
-            <li>
-                <img src="./api/images?ball_type=basquete" alt="BOLA TESTES" class="product">
+        <div class="showcase-index">
+                <!-- <img src="./api/images?ball_type=basquete" alt="BOLA TESTES" class="product">
                 <div class="descricao-bola">
                     <div class="nome-bola-escolha">Bola de Basquete</div>
                     <div>
                         <div class="small-price">à vista</div>
                         <div class="price">R&#36;40,99</div>
                     </div>
-                </div>
-            </li>
-            <li>
-                <img src="./api/images?ball_type=basquete" alt="BOLA TESTES" class="product">
-                <div class="descricao-bola">
-                    <div class="nome-bola-escolha">Bola de Basquete</div>
-                    <div>
-                        <div class="small-price">à vista</div>
-                        <div class="price">R&#36;40,99</div>
+                </div> -->
+            <div id="product-card-template" class="product-card hide-product">
+                <div class="product-sport"></div>
+                <a href="#" class="to-product-page">
+                    <div class="img-produto">
+                        <img src="" alt="" class="product-image" loading="lazy">
+                        <img src="./img/favicon.png" alt="Carregando Imagem" class="loading">
                     </div>
+                </a>
+                <div class="nome-produto"></div>
+                <div class="product-material"></div>
+                <div class="product-brand"></div>
+                <div class="price-box">
+                    <div class="money-sign"></div>
+                    <div class="price"></div>
+                    <div class="small-price">à vista</div>
                 </div>
-            </li>
-            <li>
-                <img src="./api/images?ball_type=basquete" alt="BOLA TESTES" class="product">
-                <div class="descricao-bola">
-                    <div class="nome-bola-escolha">Bola de Basquete</div>
-                    <div>
-                        <div class="small-price">à vista</div>
-                        <div class="price">R&#36;40,99</div>
-                    </div>
-                </div>
-            </li>
-            <li>
-                <img src="./api/images?ball_type=basquete" alt="BOLA TESTES" class="product">
-                <div class="descricao-bola">
-                    <div class="nome-bola-escolha">Bola de Basquete</div>
-                    <div>
-                        <div class="small-price">à vista</div>
-                        <div class="price">R&#36;40,99</div>
-                    </div>
-                </div>
-            </li>
-            <li>
-                <img src="./api/images?ball_type=basquete" alt="BOLA TESTES" class="product">
-                <div class="descricao-bola">
-                    <div class="nome-bola-escolha">Bola de Basquete</div>
-                    <div>
-                        <div class="small-price">à vista</div>
-                        <div class="price">R&#36;40,99</div>
-                    </div>
-                </div>
-            </li>
-        </ul>
+            </div>
+            
+        </div>
     </main>
 
     <footer class="footer-container flex-container recessive">
