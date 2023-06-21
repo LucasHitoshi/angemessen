@@ -6,8 +6,7 @@ const ballsApiRouter = express.Router();
 
 ballsApiRouter.get("/api/balls", async (req, res) => {
     try {
-        const queries = req.query; // { limit: 5 }
-        const ballsLimit = queries.limit ? queries.limit : 24; // { limit: 5 }
+        // const queries = req.query;
         // const ball = queries.ball_name;
         // const numberOfBalls = queries.ball_qtty
         //     // ? queries.ball_qtty
@@ -39,7 +38,7 @@ ballsApiRouter.get("/api/balls", async (req, res) => {
         if (true) {
             const possibleBalls = await ballModel
                 .find({ })
-                .limit(ballsLimit)
+                .limit(24)
                 // .sort();
             const result = possibleBalls
             console.log(result)

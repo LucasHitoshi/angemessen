@@ -8,8 +8,8 @@ const signRouter = require(path.join(__dirname, "..", "routes/sign"));
 const produtosRouter = require(path.join(__dirname, "..", "routes/products"));
 const aboutUsRouter = require(path.join(__dirname, "..", "routes/aboutus"));
 const productDescRouter = require(path.join(__dirname, "..", "routes/product-description"));
-const notFoundRouter = require(path.join(__dirname, "..", "routes/404"));
 const cartRouter = require(path.join(__dirname, "..", "routes/cart"));
+const notFoundRouter = require(path.join(__dirname, "..", "routes/404"));
 
 const appHTTP = express();
 
@@ -25,7 +25,7 @@ appHTTP.use(signRouter);
 appHTTP.use(produtosRouter);
 appHTTP.use(aboutUsRouter);
 appHTTP.use(productDescRouter);
-appHTTP.use(notFoundRouter);
 appHTTP.use(cartRouter);
+appHTTP.use(notFoundRouter);
 
 module.exports = appHTTP;

@@ -17,32 +17,127 @@
     font-family: DMSans;
 }
 
-.items-carrinho{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    max-height: 78vh;
-    margin: 1vh;
-    background-color: red;
-}
-
-.cupom-desconto-carrinho{
+.cupom-desconto-carrinho {
     margin: 1vh;
     background-color: green;
 }
 
-.resumo-total-itens{
+.resumo-total-itens {
     margin-left: 2vh;
     background-color: blue;
     width: 25%;
 }
 
-.item-carrinho-{
-    max-height: 15vh;
-    min-height: 15vh;
+.items-carrinho{
+    padding: 5rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5rem;
+
+    margin: 1vh;
+    background-color: red;
 }
 
-.aplicar-cupom{
+.item-carrinho {
+    position: relative;
+    display: block;
+    background-color: #efefef;
+    width: 100%;
+    height: 36rem;
+
+    border: #a0a0a0 solid 1px;
+    border-radius: 4rem;
+
+    padding: 1.5rem;
+}
+
+.item-carrinho > figure {
+    position: relative;
+
+    transition: all 0.35s ease-out;
+    
+    background-color: #ddd;
+
+    height: 100%;
+    aspect-ratio: 1 / 1;
+
+    padding: 3rem;
+    border-radius: 2.5rem;
+}
+
+.item-carrinho > figure:hover {
+    background-color: #aaa;
+
+    padding: 1.5rem;
+}
+
+.item-carrinho > figure > .icon {
+    transition: opacity 0.25s ease-out;
+
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+
+    opacity: 0;
+    width: 3rem;
+    aspect-ratio: 1 / 1;
+}
+
+.item-carrinho > figure:hover > .icon {
+    opacity: 1;
+}
+
+.item-carrinho > figure > .ball-image {
+    height: inherit;
+    aspect-ratio: inherit;
+}
+
+.qtty-selector-wrapper {
+    display: flex;
+    gap: 1rem;
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    width: fit-content;
+}
+
+.qtty-selector-button {
+    transition: all 0.1s linear;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 50%;
+    background-color: #dfdfdf;
+    font-size: 4rem;
+    width: 5.5rem;
+    height: 5.5rem;
+    border: #a0a0a0 solid 1px;
+    border-radius: 50%;
+    outline: #dfdfdf solid 0px;
+}
+
+.qtty-selector-button:hover {
+    background-color: #eee;
+    outline: #dfdfdf solid 5px;
+}
+
+.ball-qtty {
+
+}
+
+/* 
+<div class="qtty-selector-wrapper">
+    <button class="qtty-selector-button increase-qtty">+</button>
+    <span class="ball-qtty"></span>
+    <button class="qtty-selector-button decrease-qtty">-</button>
+</div>
+*/
+
+/* /////////////////////////////////////////// */
+
+.aplicar-cupom {
     margin: 1vh;
     margin-left: 2vh;
     font-size: 2rem;

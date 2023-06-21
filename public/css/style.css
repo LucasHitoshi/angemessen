@@ -64,26 +64,6 @@ h1 {
     height: 10.2px;
 }
 
-.price {
-    color: #ffe44e;
-    /* text-align: center; */
-    font-size: 4rem;
-}
-
-.small-price {
-    color: #ffe44e;
-    /* text-align: center; */
-    font-size: 2rem;
-}
-
-.price-box {
-    transition: all 0.25s ease-out;
-    margin: -4rem 0 0 0;
-    display: flex;
-    flex-direction: column;
-    gap: 0;
-}
-
 .hidden {
     display: none;
 }

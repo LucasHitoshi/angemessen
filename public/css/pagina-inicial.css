@@ -771,4 +771,114 @@ img.big {
     width: 28rem;
 }
 
+.price {
+    color: #ffe44e;
+    /* text-align: center; */
+    font-size: 4rem;
+}
 
+.small-price {
+    color: #ffe44e;
+    /* text-align: center; */
+    font-size: 2rem;
+}
+
+.price-box {
+    transition: all 0.25s ease-out;
+    margin: -4rem 0 0 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.img-produto > .loading {
+    width: 10rem;
+    aspect-ratio: 1 / 1;
+    animation: slow-spin 10s infinite linear;
+    position: absolute;
+}
+
+.img-produto > .product-image {
+    visibility: hidden;
+    width: 20rem;
+    aspect-ratio: 1 / 1;
+    background-color: white;
+    border-radius: 1rem;
+    cursor: pointer;
+}
+
+.nome-produto{
+    padding: 0.5rem 0 0 0;
+    line-height: 1;
+    color: white;
+    /* text-align: center; */
+    font-size: 3rem;
+}
+
+.product-material{
+    transition: all 0.25s ease-out;
+    opacity: 0;
+    color: #aaa;
+    /* text-align: center; */
+    text-transform: uppercase;
+    font-size: 1.8rem;
+}
+
+.product-sport{
+    color: #fff;
+    text-transform: uppercase;
+    /* text-align: center; */
+    font-size: 3rem;
+}
+
+.product-brand{
+    transition: all 0.25s ease-out;
+    opacity: 0;
+    color: #aaa;
+    text-transform: uppercase;
+    /* text-align: center; */
+    font-size: 1.2rem;
+}
+
+.price {
+    line-height: 3.75rem;
+    color: #ffe44e;
+    font-size: 4rem;
+}
+
+.price-pro {
+    text-decoration: line-through;
+    color: rgb(206, 75, 35);
+    text-align: center;
+    font-size: 2.5rem;
+    font-style: italic;
+}
+
+.price-pro::before {
+    text-decoration: none;
+    color: rgb(206, 75, 35);
+    text-align: center;
+    font-size: 2.5rem;
+    content: "de ";
+    font-style: italic;
+}
+
+.price-pro::after {
+    text-decoration: none;
+    color: rgb(206, 75, 35);
+    text-align: center;
+    font-size: 3rem;
+    content: " por";
+    font-style: italic;
+}
+
+.money-sign {
+    font-size: 3rem;
+    color: #ffe44e;
+    /* content: "R$ "; */
+}
+
+.to-product-page {
+    width: fit-content;
+    height: fit-content;
+}

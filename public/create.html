@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="css/criar-bola.css">
     <script src="./js/create-ball.js" defer></script>
     <script src="./js/cookies.js" defer></script>
+    <script src="./js/select-create.js" defer></script>
 </head>
 <body>
     <header>
@@ -131,7 +132,7 @@
                 <div class="escolha-criar">
                     <ul class="principal flex-container pai" width="100%">
                         <li>
-                            <input type="radio" id="soccerball" name="produto" class="bola-escollha-input">
+                            <input type="radio" id="soccerball" name="produto" class="bola-escollha-input" onclick="clearRadio(this)">
                             <label class="pai" for="soccerball">
                                 <div class="absoluto">
                                     <div class="centered radio-bola">
@@ -696,10 +697,14 @@
                     
                     <div class="select"> 
                         <div class="title-cor">Selecionar</div>
-                        <img src="./assets/bola-planificada.svg" alt="" class="bola-plana">
+                        <img src="./assets/bola-planificada.svg" alt="" class="bola-plana" usemap="#ball-custom">
+                        <map name="ball-custom">
+
+                        </map>
 
                         <div class="title-cor">Cores</div>
                         <input type="color" name="ball-color" id="color-picker">
+                        <label for="color-picker">a</label>
                     </div>
                 </div>
             </div>

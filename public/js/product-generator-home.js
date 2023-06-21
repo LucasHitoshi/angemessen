@@ -1,7 +1,6 @@
-const apiURI = "./api/balls?ball_name=random&ball_qtty=24";  // TODO: Trocar 'ball_name' por 'ball_id'
+const apiURI = "./api/balls?ball_name=random&limit=5";  // TODO: Trocar 'ball_name' por 'ball_id'
 const productCardTemplate = document.getElementById("product-card-template");
-const showcaseArea = document.querySelector(".showcase");
-const showMoreProducts = document.getElementById("show-more-products");
+const showcaseArea = document.querySelector(".showcase-index");
 
     const productInfoRequest = new Request(apiURI, { method: "GET" });
     fetch(productInfoRequest)  // <- MT OP

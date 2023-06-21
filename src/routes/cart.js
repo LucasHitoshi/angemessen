@@ -4,7 +4,7 @@ const cartRouter = express.Router();
 
 cartRouter.get("/carrinho", (req, res) => {
     try {
-        console.log("CRIE ACESSADA.");
+        console.log("CARRINHO ACESSADO.");
         res.sendFile(path.join(__dirname, "../..", "/public/carrinho.html"));
     } catch (err) {
         console.log(`ERRO: ${err}`);

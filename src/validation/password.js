@@ -1,3 +1,6 @@
+require("dotenv").config({ path: require("path").join(__dirname, "../..", ".env") });
+const crypto = require("crypto");
+
 const validatePassword = (
     /** @type {string} */ password,
     /** @type {string} */ confirmedPassword
@@ -8,4 +11,15 @@ const validatePassword = (
     return password === confirmedPassword;
 }
 
-module.exports = validatePassword;
+const hashPassword = (
+    /** @type {string} */ password
+) => {
+    const hashSecret = process.env.HASH_SECRET;
+    const hashResult = crypto.createHash("sha256", hashSecret)
+        .update(password)
+        .digest("hex");
+    
+    return hashResult;
+}
+
+module.exports = { validatePassword, hashPassword };

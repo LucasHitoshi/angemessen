@@ -1,7 +1,15 @@
-const checkboxes = document.getElementsByClassName(`bola-escollha-input`);
+const checkboxes = document.querySelectorAll(`.bola-escollha-input`);
 
-for (const /** @type {HTMLInputElement} */ checkbox of checkboxes) {
-    if (checkbox.checked) {
-        "faz algo ai galaio";
-    }
-}
+   function clearRadio(radio) {
+    //   let radio = document.getElementById("radio_btn");
+      if (radio.checked == true){
+        radio.checked = false;
+      }
+   }
+
+
+// for (const /** @type {HTMLInputElement} */ checkbox of checkboxes) {
+//     if (checkbox.checked) {
+//         "faz algo ai galaio";
+//     }
+// }

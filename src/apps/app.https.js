@@ -10,8 +10,8 @@ const signRouter = require(path.join(__dirname, "..", "routes/sign"));
 const produtosRouter = require(path.join(__dirname, "..", "routes/products"));
 const aboutUsRouter = require(path.join(__dirname, "..", "routes/aboutus"));
 const productDescRouter = require(path.join(__dirname, "..", "routes/product-description"));
-const notFoundRouter = require(path.join(__dirname, "..", "routes/404"));
 const cartRouter = require(path.join(__dirname, "..", "routes/cart"));
+const notFoundRouter = require(path.join(__dirname, "..", "routes/404"));
 
 const appHTTPS = express();
 
@@ -27,8 +27,8 @@ appHTTPS.use(signRouter);
 appHTTPS.use(produtosRouter);
 appHTTPS.use(aboutUsRouter);
 appHTTPS.use(productDescRouter);
-appHTTPS.use(notFoundRouter);
 appHTTPS.use(cartRouter);
+appHTTPS.use(notFoundRouter);
 
 const options = {
     "key": fs.readFileSync(path.join(__dirname, "..", "ssl/keys/TODO.key")),

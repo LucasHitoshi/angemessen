@@ -4,7 +4,7 @@ const signRouter = express.Router();
 const whAuthRouter = express.Router();
 const userModel = require("./../database/models/user");
 const authModel = require("./../database/models/auth");
-const validatePassword = require("./../validation/password");
+const { validatePassword, hashPassword } = require("./../validation/password");
 const { validateEmail, sendValidationEmail } = require("./../validation/email");
 const { generateValidationKey, generateValidationWebhook } = require("./../validation/webhook");
 const { isValidObjectId } = require("mongoose");
@@ -13,23 +13,30 @@ signRouter.post("/sign", async (req, res) => {
     try {
         console.log(`ROTA ACESSADA: '${req.route.path}'.`);
 
-        if (!validatePassword(req.body.password, req.body.confirm_password)) {
-            res.send("As senhas não batem ou não são válidas");
-            return;
-        }
-        
         if (!validateEmail(req.body.email)) {
             res.send("O email não é válido");
             return;
         }
 
+        const emailAlreadyUsed = await userModel.findOne({ "email": req.body.email });
+
+        if (emailAlreadyUsed !== null) {
+            res.send("O email escolhido não está disponível");
+            return;
+        }
+
+        if (!validatePassword(req.body.password, req.body.confirm_password)) {
+            res.send("As senhas não batem ou não são válidas");
+            return;
+        }
+        
         const newAuth = {
             key: generateValidationKey(),
             user_info: {
                 nome: req.body.nome,
                 sobrenome: req.body.sobrenome,
                 email: req.body.email,
-                senha: req.body.password
+                senha: hashPassword(req.body.password)
             }
         }
 
