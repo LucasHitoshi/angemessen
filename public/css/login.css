@@ -87,6 +87,7 @@ body {
     background-color: #ffd900;
     cursor: pointer;
     border-radius: 2vh;
+    border: none;
 }
 
 .button-criar-conta:hover {
