@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/pagina-inicial.css">
     <link rel="stylesheet" href="css/carrinho.css">
+    <script src="./js/cart.js" defer></script>
 </head>
 <!-- <style>
 
@@ -59,7 +60,15 @@
     .aplicar-cupom{
         margin: 1vh;
         margin-left: 2vh;
-        font-size: 2rem;
+        font-size:
+        <div class="operation-wrapper">
+            <button class="add-to-order">
+                Finalizar
+            </button>
+            <button class="remove-from-cart">
+                Remover
+            </button>
+        </div> 2rem;
         padding: 3px;
     }
 
@@ -172,8 +181,7 @@
         </section>
     </header>
     
-                                            <!-- Box do carrinho -->
-
+    <!-- Box do carrinho -->
 
     <div class="bloco-carrinho-geral">
         <div class="bloco-items-cupom">
@@ -183,14 +191,174 @@
                         <img src="./assets/arrow.svg" class="icon">
                         <img src="./api/images?ball_type=random" alt="Imagem de Teste" class="ball-image">
                     </figure>
-                    <div class="ball-info">
-                        <span class="ball-name"></span>
-                        <span class="ball-name"></span>
+                    <div class="item-wrapper">
+                        <div class="ball-info">
+                            <span class="ball-name">Bola Primordial</span>
+                            <span class="ball-price">89.90</span>
+                        </div>
+                        <div class="operation-wrapper">
+                            <button class="add-to-order">
+                                Finalizar
+                            </button>
+                            <button class="remove-from-cart">
+                                Remover
+                            </button>
+                        </div>
                     </div>
                     <div class="qtty-selector-wrapper">
-                        <button class="qtty-selector-button" id="increase-qtty">+</button>
-                        <span class="ball-qtty">1o</span>
-                        <button class="qtty-selector-button" id="decrease-qtty">-</button>
+                        <button class="qtty-selector-button increase-qtty">+</button>
+                        <span class="ball-qtty">1</span>
+                        <button class="qtty-selector-button decrease-qtty">-</button>
+                    </div>
+                </div>
+                <div class="item-carrinho">
+                    <figure>
+                        <img src="./assets/arrow.svg" class="icon">
+                        <img src="./api/images?ball_type=random" alt="Imagem de Teste" class="ball-image">
+                    </figure>
+                    <div class="item-wrapper">
+                        <div class="ball-info">
+                            <span class="ball-name">Bola Primordial</span>
+                            <span class="ball-price">89.90</span>
+                        </div>
+                        <div class="operation-wrapper">
+                            <button class="add-to-order">
+                                Finalizar
+                            </button>
+                            <button class="remove-from-cart">
+                                Remover
+                            </button>
+                        </div>
+                    </div>
+                    <div class="qtty-selector-wrapper">
+                        <button class="qtty-selector-button increase-qtty">+</button>
+                        <span class="ball-qtty">1</span>
+                        <button class="qtty-selector-button decrease-qtty">-</button>
+                    </div>
+                </div>
+                <div class="item-carrinho">
+                    <figure>
+                        <img src="./assets/arrow.svg" class="icon">
+                        <img src="./api/images?ball_type=random" alt="Imagem de Teste" class="ball-image">
+                    </figure>
+                    <div class="item-wrapper">
+                        <div class="ball-info">
+                            <span class="ball-name">Bola Primordial</span>
+                            <span class="ball-price">89.90</span>
+                        </div>
+                        <div class="operation-wrapper">
+                            <button class="add-to-order">
+                                Finalizar
+                            </button>
+                            <button class="remove-from-cart">
+                                Remover
+                            </button>
+                        </div>
+                    </div>
+                    <div class="qtty-selector-wrapper">
+                        <button class="qtty-selector-button increase-qtty">+</button>
+                        <span class="ball-qtty">1</span>
+                        <button class="qtty-selector-button decrease-qtty">-</button>
+                    </div>
+                </div>
+                <div class="item-carrinho">
+                    <figure>
+                        <img src="./assets/arrow.svg" class="icon">
+                        <img src="./api/images?ball_type=random" alt="Imagem de Teste" class="ball-image">
+                    </figure>
+                    <div class="item-wrapper">
+                        <div class="ball-info">
+                            <span class="ball-name">Bola Primordial</span>
+                            <span class="ball-price">89.90</span>
+                        </div>
+                        <div class="operation-wrapper">
+                            <button class="add-to-order">
+                                Finalizar
+                            </button>
+                            <button class="remove-from-cart">
+                                Remover
+                            </button>
+                        </div>
+                    </div>
+                    <div class="qtty-selector-wrapper">
+                        <button class="qtty-selector-button increase-qtty">+</button>
+                        <span class="ball-qtty">1</span>
+                        <button class="qtty-selector-button decrease-qtty">-</button>
+                    </div>
+                </div>
+                <div class="item-carrinho">
+                    <figure>
+                        <img src="./assets/arrow.svg" class="icon">
+                        <img src="./api/images?ball_type=random" alt="Imagem de Teste" class="ball-image">
+                    </figure>
+                    <div class="item-wrapper">
+                        <div class="ball-info">
+                            <span class="ball-name">Bola Primordial</span>
+                            <span class="ball-price">89.90</span>
+                        </div>
+                        <div class="operation-wrapper">
+                            <button class="add-to-order">
+                                Finalizar
+                            </button>
+                            <button class="remove-from-cart">
+                                Remover
+                            </button>
+                        </div>
+                    </div>
+                    <div class="qtty-selector-wrapper">
+                        <button class="qtty-selector-button increase-qtty">+</button>
+                        <span class="ball-qtty">1</span>
+                        <button class="qtty-selector-button decrease-qtty">-</button>
+                    </div>
+                </div>
+                <div class="item-carrinho">
+                    <figure>
+                        <img src="./assets/arrow.svg" class="icon">
+                        <img src="./api/images?ball_type=random" alt="Imagem de Teste" class="ball-image">
+                    </figure>
+                    <div class="item-wrapper">
+                        <div class="ball-info">
+                            <span class="ball-name">Bola Primordial</span>
+                            <span class="ball-price">89.90</span>
+                        </div>
+                        <div class="operation-wrapper">
+                            <button class="add-to-order">
+                                Finalizar
+                            </button>
+                            <button class="remove-from-cart">
+                                Remover
+                            </button>
+                        </div>
+                    </div>
+                    <div class="qtty-selector-wrapper">
+                        <button class="qtty-selector-button increase-qtty">+</button>
+                        <span class="ball-qtty">1</span>
+                        <button class="qtty-selector-button decrease-qtty">-</button>
+                    </div>
+                </div>
+                <div class="item-carrinho">
+                    <figure>
+                        <img src="./assets/arrow.svg" class="icon">
+                        <img src="./api/images?ball_type=random" alt="Imagem de Teste" class="ball-image">
+                    </figure>
+                    <div class="item-wrapper">
+                        <div class="ball-info">
+                            <span class="ball-name">Bola Primordial</span>
+                            <span class="ball-price">89.90</span>
+                        </div>
+                        <div class="operation-wrapper">
+                            <button class="add-to-order">
+                                Finalizar
+                            </button>
+                            <button class="remove-from-cart">
+                                Remover
+                            </button>
+                        </div>
+                    </div>
+                    <div class="qtty-selector-wrapper">
+                        <button class="qtty-selector-button increase-qtty">+</button>
+                        <span class="ball-qtty">1</span>
+                        <button class="qtty-selector-button decrease-qtty">-</button>
                     </div>
                 </div>
                 <div class="item-carrinho">
@@ -199,103 +367,21 @@
                         <img src="./api/images?ball_type=random" alt="Imagem de Teste" class="ball-image">
                     </figure>
                     <div class="ball-info">
-                        <span class="ball-name"></span>
-                        <span class="ball-name"></span>
-                    </div>
-                    <div class="qtty-selector-wrapper">
-                        <button class="qtty-selector-button" id="increase-qtty">+</button>
-                        <span class="ball-qtty">1o</span>
-                        <button class="qtty-selector-button" id="decrease-qtty">-</button>
-                    </div>
-                </div>
-                <div class="item-carrinho">
-                    <figure>
-                        <img src="./assets/arrow.svg" class="icon">
-                        <img src="./api/images?ball_type=random" alt="Imagem de Teste" class="ball-image">
-                    </figure>
-                    <div class="ball-info">
-                        <span class="ball-name"></span>
-                        <span class="ball-name"></span>
-                    </div>
-                    <div class="qtty-selector-wrapper">
-                        <button class="qtty-selector-button" id="increase-qtty">+</button>
-                        <span class="ball-qtty">1o</span>
-                        <button class="qtty-selector-button" id="decrease-qtty">-</button>
-                    </div>
-                </div>
-                <div class="item-carrinho">
-                    <figure>
-                        <img src="./assets/arrow.svg" class="icon">
-                        <img src="./api/images?ball_type=random" alt="Imagem de Teste" class="ball-image">
-                    </figure>
-                    <div class="ball-info">
-                        <span class="ball-name"></span>
-                        <span class="ball-name"></span>
-                    </div>
-                    <div class="qtty-selector-wrapper">
-                        <button class="qtty-selector-button" id="increase-qtty">+</button>
-                        <span class="ball-qtty">1o</span>
-                        <button class="qtty-selector-button" id="decrease-qtty">-</button>
-                    </div>
-                </div>
-                <div class="item-carrinho">
-                    <figure>
-                        <img src="./assets/arrow.svg" class="icon">
-                        <img src="./api/images?ball_type=random" alt="Imagem de Teste" class="ball-image">
-                    </figure>
-                    <div class="ball-info">
-                        <span class="ball-name"></span>
-                        <span class="ball-name"></span>
-                    </div>
-                    <div class="qtty-selector-wrapper">
-                        <button class="qtty-selector-button" id="increase-qtty">+</button>
-                        <span class="ball-qtty">1o</span>
-                        <button class="qtty-selector-button" id="decrease-qtty">-</button>
-                    </div>
-                </div>
-                <div class="item-carrinho">
-                    <figure>
-                        <img src="./assets/arrow.svg" class="icon">
-                        <img src="./api/images?ball_type=random" alt="Imagem de Teste" class="ball-image">
-                    </figure>
-                    <div class="ball-info">
-                        <span class="ball-name"></span>
-                        <span class="ball-name"></span>
-                    </div>
-                    <div class="qtty-selector-wrapper">
-                        <button class="qtty-selector-button" id="increase-qtty">+</button>
-                        <span class="ball-qtty">1o</span>
-                        <button class="qtty-selector-button" id="decrease-qtty">-</button>
-                    </div>
-                </div>
-                <div class="item-carrinho">
-                    <figure>
-                        <img src="./assets/arrow.svg" class="icon">
-                        <img src="./api/images?ball_type=random" alt="Imagem de Teste" class="ball-image">
-                    </figure>
-                    <div class="ball-info">
-                        <span class="ball-name"></span>
-                        <span class="ball-name"></span>
-                    </div>
-                    <div class="qtty-selector-wrapper">
-                        <button class="qtty-selector-button" id="increase-qtty">+</button>
-                        <span class="ball-qtty">1o</span>
-                        <button class="qtty-selector-button" id="decrease-qtty">-</button>
-                    </div>
-                </div>
-                <div class="item-carrinho">
-                    <figure>
-                        <img src="./assets/arrow.svg" class="icon">
-                        <img src="./api/images?ball_type=random" alt="Imagem de Teste" class="ball-image">
-                    </figure>
-                    <div class="ball-info">
-                        <span class="ball-name"></span>
+                        <span class="ball-name">Bola Primordial</span>
                         <span class="ball-price"></span>
                     </div>
+                    <div class="operation-wrapper">
+                        <button class="add-to-order">
+                            Finalizar
+                        </button>
+                        <button class="remove-from-cart">
+                            Remover
+                        </button>
+                    </div>
                     <div class="qtty-selector-wrapper">
-                        <button class="qtty-selector-button" id="increase-qtty">+</button>
-                        <span class="ball-qtty">1o</span>
-                        <button class="qtty-selector-button" id="decrease-qtty">-</button>
+                        <button class="qtty-selector-button increase-qtty">+</button>
+                        <span class="ball-qtty">1</span>
+                        <button class="qtty-selector-button decrease-qtty">-</button>
                     </div>
                 </div>
             </div>
@@ -306,7 +392,6 @@
                     <input type="text" class="cupom-txt" id="cupom" name="Cupom" placeholder="Cupom">
                 </div>
             </div>
-
         </div>
         <div class="resumo-total-itens">
             <div>
@@ -359,5 +444,10 @@
             <li><a href="not-found.html" class="footer">Deseja acessar o SAC?</a></li>
         </ul>
     </footer>
-</body>
+    <div id="fog">
+        <div class="item-carrinho">
+            <img src="./api/images?ball_type=random" alt="Imagem de Teste" class="ball-image">
+        </div>
+    </div>
+</body> 
 </html>

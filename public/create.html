@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="css/criar-bola.css">
     <script src="./js/create-ball.js" defer></script>
     <script src="./js/cookies.js" defer></script>
-    <script src="./js/select-create.js" defer></script>
+    <!-- <script src="./js/select-create.js" defer></script> -->
 </head>
 <body>
     <header>
@@ -132,7 +132,7 @@
                 <div class="escolha-criar">
                     <ul class="principal flex-container pai" width="100%">
                         <li>
-                            <input type="radio" id="soccerball" name="produto" class="bola-escollha-input" onclick="clearRadio(this)">
+                            <input type="radio" id="soccerball" name="soccerball" class="bola-escollha-input" onclick="clearRadio(this, 0)">
                             <label class="pai" for="soccerball">
                                 <div class="absoluto">
                                     <div class="centered radio-bola">
@@ -152,7 +152,7 @@
                             </label>
                         </li>
                         <li>
-                            <input type="radio" id="basketball" name="produto" class="bola-escollha-input">
+                            <input type="radio" id="basketball" name="basketball" class="bola-escollha-input" onclick="clearRadio(this, 0)" >
                             <label class="pai" for="basketball">
                                 <div class="absoluto">
                                     <div class="centered radio-bola">
@@ -172,7 +172,7 @@
                             </label>
                         </li>
                         <li>
-                            <input type="radio" id="volleyball" name="produto" class="bola-escollha-input">
+                            <input type="radio" id="volleyball" name="volleyball" class="bola-escollha-input" onclick="clearRadio(this, 0)" >
                             <label class="pai" for="volleyball">
                                 <div class="absoluto">
                                     <div class="centered radio-bola">
@@ -192,7 +192,7 @@
                             </label>
                         </li>
                         <li>
-                            <input type="radio" id="golf" name="produto" class="bola-escollha-input">
+                            <input type="radio" id="golf" name="golf" class="bola-escollha-input" onclick="clearRadio(this, 0)" >
                             <label class="pai" for="golf">
                                 <div class="absoluto">
                                     <div class="centered radio-bola">
@@ -212,7 +212,7 @@
                             </label>
                         </li>
                         <li>
-                            <input type="radio" id="bocha" name="produto" class="bola-escollha-input">
+                            <input type="radio" id="bocha" name="bocha" class="bola-escollha-input" onclick="clearRadio(this, 0)" >
                             <label class="pai" for="bocha">
                                 <div class="absoluto">
                                     <div class="centered radio-bola">
@@ -224,106 +224,6 @@
                                 <img src="./api/images?ball_type=bocha" alt="BOLA TESTES">
                                 <div class="descricao-bola">
                                     <div class="nome-bola-escolha">Bola de Bocha</div>
-                                    <div>
-                                        <div class="small-price">à vista</div>
-                                        <div class="price">R&#36;40,99</div>
-                                    </div>
-                                </div>
-                            </label>
-                        </li>
-                        <li>
-                            <input type="radio" id="CBI6" name="produto" class="bola-escollha-input">
-                            <label class="pai" for="CBI6">
-                                <div class="absoluto">
-                                    <div class="centered radio-bola">
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" >
-                                            <path d="M9 16.17l-3.59-3.58L4 14l5 5 10-10L19.41 7 9 16.17z"/>
-                                        </svg>
-                                    </div>
-                                </div>
-                                <img src="./img/mano.png" alt="BOLA TESTES">
-                                <div class="descricao-bola">
-                                    <div class="nome-bola-escolha">Bola de futebol</div>
-                                    <div>
-                                        <div class="small-price">à vista</div>
-                                        <div class="price">R&#36;40,99</div>
-                                    </div>
-                                </div>
-                            </label>
-                        </li>
-                        <li>
-                            <input type="radio" id="CBI7" name="produto" class="bola-escollha-input">
-                            <label class="pai" for="CBI7">
-                                <div class="absoluto">
-                                    <div class="centered radio-bola">
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" >
-                                            <path d="M9 16.17l-3.59-3.58L4 14l5 5 10-10L19.41 7 9 16.17z"/>
-                                        </svg>
-                                    </div>
-                                </div>
-                                <img src="./img/mano.png" alt="BOLA TESTES">
-                                <div class="descricao-bola">
-                                    <div class="nome-bola-escolha">Bola de futebol</div>
-                                    <div>
-                                        <div class="small-price">à vista</div>
-                                        <div class="price">R&#36;40,99</div>
-                                    </div>
-                                </div>
-                            </label>
-                        </li>
-                        <li>
-                            <input type="radio" id="CBI8" name="produto" class="bola-escollha-input">
-                            <label class="pai" for="CBI8">
-                                <div class="absoluto">
-                                    <div class="centered radio-bola">
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" >
-                                            <path d="M9 16.17l-3.59-3.58L4 14l5 5 10-10L19.41 7 9 16.17z"/>
-                                        </svg>
-                                    </div>
-                                </div>
-                                <img src="./img/mano.png" alt="BOLA TESTES">
-                                <div class="descricao-bola">
-                                    <div class="nome-bola-escolha">Bola de futebol</div>
-                                    <div>
-                                        <div class="small-price">à vista</div>
-                                        <div class="price">R&#36;40,99</div>
-                                    </div>
-                                </div>
-                            </label>
-                        </li>
-                        <li>
-                            <input type="radio" id="CBI9" name="produto" class="bola-escollha-input">
-                            <label class="pai" for="CBI9">
-                                <div class="absoluto">
-                                    <div class="centered radio-bola">
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" >
-                                            <path d="M9 16.17l-3.59-3.58L4 14l5 5 10-10L19.41 7 9 16.17z"/>
-                                        </svg>
-                                    </div>
-                                </div>
-                                <img src="./img/mano.png" alt="BOLA TESTES">
-                                <div class="descricao-bola">
-                                    <div class="nome-bola-escolha">Bola de futebol</div>
-                                    <div>
-                                        <div class="small-price">à vista</div>
-                                        <div class="price">R&#36;40,99</div>
-                                    </div>
-                                </div>
-                            </label>
-                        </li>
-                        <li>
-                            <input type="radio" id="CBI9" name="produto" class="bola-escollha-input">
-                            <label class="pai" for="CBI9">
-                                <div class="absoluto">
-                                    <div class="centered radio-bola">
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" >
-                                            <path d="M9 16.17l-3.59-3.58L4 14l5 5 10-10L19.41 7 9 16.17z"/>
-                                        </svg>
-                                    </div>
-                                </div>
-                                <img src="./img/mano.png" alt="BOLA TESTES">
-                                <div class="descricao-bola">
-                                    <div class="nome-bola-escolha">Bola de futebol</div>
                                     <div>
                                         <div class="small-price">à vista</div>
                                         <div class="price">R&#36;40,99</div>
@@ -383,7 +283,7 @@
                 <div class="escolha-criar">
                     <ul class="principal flex-container pai" width="100%">
                         <li>
-                            <input type="radio" id="couro" name="produto" class="bola-escollha-input">
+                            <input type="radio" id="couro" name="couro" class="bola-escollha-input" onclick="clearRadio(this, 1)" >
                             <label class="pai" for="couro">
                                 <div class="absoluto">
                                     <div class="centered radio-bola">
@@ -403,7 +303,7 @@
                             </label>
                         </li>
                         <li>
-                            <input type="radio" id="borracha" name="produto" class="bola-escollha-input">
+                            <input type="radio" id="borracha" name="borracha" class="bola-escollha-input" onclick="clearRadio(this, 1)" >
                             <label class="pai" for="borracha">
                                 <div class="absoluto">
                                     <div class="centered radio-bola">
@@ -423,7 +323,7 @@
                             </label>
                         </li>
                         <li>
-                            <input type="radio" id="madeira" name="produto" class="bola-escollha-input">
+                            <input type="radio" id="madeira" name="madeira" class="bola-escollha-input" onclick="clearRadio(this, 1)" >
                             <label class="pai" for="madeira">
                                 <div class="absoluto">
                                     <div class="centered radio-bola">
@@ -442,46 +342,7 @@
                                 </div>
                             </label>
                         </li>
-                        <li>
-                            <input type="radio" id="CBI4" name="produto" class="bola-escollha-input">
-                            <label class="pai" for="CBI4">
-                                <div class="absoluto">
-                                    <div class="centered radio-bola">
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" >
-                                            <path d="M9 16.17l-3.59-3.58L4 14l5 5 10-10L19.41 7 9 16.17z"/>
-                                        </svg>
-                                    </div>
-                                </div>
-                                <img src="./img/couro.png" alt="BOLA TESTES">
-                                <div class="descricao-bola">
-                                    <div class="nome-bola-escolha">Couro</div>
-                                    <div>
-                                        <div class="small-price">à vista</div>
-                                        <div class="price">R&#36;40,99</div>
-                                    </div>
-                                </div>
-                            </label>
-                        </li>
-                        <li>
-                            <input type="radio" id="CBI5" name="produto" class="bola-escollha-input">
-                            <label class="pai" for="CBI5">
-                                <div class="absoluto">
-                                    <div class="centered radio-bola">
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" >
-                                            <path d="M9 16.17l-3.59-3.58L4 14l5 5 10-10L19.41 7 9 16.17z"/>
-                                        </svg>
-                                    </div>
-                                </div>
-                                <img src="./img/couro.png" alt="BOLA TESTES">
-                                <div class="descricao-bola">
-                                    <div class="nome-bola-escolha">Couro</div>
-                                    <div>
-                                        <div class="small-price">à vista</div>
-                                        <div class="price">R&#36;40,99</div>
-                                    </div>
-                                </div>
-                            </label>
-                        </li>
+                        
                     </ul>
                 </div>
             </div>
@@ -533,8 +394,8 @@
                 <div class="escolha-criar">
                     <ul class="principal flex-container pai" width="100%">
                         <li>
-                            <input type="radio" id="CBI1" name="produto" class="bola-escollha-input">
-                            <label class="pai" for="CBI1">
+                            <input type="radio" id="pentHex" name="pentHex" class="bola-escollha-input" onclick="clearRadio(this,2)" >
+                            <label class="pai" for="pentHex">
                                 <div class="absoluto">
                                     <div class="centered radio-bola">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" >
@@ -552,86 +413,7 @@
                                 </div>
                             </label>
                         </li>
-                        <li>
-                            <input type="radio" id="CBI2" name="produto" class="bola-escollha-input">
-                            <label class="pai" for="CBI2">
-                                <div class="absoluto">
-                                    <div class="centered radio-bola">
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" >
-                                            <path d="M9 16.17l-3.59-3.58L4 14l5 5 10-10L19.41 7 9 16.17z"/>
-                                        </svg>
-                                    </div>
-                                </div>
-                                <img src="./img/mano.png" alt="BOLA TESTES">
-                                <div class="descricao-bola">
-                                    <div class="nome-bola-escolha">Pentagono e Hexágono</div>
-                                    <div>
-                                        <div class="small-price">à vista</div>
-                                        <div class="price">R&#36;40,99</div>
-                                    </div>
-                                </div>
-                            </label>
-                        </li>
-                        <li>
-                            <input type="radio" id="CBI3" name="produto" class="bola-escollha-input">
-                            <label class="pai" for="CBI3">
-                                <div class="absoluto">
-                                    <div class="centered radio-bola">
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" >
-                                            <path d="M9 16.17l-3.59-3.58L4 14l5 5 10-10L19.41 7 9 16.17z"/>
-                                        </svg>
-                                    </div>
-                                </div>
-                                <img src="./img/mano.png" alt="BOLA TESTES">
-                                <div class="descricao-bola">
-                                    <div class="nome-bola-escolha">Pentagono e Hexágono</div>
-                                    <div>
-                                        <div class="small-price">à vista</div>
-                                        <div class="price">R&#36;40,99</div>
-                                    </div>
-                                </div>
-                            </label>
-                        </li>
-                        <li>
-                            <input type="radio" id="CBI4" name="produto" class="bola-escollha-input">
-                            <label class="pai" for="CBI4">
-                                <div class="absoluto">
-                                    <div class="centered radio-bola">
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" >
-                                            <path d="M9 16.17l-3.59-3.58L4 14l5 5 10-10L19.41 7 9 16.17z"/>
-                                        </svg>
-                                    </div>
-                                </div>
-                                <img src="./img/mano.png" alt="BOLA TESTES">
-                                <div class="descricao-bola">
-                                    <div class="nome-bola-escolha">Pentagono e Hexágono</div>
-                                    <div>
-                                        <div class="small-price">à vista</div>
-                                        <div class="price">R&#36;40,99</div>
-                                    </div>
-                                </div>
-                            </label>
-                        </li>
-                        <li>
-                            <input type="radio" id="CBI5" name="produto" class="bola-escollha-input">
-                            <label class="pai" for="CBI5">
-                                <div class="absoluto">
-                                    <div class="centered radio-bola">
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" >
-                                            <path d="M9 16.17l-3.59-3.58L4 14l5 5 10-10L19.41 7 9 16.17z"/>
-                                        </svg>
-                                    </div>
-                                </div>
-                                <img src="./img/mano.png" alt="BOLA TESTES">
-                                <div class="descricao-bola">
-                                    <div class="nome-bola-escolha">Pentagono e Hexágono</div>
-                                    <div>
-                                        <div class="small-price">à vista</div>
-                                        <div class="price">R&#36;40,99</div>
-                                    </div>
-                                </div>
-                            </label>
-                        </li>
+                        
                     </ul>
                 </div>
             </div>

@@ -7,11 +7,11 @@
     
 }
 
-.bloco-items-cupom{
+.bloco-items-cupom {
     display: flex;
     flex-direction: column;
     margin-right: 2vh;
-    background-color: white;
+    /* background-color: white; */
     width: 65%;
     height: auto;
     font-family: DMSans;
@@ -28,41 +28,45 @@
     width: 25%;
 }
 
-.items-carrinho{
-    padding: 5rem;
+.items-carrinho {
+    padding: 3rem;
+    border: #777 solid 1px;
+    border-radius: 6.5rem;
 
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 5rem;
+    gap: 2rem;
 
     margin: 1vh;
-    background-color: red;
+    background-color: #353535;
 }
 
 .item-carrinho {
+    transition: all 0.15s ease-in-out;
     position: relative;
-    display: block;
-    background-color: #efefef;
+    display: flex;
+    gap: 2rem;
+    background-color: #505050;
     width: 100%;
     height: 36rem;
 
-    border: #a0a0a0 solid 1px;
+    border: #777 solid 1px;
     border-radius: 4rem;
-
     padding: 1.5rem;
+}
+
+.item-carrinho:hover {
+    box-shadow: 0px 0px 7px #888;
 }
 
 .item-carrinho > figure {
     position: relative;
-
+    cursor: zoom-in;
     transition: all 0.35s ease-out;
-    
     background-color: #ddd;
-
     height: 100%;
     aspect-ratio: 1 / 1;
-
     padding: 3rem;
     border-radius: 2.5rem;
 }
@@ -120,11 +124,71 @@
 
 .qtty-selector-button:hover {
     background-color: #eee;
-    outline: #dfdfdf solid 5px;
+    box-shadow: 0px 0px 5px 2px #888;
 }
 
 .ball-qtty {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3.5rem;
+    width: 4rem;
+    color: #f5f5f5;
+}
 
+.ball-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.ball-name {
+    font-size: 4rem;
+    color: #ffba25;
+}
+
+.ball-price {
+    font-size: 5.5rem;
+    color: #ffba25;
+}
+
+.operation-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.remove-from-cart,
+.add-to-order {
+    transition: all 0.25s ease-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 15rem;
+    height: 6rem;
+    border: #ffba25 solid 2px;
+    border-radius: 3rem;
+    background-color: rgb(0, 0, 0, 0);
+    font-size: 2rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #ffba25;
+}
+
+.remove-from-cart:hover,
+.add-to-order:hover {
+    border: #df9800 solid 2px;
+    background-color: #ffba25;
+    color: #202020;
+}
+
+.remove-from-cart {
+    color: #ff2525;
+    border: #ff2525 solid 2px;
+}
+
+.remove-from-cart:hover {
+    border: #bd1616 solid 2px;
+    background-color: #ff2525;
 }
 
 /* 

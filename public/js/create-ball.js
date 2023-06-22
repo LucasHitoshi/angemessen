@@ -1,3 +1,36 @@
+const checkboxes = document.querySelectorAll(`.bola-escollha-input`);
+
+// const checkboxes = document.querySelectorAll(`.bola-escollha-input`);
+// var check;
+/** @type {HTMLElement[]} */ 
+ 
+function clearRadio(radio, level) {
+    //   let radio = document.getElementById("radio_btn");
+      if (radio.checked == 1){
+        radio.checked++;
+        console.log(`checked ${radio.checked}`);
+        buttonsNext[level].style.backgroundColor = `green`
+        buttonsNext[level].addEventListener("click", () => {
+            counter++;
+            console.log(counter);
+            for (let i = 0; i < 5; i++) {
+                // Seta o display como "none" para todas as sessões
+                create[i].style.display = "none";
+            }
+            // Dá um display "block" pra mostrar só uma
+            create[counter].style.display = "block";
+            document.cookie = `createLevelCounter=${counter}`;
+            document.cookie = `ballConfig=${JSON.stringify(ballConfig)}`;
+        })
+        
+      }else{
+        radio.checked=0;
+        console.log(`not checked ${radio.checked}`);
+        radio.removeEventListener();
+      }
+
+   }
+
 const parsedCookies = document.cookie
     .split("; ")
     .map((cookie) => {
@@ -54,16 +87,20 @@ function reset(cLevel){
 }
 
 for (let i = 0; i < buttonsNext.length; i++) {
-    buttonsNext[i].addEventListener("click", () => {
-        counter++;
-        console.log(counter);
-        for (let i = 0; i < 5; i++) {
-            // Seta o display como "none" para todas as sessões
-            create[i].style.display = "none";
-        }
-        // Dá um display "block" pra mostrar só uma
-        create[counter].style.display = "block";
-        document.cookie = `createLevelCounter=${counter}`;
-        document.cookie = `ballConfig=${JSON.stringify(ballConfig)}`;
-    })
+    // buttonsNext[i].addEventListener("click", () => {
+    //     counter++;
+    //     console.log(counter);
+    //     for (let i = 0; i < 5; i++) {
+    //         // Seta o display como "none" para todas as sessões
+    //         create[i].style.display = "none";
+    //     }
+    //     // Dá um display "block" pra mostrar só uma
+    //     create[counter].style.display = "block";
+    //     document.cookie = `createLevelCounter=${counter}`;
+    //     document.cookie = `ballConfig=${JSON.stringify(ballConfig)}`;
+    // 
+    clearRadio();
 }
+
+
+
