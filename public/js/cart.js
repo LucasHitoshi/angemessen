@@ -28,3 +28,4 @@ for (const item of cartItems) {
         fog.style.display = "flex";
     })
 }
+

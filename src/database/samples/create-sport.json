@@ -1,0 +1,14 @@
+[
+    {
+        "name": "Futebol",
+        "price": {
+            "sign": "R$",
+			"value": {
+				"int": 39,
+				"cent": 90
+			}
+        },
+        "image": "/api/images?ball_type=futebol",
+        "planned-image": "/api/images?ball"
+    },
+]

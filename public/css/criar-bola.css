@@ -177,7 +177,7 @@ li > input[type="radio"]:checked + label > div > div > svg > path {
 
 } */
 
-.create{
+.create-level{
     display: none;
 }
 
