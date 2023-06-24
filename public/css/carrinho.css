@@ -1,15 +1,16 @@
 .bloco-carrinho-geral{
     justify-content: center;
     display: block;
+    max-width: 250rem;
     height: auto;
     display: flex;
-    margin-top: 2vh;
-    
+    margin: 5rem auto;
 }
 
 .bloco-items-cupom {
     display: flex;
     flex-direction: column;
+    gap: 3rem;
     margin-right: 2vh;
     /* background-color: white; */
     width: 65%;
@@ -28,14 +29,7 @@
     align-items: center;
     gap: 2rem;
 
-    margin: 1vh;
     background-color: #353535;
-}
-/*  */
-.resumo-total-itens {
-    margin-left: 2vh;
-    background-color: blue;
-    width: 25%;
 }
 
 .items-carrinho {
@@ -48,7 +42,6 @@
     align-items: center;
     gap: 2rem;
 
-    margin: 1vh;
     background-color: #353535;
 }
 
@@ -57,11 +50,12 @@
     position: relative;
     display: flex;
     gap: 2rem;
-    background-color: #505050;
+    /* background-color: #505050; */
     width: 100%;
     height: 22rem;
 
-    border: #777 solid 1px;
+    /* border: #777 solid 1px; */
+    border: #555 solid 1px;
     border-radius: 1.5rem;
     padding: 1.5rem;
 }
@@ -82,7 +76,7 @@
 }
 
 .item-carrinho > figure:hover {
-    background-color: #aaa;
+    background-color: #b5b5b5;
 
     padding: 1.5rem;
 }
@@ -110,10 +104,25 @@
 
 .qtty-selector-wrapper {
     display: flex;
-    gap: 1rem;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.4rem;
     position: absolute;
     top: 2rem;
     right: 2rem;
+}
+
+.qtty-selector-wrapper > span {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 2rem;
+    color: #ffd900;
+}
+
+.qtty-selector-buttons-wrapper {
+    display: flex;
+    gap: 1rem;
     width: fit-content;
 }
 
@@ -125,8 +134,8 @@
     line-height: 50%;
     background-color: #dfdfdf;
     font-size: 4rem;
-    width: 5.5rem;
-    height: 5.5rem;
+    width: 4rem;
+    height: 4rem;
     border: #a0a0a0 solid 1px;
     border-radius: 50%;
     outline: #dfdfdf solid 0px;
@@ -141,8 +150,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 3.5rem;
-    width: 4rem;
+    font-size: 3rem;
+    width: 3rem;
     color: #f5f5f5;
 }
 
@@ -151,20 +160,39 @@
     flex-direction: column;
 }
 
+.ball-sport {
+    font-size: 1.75rem;
+    color: #b5b5b5;
+    margin: 0 0 -0.25rem 0;
+}
+
 .ball-name {
     font-size: 3rem;
-    color: #f5f5f5;
+    color: #ffd900;
     margin: 0 0 -0.5rem 0;
 }
 
 .ball-price {
     font-size: 2.25rem;
-    color: #ffba25;
+    color: #f5f5f5;
+}
+
+.ball-price::before {
+    content: "R$";
+    font-size: 2.25rem;
+    color: #f5f5f5;
+    margin: 0 0.25rem 0 0;
 }
 
 .ball-parcels {
     font-size: 1.5rem;
-    color: #f5f5f5;
+    color: #b5b5b5;
+}
+
+.ball-parcels > .u {
+    font-size: 1.5rem;
+    color: #b5b5b5;
+    text-decoration: underline;
 }
 
 .operation-wrapper {
@@ -276,14 +304,116 @@
     color: white;
 }
 
-.cupom-txt{
+.cupom-txt {
     font-size: 2vh;
     padding: 3px;
 }
 
-.title-resumo{
+/*
+ * Style da área de pedidos
+ */
+
+.order-abstract-wrapper {
+    position: -webkit-sticky;  /* Safari */
+    position: relative;
+    height: inherit;
+}
+
+.resumo-total-itens {
+    position: sticky;
+    top: 5rem;
+    border: #777 solid 1px;
+    border-radius: 1.5rem;
+    margin-left: 2vh;
+    background-color: #353535;
+    width: 52.5rem;
+    height: calc(100vh - 24rem);
+    overflow: scroll;
+}
+
+.title-orders-abstract {
+    position: sticky;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 4.2rem;
+    width: 100%;
+    height: calc(12rem);
+    background-color: #353535;
+    border-bottom: #777 solid 1px;
+}
+
+.title-resumo {
     display: flex;
     font-size: 4.2rem;
     justify-content: center;
     color: white;
+    text-align: center;
+}
+
+.desc-abstract {
+    display: flex;
+    font-size: 2rem;
+    justify-content: center;
+    width: 28rem;
+    color: white;
+    text-align: center;
+    margin: 0 0 1.5rem 0;
+}
+
+.order-balls-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.order-balls-list > li {
+    display: flex;
+    gap: 2rem;
+    padding: 1.75rem;
+    border-bottom: #777 solid 1px;
+}
+
+/* .order-balls-list > li::after {
+    content: "-";
+    color: rgb(0, 0, 0, 0);
+    width: 100%;
+    height: 1px;
+    background-color: #f5f5f5;
+} */
+
+.order-ball-image {
+    width: 15rem;
+    aspect-ratio: 1 / 1;
+    padding: 1rem;
+    border: none;
+    border-radius: 1rem;
+    background-color: #f5f5f5;
+}
+
+.order-ball-image > img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+}
+
+.order-info-wrapper {
+    display: flex;
+    flex-direction: column;
+    /* gap: 0.5rem; */
+}
+
+.order-ball-name,
+.order-total-balls-price,
+.order-balls-qtty {
+    font-size: 3rem;
+    color: #f5f5f5;
+}
+
+/* scrollbar */
+
+::-webkit-scrollbar,
+::-webkit-scrollbar-track,
+::-webkit-scrollbar-thumb,
+::-webkit-scrollbar-thumb:hover {
+    display: none; 
 }

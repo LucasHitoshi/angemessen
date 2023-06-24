@@ -37,9 +37,86 @@ if (!parsedCookies.createLevelCounter) {
  * @property {number} tamanho
  */
 var ballConfig = {
-    tipo: "",
-    material: "",
-    tamanho: 0
+    // tipo: "",
+    // material: "",
+    // tamanho: 0
+    sport: {
+        {
+        "name": "Futebol",
+        "price": {
+            "sign": "R$",
+            "value": 39.90
+        },
+        "image": "/api/images?ball_type=futebol",
+        "planned-image": "/api/images?ball"
+        },
+        {
+        "name": "Basquete",
+        "price": {
+            "sign": "R$",
+            "value": 69.90
+        },
+        "image": "/api/images?ball_type=basquete",
+        "planned-image": "/api/images?ball"
+        },
+        {
+        "name": "Golfe",
+        "price": {
+            "sign": "R$",
+            "value": 79.90
+        },
+        "image": "/api/images?ball_type=golfe",
+        "planned-image": "/api/images?ball"
+        },
+        {
+        "name": "Bocha",
+        "price": {
+            "sign": "R$",
+            "value": 39.90
+        },
+        "image": "/api/images?ball_type=bocha",
+        "planned-image": "/api/images?ball"
+        },
+        {
+        "name": "Volêi",
+        "price": {
+            "sign": "R$",
+            "value": 39.90
+        },
+        "image": "/api/images?ball_type=volei",
+        "planned-image": "/api/images?ball"
+        }
+    },
+    material: {
+        {
+        "name": "couro",
+        "price": {
+            "sign": "R$",
+            "value": 109.90
+        },
+        "image": "/api/images?ball_type=futebol"
+        },
+        {
+        "name": "borracha",
+        "price": {
+            "sign": "R$",
+            "value": 49.90
+        },
+        "image": "/api/images?ball_type=futebol"
+        },
+        {
+        "name": "madeira",
+        "price": {
+            "sign": "R$",
+            "value": 159.90
+        },
+        "image": "/api/images?ball_type=futebol"        }
+    },
+    section: {
+        {
+            "name": "Hexágonos e pentágonos",
+            "image": "/api/images?ball_type=futebol"        }
+    }
 }
 
 /** @type {HTMLElement} */

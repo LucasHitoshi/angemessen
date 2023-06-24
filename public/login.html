@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="css/pagina-inicial.css">
     <link rel="stylesheet" href="css/login.css">
     <style>
-        @keyframes changeBackgroundColor {
+        /* @keyframes changeBackgroundColor {
 
             
             0%{
@@ -46,21 +46,17 @@
             flex-direction: column;
         }
 
-        .nsei {
+        .login-form {
             display: flex;
             flex-direction: column;
             padding: 5px;
             max-width: 200px;
-            /* font-family: Arial, Helvetica, sans-serif; */
+            font-family: Arial, Helvetica, sans-serif;
             font-family: DMSans;
         }
         
         .termos-criar-conta > a{
             color: blue;
-        }
-        
-        .text {
-            font-size: 2vh;
         }
 
         .box-login{
@@ -90,7 +86,7 @@
             width: 15vh;
             background-color: black;
 
-        }
+        } */
     </style>
 </head>
 <body>
@@ -190,7 +186,7 @@
         </div>
 
         <div>
-            <form action="send-login" method="POST" class="nsei"><br>
+            <form action="send-login" method="POST" class="login-form"><br>
                 <label for="email"><p class="text">Email ou telefone:</p></label>
                 <input type="text" id="email" name="email" required class="box-login"><br>
 

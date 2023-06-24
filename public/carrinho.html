@@ -11,92 +11,6 @@
     <link rel="stylesheet" href="css/carrinho.css">
     <script src="./js/cart.js" defer></script>
 </head>
-
-<!-- <style>
-
-    .bloco-carrinho-geral{
-        justify-content: center;
-        display: block;
-        height: auto;
-        display: flex;
-        margin-top: 2vh;
-        
-    }
-
-    .bloco-items-cupom{
-        display: flex;
-        flex-direction: column;
-        margin-right: 2vh;
-        background-color: white;
-        width: 65%;
-        height: auto;
-        font-family: DMSans;
-    }
-
-    .items-carrinho{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        max-height: 78vh;
-        margin: 1vh;
-        background-color: red;
-    }
-
-    .cupom-desconto-carrinho{
-        margin: 1vh;
-        background-color: green;
-    }
-
-    .resumo-total-itens{
-        margin-left: 2vh;
-        background-color: blue;
-        width: 25%;
-    }
-
-    .item-carrinho-{
-        max-height: 15vh;
-        min-height: 15vh;
-    }
-
-    .aplicar-cupom{
-        margin: 1vh;
-        margin-left: 2vh;
-        font-size:
-        <div class="operation-wrapper">
-            <button class="add-to-order">
-                Finalizar
-            </button>
-            <button class="remove-from-cart">
-                Remover
-            </button>
-        </div> 2rem;
-        padding: 3px;
-    }
-
-    .cupom-title{
-        font-size: 3rem;
-        margin-left: 1vh;
-        color: white;
-    }
-
-    .cupom-txt{
-        font-size: 2vh;
-        padding: 3px;
-    }
-
-    .title-resumo{
-        display: flex;
-        font-size: 4.2rem;
-        justify-content: center;
-        color: white;
-    }
-        
-</style> -->
-
-<script>
-    
-</script>
-
 <body>
     <header>
         <section class="flex-container dominant centered">
@@ -194,9 +108,11 @@
                     </figure>
                     <div class="item-wrapper">
                         <div class="ball-info">
+                            <span class="ball-sport">Bola Esportiva</span>
                             <span class="ball-name">Bola Primordial</span>
                             <span class="ball-price">89.90</span>
-                            <span class="ball-parcels">Até 12 vezes no cartão</span>
+                            <span class="ball-parcels">Até <span class="u">12</span> vezes no cartão</span>
+                            <span class="ball-parcels"><span class="u">10</span>% de desconto no PIX</span>
                         </div>
                         <div class="operation-wrapper">
                             <button class="add-to-order">
@@ -210,9 +126,12 @@
                         </div>
                     </div>
                     <div class="qtty-selector-wrapper">
-                        <button class="qtty-selector-button increase-qtty">+</button>
-                        <span class="ball-qtty">1</span>
-                        <button class="qtty-selector-button decrease-qtty">-</button>
+                        <span>Quant.</span>
+                        <div class="qtty-selector-buttons-wrapper">
+                            <button class="qtty-selector-button increase-qtty">+</button>
+                            <span class="ball-qtty">1</span>
+                            <button class="qtty-selector-button decrease-qtty">-</button>
+                        </div>
                     </div>
                 </div>
                 <div class="item-carrinho">
@@ -222,23 +141,30 @@
                     </figure>
                     <div class="item-wrapper">
                         <div class="ball-info">
+                            <span class="ball-sport">Bola Esportiva</span>
                             <span class="ball-name">Bola Primordial</span>
                             <span class="ball-price">89.90</span>
-                            <span class="ball-parcels">Até 12 vezes no cartão</span>
+                            <span class="ball-parcels">Até <span class="u">12</span> vezes no cartão</span>
+                            <span class="ball-parcels"><span class="u">10</span>% de desconto no PIX</span>
                         </div>
                         <div class="operation-wrapper">
                             <button class="add-to-order">
+                                <img src="http://localhost:3000/assets/carrinho-de-compras.png" alt="" class="cart-icon">
                                 Finalizar
                             </button>
                             <button class="remove-from-cart">
+                                <img src="http://localhost:3000/assets/lixeira-de-reciclagem.png" alt="" class="cart-icon">
                                 Remover
                             </button>
                         </div>
                     </div>
                     <div class="qtty-selector-wrapper">
-                        <button class="qtty-selector-button increase-qtty">+</button>
-                        <span class="ball-qtty">1</span>
-                        <button class="qtty-selector-button decrease-qtty">-</button>
+                        <span>Quant.</span>
+                        <div class="qtty-selector-buttons-wrapper">
+                            <button class="qtty-selector-button increase-qtty">+</button>
+                            <span class="ball-qtty">1</span>
+                            <button class="qtty-selector-button decrease-qtty">-</button>
+                        </div>
                     </div>
                 </div>
                 <div class="item-carrinho">
@@ -248,23 +174,30 @@
                     </figure>
                     <div class="item-wrapper">
                         <div class="ball-info">
+                            <span class="ball-sport">Bola Esportiva</span>
                             <span class="ball-name">Bola Primordial</span>
                             <span class="ball-price">89.90</span>
-                            <span class="ball-parcels">Até 12 vezes no cartão</span>
+                            <span class="ball-parcels">Até <span class="u">12</span> vezes no cartão</span>
+                            <span class="ball-parcels"><span class="u">10</span>% de desconto no PIX</span>
                         </div>
                         <div class="operation-wrapper">
                             <button class="add-to-order">
+                                <img src="http://localhost:3000/assets/carrinho-de-compras.png" alt="" class="cart-icon">
                                 Finalizar
                             </button>
                             <button class="remove-from-cart">
+                                <img src="http://localhost:3000/assets/lixeira-de-reciclagem.png" alt="" class="cart-icon">
                                 Remover
                             </button>
                         </div>
                     </div>
                     <div class="qtty-selector-wrapper">
-                        <button class="qtty-selector-button increase-qtty">+</button>
-                        <span class="ball-qtty">1</span>
-                        <button class="qtty-selector-button decrease-qtty">-</button>
+                        <span>Quant.</span>
+                        <div class="qtty-selector-buttons-wrapper">
+                            <button class="qtty-selector-button increase-qtty">+</button>
+                            <span class="ball-qtty">1</span>
+                            <button class="qtty-selector-button decrease-qtty">-</button>
+                        </div>
                     </div>
                 </div>
                 <div class="item-carrinho">
@@ -274,23 +207,30 @@
                     </figure>
                     <div class="item-wrapper">
                         <div class="ball-info">
+                            <span class="ball-sport">Bola Esportiva</span>
                             <span class="ball-name">Bola Primordial</span>
                             <span class="ball-price">89.90</span>
-                            <span class="ball-parcels">Até 12 vezes no cartão</span>
+                            <span class="ball-parcels">Até <span class="u">12</span> vezes no cartão</span>
+                            <span class="ball-parcels"><span class="u">10</span>% de desconto no PIX</span>
                         </div>
                         <div class="operation-wrapper">
                             <button class="add-to-order">
+                                <img src="http://localhost:3000/assets/carrinho-de-compras.png" alt="" class="cart-icon">
                                 Finalizar
                             </button>
                             <button class="remove-from-cart">
+                                <img src="http://localhost:3000/assets/lixeira-de-reciclagem.png" alt="" class="cart-icon">
                                 Remover
                             </button>
                         </div>
                     </div>
                     <div class="qtty-selector-wrapper">
-                        <button class="qtty-selector-button increase-qtty">+</button>
-                        <span class="ball-qtty">1</span>
-                        <button class="qtty-selector-button decrease-qtty">-</button>
+                        <span>Quant.</span>
+                        <div class="qtty-selector-buttons-wrapper">
+                            <button class="qtty-selector-button increase-qtty">+</button>
+                            <span class="ball-qtty">1</span>
+                            <button class="qtty-selector-button decrease-qtty">-</button>
+                        </div>
                     </div>
                 </div>
                 <div class="item-carrinho">
@@ -300,23 +240,30 @@
                     </figure>
                     <div class="item-wrapper">
                         <div class="ball-info">
+                            <span class="ball-sport">Bola Esportiva</span>
                             <span class="ball-name">Bola Primordial</span>
                             <span class="ball-price">89.90</span>
-                            <span class="ball-parcels">Até 12 vezes no cartão</span>
+                            <span class="ball-parcels">Até <span class="u">12</span> vezes no cartão</span>
+                            <span class="ball-parcels"><span class="u">10</span>% de desconto no PIX</span>
                         </div>
                         <div class="operation-wrapper">
                             <button class="add-to-order">
+                                <img src="http://localhost:3000/assets/carrinho-de-compras.png" alt="" class="cart-icon">
                                 Finalizar
                             </button>
                             <button class="remove-from-cart">
+                                <img src="http://localhost:3000/assets/lixeira-de-reciclagem.png" alt="" class="cart-icon">
                                 Remover
                             </button>
                         </div>
                     </div>
                     <div class="qtty-selector-wrapper">
-                        <button class="qtty-selector-button increase-qtty">+</button>
-                        <span class="ball-qtty">1</span>
-                        <button class="qtty-selector-button decrease-qtty">-</button>
+                        <span>Quant.</span>
+                        <div class="qtty-selector-buttons-wrapper">
+                            <button class="qtty-selector-button increase-qtty">+</button>
+                            <span class="ball-qtty">1</span>
+                            <button class="qtty-selector-button decrease-qtty">-</button>
+                        </div>
                     </div>
                 </div>
                 <div class="item-carrinho">
@@ -326,23 +273,30 @@
                     </figure>
                     <div class="item-wrapper">
                         <div class="ball-info">
+                            <span class="ball-sport">Bola Esportiva</span>
                             <span class="ball-name">Bola Primordial</span>
                             <span class="ball-price">89.90</span>
-                            <span class="ball-parcels">Até 12 vezes no cartão</span>
+                            <span class="ball-parcels">Até <span class="u">12</span> vezes no cartão</span>
+                            <span class="ball-parcels"><span class="u">10</span>% de desconto no PIX</span>
                         </div>
                         <div class="operation-wrapper">
                             <button class="add-to-order">
+                                <img src="http://localhost:3000/assets/carrinho-de-compras.png" alt="" class="cart-icon">
                                 Finalizar
                             </button>
                             <button class="remove-from-cart">
+                                <img src="http://localhost:3000/assets/lixeira-de-reciclagem.png" alt="" class="cart-icon">
                                 Remover
                             </button>
                         </div>
                     </div>
                     <div class="qtty-selector-wrapper">
-                        <button class="qtty-selector-button increase-qtty">+</button>
-                        <span class="ball-qtty">1</span>
-                        <button class="qtty-selector-button decrease-qtty">-</button>
+                        <span>Quant.</span>
+                        <div class="qtty-selector-buttons-wrapper">
+                            <button class="qtty-selector-button increase-qtty">+</button>
+                            <span class="ball-qtty">1</span>
+                            <button class="qtty-selector-button decrease-qtty">-</button>
+                        </div>
                     </div>
                 </div>
                 <div class="item-carrinho">
@@ -352,23 +306,30 @@
                     </figure>
                     <div class="item-wrapper">
                         <div class="ball-info">
+                            <span class="ball-sport">Bola Esportiva</span>
                             <span class="ball-name">Bola Primordial</span>
                             <span class="ball-price">89.90</span>
-                            <span class="ball-parcels">Até 12 vezes no cartão</span>
+                            <span class="ball-parcels">Até <span class="u">12</span> vezes no cartão</span>
+                            <span class="ball-parcels"><span class="u">10</span>% de desconto no PIX</span>
                         </div>
                         <div class="operation-wrapper">
                             <button class="add-to-order">
+                                <img src="http://localhost:3000/assets/carrinho-de-compras.png" alt="" class="cart-icon">
                                 Finalizar
                             </button>
                             <button class="remove-from-cart">
+                                <img src="http://localhost:3000/assets/lixeira-de-reciclagem.png" alt="" class="cart-icon">
                                 Remover
                             </button>
                         </div>
                     </div>
                     <div class="qtty-selector-wrapper">
-                        <button class="qtty-selector-button increase-qtty">+</button>
-                        <span class="ball-qtty">1</span>
-                        <button class="qtty-selector-button decrease-qtty">-</button>
+                        <span>Quant.</span>
+                        <div class="qtty-selector-buttons-wrapper">
+                            <button class="qtty-selector-button increase-qtty">+</button>
+                            <span class="ball-qtty">1</span>
+                            <button class="qtty-selector-button decrease-qtty">-</button>
+                        </div>
                     </div>
                 </div>
                 <div class="item-carrinho">
@@ -377,6 +338,7 @@
                         <img src="./api/images?ball_type=random" alt="Imagem de Teste" class="ball-image">
                     </figure>
                     <div class="ball-info">
+                        <span class="ball-sport">Bola Esportiva</span>
                         <span class="ball-name">Bola Primordial</span>
                         <span class="ball-price"></span>
                     </div>
@@ -389,9 +351,12 @@
                         </button>
                     </div>
                     <div class="qtty-selector-wrapper">
-                        <button class="qtty-selector-button increase-qtty">+</button>
-                        <span class="ball-qtty">1</span>
-                        <button class="qtty-selector-button decrease-qtty">-</button>
+                        <span>Quant.</span>
+                        <div class="qtty-selector-buttons-wrapper">
+                            <button class="qtty-selector-button increase-qtty">+</button>
+                            <span class="ball-qtty">1</span>
+                            <button class="qtty-selector-button decrease-qtty">-</button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -403,36 +368,139 @@
                 </div>
             </div>
         </div>
-        <div class="resumo-total-itens">
-            <div>
-                <table class="table-total-itens">
-                    <thead class>
-                        <tr>
-                            <th>
-                                <p class="title-resumo">Resumo</p>
-                            </th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <th>
-                                <p>Subtotal</p>
-                            </th>
-                            <td>
-                                <p>R$&nbsp;0,00</p>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
+        <div class="order-abstract-wrapper">
+            <div class="resumo-total-itens">
+                <div class="title-orders-abstract">
+                    <span class="title-resumo">Resumo</span>
+                    <span class="desc-abstract">Veja os produtos prontos para serem comprados</span>
+                </div>
+                <ul class="order-balls-list">
+                    <li>
+                        <figure class="order-ball-image">
+                            <img src="http://localhost:3000/api/images?ball_type=random" alt="Bola de Exemplo">
+                        </figure>
+                        <div class="order-info-wrapper">
+                            <span class="order-ball-name">Bola Primordial</span>
+                            <span class="order-total-balls-price">89.90</span>
+                            <span class="order-balls-qtty">19</span>
+                        </div>
+                    </li>
+                    <li>
+                        <figure class="order-ball-image">
+                            <img src="http://localhost:3000/api/images?ball_type=random" alt="Bola de Exemplo">
+                        </figure>
+                        <div class="order-info-wrapper">
+                            <span class="order-ball-name">Bola Primordial</span>
+                            <span class="order-total-balls-price">89.90</span>
+                            <span class="order-balls-qtty">19</span>
+                        </div>
+                    </li>
+                    <li>
+                        <figure class="order-ball-image">
+                            <img src="http://localhost:3000/api/images?ball_type=random" alt="Bola de Exemplo">
+                        </figure>
+                        <div class="order-info-wrapper">
+                            <span class="order-ball-name">Bola Primordial</span>
+                            <span class="order-total-balls-price">89.90</span>
+                            <span class="order-balls-qtty">19</span>
+                        </div>
+                    </li>
+                    <li>
+                        <figure class="order-ball-image">
+                            <img src="http://localhost:3000/api/images?ball_type=random" alt="Bola de Exemplo">
+                        </figure>
+                        <div class="order-info-wrapper">
+                            <span class="order-ball-name">Bola Primordial</span>
+                            <span class="order-total-balls-price">89.90</span>
+                            <span class="order-balls-qtty">19</span>
+                        </div>
+                    </li>
+                    <li>
+                        <figure class="order-ball-image">
+                            <img src="http://localhost:3000/api/images?ball_type=random" alt="Bola de Exemplo">
+                        </figure>
+                        <div class="order-info-wrapper">
+                            <span class="order-ball-name">Bola Primordial</span>
+                            <span class="order-total-balls-price">89.90</span>
+                            <span class="order-balls-qtty">19</span>
+                        </div>
+                    </li>
+                    <li>
+                        <figure class="order-ball-image">
+                            <img src="http://localhost:3000/api/images?ball_type=random" alt="Bola de Exemplo">
+                        </figure>
+                        <div class="order-info-wrapper">
+                            <span class="order-ball-name">Bola Primordial</span>
+                            <span class="order-total-balls-price">89.90</span>
+                            <span class="order-balls-qtty">19</span>
+                        </div>
+                    </li>
+                    <li>
+                        <figure class="order-ball-image">
+                            <img src="http://localhost:3000/api/images?ball_type=random" alt="Bola de Exemplo">
+                        </figure>
+                        <div class="order-info-wrapper">
+                            <span class="order-ball-name">Bola Primordial</span>
+                            <span class="order-total-balls-price">89.90</span>
+                            <span class="order-balls-qtty">19</span>
+                        </div>
+                    </li>
+                    <li>
+                        <figure class="order-ball-image">
+                            <img src="http://localhost:3000/api/images?ball_type=random" alt="Bola de Exemplo">
+                        </figure>
+                        <div class="order-info-wrapper">
+                            <span class="order-ball-name">Bola Primordial</span>
+                            <span class="order-total-balls-price">89.90</span>
+                            <span class="order-balls-qtty">19</span>
+                        </div>
+                    </li>
+                    <li>
+                        <figure class="order-ball-image">
+                            <img src="http://localhost:3000/api/images?ball_type=random" alt="Bola de Exemplo">
+                        </figure>
+                        <div class="order-info-wrapper">
+                            <span class="order-ball-name">Bola Primordial</span>
+                            <span class="order-total-balls-price">89.90</span>
+                            <span class="order-balls-qtty">19</span>
+                        </div>
+                    </li>
+                    <li>
+                        <figure class="order-ball-image">
+                            <img src="http://localhost:3000/api/images?ball_type=random" alt="Bola de Exemplo">
+                        </figure>
+                        <div class="order-info-wrapper">
+                            <span class="order-ball-name">Bola Primordial</span>
+                            <span class="order-total-balls-price">89.90</span>
+                            <span class="order-balls-qtty">19</span>
+                        </div>
+                    </li>
+                    <li>
+                        <figure class="order-ball-image">
+                            <img src="http://localhost:3000/api/images?ball_type=random" alt="Bola de Exemplo">
+                        </figure>
+                        <div class="order-info-wrapper">
+                            <span class="order-ball-name">Bola Primordial</span>
+                            <span class="order-total-balls-price">89.90</span>
+                            <span class="order-balls-qtty">19</span>
+                        </div>
+                    </li>
+                    <li>
+                        <figure class="order-ball-image">
+                            <img src="http://localhost:3000/api/images?ball_type=random" alt="Bola de Exemplo">
+                        </figure>
+                        <div class="order-info-wrapper">
+                            <span class="order-ball-name">Bola Primordial</span>
+                            <span class="order-total-balls-price">89.90</span>
+                            <span class="order-balls-qtty">19</span>
+                        </div>
+                    </li>
+                </ul>
             </div>
         </div>
     </div>
     
-
-
-
     <!-- Implementar JavaScript para mostrar o carrinho do usuário -->
-    <br>
 
     <footer class="footer-container flex-container recessive">
         <div class="topic-box" style="overflow: auto;">

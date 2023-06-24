@@ -266,9 +266,10 @@ div.limb {
 .logo {
     font-family: Naville;
     text-transform: uppercase;
-    font-size: 5vh;
+    font-size: 7rem;
     font-weight: bold;
     text-align: center;
+    color: #202020;
     padding-top: 1vh;
 }
 
@@ -568,7 +569,7 @@ img.big {
     display: flex;
     gap: 10rem;
     z-index: 20;
-    text-shadow: 0 2px 0.5rem #000;
+    text-shadow: 0 2px 0.5rem #202020;
     padding: 27.5rem 0;
 }
 

@@ -89,7 +89,7 @@ li > input[type="radio"]:checked + label > div > div > svg > path {
 }
 
 .avancar{
-    position: -webkit-sticky; /* Safari */
+    position: -webkit-sticky;  /* Safari */
     position: sticky;
     top: 20px;
     height: 481.11px;
