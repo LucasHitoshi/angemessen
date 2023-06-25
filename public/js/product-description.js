@@ -1,5 +1,6 @@
 const buyButton = document.getElementById("buy-button");
 const kartButton = document.getElementById("kart-button");
+const addToCart = document.getElementById("add-to-cart");
 const productInfoCard = document.getElementById("ball-information");
 const ballName = productInfoCard.querySelector("#ball-name");
 const ballDescription = productInfoCard.querySelector("#ball-description");
@@ -26,6 +27,7 @@ fetch(productInfoRequest)
         // ballSmallImages.src = productInfo.image;
         ballDescription.innerHTML = productInfo.description
         ballOldPrice.innerHTML = `${productInfo.price.value.int},${productInfo.price.value.cent}`
+        addToCart.href = `http://localhost:3000/add-to-cart/${productInfo._id}`
 
         for (const ballImage of ballSmallImages) {
             console.log(ballImage)

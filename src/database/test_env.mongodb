@@ -5,6 +5,107 @@ use('TESTE');
 // db.drop('ballmodels');
 // db.drop('ballModels');
 
+db.createCollection("pedido", {
+    validator:{
+        $jsonSchema: {
+          bsonType: "object",
+          required: [ "pedido", "carrinho", "metodo", "pagamento", "cobranca" ],
+          properties: {
+             pedido: {
+                bsonType: "object",
+                required: [ "usuario_id", "pagamento_id", "status", "data" ],
+                properties: {
+                   usuario_id: {
+                      bsonType: "string",
+                      description: "must be a string if the field exists"
+                   },
+                   pagamento_id: {
+                      bsonType: "string",
+                      description: "must be a string if the field exists"
+                   },
+                   status: {
+                      bsonType: "string",
+                      description: "must be a string if the field exists"
+                   },
+                   data: {
+                      bsonType: "string",
+                      description: "must be a string if the field exists"
+                   },
+                }
+             },
+             carrinho: {
+                bsonType: "object",
+                required: [ "pais", "estado", "cidade" ],
+                properties: {
+                   carrinho_id: {
+                      bsonType: "string",
+                      description: "must be a string if the field exists"
+                   },
+                   bola_id: {
+                      bsonType: "string",
+                      description: "must be a string if the field exists"
+                   },
+                   quantidade: {
+                      bsonType: "int",
+                      description: "must be a string if the field exists"
+                   }
+                }
+             },
+             metodo: {
+                bsonType: "object",
+                required: [ "pix", "tipo", "nome" ],
+                properties: {
+                   pix: {
+                      bsonType: "string",
+                      description: "must be a string if the field exists"
+                   },
+                   tipo: {
+                      bsonType: "string",
+                      description: "must be a string if the field exists"
+                   },
+                   nome: {
+                      bsonType: "string",
+                      description: "must be a string if the field exists"
+                   }
+                }
+             },
+             pagamento: {
+                bsonType: "object",
+                required: [ "tipo_id", "parcelas", "cpf" ],
+                properties: {
+                   tipo_id: {
+                      bsonType: "string",
+                      description: "must be a string if the field exists"
+                   },
+                   parcelas: {
+                      bsonType: "string",
+                      description: "must be a string if the field exists"
+                   },
+                   cpf: {
+                      bsonType: "string",
+                      description: "must be a string if the field exists"
+                   }
+                }
+             },
+             cobranca: {
+                bsonType: "object",
+                required: [ "pagamento_id", "endereco_id" ],
+                properties: {
+                   pagamento_id: {
+                      bsonType: "string",
+                      description: "must be a string if the field exists"
+                   },
+                   endereco_id: {
+                      bsonType: "string",
+                      description: "must be a string if the field exists"
+                   }
+                }
+             }
+          }
+        }
+    }
+})
+
 db.getCollection('ballmodels').insertMany(
     [
         {

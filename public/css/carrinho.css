@@ -12,14 +12,12 @@
     flex-direction: column;
     gap: 3rem;
     margin-right: 2vh;
-    /* background-color: white; */
     width: 65%;
     height: auto;
     font-family: DMSans;
 }
 
 .cupom-desconto-carrinho {
-    /* margin: 1vh; */
     padding: 3rem;
     border: #777 solid 1px;
     border-radius: 1.5rem;
@@ -34,7 +32,7 @@
 
 .items-carrinho {
     padding: 3rem;
-    border: #777 solid 1px;
+    border: #555 solid 1px;
     border-radius: 1.5rem;
 
     display: flex;
@@ -42,7 +40,48 @@
     align-items: center;
     gap: 2rem;
 
+    min-height: calc(100vh - 24rem);
     background-color: #353535;
+}
+
+.no-balls {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin: 0 0 15rem 0;
+}
+
+.sad-face-cuz-no-ballz {
+    margin: 0 8rem 0 0;
+    font-size: 40rem;
+    color: #f5f5f5;
+}
+
+.sad-text-cuz-no-ballz {
+    font-size: 2.5rem;
+    color: #f5f5f5;
+}
+
+.buy-some-ballz {
+    font-size: 4rem;
+    color: #f5f5f5;
+}
+
+.buy-some-ballz > a {
+    transition: all 0.25s ease-out;
+    font-size: 4.25rem;
+    color: #f5f5f5;
+    text-decoration: underline;
+}
+
+.buy-some-ballz > a:hover {
+    color: #ffd900;
+}
+
+#item-cart-template {
+    display: none;
 }
 
 .item-carrinho {
@@ -50,11 +89,9 @@
     position: relative;
     display: flex;
     gap: 2rem;
-    /* background-color: #505050; */
     width: 100%;
     height: 22rem;
 
-    /* border: #777 solid 1px; */
     border: #555 solid 1px;
     border-radius: 1.5rem;
     padding: 1.5rem;
@@ -155,6 +192,11 @@
     color: #f5f5f5;
 }
 
+.item-wrapper {
+    display: flex;
+    gap: 10rem;
+}
+
 .ball-info {
     display: flex;
     flex-direction: column;
@@ -201,6 +243,55 @@
     gap: 0.3rem;
 }
 
+.pay-method-selection {
+    display: flex;
+    gap: 0.75rem;
+    margin: 0 0 1.5rem 0;
+}
+
+.pay-method-option {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 5rem;
+}
+
+.pay-method-option:hover > .pay-method-name {
+    box-shadow: 0px 0.6px 0.15px 0px #fff;
+}
+
+.pay-method-option:hover > .pay-method-icon {
+    background-color: #444;
+}
+
+.pay-method-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.25s ease-out;
+    width: 5rem;
+    aspect-ratio: 1 / 1;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 2.5rem;
+    background-color: rgb(0, 0, 0, 0);
+}
+
+.pay-method-icon > img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+}
+
+.pay-method-name {
+    width: fit-content;
+    transition: all 0.25s;
+    text-align: center;
+    font-size: 1.75rem;
+    color: #f5f5f5;
+}
+
+
 .cart-icon {
     width: 1.85rem;
     aspect-ratio: 1 / 1;
@@ -225,9 +316,7 @@
     color: #18a808;
 }
 
-/* .remove-from-cart:hover, */
 .add-to-order:hover {
-    /* border: #df9800 solid 2px; */
     background-color: #626262;
     color: #f5f5f5;
 }
@@ -240,16 +329,6 @@
     background-color: #626262;
     color: #f5f5f5;
 }
-
-/* 
-<div class="qtty-selector-wrapper">
-    <button class="qtty-selector-button increase-qtty">+</button>
-    <span class="ball-qtty"></span>
-    <button class="qtty-selector-button decrease-qtty">-</button>
-</div>
-*/
-
-/* /////////////////////////////////////////// */
 
 .aplicar-cupom {
     transition: all 0.25s ease-out;
@@ -322,7 +401,7 @@
 .resumo-total-itens {
     position: sticky;
     top: 5rem;
-    border: #777 solid 1px;
+    border: #555 solid 1px;
     border-radius: 1.5rem;
     margin-left: 2vh;
     background-color: #353535;
@@ -341,7 +420,8 @@
     width: 100%;
     height: calc(12rem);
     background-color: #353535;
-    border-bottom: #777 solid 1px;
+    /* border-bottom: #777 solid 1px; */
+    border-bottom: #555 solid 1px;
 }
 
 .title-resumo {
@@ -371,16 +451,9 @@
     display: flex;
     gap: 2rem;
     padding: 1.75rem;
-    border-bottom: #777 solid 1px;
+    /* border-bottom: #777 solid 1px; */
+    border-bottom: #555 solid 1px;
 }
-
-/* .order-balls-list > li::after {
-    content: "-";
-    color: rgb(0, 0, 0, 0);
-    width: 100%;
-    height: 1px;
-    background-color: #f5f5f5;
-} */
 
 .order-ball-image {
     width: 15rem;
@@ -399,7 +472,6 @@
 .order-info-wrapper {
     display: flex;
     flex-direction: column;
-    /* gap: 0.5rem; */
 }
 
 .order-ball-name,

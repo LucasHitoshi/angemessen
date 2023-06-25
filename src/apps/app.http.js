@@ -1,5 +1,7 @@
-const express = require("express");
 const path = require("path");
+require("dotenv").config({ path: path.join(__dirname, "../..", ".env") });
+const express = require("express");
+const session = require("express-session");
 const mainRouter = require(path.join(__dirname, "..", "routes/main"));
 const testRouter = require(path.join(__dirname, "..", "routes/test"));
 const createRouter = require(path.join(__dirname, "..", "routes/create"));
@@ -12,6 +14,13 @@ const cartRouter = require(path.join(__dirname, "..", "routes/cart"));
 const notFoundRouter = require(path.join(__dirname, "..", "routes/404"));
 
 const appHTTP = express();
+
+appHTTP.use(session({
+    secret: process.env.LOGIN_SESSION_SECRET,
+    resave: false,
+    saveUninitialized: true,
+    cookie: { secure: false }
+}));
 
 appHTTP.use(express.json());
 appHTTP.use(express.urlencoded({ extended: true }));

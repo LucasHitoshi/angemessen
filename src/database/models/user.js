@@ -1,4 +1,4 @@
-const { Schema, model } = require("mongoose");
+const { Schema, model, default: mongoose } = require("mongoose");
 
 const userSchema = new Schema(
     {
@@ -6,6 +6,7 @@ const userSchema = new Schema(
         sobrenome: { type: String, required: true },
         email: { type: String, required: true },
         senha: { type: String, required: true },
+        cpf: { type: String, /** required: true */ },
         endereco: {
             pais: { type: String, /** required: true */ },
             estado: { type: String, /** required: true */ },
@@ -16,7 +17,10 @@ const userSchema = new Schema(
             complemento: { type: String, /** required: true */ },
             cep: { type: String, /** required: true */ }
         },
-        cpf: { type: String, /** required: true */ }
+        cart: [
+            { ball_id: { type: mongoose.Types.ObjectId, required: true },
+              qtty: { type: Number, require: true, default: 1 } }
+        ]
     }
 )
 

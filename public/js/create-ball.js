@@ -1,7 +1,7 @@
 const checkboxes = document.querySelectorAll(`.bola-escollha-input`);
 const materialRadios = document.querySelectorAll(".select-material");
 const sportRadios = document.querySelectorAll(".select-sport");
-const sectionRadios = document.querySelectorAll(".select-section");
+const sectionRadios = document.querySelector(".select-section");
 
 var check = 0;
 var currRadio = undefined;
@@ -36,88 +36,90 @@ if (!parsedCookies.createLevelCounter) {
  * @property {string} material
  * @property {number} tamanho
  */
+// tipo: "",
+// material: "",
+// tamanho: 0
 var ballConfig = {
-    // tipo: "",
-    // material: "",
-    // tamanho: 0
-    sport: {
+    sport: [
         {
-        "name": "Futebol",
-        "price": {
-            "sign": "R$",
-            "value": 39.90
-        },
-        "image": "/api/images?ball_type=futebol",
-        "planned-image": "/api/images?ball"
+            "name": "Futebol",
+            "price": {
+                "sign": "R$",
+                "value": 39.90
+            },
+            "image": "/api/images?ball_type=futebol",
+            "planned-image": "/api/images?ball"
         },
         {
-        "name": "Basquete",
-        "price": {
-            "sign": "R$",
-            "value": 69.90
-        },
-        "image": "/api/images?ball_type=basquete",
-        "planned-image": "/api/images?ball"
-        },
-        {
-        "name": "Golfe",
-        "price": {
-            "sign": "R$",
-            "value": 79.90
-        },
-        "image": "/api/images?ball_type=golfe",
-        "planned-image": "/api/images?ball"
+            "name": "Basquete",
+            "price": {
+                "sign": "R$",
+                "value": 69.90
+            },
+            "image": "/api/images?ball_type=basquete",
+            "planned-image": "/api/images?ball"
         },
         {
-        "name": "Bocha",
-        "price": {
-            "sign": "R$",
-            "value": 39.90
-        },
-        "image": "/api/images?ball_type=bocha",
-        "planned-image": "/api/images?ball"
+            "name": "Golfe",
+            "price": {
+                "sign": "R$",
+                "value": 79.90
+            },
+            "image": "/api/images?ball_type=golfe",
+            "planned-image": "/api/images?ball"
         },
         {
-        "name": "Volêi",
-        "price": {
-            "sign": "R$",
-            "value": 39.90
+            "name": "Bocha",
+            "price": {
+                "sign": "R$",
+                "value": 39.90
+            },
+            "image": "/api/images?ball_type=bocha",
+            "planned-image": "/api/images?ball"
         },
-        "image": "/api/images?ball_type=volei",
-        "planned-image": "/api/images?ball"
+        {
+            "name": "Volêi",
+            "price": {
+                "sign": "R$",
+                "value": 39.90
+            },
+            "image": "/api/images?ball_type=volei",
+            "planned-image": "/api/images?ball"
         }
-    },
-    material: {
+    ],
+    material: [
         {
-        "name": "couro",
-        "price": {
-            "sign": "R$",
-            "value": 109.90
-        },
-        "image": "/api/images?ball_type=futebol"
-        },
-        {
-        "name": "borracha",
-        "price": {
-            "sign": "R$",
-            "value": 49.90
-        },
-        "image": "/api/images?ball_type=futebol"
+            "name": "couro",
+            "price": {
+                "sign": "R$",
+                "value": 109.90
+            },
+            "image": "/api/images?ball_type=futebol"
         },
         {
-        "name": "madeira",
-        "price": {
-            "sign": "R$",
-            "value": 159.90
+            "name": "borracha",
+            "price": {
+                "sign": "R$",
+                "value": 49.90
+            },
+            "image": "/api/images?ball_type=futebol"
         },
-        "image": "/api/images?ball_type=futebol"        }
-    },
-    section: {
         {
-            "name": "Hexágonos e pentágonos",
-            "image": "/api/images?ball_type=futebol"        }
-    }
-}
+            "name": "madeira",
+            "price": {
+                "sign": "R$",
+                "value": 159.90
+            },
+            "image": "/api/images?ball_type=futebol"
+        }
+    ],
+    section: [
+        {
+            "name": "clássico",
+            "image": "/api/images?ball_type=futebol"
+        }
+    ]
+};
 
 /** @type {HTMLElement} */
 var buttonsNext = document.getElementsByClassName("button-avancar");
@@ -127,6 +129,21 @@ var create = document.querySelectorAll(".create-level");
 var progress = document.getElementsByClassName("place-holder");
 
 create[counter].style.display = "block";
+const levels = [
+    "sport",
+    "material",
+    "section",
+    "color",
+]
+const radioLevels = [
+    "sport",
+    "material",
+    "section",
+]
+
+// if(!radioLevels){
+//     buttonsNext[levels].style.backgroundColor = `green`
+// } 
 
 function clearRadio(radio, level) {
     currRadio = currRadio ? currRadio : radio;
@@ -138,27 +155,34 @@ function clearRadio(radio, level) {
     check++;
     radio.checked = check % 2;
     
+    
     if (radio.checked == 1){
         console.log(`checked ${radio.checked}`);
         buttonsNext[level].style.backgroundColor = `green`
         buttonsNext[level].addEventListener("click", () => {
             counter = level;
             console.log("nos sab mt");
-            const levels = [
-                "sport",
-                "material",
-                "gomo",
-            ]
             
-            const isRadioLevel = levels[level] ? true : false;
             
+            // const isRadioLevel = levels[level] ? true : false;
+            
+
+            // if (isRadioLevel) {
+            //     const oneRadioIsChecked = document.querySelector(`.select-${levels[level]}:checked`);
+            //     console.log(oneRadioIsChecked);
+                
+            //     if (!oneRadioIsChecked) return;
+            // } 
+
+            const isRadioLevel = radioLevels[level] ? true : false;
             if (isRadioLevel) {
                 const oneRadioIsChecked = document.querySelector(`.select-${levels[level]}:checked`);
                 console.log(oneRadioIsChecked);
                 
                 if (!oneRadioIsChecked) return;
-            }
-            
+            } 
+
+
             console.log("vdd manja mt slk", level);
             counter++;
             for (let i = 0; i < 5; i++) {
@@ -175,9 +199,10 @@ function clearRadio(radio, level) {
     } else {
         console.log(`not checked ${radio.checked}`);
         buttonsNext[level].style.backgroundColor = `gray`
-
+        
     }
     currRadio = radio;
+
 }
 
 
@@ -205,5 +230,5 @@ for (let i = 0; i < buttonsNext.length; i++) {
     //     create[counter].style.display = "block";
     //     document.cookie = `createLevelCounter=${counter}`;
     //     document.cookie = `ballConfig=${JSON.stringify(ballConfig)}`;
-    // 
+    // })
 }
