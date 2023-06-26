@@ -1,8 +1,10 @@
 .container {
+    width: max-content;
     display: flex;
     gap: 3rem;
     flex-wrap: wrap;
-    margin: 4rem 0 4rem 12rem;
+    margin: 4rem auto;
+    min-height: calc(100vh - 47rem);
 }
 
 .img-ball {

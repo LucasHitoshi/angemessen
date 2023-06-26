@@ -7,7 +7,7 @@ const loginRouter = express.Router();
 loginRouter.get("/login", (req, res) => {
     try {
         if (req.session.email) {
-            res.redirect("http://localhost:3000/");
+            res.redirect("http://localhost:3000/homepage");
             return;
         }
 
@@ -21,10 +21,6 @@ loginRouter.get("/login", (req, res) => {
 
 loginRouter.post("/send-login", async (req, res) => {
     try {
-        // console.log("O USUÁRIO FEZ LOGIN OMAGA");
-        // console.log(`DON'S INFO: ${Object.values(req.body)}`);
-        // console.log(req.body.email, req.body.password);
-
         if (req.session.email) {
             res.send("Tu já tá logadu doido");
             return;
@@ -36,14 +32,16 @@ loginRouter.post("/send-login", async (req, res) => {
 
         const result = await userModel.findOne({ email: req.body.email });
 
-        console.log(result);
+        if (!result) {
+            res.send("Kkkkkk login errado troxa");
+            return;
+        }
         
         console.log(result.senha, "\n", hashedPassword);
         if (result.senha === hashedPassword) {
             req.session.email = req.body.email;
             console.log(req.session.email);
             res.send("Parabains vc logou");
-            // res.sendFile(path.join(__dirname, "../..", "/public/index.html"));
         } else {
             res.send("Errou o login KKKKK nub");
         }

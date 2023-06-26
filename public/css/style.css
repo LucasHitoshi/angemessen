@@ -72,7 +72,7 @@ h1 {
     display: none;
 }
 
-.fixed {
+.fixed-on-bottom {
     display: block;
     width: 100%;
     position: fixed;

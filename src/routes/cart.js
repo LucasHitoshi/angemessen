@@ -21,10 +21,9 @@ cartRouter.get("/add-to-cart/:id", async (req, res) => {
         
         if (req.session.email) {
             const user = await userModel.findOne({ email: req.session.email });
-            const result = await userModel.findOneAndUpdate(
-                { email: req.session.email },
-                { cart: [ ...user.cart, { ball_id: req.params.id } ] }
-            );
+            const result = await userModel.findOneAndUpdate
+                ( { email: req.session.email },
+                  { cart: [ ...user.cart, { ball_id: req.params.id } ] } );
             req.session.cart = result.cart;
         }
 
@@ -37,8 +36,21 @@ cartRouter.get("/add-to-cart/:id", async (req, res) => {
 cartRouter.get("/cart/balls", async (req, res) => {
     try {
         if (req.session.email) {
+            // Junta as bolas do carrinho de sessão às registradas no mongo
+            const sessionCart = req.session.cart ? req.session.cart : [];
+            req.session.cart = [];
             const user = await userModel.findOne({ email: req.session.email });
-            var cart = user.cart;
+            var cart = [...user.cart, ...sessionCart];
+            await userModel.updateOne
+                ( { email: req.session.email },
+                  { cart: cart } );
+            console.log(
+                req.session.email,
+                sessionCart,
+                req.session.cart,
+                user,
+                cart
+            );
         } else {
             var cart = req.session.cart ? req.session.cart : [];
         }

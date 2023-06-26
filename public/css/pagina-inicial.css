@@ -90,19 +90,29 @@ a {
 }
 
 header > section.dominant {
-    height: 5rem;
+    height: 14rem;
     padding: 4rem 10rem 4rem 10rem;
-    background-color: #ffd900;
+    /* background-color: #ffd900; */
+    background-color: #353535;
     justify-content: space-between;
+    border-bottom: #c9ab00 solid 1px;
 }
 
-header > section.recessive {
-    background-color: #ffe44e;
+/* 
+header > section.dominant + .bottom {
+    height: 1rem;
+    background-color: #ffd900;
+    border-top: #c9ab00 solid 1px;
+    border-bottom: #c9ab00 solid 1px;
+} */
+
+/* header > section.recessive {
+    background-color: #353535;
 }
 
 footer > section.recessive {
-    background-color: #ffe44e;
-}
+    background-color: #353535;
+} */
 
 .bg-transparent {
     background-color: transparent;
@@ -115,7 +125,11 @@ footer > section.recessive {
 }
 
 .main-wrapper {
+    width: 100%;
+    max-width: 2000px;
+    margin: 5rem auto;
     display: flex;
+    flex-direction: column;
     justify-content: center;
 }
 
@@ -173,10 +187,9 @@ div.link-box:not(:hover) > svg.menu-arrow {
     flex-direction: column;
     justify-content: space-evenly;
     padding: 0 1.5rem 0 1.5rem;
-    border-left: #ffd900 solid 5px;
+    border-left: #ffd900 solid 1px;
     height: 15rem;
 }
-
 
 li {
     list-style: none;
@@ -198,11 +211,13 @@ a.footer {
     font-family: DMSans;
     text-decoration: none;
     font-size: 2rem;
+    color: #f5f5f5;
 }
 
 footer {
     padding: 4rem 10vw;
-    background-color: #ffe44e;
+    background-color: #353535;
+    border-top: #ffd900 solid 1px;
     font-family: DMSans;
 }
 
@@ -213,22 +228,43 @@ footer {
     gap: 5vw;
 }
 
+.search-bar {
+    border: #ffd900 solid 1px;
+    border-radius: 1rem;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+#submit-search-button {
+    display: none;
+}
+
+.search-icon {
+    width: 2.75rem;
+    aspect-ratio: 1 / 1;
+    margin: 0 0.8rem 0 0;
+    background-color: rgba(0, 0, 0, 0);
+}
+
 form.search-bar > label > div.bar {
-    background-color: #ffe44e;
+    height: 5rem;
+    background-color: rgba(0, 0, 0, 0);
     border-radius: 0.75rem;
 }
 
 form.search-bar > label > div > input {
     padding: 0.75rem;
-    background-color: #ffe44e;
+    background-color: rgba(0, 0, 0, 0);
     border: none;
+    font-size: 2rem;
+    color: #f5f5f5;
+    font-family: DMSans;
 }
 
-form.search-bar > label > div > input::-webkit-input-placeholder {
-    color: #000;
+form.search-bar > label > div > input::placeholder {
+    /* color: #ffd900; */
+    color: #f5f5f5;
     font-family: DMSans;
-    font-size: 1.5vh;
-    text-transform: uppercase;
+    font-size: 2rem;
 }
 
 .centered {
@@ -267,10 +303,10 @@ div.limb {
     font-family: Naville;
     text-transform: uppercase;
     font-size: 7rem;
-    font-weight: bold;
+    /* font-weight: bold; */
     text-align: center;
-    color: #202020;
-    padding-top: 1vh;
+    color: #ffd900;
+    padding-top: 1rem;
 }
 
 input {

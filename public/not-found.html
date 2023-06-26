@@ -15,7 +15,7 @@
         <section class="flex-container dominant centered">
             <div class="flex-container centered gapped">
                 <svg viewbox="0 0 20 18" xmlns="http://www.w3.org/2000/svg" class="centered svg-hamburguer">
-                    <path d="M0 0 L20 0 L20 2 L0 2 M0 8 L20 8 L20 10 L0 10 M0 16 L20 16 L20 18 L0 18 Z"/>
+                    <path d="M0 0 L20 0 L20 2 L0 2 M0 8 L20 8 L20 10 L0 10 M0 16 L20 16 L20 18 L0 18 Z" fill="#ffd900" />
                 </svg>
                 <a href="/homepage">
                     <p class="logo">
@@ -25,13 +25,14 @@
             </div>
             <div class="flex-container pos-left centered nav-bar gapped">
                 <!-- TODO: Adicionar conexão (action) com o backend -->
-                <form action="" class="search-bar b-spaced">
+                <form action="http://localhost:3000/search" class="search-bar b-spaced" method="GET">
                     <label for="search">
                         <div class="flex-container bar centered">
-                            <input type="text" id="search"  name="Search" placeholder="Pesquisar">
-                            <button class="small-icon">
-                                <img src="img/search.png" alt="Pesquisa" class="small-icon" >
-                            </button>
+                            <input type="text" id="search"  name="q" placeholder="Pesquisar...">
+                            <input type="submit" id="submit-search-button">
+                            <label for="submit-search-button">
+                                <img src="http://localhost:3000/assets/yellow-search-icon.png" alt="Pesquisa" class="search-icon" />
+                            </label>
                         </div>
                     </label>
                 </form>
@@ -39,20 +40,21 @@
                     <!-- TODO: Trocar a imagem do carrinho, colocar algo mais simples mais clean :) -->
                     <div class="s-spaced">
                         <a href="/carrinho">
-                            <img src="img/market-cart-icon.png" alt="Carrinho" class="medium-icon">
+                            <img src="http://localhost:3000/assets/yellow-cart-icon.png" alt="Pesquisa" class="medium-icon" />
                         </a>
                     </div>
                     <div class="s-spaced centered">
                         <a href="/login">
-                            <img src="img/user-icon.png" alt="Usuário" class="medium-icon">
+                            <img src="http://localhost:3000/assets/yellow-user-icon.png" alt="Usuário" class="medium-icon">
                         </a>
                     </div>
                 </div>
             </div>
         </section>
+        <span class="bottom"></span>
         <!-- TODO: Implementar links para outras páginas -->
-        <section class="flex-container recessive sub-menu even">
-            <div class="link-box centered">
+        <section class="flex-container recessive sub-menu even" style="display: none;">
+            <!-- <div class="link-box centered">
                 <a href="/crie" class="recessive-header">
                     Crie
                 </a>
@@ -91,23 +93,24 @@
                 <svg viewbox="0 0 19 13.5" xmlns="http://www.w3.org/2000/svg" class="svg svg-arrow menu-arrow">
                     <path d="M2 2 L10 11.5 L18 2 L19 3 L10 13.5 L1 3 Z" />
                 </svg>
-            </div>
+            </div> -->
         </section>
     </header>
 
-    <div class="error-box">
+    <main class="error-box">
         <img src="./img/bola-erro-404.png" alt="Bola Erro 404" class="bola-erro-404">
         <div class="error-message">
-            <div class="erro">ERROR 404</div> 
-            <p>página não encontrada</p>
-            <div class="voltar">
-            <a href="index.html" class="voltar">Voltar ao jogo</a>
-            </div>
+            <span class="error-404">ERRO 404</span> 
+            <span class="comeback-msg">Página não encontrada</span>
+            <a href="http://localhost:3000/homepage" class="comeback-link">
+                <span class="comeback-msg">
+                    Voltar ao jogo
+                </span>
+            </a>
         </div>
-    </div>
+    </main>
 
-
-    <footer class="footer-container flex-container recessive">
+    <footer class="footer-container flex-container recessive fixed-on-bottom">
         <div class="topic-box" style="overflow: auto;">
             <ul>
                 <!-- TODO: Implementar links para redes sociais -->

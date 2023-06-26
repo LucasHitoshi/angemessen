@@ -140,10 +140,18 @@ const radioLevels = [
     "material",
     "section",
 ]
+for(let i = 0; i < 5; i++){
+if(radioLevels[i] !== levels[i]){
+    buttonsNext[i].style.backgroundColor = `green`
+    console.log("opa")
+    buttonsNext[i].addEventListener("click", () => {
 
-// if(!radioLevels){
-//     buttonsNext[levels].style.backgroundColor = `green`
-// } 
+        create[i].style.display = "block";
+        document.cookie = `createLevelCounter=${counter}`;
+        document.cookie = `ballConfig=${JSON.stringify(ballConfig)}`;
+    })
+} 
+
 
 function clearRadio(radio, level) {
     currRadio = currRadio ? currRadio : radio;
@@ -203,6 +211,7 @@ function clearRadio(radio, level) {
     }
     currRadio = radio;
 
+}
 }
 
 
