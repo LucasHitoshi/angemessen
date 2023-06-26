@@ -198,7 +198,7 @@ li > input[type="radio"]:checked + label > div > div > svg > path {
     border-radius: 2rem;
 } */
 
-.main-wrapper {
+.create-main-wrapper {
     display: flex;
     gap: 1.75rem;
 }

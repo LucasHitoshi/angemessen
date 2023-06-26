@@ -134,6 +134,7 @@ const levels = [
     "material",
     "section",
     "color",
+    "final",
 ]
 const radioLevels = [
     "sport",
@@ -145,7 +146,8 @@ if(radioLevels[i] !== levels[i]){
     buttonsNext[i].style.backgroundColor = `green`
     console.log("opa")
     buttonsNext[i].addEventListener("click", () => {
-
+        create[i].style.display = "none";
+        i++
         create[i].style.display = "block";
         document.cookie = `createLevelCounter=${counter}`;
         document.cookie = `ballConfig=${JSON.stringify(ballConfig)}`;

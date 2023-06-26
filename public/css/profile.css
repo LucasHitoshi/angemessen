@@ -1,0 +1,70 @@
+/* 
+<main class="main-profile-wrapper">
+    <figure class="user-photo">
+        <img src="http://localhost:3000/img/mano.png" alt="Test Placeholder">
+    </figure>
+    <div class="user-info-wrapper">
+        <span class="profile-area-title">Perfil do usuário</span>
+        <span id="user-name">Mano</span>
+        <span class="user-class">Membro cadastrado</span>
+        <span id="user-email" class="censored-info">el_mano_angemessiano@ggmail.com</span>
+        <div class="operation-wrapper">
+            <button id="log-out">
+                Log-out
+            </button>
+            <button id="change-password">
+                Mudar senha
+            </button>
+        </div>
+        <div class="redirection-wrapper">
+            <a href="http://localhost:3000/carrinho">Carrinho</a>
+            <a href="http://localhost:3000/historico">Histórico</a>
+            <a href="http://localhost:3000/favoritos">Favoritos</a>
+        </div>
+        <div class="personal-data">
+            <span class="profile-area-title">Dados pessoais</span>
+            <span class="user-cpf">135.115.300-07</span>
+            <span class="user-card-name">El Manolo</span>
+            <span class="user-card-number">5450-9080-8467-8247</span>
+        </div>
+    </div>
+</main>
+*/
+
+.main-profile-wrapper {
+    display: flex;
+}
+
+.user-photo {
+    background-color: #f5f5f5;
+    width: 40rem;
+    aspect-ratio: 1 / 1;
+    padding: 5rem;
+    border: none;
+    border-radius: 2rem;
+}
+
+.user-photo > img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+}
+
+.user-info-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-area-title {
+    font-size: 4rem;
+    color: #f5f5f5;
+}
+
+#user-name {
+    font-size: 3rem;
+    color: #f5f5f5;
+}
+
+.user-class {
+    font-size: 2rem;
+    color: #f5f5f5;
+}
