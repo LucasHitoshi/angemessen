@@ -5,7 +5,6 @@ const notFoundRouter = express.Router();
 // notFoundRouter.get("/404", (req, res) => {  
 notFoundRouter.all("*", (req, res) => {
     try {
-        console.log("CRIE ACESSADA.");
         res.status(404);
         res.sendFile(path.join(__dirname, "../..", "/public/not-found.html"));
     } catch (err) {

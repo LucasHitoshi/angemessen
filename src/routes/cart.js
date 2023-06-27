@@ -6,7 +6,6 @@ const cartRouter = express.Router();
 
 cartRouter.get("/carrinho", (req, res) => {
     try {
-        console.log("CARRINHO ACESSADO.");
         res.sendFile(path.join(__dirname, "../..", "/public/carrinho.html"));
     } catch (err) {
         console.log(`ERRO: ${err}`);
@@ -44,13 +43,13 @@ cartRouter.get("/cart/balls", async (req, res) => {
             await userModel.updateOne
                 ( { email: req.session.email },
                   { cart: cart } );
-            console.log(
-                req.session.email,
-                sessionCart,
-                req.session.cart,
-                user,
-                cart
-            );
+            // console.log(
+            //     req.session.email,
+            //     sessionCart,
+            //     req.session.cart,
+            //     user,
+            //     cart
+            // );
         } else {
             var cart = req.session.cart ? req.session.cart : [];
         }

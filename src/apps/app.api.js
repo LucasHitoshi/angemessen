@@ -2,6 +2,7 @@ const express = require("express");
 const path = require("path");
 const ballsApiRouter = require(path.join(__dirname, "..", "api/balls"));
 const imagesApiRouter = require(path.join(__dirname, "..", "api/images"));
+const usersApiRouter = require(path.join(__dirname, "..", "api/users"));
 
 const appAPI = express();
 
@@ -11,5 +12,6 @@ appAPI.use(express.static(path.join(__dirname, "../..", "/public")));
 appAPI.set("query parser", (str) => queryStringParser.parse(str));
 appAPI.use(ballsApiRouter);
 appAPI.use(imagesApiRouter);
+appAPI.use(usersApiRouter);
 
 module.exports = appAPI;

@@ -42,7 +42,7 @@ ballsApiRouter.get("/api/balls", async (req, res) => {
                 .limit(ballsLimit)
                 // .sort();
             const result = possibleBalls
-            console.log(result)
+            // console.log(result)
             res.type("json");
             res.send(result);
         } else {
