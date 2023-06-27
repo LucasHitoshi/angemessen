@@ -96,3 +96,7 @@ h1 {
     width: 70rem;
     height: 70rem;
 }
+
+label {
+    cursor: pointer;
+}

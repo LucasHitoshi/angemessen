@@ -1,12 +1,13 @@
 const path = require("path");
 const express = require("express");
-const ballModel = require("../database/models/ball");
+const planBallModel = require("../database/models/ball");
 const { isValidObjectId } = require("mongoose");
-const ballsApiRouter = express.Router();
+const planBallsApiRouter = express.Router();
 
-ballsApiRouter.get("/api/balls", async (req, res) => {
+planBallsApiRouter.get("/api/plan-ball", async (req, res) => {
     try {
-        // const queries = req.query;
+        const queries = req.query; // { limit: 5 }
+        const ballsLimit = queries.limit ? queries.limit : 5; // { limit: 5 }
         // const ball = queries.ball_name;
         // const numberOfBalls = queries.ball_qtty
         //     // ? queries.ball_qtty
@@ -22,7 +23,7 @@ ballsApiRouter.get("/api/balls", async (req, res) => {
         // console.log(filters, numberOfBalls);
 
         // if (ball === "random") {
-        //     const possibleBalls = await ballModel
+        //     const possibleBalls = await planBallModel
         //         .find({ })
         //         // .limit(numberOfBalls)
         //         // .sort();
@@ -36,12 +37,12 @@ ballsApiRouter.get("/api/balls", async (req, res) => {
         //     res.send({ "err": "400: Ball not found (Bad ball name)" });
         // }
         if (true) {
-            const possibleBalls = await ballModel
+            const possibleBalls = await planBallModel
                 .find({ })
-                .limit(24)
+                .limit(ballsLimit)
                 // .sort();
             const result = possibleBalls
-            console.log(result)
+            // console.log(result)
             res.type("json");
             res.send(result);
         } else {
@@ -53,13 +54,13 @@ ballsApiRouter.get("/api/balls", async (req, res) => {
     }
 });
 
-ballsApiRouter.get("/api/ball/:id", async (req, res) => {
+planBallsApiRouter.get("/api/plain_ball/:id", async (req, res) => {
     try {
         const _id = req.params.id;
         
         if (isValidObjectId(_id)) {
             // cria a var; await; model.op();
-            const result = await ballModel.findOne({ "_id": _id });
+            const result = await planBallModel.findOne({ "_id": _id });
             res.type("json");
             res.send(result);
         } else {
@@ -72,4 +73,4 @@ ballsApiRouter.get("/api/ball/:id", async (req, res) => {
     }
 });
 
-module.exports = ballsApiRouter;
+module.exports = planBallsApiRouter;

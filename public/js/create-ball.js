@@ -47,8 +47,10 @@ var ballConfig = {
                 "sign": "R$",
                 "value": 39.90
             },
-            "image": "/api/images?ball_type=futebol",
-            "planned-image": "/api/images?ball"
+            "view": {
+                "image": "/api/images?ball_type=futebol",
+                "planImage": "/api/plan-ball (ver depois) ?random"
+            }
         },
         {
             "name": "Basquete",
@@ -56,8 +58,10 @@ var ballConfig = {
                 "sign": "R$",
                 "value": 69.90
             },
-            "image": "/api/images?ball_type=basquete",
-            "planned-image": "/api/images?ball"
+            "view": {
+                "image": "/api/images?ball_type=basquete",
+                "planImage": "/api/plan-ball (ver depois) ?random"
+            }
         },
         {
             "name": "Golfe",
@@ -65,8 +69,10 @@ var ballConfig = {
                 "sign": "R$",
                 "value": 79.90
             },
-            "image": "/api/images?ball_type=golfe",
-            "planned-image": "/api/images?ball"
+            "view": {
+                "image": "/api/images?ball_type=golfe",
+                "planImage": "/api/plan-ball (ver depois) ?random"
+            }
         },
         {
             "name": "Bocha",
@@ -74,8 +80,10 @@ var ballConfig = {
                 "sign": "R$",
                 "value": 39.90
             },
-            "image": "/api/images?ball_type=bocha",
-            "planned-image": "/api/images?ball"
+            "view": {
+                "image": "/api/images?ball_type=bocha",
+                "planImage": "/api/plan-ball (ver depois) ?random"
+            }
         },
         {
             "name": "Volêi",
@@ -83,8 +91,10 @@ var ballConfig = {
                 "sign": "R$",
                 "value": 39.90
             },
-            "image": "/api/images?ball_type=volei",
-            "planned-image": "/api/images?ball"
+            "view": {
+                "image": "/api/images?ball_type=volei",
+                "planImage": "/api/plan-ball (ver depois) ?random"
+            }
         }
     ],
     material: [

@@ -8,8 +8,8 @@
     <link rel="icon" type="image/x-icon" href="img/favicon.png">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/pagina-inicial.css">
-    <!-- <link rel="stylesheet" href="./css/criar-bola.css"> -->
-    <link rel="stylesheet" href="./css/produtos-home.css">
+    <link rel="stylesheet" href="./css/side-bar.css">
+    <script src="./js/side-bar.js" defer></script>
     <script src="./js/script.js" type="text/javascript" defer></script>
     <script src="./js/carousel.js" type="text/javascript" defer></script>
     <script src="./js/product-generator-home.js" defer></script>
@@ -18,9 +18,12 @@
     <header>
         <section class="flex-container dominant centered">
             <div class="flex-container centered gapped">
-                <svg viewbox="0 0 20 18" xmlns="http://www.w3.org/2000/svg" class="centered svg-hamburguer">
-                    <path d="M0 0 L20 0 L20 2 L0 2 M0 8 L20 8 L20 10 L0 10 M0 16 L20 16 L20 18 L0 18 Z" fill="#ffd900" />
-                </svg>
+                <input type="checkbox" id="menu-hamburguer" name="menu-hamburguer">
+                <label for="menu-hamburguer">
+                    <svg viewbox="0 0 20 18" xmlns="http://www.w3.org/2000/svg" class="centered svg-hamburguer">
+                        <path d="M0 0 L20 0 L20 2 L0 2 M0 8 L20 8 L20 10 L0 10 M0 16 L20 16 L20 18 L0 18 Z" fill="#ffd900" />
+                    </svg>
+                </label>
                 <a href="/homepage">
                     <p class="logo">
                         Angemessen
@@ -101,7 +104,47 @@
         </section>
     </header>
 
+    <nav id="side-bar">
+        <label for="menu-hamburguer">
+            <img src="./assets/yellow-direction-icon.png" alt="Fechar menu lateral" class="close-menu-icon">
+        </label>
+        <span class="side-bar-title">Menu</span>
+        <ul class="intra-nav-menu">
+            <li>
+                <span>
+                    Crie <span class="thin-text">sua Bola</span>
+                </span>
+            </li>
+            <li>
+                <span>
+                    Produtos
+                </span>
+            </li>
+            <li>
+                <span>
+                    Promoções
+                </span>
+            </li>
+            <li>
+                <span>
+                    Coleções
+                </span>
+            </li>
+            <li>
+                <span>
+                    Sobre <span class="thin-text">nós</span>
+                </span>
+            </li>
+            <li>
+                <span>
+                    Perfil <span class="thin-text"> e ajustes</span>
+                </span>
+            </li>
+        </ul>
+    </nav>
     
+    <label id="thick-fog" for="menu-hamburguer"></label>
+
     <main class="main-wrapper">
         <section class="about-us-4">
             <div class="carousel-wrapper">

@@ -10,7 +10,10 @@ const ballSchema = new Schema(
         brand: { type: String, required: true },
         size: { type: String, required: true },
         complete: { type: Boolean },
-        image: { type: String, required: true },
+        view: {
+            image: { type: String, required: true },
+            planImage: { type: String, required: true }
+        },
         avaliation: { type: Number, required: true },
         price: {
             sign: { type: String, required: true },
