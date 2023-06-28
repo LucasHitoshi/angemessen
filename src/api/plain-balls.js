@@ -1,10 +1,10 @@
 const path = require("path");
 const express = require("express");
-const planBallModel = require("../database/models/ball");
+const plainBallModel = require("../database/models/ball");
 const { isValidObjectId } = require("mongoose");
-const planBallsApiRouter = express.Router();
+const plainBallsApiRouter = express.Router();
 
-planBallsApiRouter.get("/api/plan-ball", async (req, res) => {
+plainBallsApiRouter.get("/api/plain-ball", async (req, res) => {
     try {
         const queries = req.query; // { limit: 5 }
         const ballsLimit = queries.limit ? queries.limit : 5; // { limit: 5 }
@@ -23,7 +23,7 @@ planBallsApiRouter.get("/api/plan-ball", async (req, res) => {
         // console.log(filters, numberOfBalls);
 
         // if (ball === "random") {
-        //     const possibleBalls = await planBallModel
+        //     const possibleBalls = await plainBallModel
         //         .find({ })
         //         // .limit(numberOfBalls)
         //         // .sort();
@@ -37,7 +37,7 @@ planBallsApiRouter.get("/api/plan-ball", async (req, res) => {
         //     res.send({ "err": "400: Ball not found (Bad ball name)" });
         // }
         if (true) {
-            const possibleBalls = await planBallModel
+            const possibleBalls = await plainBallModel
                 .find({ })
                 .limit(ballsLimit)
                 // .sort();
@@ -53,13 +53,13 @@ planBallsApiRouter.get("/api/plan-ball", async (req, res) => {
     }
 });
 
-planBallsApiRouter.get("/api/plain_ball/:id", async (req, res) => {
+plainBallsApiRouter.get("/api/plain_ball/:id", async (req, res) => {
     try {
         const _id = req.params.id;
         
         if (isValidObjectId(_id)) {
             // cria a var; await; model.op();
-            const result = await planBallModel.findOne({ "_id": _id });
+            const result = await plainBallModel.findOne({ "_id": _id });
             res.type("json");
             res.send(result);
         } else {
@@ -72,4 +72,4 @@ planBallsApiRouter.get("/api/plain_ball/:id", async (req, res) => {
     }
 });
 
-module.exports = planBallsApiRouter;
+module.exports = plainBallsApiRouter;

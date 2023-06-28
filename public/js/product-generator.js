@@ -1,4 +1,4 @@
-const apiURI = "./api/balls?ball_name=random&ball_qtty=24";  // TODO: Trocar 'ball_name' por 'ball_id'
+const apiURI = "./api/balls?ball_name=random&limit=104";  // TODO: Trocar 'ball_name' por 'ball_id'
 const productCardTemplate = document.getElementById("product-card-template");
 const showcaseArea = document.querySelector(".showcase");
 const showMoreProducts = document.getElementById("show-more-products");
@@ -49,6 +49,8 @@ const loadMoreProducts = (/* numberOfProducts */) => {
                 newProduct.querySelector(".price").innerHTML = `${Math.floor(product.price.value.int*0.6)},${product.price.value.cent}`;
                 newProduct.querySelector(".money-sign").innerHTML = product.price.sign;
                 newProduct.querySelector(".to-product-page").href = `./produtos/${product._id}/desc`;
+                newProduct.querySelector(".operation-button-wrapper > a.buy-now").href = `http://localhost:3000/buy-now/${product._id}`;
+                newProduct.querySelector(".operation-button-wrapper > a.to-cart").href = `http://localhost:3000/add-to-cart/${product._id}`;
                 
                 showcaseArea.appendChild(newProduct);
             });

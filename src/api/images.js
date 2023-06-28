@@ -12,7 +12,7 @@ imagesApiRouter.get("/api/images", (req, res) => {
             "bocha": "bocha.png",
             "volei": "volleyball.png",
             "golfe": "golf.png",
-            "futebol": "mano.png"
+            "futebol": "mano-nerfado.png"
         }
 
         if (Object.keys(balls).includes(ball)) {

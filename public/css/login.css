@@ -29,6 +29,16 @@ body {
     }
 }
 
+@keyframes changeBackgroundColorr {
+    0% {
+        background-color: lightgray;
+    }
+
+    100% {
+        background-color: darkgray  ;
+    }
+}
+
 .box-log {
     align-items: center;
     display: flex;
@@ -99,4 +109,25 @@ body {
     background-color: #e29d07;
     animation: changeBackgroundColor;
     animation-duration: 0.8s;
+}
+
+
+.button-criar-conta2 {
+    font-size: 1.9vh;
+    font-size: DMSans;
+    background-color: lightgray;
+    cursor: pointer;
+    border-radius: 2vh;
+    border: none;
+}
+
+.button-criar-conta2:hover {
+    background-color: darkgray;
+    animation: changeBackgroundColorr;
+    animation-duration: 0.8s;
+}
+
+.button-criar-conta-a {
+    font-size: 1.9vh;
+    font-size: DMSans;
 }

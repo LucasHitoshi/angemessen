@@ -1,0 +1,20 @@
+
+
+
+{
+    "balls" : {
+        "baska": {
+            "clássico": {
+                "img": "url da api"
+            }
+        },
+        "fut": {
+            "pentagonos e hexagonos": {
+                "img": "url da api"
+            },
+            "círculos": {
+                "img": "url da api"
+            }
+        }
+    }
+}

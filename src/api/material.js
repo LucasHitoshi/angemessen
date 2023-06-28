@@ -8,8 +8,8 @@ plainImagesApiRouter.get("/api/plain_image", (req, res) => {
         const plainBall = req.query.ball_type;
         console.log(plainBall);
         const plainBalls = {
-            "basquete": "basquete-planificado.svg",
-            "futebol": "futebol-planificado.svg",
+            "couro": "basquete-planificado.svg",
+            "borracha": "futebol-planificado.svg",
             "volei": "volei-planificado.svg"
         };
 

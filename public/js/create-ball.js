@@ -49,7 +49,7 @@ var ballConfig = {
             },
             "view": {
                 "image": "/api/images?ball_type=futebol",
-                "planImage": "/api/plan-ball (ver depois) ?random"
+                "plainImage": "/api/plain-image?ball_type=futebol"
             }
         },
         {
@@ -60,7 +60,7 @@ var ballConfig = {
             },
             "view": {
                 "image": "/api/images?ball_type=basquete",
-                "planImage": "/api/plan-ball (ver depois) ?random"
+                "plainImage": "/api/plain-image?ball_type=basquete"
             }
         },
         {
@@ -71,7 +71,7 @@ var ballConfig = {
             },
             "view": {
                 "image": "/api/images?ball_type=golfe",
-                "planImage": "/api/plan-ball (ver depois) ?random"
+                "plainImage": "/api/plain-image?ball_type=golfe"
             }
         },
         {
@@ -82,7 +82,7 @@ var ballConfig = {
             },
             "view": {
                 "image": "/api/images?ball_type=bocha",
-                "planImage": "/api/plan-ball (ver depois) ?random"
+                "plainImage": "/api/plain-image?ball_type=bocha"
             }
         },
         {
@@ -93,7 +93,7 @@ var ballConfig = {
             },
             "view": {
                 "image": "/api/images?ball_type=volei",
-                "planImage": "/api/plan-ball (ver depois) ?random"
+                "plainImage": "/api/plain-image?ball_type=Volêi"
             }
         }
     ],

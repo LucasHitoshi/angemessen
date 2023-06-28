@@ -45,12 +45,20 @@
 
 .product-card {
     transition: all 0.25s ease-out;
+    position: relative;
     background-color: rgba(0, 0, 0, 0);
     width: 35rem;
+    height: 54.5rem;
     padding: 1.5rem;
     /* border: #aaa solid 1px; */
     border: #555 solid 1px;
     border-radius: 0 1.5rem 1.5rem 1.5rem;
+    overflow: hidden;
+}
+
+.product-card:hover > .operation-button-wrapper {
+    opacity: 1;
+    margin: -6.5rem 0 0 0;
 }
 
 .product-card:hover {
@@ -434,4 +442,75 @@
 .money-sign {
     font-size: 3rem;
     color: #ffd900;
+}
+
+.operation-button-wrapper {
+    transition: all 0.25s ease-out;
+    position: absolute;
+    z-index: 10;
+    width: 31.70rem;
+    height: 10rem;
+    opacity: 0;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 0 0 0;
+}
+
+.operation-button-wrapper > a > button {
+    transition: all 0.15s ease-out;
+    cursor: pointer;
+    padding: 1rem 0.75rem;
+}
+
+.operation-button-wrapper > a > button > img {
+    width: 3rem;
+    aspect-ratio: 1 / 1;
+}
+
+.operation-button-wrapper > a > .buy-now-button > span {
+    font-size: 1.75rem;
+    text-transform: uppercase;
+    color: #008700;
+}
+
+.operation-button-wrapper > a > .add-to-cart-button > span {
+    font-size: 1.75rem;
+    text-transform: uppercase;
+    color: #ffd900;
+}
+
+.operation-button-wrapper > a > .buy-now-button:hover {
+    background-color: #0087007a;
+}
+
+.operation-button-wrapper > a > .buy-now-button:hover > span {
+    color: #f5f5f5;
+}
+
+.operation-button-wrapper > a > .add-to-cart-button:hover {
+    background-color: #ffd9007a;
+}
+
+.operation-button-wrapper > a > .add-to-cart-button:hover > span {
+    color: #f5f5f5;
+}
+
+.operation-button-wrapper > a > .buy-now-button {
+    border: #008700 solid 1px;
+    border-radius: 1rem;
+    background-color: #00000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.operation-button-wrapper > a > .add-to-cart-button {
+    border: #ffd900 solid 1px;
+    border-radius: 1rem;
+    background-color: #00000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
 }
