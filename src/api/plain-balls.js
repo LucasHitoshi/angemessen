@@ -42,7 +42,6 @@ planBallsApiRouter.get("/api/plan-ball", async (req, res) => {
                 .limit(ballsLimit)
                 // .sort();
             const result = possibleBalls
-            // console.log(result)
             res.type("json");
             res.send(result);
         } else {

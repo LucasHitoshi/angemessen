@@ -333,14 +333,22 @@ input {
     align-items: center;
     position: relative;
     cursor: pointer;
-    /* width: 1466px; */
-    width: 100%;
+    width: 65%;
     max-width: 1920px;
     min-width: 700px;
-    /* aspect-ratio: 10 / 1; */
+    overflow: hidden;
+}
+
+.carousel-wrapper:hover > #left-button {
+    left: 0px;
+}
+
+.carousel-wrapper:hover > #right-button {
+    right: 0px;
 }
 
 .carousel-wrapper > #left-button {
+    transition: all 0.25s ease-out;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -348,12 +356,10 @@ input {
     height: 42px;
     background-color: #fff;
     margin: 1.5rem;
-    /* border: #000 solid 1px; */
     border-radius: 35px;
-    /* background-color: rgba(0, 0, 0, 0); */
     border-color: rgba(0, 0, 0, 0);
     position: absolute;
-    left: 0px;
+    left: -7.5rem;
     z-index: 20;
     opacity: 0.5;
     rotate: 90deg;
@@ -361,6 +367,7 @@ input {
 }
 
 .carousel-wrapper > #right-button {
+    transition: all 0.25s ease-out;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -368,12 +375,10 @@ input {
     height: 42px;
     background-color: #fff;
     margin: 1.5rem;
-    /* border: #000 solid 1px; */
     border-radius: 35px;
-    /* background-color: rgba(0, 0, 0, 0); */
     border-color: rgba(0, 0, 0, 0);
     position: absolute;
-    right: 0px;
+    right: -7.5rem;
     z-index: 20;
     opacity: 0.5;
     rotate: 270deg;
@@ -710,9 +715,10 @@ img.big {
 
 .about-us-4 {
     display: flex;
-    gap: 5rem;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 5rem;
 }
 
 .ator-1 {
@@ -918,4 +924,59 @@ img.big {
 .to-product-page {
     width: fit-content;
     height: fit-content;
+}
+
+.promotions-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.promotions-showcase {
+    width: 65%;
+    max-width: 1920px;
+    min-width: 700px;
+    aspect-ratio: 5 / 3;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    /* padding: 0 30rem; */
+}
+
+.promotions-showcase > div {
+    background-color: aqua;
+    margin: 1rem;
+}
+
+.promotions-showcase > div > img {
+    object-fit: fill;
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 1 / 1;
+}
+
+.promotions-showcase > .big-one {
+    background-color: red;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 4;
+}
+
+.promotions-showcase > .small-one {
+    background-color: green;
+    grid-column-start: 4;
+    grid-column-end: 7;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+.promotions-showcase > .medium-one {
+    background-color: purple;
+    grid-column-start: 4;
+    grid-column-end: 7;
+    grid-row-start: 2;
+    grid-row-end: 4;
 }

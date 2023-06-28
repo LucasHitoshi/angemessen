@@ -12,7 +12,7 @@
     <script src="./js/side-bar.js" defer></script>
     <script src="./js/script.js" type="text/javascript" defer></script>
     <script src="./js/carousel.js" type="text/javascript" defer></script>
-    <script src="./js/product-generator-home.js" defer></script>
+    <script src="./js/product-generator-home.js?mano=mano" defer></script>
 </head>
 <body>
     <header>
@@ -59,94 +59,52 @@
             </div>
         </section>
         <span class="bottom"></span>
-        <!-- TODO: Implementar links para outras páginas -->
-        <section class="flex-container recessive sub-menu even" style="display: none;">
-            <!-- <div class="link-box centered">
-                <a href="/crie" class="recessive-header">
-                    Crie
-                </a>
-                <svg viewbox="0 0 19 13.5" xmlns="http://www.w3.org/2000/svg" class="svg svg-arrow menu-arrow">
-                    <path d="M2 2 L10 11.5 L18 2 L19 3 L10 13.5 L1 3 Z" />
-                </svg>
-            </div>
-            <div class="link-box centered">
-                <a href="not-found.html" class="recessive-header">
-                    Coleções
-                </a>
-                <svg viewbox="0 0 19 13.5" xmlns="http://www.w3.org/2000/svg" class="svg svg-arrow menu-arrow">
-                    <path d="M2 2 L10 11.5 L18 2 L19 3 L10 13.5 L1 3 Z" />
-                </svg>
-            </div>
-            <div class="link-box centered">
-                <a href="/produtos" class="recessive-header">
-                    Produtos
-                </a>
-                <svg viewbox="0 0 19 13.5" xmlns="http://www.w3.org/2000/svg" class="svg svg-arrow menu-arrow">
-                    <path d="M2 2 L10 11.5 L18 2 L19 3 L10 13.5 L1 3 Z" />
-                </svg>
-            </div>
-            <div class="link-box centered">
-                <a href="not-found.html" class="recessive-header">
-                    Promoções
-                </a>
-                <svg viewbox="0 0 19 13.5" xmlns="http://www.w3.org/2000/svg" class="svg svg-arrow menu-arrow">
-                    <path d="M2 2 L10 11.5 L18 2 L19 3 L10 13.5 L1 3 Z" />
-                </svg>
-            </div>
-            <div class="link-box centered">
-                <a href="/sobre-nos" class="recessive-header">
-                    Sobre Nós
-                </a>
-                <svg viewbox="0 0 19 13.5" xmlns="http://www.w3.org/2000/svg" class="svg svg-arrow menu-arrow">
-                    <path d="M2 2 L10 11.5 L18 2 L19 3 L10 13.5 L1 3 Z" />
-                </svg>
-            </div> -->
-        </section>
     </header>
-
+    
+    <label id="thick-fog" for="menu-hamburguer"></label>
     <nav id="side-bar">
-        <label for="menu-hamburguer">
-            <img src="./assets/yellow-direction-icon.png" alt="Fechar menu lateral" class="close-menu-icon">
-        </label>
-        <span class="side-bar-title">Menu</span>
+        <div class="top-section-nav-bar">
+            <span class="side-bar-title">Menu</span>
+            <label for="menu-hamburguer">
+                <img src="./assets/yellow-direction-icon.png" alt="Fechar menu lateral" class="close-menu-icon">
+            </label>
+        </div>
         <ul class="intra-nav-menu">
             <li>
-                <span>
+                <a href="http://localhost:3000/crie">
                     Crie <span class="thin-text">sua Bola</span>
-                </span>
+                </a>
             </li>
             <li>
-                <span>
+                <a href="http://localhost:3000/produtos">
                     Produtos
-                </span>
+                </a>
             </li>
             <li>
-                <span>
+                <a href="http://localhost:3000/promos">
                     Promoções
-                </span>
+                </a>
             </li>
             <li>
-                <span>
+                <a href="http://localhost:3000/colecoes">
                     Coleções
-                </span>
+                </a>
             </li>
             <li>
-                <span>
+                <a href="http://localhost:3000/about-us">
                     Sobre <span class="thin-text">nós</span>
-                </span>
+                </a>
             </li>
             <li>
-                <span>
+                <a href="http://localhost:3000/perfil">
                     Perfil <span class="thin-text"> e ajustes</span>
-                </span>
+                </a>
             </li>
         </ul>
     </nav>
     
-    <label id="thick-fog" for="menu-hamburguer"></label>
-
     <main class="main-wrapper">
-        <section class="about-us-4">
+        <section class="promotions-wrapper">
             <div class="carousel-wrapper">
                 <button id="left-button">
                     <img src="./assets/arrow.svg" alt="Botão Esquerdo Carrossel" class="svg svg-arrow">
@@ -159,6 +117,11 @@
                     <img src="./img/promotions/promo-2.png" alt="bg-teste" class="carousel-img">
                     <!-- <img src="./img/background/background3.jpg" alt="bg-teste" class="carousel-img"> -->
                 </ul>
+            </div>
+            <div class="promotions-showcase">
+                <div class="big-one"><img src="./img/promotions/mini-promo-1.png" alt="Em breve: Wilson na Angemessen"></div>
+                <div class="small-one">a</div>
+                <div class="medium-one">a</div>
             </div>
         </section>
         

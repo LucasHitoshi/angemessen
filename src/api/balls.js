@@ -6,8 +6,9 @@ const ballsApiRouter = express.Router();
 
 ballsApiRouter.get("/api/balls", async (req, res) => {
     try {
-        const queries = req.query; // { limit: 5 }
-        const ballsLimit = queries.limit ? queries.limit : 24; // { limit: 5 }
+        const queries = req.query;
+        const ballsLimit = queries.limit ? queries.limit : 24;
+
         // const ball = queries.ball_name;
         // const numberOfBalls = queries.ball_qtty
         //     // ? queries.ball_qtty
@@ -36,13 +37,14 @@ ballsApiRouter.get("/api/balls", async (req, res) => {
         //     res.status(400);
         //     res.send({ "err": "400: Ball not found (Bad ball name)" });
         // }
+        
         if (true) {
             const possibleBalls = await ballModel
                 .find({ })
                 .limit(ballsLimit)
-                // .sort();
-            const result = possibleBalls
-            // console.log(result)
+                .exec()
+                .then(res => res.sort((_, __) => 0.5 - Math.random()));
+            const result = possibleBalls;
             res.type("json");
             res.send(result);
         } else {

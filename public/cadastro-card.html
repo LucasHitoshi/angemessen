@@ -102,9 +102,12 @@
     <header>
         <section class="flex-container dominant centered">
             <div class="flex-container centered gapped">
-                <svg viewbox="0 0 20 18" xmlns="http://www.w3.org/2000/svg" class="centered svg-hamburguer">
-                    <path d="M0 0 L20 0 L20 2 L0 2 M0 8 L20 8 L20 10 L0 10 M0 16 L20 16 L20 18 L0 18 Z" fill="#ffd900" />
-                </svg>
+                <input type="checkbox" id="menu-hamburguer" name="menu-hamburguer">
+                <label for="menu-hamburguer">
+                    <svg viewbox="0 0 20 18" xmlns="http://www.w3.org/2000/svg" class="centered svg-hamburguer">
+                        <path d="M0 0 L20 0 L20 2 L0 2 M0 8 L20 8 L20 10 L0 10 M0 16 L20 16 L20 18 L0 18 Z" fill="#ffd900" />
+                    </svg>
+                </label>
                 <a href="/homepage">
                     <p class="logo">
                         Angemessen
@@ -139,51 +142,49 @@
                 </div>
             </div>
         </section>
-        <span class="bottom"></span>
-        <!-- TODO: Implementar links para outras páginas -->
-        <section class="flex-container recessive sub-menu even" style="display: none;">
-            <!-- <div class="link-box centered">
-                <a href="/crie" class="recessive-header">
-                    Crie
+    </header>
+    
+    <label id="thick-fog" for="menu-hamburguer"></label>
+    <nav id="side-bar">
+        <div class="top-section-nav-bar">
+            <span class="side-bar-title">Menu</span>
+            <label for="menu-hamburguer">
+                <img src="./assets/yellow-direction-icon.png" alt="Fechar menu lateral" class="close-menu-icon">
+            </label>
+        </div>
+        <ul class="intra-nav-menu">
+            <li>
+                <a href="http://localhost:3000/crie">
+                    Crie <span class="thin-text">sua Bola</span>
                 </a>
-                <svg viewbox="0 0 19 13.5" xmlns="http://www.w3.org/2000/svg" class="svg svg-arrow menu-arrow">
-                    <path d="M2 2 L10 11.5 L18 2 L19 3 L10 13.5 L1 3 Z" />
-                </svg>
-            </div>
-            <div class="link-box centered">
-                <a href="not-found.html" class="recessive-header">
-                    Coleções
-                </a>
-                <svg viewbox="0 0 19 13.5" xmlns="http://www.w3.org/2000/svg" class="svg svg-arrow menu-arrow">
-                    <path d="M2 2 L10 11.5 L18 2 L19 3 L10 13.5 L1 3 Z" />
-                </svg>
-            </div>
-            <div class="link-box centered">
-                <a href="/produtos" class="recessive-header">
+            </li>
+            <li>
+                <a href="http://localhost:3000/produtos">
                     Produtos
                 </a>
-                <svg viewbox="0 0 19 13.5" xmlns="http://www.w3.org/2000/svg" class="svg svg-arrow menu-arrow">
-                    <path d="M2 2 L10 11.5 L18 2 L19 3 L10 13.5 L1 3 Z" />
-                </svg>
-            </div>
-            <div class="link-box centered">
-                <a href="not-found.html" class="recessive-header">
+            </li>
+            <li>
+                <a href="http://localhost:3000/promos">
                     Promoções
                 </a>
-                <svg viewbox="0 0 19 13.5" xmlns="http://www.w3.org/2000/svg" class="svg svg-arrow menu-arrow">
-                    <path d="M2 2 L10 11.5 L18 2 L19 3 L10 13.5 L1 3 Z" />
-                </svg>
-            </div>
-            <div class="link-box centered">
-                <a href="/sobre-nos" class="recessive-header">
-                    Sobre Nós
+            </li>
+            <li>
+                <a href="http://localhost:3000/colecoes">
+                    Coleções
                 </a>
-                <svg viewbox="0 0 19 13.5" xmlns="http://www.w3.org/2000/svg" class="svg svg-arrow menu-arrow">
-                    <path d="M2 2 L10 11.5 L18 2 L19 3 L10 13.5 L1 3 Z" />
-                </svg>
-            </div> -->
-        </section>
-    </header>
+            </li>
+            <li>
+                <a href="http://localhost:3000/about-us">
+                    Sobre <span class="thin-text">nós</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:3000/perfil">
+                    Perfil <span class="thin-text"> e ajustes</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
     
     <div class="login-container">
         <div class="login-header">
