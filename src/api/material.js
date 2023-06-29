@@ -1,22 +1,23 @@
 const path = require("path");
 const express = require("express");
-const plainImagesApiRouter = express.Router();
+const materialImagesApiRouter = express.Router();
 
-plainImagesApiRouter.get("/api/plain_image", (req, res) => {
+materialImagesApiRouter.get("/api/material_image", (req, res) => {
     try {
         // TODO: Trocar o 'req.param' por algo bom de vdd
-        const plainBall = req.query.ball_type;
-        console.log(plainBall);
-        const plainBalls = {
-            "couro": "basquete-planificado.svg",
-            "borracha": "futebol-planificado.svg",
-            "volei": "volei-planificado.svg"
+        const material = req.query.material;
+        console.log(material);
+        const materials = {
+            "couro": "couro.png",
+            "borracha": "borracha.png",
+            "eva": "eva.png",
         };
 
-        if (Object.keys(plainBalls).includes(plainBall)) {
-            const result = plainBalls[plainBall];
-            res.type("svg");
-            res.sendFile(path.join(__dirname, "../..", `/public/assets/${result}`));
+        if (Object.keys(materials).includes(material)) {
+            const result = materials[material];
+            console.log("aaa");
+            res.type("png");
+            res.sendFile(path.join(__dirname, "../..", `/public/img/${result}`));
         } else {
             res.status(400);
             res.send({ "err": "400: Ball not found (Bad ball name)" });
@@ -29,4 +30,4 @@ plainImagesApiRouter.get("/api/plain_image", (req, res) => {
     }
 });
 
-module.exports = plainImagesApiRouter;
+module.exports = materialImagesApiRouter;

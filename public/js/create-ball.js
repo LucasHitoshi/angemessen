@@ -1,4 +1,4 @@
-const checkboxes = document.querySelectorAll(`.bola-escollha-input`);
+const checkboxes = document.querySelectorAll(`.bola-escolha-input`);
 const materialRadios = document.querySelectorAll(".select-material");
 const sportRadios = document.querySelectorAll(".select-sport");
 const sectionRadios = document.querySelector(".select-section");
@@ -61,28 +61,6 @@ var ballConfig = {
             "view": {
                 "image": "/api/images?ball_type=basquete",
                 "plainImage": "/api/plain-image?ball_type=basquete"
-            }
-        },
-        {
-            "name": "Golfe",
-            "price": {
-                "sign": "R$",
-                "value": 79.90
-            },
-            "view": {
-                "image": "/api/images?ball_type=golfe",
-                "plainImage": "/api/plain-image?ball_type=golfe"
-            }
-        },
-        {
-            "name": "Bocha",
-            "price": {
-                "sign": "R$",
-                "value": 39.90
-            },
-            "view": {
-                "image": "/api/images?ball_type=bocha",
-                "plainImage": "/api/plain-image?ball_type=bocha"
             }
         },
         {

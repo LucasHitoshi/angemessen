@@ -4,6 +4,7 @@ const ballsApiRouter = require(path.join(__dirname, "..", "api/balls"));
 const imagesApiRouter = require(path.join(__dirname, "..", "api/images"));
 const usersApiRouter = require(path.join(__dirname, "..", "api/users"));
 const plainImagesApiRouter = require(path.join(__dirname, "..", "api/plain-image"));
+const materialImagesApiRouter = require(path.join(__dirname, "..", "api/material"));
 
 const appAPI = express();
 
@@ -15,5 +16,6 @@ appAPI.use(ballsApiRouter);
 appAPI.use(imagesApiRouter);
 appAPI.use(usersApiRouter);
 appAPI.use(plainImagesApiRouter);
+appAPI.use(materialImagesApiRouter);
 
 module.exports = appAPI;

@@ -119,6 +119,7 @@ body {
     cursor: pointer;
     border-radius: 2vh;
     border: none;
+    width: 196px;
 }
 
 .button-criar-conta2:hover {

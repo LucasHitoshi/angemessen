@@ -323,25 +323,37 @@
         </div>
     </div>
     
-    <div class="cep-validation-form-fog">
+    <div id="cep-validation-form-fog">
         <div id="cep-validator-form-wrapper">
             <form action="/validate-cep" method="GET" id="cep-validator-form">
                 <span class="cep-validator-form-title">Angemessen</span>
                 <input type="text" id="cep" name="cep" placeholder="Digite seu CEP..." />
-                <input type="submit" value="Enviar" id="submit-cep">
+                <div class="cep-validator-form-buttons">
+                    <input type="submit" value="Adicionar" id="submit-cep">
+                    <input value="Sair" id="exit-cep-validation-form">
+                </div>
             </form>
-            <div id="cep-validation-result-box">
-                <span class="cep-validation-tip">O resultado da verificação aparecerá aqui</span>
-                <span>O seu CEP é</span>
-                <span class="cep-validation-result">Válido</span>
+            <span id="cep-validation-tip">O resultado da verificação aparecerá aqui</span>
+            <div id="cep-sucess-validation-result-box">
+                <div class="cep-validation-result-wrapper">
+                    <span class="cep-validation-result-title">O seu CEP é</span>
+                    <span class="cep-validation-result">Válido</span>
+                </div>
                 <div class="cep-info-wrapper">
-                    <span>Localização verificada:</span>
-                    <span class="cep-city-n-district">Joinville - SC</span>
-                    <span class="cep-neighborhood">Jardim Iririú</span>
+                    <span class="cep-info-title">Localização verificada:</span>
+                    <span id="cep-city-n-district"></span>
+                    <span id="cep-neighborhood"></span>
+                </div>
+            </div>
+            <div id="cep-error-validation-result-box">
+                <div class="cep-error-validation-result-wrapper">
+                    <span class="cep-error-validation-result-title">O seu CEP é</span>
+                    <span class="cep-error-validation-result">Inválido</span>
                 </div>
             </div>
         </div>
     </div>
+
 
     <footer class="footer-container flex-container recessive">
         <div class="topic-box" style="overflow: auto;">

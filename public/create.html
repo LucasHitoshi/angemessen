@@ -106,7 +106,7 @@
     <div class="limbo"></div>
     <div class="create-level">
         <div>
-            <div class="progresso-criar-bola">
+            <div class="create-progress">
                 <div class="place-holder" style="background-color: #ffd900;"><img src="./assets/type-ball-icon.svg" alt="" style="width: 9rem;"></div>
                 <div class="place-holder"><img src="./assets/material.svg" alt="" style="width: 9rem;"></div>
                 <div class="place-holder"><img src="./assets/gomo-icon.svg" alt="" style="width: 9rem;"></div>
@@ -132,83 +132,86 @@
     
         <div class="flex-container">
             <div class="option-wrapper">
-                <div class="title-creation">
-                    Esporte
-                </div>
-                <!-- <div class="escolha-criar"> -->
+                <div class="level-template">
+                    <div class="title-creation">
+                        Esporte
+                    </div>
+                    <!-- <div class="escolha-criar"> -->
                 
-                <div class="showcase-create">
-                    <div>
-                        <input type="radio" id="soccerball" name="sport" class="bola-escollha-input select-sport" onclick="clearRadio(this, 0)">
-                        <label class="pai" for="soccerball">
-                            <div class="absoluto">
-                                <div class="centered radio-bola">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" >
-                                        <path d="M9 16.17l-3.59-3.58L4 14l5 5 10-10L19.41 7 9 16.17z"/>
-                                    </svg>
+                    <div class="showcase-create">
+                        <div>
+                            <input type="radio" id="soccerball" name="sport" class="bola-escolha-input select-sport" onclick="clearRadio(this, 0)">
+                            <label class="pai" for="soccerball">
+                                <div class="absoluto">
+                                    <div class="centered radio-bola">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" >
+                                            <path d="M9 16.17l-3.59-3.58L4 14l5 5 10-10L19.41 7 9 16.17z"/>
+                                        </svg>
+                                    </div>
                                 </div>
-                            </div>
-                            <img src="./api/images?ball_type=futebol" alt="BOLA TESTES">
-                            <div class="descricao-bola">
-                                <div class="nome-bola-escolha">Bola de Futebol</div>
-                                <div>
-                                    <div class="small-price">à vista</div>
-                                    <div class="price">R&#36;40,99</div>
+                                <img src="./api/images?ball_type=futebol" alt="BOLA TESTES">
+                                <div class="descricao-bola">
+                                    <div class="option-name">Bola de Futebol</div>
+                                    <div>
+                                        <div class="small-price">à vista</div>
+                                        <div class="price">R&#36;40,99</div>
+                                    </div>
                                 </div>
-                            </div>
-                        </label>
+                            </label>
+                        </div>
+                        <div>
+                            <input type="radio" id="basketball" name="sport" class="bola-escolha-input select-sport" onclick="clearRadio(this, 0)" >
+                            <label class="pai" for="basketball">
+                                <div class="absoluto">
+                                    <div class="centered radio-bola">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" >
+                                            <path d="M9 16.17l-3.59-3.58L4 14l5 5 10-10L19.41 7 9 16.17z"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <img src="./api/images?ball_type=basquete" alt="BOLA TESTES">
+                                <div class="descricao-bola">
+                                    <div class="option-name">Bola de Basquete</div>
+                                    <div>
+                                        <div class="small-price">à vista</div>
+                                        <div class="price">R&#36;40,99</div>
+                                    </div>
+                                </div>
+                            </label>
+                        </div>
+                        <div>
+                            <input type="radio" id="volleyball" name="sport" class="bola-escolha-input select-sport" onclick="clearRadio(this, 0)" >
+                            <label class="pai" for="volleyball">
+                                <div class="absoluto">
+                                    <div class="centered radio-bola">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" >
+                                            <path d="M9 16.17l-3.59-3.58L4 14l5 5 10-10L19.41 7 9 16.17z"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <img src="./api/images?ball_type=volei" alt="BOLA TESTES">
+                                <div class="descricao-bola">
+                                    <div class="option-name">Bola de Vôlei</div>
+                                    <div>
+                                        <div class="small-price">à vista</div>
+                                        <div class="price">R&#36;40,99</div>
+                                    </div>
+                                </div>
+                            </label>
+                        </div>
                     </div>
-                    <div>
-                        <input type="radio" id="basketball" name="sport" class="bola-escollha-input select-sport" onclick="clearRadio(this, 0)" >
-                        <label class="pai" for="basketball">
-                            <div class="absoluto">
-                                <div class="centered radio-bola">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" >
-                                        <path d="M9 16.17l-3.59-3.58L4 14l5 5 10-10L19.41 7 9 16.17z"/>
-                                    </svg>
-                                </div>
+                
+                    <div class="avancar">
+                        <div class="button-avancar">
+                            <img src="./assets/seta-avancar.svg" class="next-simbol">
+                            AVANÇAR
+                        </div>
+                        <div class="lateral-criar">
+                            <div id="nome-bola">
+                                nome bola
+                                <div id="imagem-bola">imagem Bola</div>
                             </div>
-                            <img src="./api/images?ball_type=basquete" alt="BOLA TESTES">
-                            <div class="descricao-bola">
-                                <div class="nome-bola-escolha">Bola de Basquete</div>
-                                <div>
-                                    <div class="small-price">à vista</div>
-                                    <div class="price">R&#36;40,99</div>
-                                </div>
-                            </div>
-                        </label>
-                    </div>
-                    <div>
-                        <input type="radio" id="volleyball" name="sport" class="bola-escollha-input select-sport" onclick="clearRadio(this, 0)" >
-                        <label class="pai" for="volleyball">
-                            <div class="absoluto">
-                                <div class="centered radio-bola">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" >
-                                        <path d="M9 16.17l-3.59-3.58L4 14l5 5 10-10L19.41 7 9 16.17z"/>
-                                    </svg>
-                                </div>
-                            </div>
-                            <img src="./api/images?ball_type=volei" alt="BOLA TESTES">
-                            <div class="descricao-bola">
-                                <div class="nome-bola-escolha">Bola de Vôlei</div>
-                                <div>
-                                    <div class="small-price">à vista</div>
-                                    <div class="price">R&#36;40,99</div>
-                                </div>
-                            </div>
-                        </label>
-                    </div>
-                </div>
-            </div>
-            <div class="avancar">
-                <div class="button-avancar">
-                    <img src="./assets/seta-avancar.svg" class="next-simbol">
-                    AVANÇAR
-                </div>
-                <div class="lateral-criar">
-                    <div id="nome-bola">
-                        nome bola
-                        <div id="imagem-bola">imagem Bola</div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -219,7 +222,7 @@
     
     <div class="create-level">
         <div>
-            <div class="progresso-criar-bola">
+            <div class="create-progress">
                 <div class="place-holder" style="background-color: #ffe44e;" onclick="reset(0)"><img src="./assets/type-ball-icon.svg" alt="" style="width: 9rem;" onclick="reset(0)"></div>
                 <div class="place-holder" style="background-color: #ffd900;"><img src="./assets/material.svg" alt="" style="width: 9rem;"></div>
                 <div class="place-holder"></div>
@@ -243,13 +246,13 @@
         </div>
         <div class="flex-container">
             <div class="option-wrapper">
-                <div class="title-creation">
-                    Material
-                </div>
-                <div class="escolha-criar">
-                    <ul class="principal flex-container pai" width="100%">
-                        <li>
-                            <input type="radio" id="couro" name="material" class="bola-escollha-input select-material" onclick="clearRadio(this, 1)" >
+                <div class="level-template">
+                    <div class="title-creation">
+                        Material
+                    </div>
+                    <div class="showcase-create">
+                        <div>
+                            <input type="radio" id="couro" name="material" class="bola-escolha-input select-material" onclick="clearRadio(this, 1)" >
                             <label class="pai" for="couro">
                                 <div class="absoluto">
                                     <div class="centered radio-bola">
@@ -260,16 +263,16 @@
                                 </div>
                                 <img src="./img/couro.png" alt="BOLA TESTES">
                                 <div class="descricao-bola">
-                                    <div class="nome-bola-escolha">Couro</div>
+                                    <div class="option-name">Couro</div>
                                     <div>
                                         <div class="small-price">à vista</div>
                                         <div class="price">R&#36;40,99</div>
                                     </div>
                                 </div>
                             </label>
-                        </li>
-                        <li>
-                            <input type="radio" id="borracha" name="material" class="bola-escollha-input select-material" onclick="clearRadio(this, 1)" >
+                        </div>
+                        <div>
+                            <input type="radio" id="borracha" name="material" class="bola-escolha-input select-material" onclick="clearRadio(this, 1)" >
                             <label class="pai" for="borracha">
                                 <div class="absoluto">
                                     <div class="centered radio-bola">
@@ -280,17 +283,17 @@
                                 </div>
                                 <img src="./img/borracha.png" alt="BOLA TESTES">
                                 <div class="descricao-bola">
-                                    <div class="nome-bola-escolha">Borracha</div>
+                                    <div class="option-name">Borracha</div>
                                     <div>
                                         <div class="small-price">à vista</div>
                                         <div class="price">R&#36;40,99</div>
                                     </div>
                                 </div>
                             </label>
-                        </li>
-                        <li>
-                            <input type="radio" id="madeira" name="material" class="bola-escollha-input select-material" onclick="clearRadio(this, 1)" >
-                            <label class="pai" for="madeira">
+                        </div>
+                        <div>
+                            <input type="radio" id="eva" name="material" class="bola-escolha-input select-material" onclick="clearRadio(this, 1)" >
+                            <label class="pai" for="eva">
                                 <div class="absoluto">
                                     <div class="centered radio-bola">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" >
@@ -298,39 +301,39 @@
                                         </svg>
                                     </div>
                                 </div>
-                                <img src="./img/madeira.png" alt="BOLA TESTES">
+                                <img src="./img/eva.png" alt="BOLA TESTES">
                                 <div class="descricao-bola">
-                                    <div class="nome-bola-escolha">Madeira</div>
+                                    <div class="option-name">EVA</div>
                                     <div>
                                         <div class="small-price">à vista</div>
                                         <div class="price">R&#36;40,99</div>
                                     </div>
                                 </div>
                             </label>
-                        </li>
-                        
-                    </ul>
-                </div>
-            </div>
-            <div class="avancar">
-                <div class="button-avancar">
-                    <img src="./assets/seta-avancar.svg" class="next-simbol">
-                    AVANÇAR
-                </div>
-                <div class="lateral-criar">
-                    <div id="nome-bola">
-                        nome bola
-                        <div id="imagem-bola">imagem Bola</div>
+                        </div>
+                    </div>
+                    <div class="avancar">
+                        <div class="button-avancar">
+                            <img src="./assets/seta-avancar.svg" class="next-simbol">
+                            AVANÇAR
+                        </div>
+                        <div class="lateral-criar">
+                            <div id="nome-bola">
+                                nome bola
+                                <div id="imagem-bola">imagem Bola</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
+        </div> 
+    </div>   
+        
 
 
     <div class="create-level">
         <div>
-            <div class="progresso-criar-bola">
+            <div class="create-progress">
                 <div class="place-holder" style="background-color: #ffe44e;" onclick="reset(0)"><img src="./assets/type-ball-icon.svg" alt="" style="width: 9rem;"></div>
                 <div class="place-holder" style="background-color: #ffe44e;" onclick="reset(1)"><img src="./assets/material.svg" alt="" style="width: 9rem;"></div>
                 <div class="place-holder" style="background-color: #ffd900;"></div>
@@ -357,30 +360,27 @@
                 <div class="title-creation">
                     Gomos
                 </div>
-                <div class="escolha-criar">
-                    <ul class="principal flex-container pai" width="100%">
-                        <li>
-                            <input type="radio" id="pentHex" name="section" class="bola-escollha-input select-section" onclick="clearRadio(this,2)" >
-                            <label class="pai" for="pentHex">
-                                <div class="absoluto">
-                                    <div class="centered radio-bola">
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" >
-                                            <path d="M9 16.17l-3.59-3.58L4 14l5 5 10-10L19.41 7 9 16.17z"/>
-                                        </svg>
-                                    </div>
+                <div class="showcase-create">
+                    <div>
+                        <input type="radio" id="pentHex" name="section" class="bola-escolha-input select-section" onclick="clearRadio(this,2)" >
+                        <label class="pai" for="pentHex">
+                            <div class="absoluto">
+                                <div class="centered radio-bola">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" >
+                                        <path d="M9 16.17l-3.59-3.58L4 14l5 5 10-10L19.41 7 9 16.17z"/>
+                                    </svg>
                                 </div>
-                                <img src="./api/plain_image?ball_type=basquete" alt="BOLA TESTES" style="background-color: #00000000;">
-                                <div class="descricao-bola">
-                                    <div class="nome-bola-escolha">Pentágonos e Hexágonos</div>
-                                    <div>
-                                        <div class="small-price">à vista</div>
-                                        <div class="price">R&#36;40,99</div>
-                                    </div>
+                            </div>
+                            <img src="./api/plain_image?ball_type=basquete" alt="BOLA TESTES" style="background-color: #00000000;">
+                            <div class="descricao-bola">
+                                <div class="option-name">Pentágonos e Hexágonos</div>
+                                <div>
+                                    <div class="small-price">à vista</div>
+                                    <div class="price">R&#36;40,99</div>
                                 </div>
-                            </label>
-                        </li>
-                        
-                    </ul>
+                            </div>
+                        </label>
+                    </div>
                 </div>
             </div>
             <div class="avancar">
@@ -400,7 +400,7 @@
     
     <div class="create-level">
         <div>
-            <div class="progresso-criar-bola">
+            <div class="create-progress">
                 <div class="place-holder" style="background-color: #ffe44e;" onclick="reset(0)"><img src="./assets/type-ball-icon.svg" alt="" style="width: 9rem;"></div>
                 <div class="place-holder" style="background-color: #ffe44e;" onclick="reset(1)"><img src="./assets/material.svg" alt="" style="width: 9rem;"></div>
                 <div class="place-holder" style="background-color: #ffe44e;" onclick="reset(2)"></div>
@@ -475,7 +475,7 @@
 
     <div class="create-level">
         <div>
-            <div class="progresso-criar-bola">
+            <div class="create-progress">
                 <div class="place-holder" style="background-color: #ffe44e;" onclick="reset(0)"><img src="./assets/type-ball-icon.svg" alt="" style="width: 9rem;"></div>
                 <div class="place-holder" style="background-color: #ffe44e;" onclick="reset(1)"><img src="./assets/material.svg" alt="" style="width: 9rem;"></div>
                 <div class="place-holder" style="background-color: #ffe44e;" onclick="reset(2)"></div>
@@ -557,6 +557,5 @@
             <li><a href="not-found.html" class="footer">Deseja acessar o SAC?</a></li>
         </ul>
     </footer>
-    <div class="limbo"></div>
 </body>
 </html>

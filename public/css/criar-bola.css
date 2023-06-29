@@ -9,13 +9,13 @@
     flex-wrap: wrap;
 }
 
-.bola-escollha-input {
+.bola-escolha-input {
     display: none;
     position: absolute;
     z-index: 2;
 }
 
-.principal > li {
+.principal > div {
     display: inline-block;
 }
 
@@ -55,13 +55,13 @@ label > img {
     border-radius: 2rem;
 }
 
-li > input[type="radio"]:checked + label > div > div.radio-bola {
+div > input[type="radio"]:checked + label > div > div.radio-bola {
     border-color: rgb(18, 177, 18);
     background-color: rgb(18, 177, 18);
     cursor: pointer;
 }
 
-li > input[type="radio"]:checked + label > div > div > svg > path {
+div > input[type="radio"]:checked + label > div > div > svg > path {
     fill: white;
 }
 
@@ -74,25 +74,34 @@ li > input[type="radio"]:checked + label > div > div > svg > path {
 } */
 .showcase-create {
     display: grid;
-    grid-template-columns: 30rem 30rem 30rem;
+    grid-template-columns: 25% 25% 25% 25%;
     background-color: #353535;
     margin: 0 21px 0 21px;
     border-radius: 2rem;
-    padding: 1rem;
+    padding: 2rem;
+    gap: 2rem;
 }
 
 .level-template {
     display: grid;
-    grid-template-areas: 
-    'showcase' 'showcase' 'showcase' 'sidebar' ;
+    grid-template-areas:
+    'title . . sidebar'
+    'showcase showcase showcase sidebar';
+    grid-template-columns: 5fr 2fr;
+    grid-template-rows: 1fr 5fr;
+    width: 1349px;
 }
 
-#showcase-create{
-    grid-area: 'showcase';
+.title-creation {
+    grid-area: title;
 }
 
-#avancar{
-    grid-area: 'sidebar';
+.showcase-create{
+    grid-area: showcase;
+}
+
+.avancar{
+    grid-area: sidebar;
 }
 
 .button-avancar{
@@ -140,9 +149,9 @@ li > input[type="radio"]:checked + label > div > div > svg > path {
     border-radius: 2rem;
 }
 
-.nome-bola-escolha {
+.option-name {
     color: white;
-    text-align: center;
+    text-align: left;
     font-size: 2rem;
 }
 
@@ -163,7 +172,7 @@ li > input[type="radio"]:checked + label > div > div > svg > path {
     border-radius: 2rem;
 }
 
-.progresso-criar-bola{
+.create-progress{
     /* display: flex; */
     display: grid;
     grid-template-columns: repeat(5, 1fr);
@@ -206,6 +215,7 @@ li > input[type="radio"]:checked + label > div > div > svg > path {
     font-size: 4rem;
     color: white;
     height: 100px;
+
     display: flex;
     align-items: center;
     margin-left: 21px;

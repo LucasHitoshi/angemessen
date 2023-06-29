@@ -1,6 +1,57 @@
 const cartItemsWrapper = document.querySelector(".items-carrinho");
+const cepValidationFormFog = document.querySelector("#cep-validation-form-fog");
+const closeCepValidationFormFog = document.querySelector("#exit-cep-validation-form");
 const templateCartItem = document.querySelector("#item-cart-template");
+const cepValidatorForm = document.querySelector("#cep-validator-form");
+const cepValidationTip = document.querySelector("#cep-validation-tip");
+const sepValidationSuccess = document.querySelector("#cep-sucess-validation-result-box");
+const sepValidationError= document.querySelector("#cep-error-validation-result-box");
+const cepCityAndDistrict = document.querySelector("#cep-city-n-district");
+const cepNeighborhood = document.querySelector("#cep-neighborhood");
+const selectLocationButton = document.querySelector("#select-loc-button");
 const API_URI_cartItems = "http://localhost:3000/cart/balls";
+
+
+
+console.log(window.location.href);
+
+// cepValidationFormFog.addEventListener("click", () => {
+//     cepValidationFormFog.style.display = "none";
+// });
+
+selectLocationButton.addEventListener("click", () => {
+    cepValidationFormFog.style.display = "flex";
+});
+
+closeCepValidationFormFog.addEventListener("click", () => {
+    cepValidationFormFog.style.display = "none";
+});
+
+
+cepValidatorForm.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    const cepInput = document.querySelector("#cep");
+    const cep = cepInput.value;
+    const validantionURL = `http://localhost:3000/validate-cep?cep=${cep}`;
+
+    const validationResult = await (await fetch(validantionURL)).json();
+    const cepIsValid = validationResult.isValid;
+
+    if (cepIsValid) {
+        cepValidationTip.style.display = "none";
+        sepValidationSuccess.style.display = "flex";
+
+        cepCityAndDistrict.innerHTML = `${validationResult.cepInfo.localidade} - ${validationResult.cepInfo.uf}`;
+        cepNeighborhood.innerHTML = validationResult.cepInfo.bairro;
+    } else {
+        cepValidationTip.style.display = "none";
+        sepValidationError.style.display = "flex";
+    }
+
+    console.log(validationResult);
+});
+
 
 
 const products = fetch(API_URI_cartItems)

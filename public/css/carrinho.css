@@ -620,8 +620,8 @@
 }
 
 /* Form da validação de CEP */
-.cep-validation-form-fog {
-    display: flex;
+#cep-validation-form-fog {
+    display: none;
     justify-content: center;
     align-items: center;
     position: fixed;
@@ -676,6 +676,11 @@
     color: #777;
 }
 
+.cep-validator-form-buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
 #submit-cep {
     cursor: pointer;
     width: fit-content;
@@ -689,11 +694,25 @@
     margin: 0 0 0.75rem 0;
 }
 
-#cep-validation-result-box {
+#exit-cep-validation-form {
+    cursor: pointer;
+    width: 7rem;
+    background-color: #ffd900;
+    border: none;
+    border-radius: 1rem;
+    font-size: 2rem;
+    text-transform: uppercase;
+    color: #202020;
+    padding: 1rem 1.25rem;
+    margin: 0 0 0.75rem 0;
+}
+
+/* Caixa de resultado positivo para a validade do CEP */
+
+#cep-sucess-validation-result-box {
     width: 43.5rem;
-    display: flex;
+    display: none;
     flex-direction: column;
-    gap: 1.5rem;
     background-color: #444;
     border: #555 solid 1px;
     border-top: none;
@@ -701,8 +720,103 @@
     padding: 2rem;
 }
 
+.cep-validation-result-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    border: rgb(45, 167, 61) solid 2px;
+    border-bottom: none;
+    border-radius: 1rem 1rem 0 0;
+    background-color: #61bb6d;
+}
+
+.cep-validation-result-title {
+    font-size: 2rem;
+    color: #f5f5f5;
+}
+
+.cep-validation-result {
+    font-size: 3rem;
+    text-transform: uppercase;
+    color: rgb(26, 131, 40);
+}
+
 .cep-validation-tip {
     /* display: none; */
     color: #f5f5f5;
     font-size: 2rem;
+    margin: 0 0 1.5rem 0;
+}
+
+.cep-info-wrapper {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 1.5rem;
+    border: rgb(45, 167, 61) solid 2px;
+    border-radius: 0 0 1rem 1rem;
+    background-color: #61bb6d;
+}
+
+.cep-info-wrapper > .cep-info-title {
+    font-size: 3rem;
+    color: #f5f5f5;
+    margin: 0 0 0.75rem 0;
+}
+
+.cep-info-wrapper > #cep-city-n-district {
+    font-size: 2rem;
+    color: #f5f5f5;
+}
+
+.cep-info-wrapper > #cep-neighborhood {
+    font-size: 2rem;
+    color: #f5f5f5;
+}
+
+/* Resultado de validação errado */
+
+#cep-error-validation-result-box {
+    width: 43.5rem;
+    display: none;
+    flex-direction: column;
+    background-color: #444;
+    border: #555 solid 1px;
+    border-top: none;
+    border-radius: 0 0 2rem 2rem;
+    padding: 2rem;
+}
+
+.cep-error-validation-result-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    border: #ff2525 solid 2px;
+    border-radius: 1rem;
+    background-color: #e46d6d;
+}
+
+.cep-error-validation-result-title {
+    font-size: 2rem;
+    color: #f5f5f5;
+}
+
+.cep-error-validation-result {
+    font-size: 3rem;
+    text-transform: uppercase;
+    color: #ff2525;
+}
+
+#cep-validation-tip {
+    width: 43.5rem;
+    flex-direction: column;
+    background-color: #444;
+    border: #555 solid 1px;
+    border-top: none;
+    border-radius: 0 0 2rem 2rem;
+    padding: 2rem;
+    color: #f5f5f5;
+    font-size: 2rem;
+    margin: 0 0 1.5rem 0;
 }
