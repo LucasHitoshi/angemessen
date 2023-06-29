@@ -65,14 +65,35 @@ li > input[type="radio"]:checked + label > div > div > svg > path {
     fill: white;
 }
 
-.escolha-criar {
+/* .escolha-criar {
     max-width: 142.85rem;
+    background-color: #353535;
+    margin: 0 21px 0 21px;
+    border-radius: 2rem;
+    padding: 1rem;
+} */
+.showcase-create {
+    display: grid;
+    grid-template-columns: 30rem 30rem 30rem;
     background-color: #353535;
     margin: 0 21px 0 21px;
     border-radius: 2rem;
     padding: 1rem;
 }
 
+.level-template {
+    display: grid;
+    grid-template-areas: 
+    'showcase' 'showcase' 'showcase' 'sidebar' ;
+}
+
+#showcase-create{
+    grid-area: 'showcase';
+}
+
+#avancar{
+    grid-area: 'sidebar';
+}
 
 .button-avancar{
     background-color: gray;

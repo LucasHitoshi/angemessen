@@ -1,3 +1,5 @@
+// import fetch from "node-fetch";
+const fetch = (...args) => import('node-fetch').then(({default: fetch}) => fetch(...args));
 const path = require("path");
 const express = require("express");
 const userModel = require("../database/models/user");
@@ -63,6 +65,20 @@ cartRouter.get("/cart/balls", async (req, res) => {
 
         res.type("json");
         res.send(cartBalls);
+    } catch (err) {
+        console.log(`ERRO: ${err}`);
+    }
+});
+
+cartRouter.get("/validate-cep", async (req, res) => {
+    try {
+        const cep = req.query.cep;
+        console.log(cep);
+        const apiFetchURL = `http://viacep.com.br/ws/${cep}/json/`;
+        const fetchOptions = { method: "GET" };
+        const result = await fetch(apiFetchURL, fetchOptions);
+        const cepIsValid = result.statusText === "OK";
+        res.send(`${cepIsValid}`);
     } catch (err) {
         console.log(`ERRO: ${err}`);
     }

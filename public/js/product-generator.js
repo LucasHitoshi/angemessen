@@ -1,7 +1,8 @@
-const apiURI = "./api/balls?ball_name=random&limit=104";  // TODO: Trocar 'ball_name' por 'ball_id'
-const productCardTemplate = document.getElementById("product-card-template");
+const ballsQueryLimit = +document.currentScript.src.split("?")[1].replace("limit=", "");
+const apiURI = `./api/balls?ball_name=random&limit=${ballsQueryLimit}`;  // TODO: Trocar 'ball_name' por 'ball_id'
+const productCardTemplate = document.querySelector("#product-card-template");
 const showcaseArea = document.querySelector(".showcase");
-const showMoreProducts = document.getElementById("show-more-products");
+const showMoreProducts = document.querySelector("#show-more-products");
 
 const loadMoreProducts = (/* numberOfProducts */) => {
     const productInfoRequest = new Request(apiURI, { method: "GET" });

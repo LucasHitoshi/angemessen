@@ -175,7 +175,27 @@
             <div class="resumo-total-itens">
                 <div class="title-orders-abstract">
                     <span class="title-resumo">Resumo</span>
-                    <span class="desc-abstract">Veja os produtos prontos para serem comprados</span>
+                    <img src="http://localhost:3000/assets/yellow-note-icon.png" alt="Resumo da compra" class="abstract-icon">
+                    <div class="total-value-wrapper">
+                        <span class="total-value-title">Frete:</span>
+                        <span class="total-value">29,99</span>
+                    </div>
+                    <div class="total-value-wrapper">
+                        <span class="total-value-title">Valor total:</span>
+                        <span class="total-value">1234,99</span>
+                    </div>
+                    <div class="pay-stats-wrapper">
+                        <span class="total-parcels"><span class="bold-text">1351 vezes</span> no cartão</span>
+                        <span class="total-parcels"><span class="bold-text">10%</span> de <span class="bold-text">desconto</span> no <span class="bold-text">PIX</span></span>
+                    </div>
+                    <div class="order-buttons-wrapper">
+                        <button id="select-loc-button">
+                            Pesquisar endereço
+                        </button>
+                        <button id="finalize-order-button">
+                            Finalizar pedido
+                        </button>
+                    </div>
                 </div>
                 <ul class="order-balls-list">
                     <li>
@@ -303,7 +323,25 @@
         </div>
     </div>
     
-    <!-- Implementar JavaScript para mostrar o carrinho do usuário -->
+    <div class="cep-validation-form-fog">
+        <div id="cep-validator-form-wrapper">
+            <form action="/validate-cep" method="GET" id="cep-validator-form">
+                <span class="cep-validator-form-title">Angemessen</span>
+                <input type="text" id="cep" name="cep" placeholder="Digite seu CEP..." />
+                <input type="submit" value="Enviar" id="submit-cep">
+            </form>
+            <div id="cep-validation-result-box">
+                <span class="cep-validation-tip">O resultado da verificação aparecerá aqui</span>
+                <span>O seu CEP é</span>
+                <span class="cep-validation-result">Válido</span>
+                <div class="cep-info-wrapper">
+                    <span>Localização verificada:</span>
+                    <span class="cep-city-n-district">Joinville - SC</span>
+                    <span class="cep-neighborhood">Jardim Iririú</span>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <footer class="footer-container flex-container recessive">
         <div class="topic-box" style="overflow: auto;">
