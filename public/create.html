@@ -357,44 +357,46 @@
         </div>
         <div class="flex-container">
             <div class="option-wrapper">
-                <div class="title-creation">
-                    Gomos
-                </div>
-                <div class="showcase-create">
-                    <div>
-                        <input type="radio" id="pentHex" name="section" class="bola-escolha-input select-section" onclick="clearRadio(this,2)" >
-                        <label class="pai" for="pentHex">
-                            <div class="absoluto">
-                                <div class="centered radio-bola">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" >
-                                        <path d="M9 16.17l-3.59-3.58L4 14l5 5 10-10L19.41 7 9 16.17z"/>
-                                    </svg>
-                                </div>
+                <div class="level-template">
+                        <div class="title-creation">
+                            Gomos
+                        </div>
+                        <div class="showcase-create">
+                            <div>
+                                <input type="radio" id="pentHex" name="section" class="bola-escolha-input select-section" onclick="clearRadio(this,2)" >
+                                <label class="pai" for="pentHex">
+                                    <div class="absoluto">
+                                        <div class="centered radio-bola">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" >
+                                                <path d="M9 16.17l-3.59-3.58L4 14l5 5 10-10L19.41 7 9 16.17z"/>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <img src="./api/plain_image?ball_type=basquete" alt="BOLA TESTES" style="background-color: #00000000;">
+                                    <div class="descricao-bola">
+                                        <div class="option-name">Clássico</div>
+                                        <div>
+                                            <div class="small-price">à vista</div>
+                                            <div class="price">R&#36;40,99</div>
+                                        </div>
+                                    </div>
+                                </label>
                             </div>
-                            <img src="./api/plain_image?ball_type=basquete" alt="BOLA TESTES" style="background-color: #00000000;">
-                            <div class="descricao-bola">
-                                <div class="option-name">Pentágonos e Hexágonos</div>
-                                <div>
-                                    <div class="small-price">à vista</div>
-                                    <div class="price">R&#36;40,99</div>
-                                </div>
+                        </div>
+                        <div class="avancar">
+                        <div class="button-avancar">
+                            <img src="./assets/seta-avancar.svg" class="next-simbol">
+                            AVANÇAR
+                        </div>
+                        <div class="lateral-criar">
+                            <div id="nome-bola">
+                                nome bola
+                                <div id="imagem-bola">imagem Bola</div>
                             </div>
-                        </label>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="avancar">
-                <div class="button-avancar">
-                    <img src="./assets/seta-avancar.svg" class="next-simbol">
-                    AVANÇAR
-                </div>
-                <div class="lateral-criar">
-                    <div id="nome-bola">
-                        nome bola
-                        <div id="imagem-bola">imagem Bola</div>
-                    </div>
-                </div>
-            </div>
+            </div>      
         </div>
     </div>
     
@@ -424,52 +426,54 @@
         </div>
         <div class="create-main-wrapper">
             <div class="option-wrapper">
-                <div class="title-creation" name="color">
-                    Cor
-                </div>
-                <div class="template-cor">
-                    <div class="showcase-icon-container">
-                        <div class="showcase-cor"> 
-                            <div class="title-cor">Preview</div>
-                            <img src="./img/mano.png" alt="preview" class="preview">
-                        </div>
-                        
-                        <div class="showcase-cor"> 
-                            <div>
-                                <div class="title-cor">Upload de imagem</div>
-                                <div class="title-cor-recessive">.png .jpg .jpeg</div>
-                                <div class="space">Arraste aqui</div>
+                <div class="color-template">
+                    <div class="title-creation" name="color">
+                        Cor
+                    </div>
+                    <div class="template-cor">
+                        <div class="showcase-icon-container">
+                            <div class="showcase-cor"> 
+                                <div class="title-cor">Preview</div>
+                                <img src="./img/mano.png" alt="preview" class="preview">
+                            </div>
+                            
+                            <div class="showcase-cor"> 
+                                <div>
+                                    <div class="title-cor">Upload de imagem</div>
+                                    <div class="title-cor-recessive">.png .jpg .jpeg</div>
+                                    <div class="space">Arraste aqui</div>
+                                </div>
                             </div>
                         </div>
+                        
+                        <div class="select"> 
+                            <div class="title-cor">Selecionar</div>
+                            <img src="./assets/bola-planificada.svg" alt="" class="bola-plana" usemap="#ball-custom">
+                            <map name="ball-custom">
+    
+                            </map>
+    
+                            <div class="title-cor">Cores</div>
+                            <input type="color" name="ball-color" id="color-picker">
+                            <label for="color-picker">a</label>
+                        </div>
+                        
                     </div>
                     
-                    <div class="select"> 
-                        <div class="title-cor">Selecionar</div>
-                        <img src="./assets/bola-planificada.svg" alt="" class="bola-plana" usemap="#ball-custom">
-                        <map name="ball-custom">
-
-                        </map>
-
-                        <div class="title-cor">Cores</div>
-                        <input type="color" name="ball-color" id="color-picker">
-                        <label for="color-picker">a</label>
+                </div>
+                <div class="avancar">
+                    <div class="button-avancar">
+                        <img src="./assets/seta-avancar.svg" class="next-simbol">
+                        AVANÇAR
                     </div>
-                    
-                </div>
-                
-            </div>
-            <div class="avancar">
-                <div class="button-avancar">
-                    <img src="./assets/seta-avancar.svg" class="next-simbol">
-                    AVANÇAR
-                </div>
-                <div class="lateral-criar">
-                    <div id="nome-bola">
-                        nome bola
-                        <div id="imagem-bola">imagem Bola</div>
+                    <div class="lateral-criar">
+                        <div id="nome-bola">
+                            nome bola
+                            <div id="imagem-bola">imagem Bola</div>
+                        </div>
                     </div>
                 </div>
-            </div>
+            </div>   
         </div>
     </div>
 

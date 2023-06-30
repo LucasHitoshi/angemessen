@@ -90,18 +90,33 @@ div > input[type="radio"]:checked + label > div > div > svg > path {
     grid-template-columns: 5fr 2fr;
     grid-template-rows: 1fr 5fr;
     width: 1349px;
+    /* aspect-ratio: 1 / 1; */ /* TENTAR USAR */
+    /* grid-template-columns: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
+    grid-template-rows: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%; */
 }
 
 .title-creation {
+    /* grid-area: 1 / 1 / 2 / 11; */
     grid-area: title;
 }
 
 .showcase-create{
+    /* grid-area: 2 / 1 / 10 / 11; */
     grid-area: showcase;
 }
 
 .avancar{
     grid-area: sidebar;
+}
+
+.color-template {
+    display: grid;
+    grid-template-areas:
+    'title . . sidebar'
+    'color-sections color-sections color-sections sidebar';
+    grid-template-columns: 5fr 2fr;
+    grid-template-rows: 1fr 5fr;
+    width: 1349px;
 }
 
 .button-avancar{
@@ -237,6 +252,7 @@ div > input[type="radio"]:checked + label > div > div > svg > path {
 .template-cor {
     display: flex;
     gap: 5rem;
+    grid-area: color-sections;
 }
 
 .showcase-icon-container {
