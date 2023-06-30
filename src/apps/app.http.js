@@ -1,17 +1,17 @@
 const path = require("path");
 require("dotenv").config({ path: path.join(__dirname, "../..", ".env") });
 const express = require("express");
-const mainRouter = require(path.join(__dirname, "..", "routes/main"));
-const testRouter = require(path.join(__dirname, "..", "routes/test"));
-const createRouter = require(path.join(__dirname, "..", "routes/create"));
-const loginRouter = require(path.join(__dirname, "..", "routes/login"));
-const signRouter = require(path.join(__dirname, "..", "routes/sign"));
-const produtosRouter = require(path.join(__dirname, "..", "routes/products"));
-const aboutUsRouter = require(path.join(__dirname, "..", "routes/aboutus"));
-const productDescRouter = require(path.join(__dirname, "..", "routes/product-description"));
-const cartRouter = require(path.join(__dirname, "..", "routes/cart"));
-const profileRouter = require(path.join(__dirname, "..", "routes/profile"));
-const notFoundRouter = require(path.join(__dirname, "..", "routes/404"));
+const mainRouter = require(path.join(__dirname, "..", "routes/public/main"));
+const testRouter = require(path.join(__dirname, "..", "routes/public/test"));
+const createRouter = require(path.join(__dirname, "..", "routes/public/create"));
+const loginRouter = require(path.join(__dirname, "..", "routes/public/login"));
+const signRouter = require(path.join(__dirname, "..", "routes/public/sign"));
+const produtosRouter = require(path.join(__dirname, "..", "routes/public/products"));
+const aboutUsRouter = require(path.join(__dirname, "..", "routes/public/aboutus"));
+const productDescRouter = require(path.join(__dirname, "..", "routes/public/product-description"));
+const cartRouter = require(path.join(__dirname, "..", "routes/public/cart"));
+const profileRouter = require(path.join(__dirname, "..", "routes/public/profile"));
+const notFoundRouter = require(path.join(__dirname, "..", "routes/public/404"));
 
 const appHTTP = express();
 

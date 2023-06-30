@@ -2,11 +2,11 @@ const path = require("path");
 const express = require("express");
 const signRouter = express.Router();
 const whAuthRouter = express.Router();
-const userModel = require("./../database/models/user");
-const authModel = require("./../database/models/auth");
-const { validatePassword, hashPassword } = require("./../validation/password");
-const { validateEmail, sendValidationEmail } = require("./../validation/email");
-const { generateValidationKey, generateValidationWebhook } = require("./../validation/webhook");
+const userModel = require("./../../database/models/user");
+const authModel = require("./../../database/models/auth");
+const { validatePassword, hashPassword } = require("./../../validation/password");
+const { validateEmail, sendValidationEmail } = require("./../../validation/email");
+const { generateValidationKey, generateValidationWebhook } = require("./../../validation/webhook");
 const { isValidObjectId } = require("mongoose");
 
 signRouter.post("/sign", async (req, res) => {
@@ -48,7 +48,7 @@ signRouter.post("/sign", async (req, res) => {
             { name: req.body.nome }
         );
 
-        res.sendFile(path.join(__dirname, "../..", "/public/login.html"));
+        res.sendFile(path.join(__dirname, "../../..", "/public/login.html"));
     } catch (err) {
         console.log(`ERRO: ${err}`);
     }
@@ -61,7 +61,7 @@ whAuthRouter.get("/wh-auth/:id/:authKey", async (req, res, next) => {
         
         if (!isValidObjectId(_id)) {
             console.log(`só us erru man ${_id}, ${authKey} ; 1`);
-            res.sendFile(path.join(__dirname, "../..", "/public/not-found.html"));
+            res.sendFile(path.join(__dirname, "../../..", "/public/not-found.html"));
             return;
         }
         
@@ -69,11 +69,11 @@ whAuthRouter.get("/wh-auth/:id/:authKey", async (req, res, next) => {
         
         if (authResult === undefined || authResult === null) {
             console.log(`só us erru man ${_id}, ${authKey} ; 2 `);
-            res.sendFile(path.join(__dirname, "../..", "/public/not-found.html"));
+            res.sendFile(path.join(__dirname, "../../..", "/public/not-found.html"));
             return;
         } else if (!(authResult.key === authKey)) {
             console.log(`só us erru man ${_id}, ${authKey} ; 3`);
-            res.sendFile(path.join(__dirname, "../..", "/public/not-found.html"));
+            res.sendFile(path.join(__dirname, "../../..", "/public/not-found.html"));
             return;
         }
 

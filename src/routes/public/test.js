@@ -2,8 +2,8 @@ const path = require("path");
 const express = require("express");
 const { default: mongoose } = require("mongoose");
 const testRouter = express.Router();
-/** @type {mongoose.Model} */ const colorModel = require(path.join(__dirname, "..", "database/models/color"));
-const data = require(path.join(__dirname, "..", "database/samples/dummy"));
+/** @type {mongoose.Model} */ const colorModel = require(path.join(__dirname, "../..", "database/models/color"));
+const data = require(path.join(__dirname, "../..", "database/samples/dummy"));
 
 testRouter.get("/test", async (req, res) => {
     try {

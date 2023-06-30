@@ -1,7 +1,7 @@
 const ballsQueryLimit = +document.currentScript.src.split("?")[1].replace("limit=", "");
 const apiURI = `./api/balls?ball_name=random&limit=${ballsQueryLimit}`;  // TODO: Trocar 'ball_name' por 'ball_id'
 const productCardTemplate = document.querySelector("#product-card-template");
-const showcaseArea = document.querySelector(".showcase");
+const showcaseArea = document.querySelector("#product-list");
 const showMoreProducts = document.querySelector("#show-more-products");
 
 const loadMoreProducts = (/* numberOfProducts */) => {
@@ -54,6 +54,8 @@ const loadMoreProducts = (/* numberOfProducts */) => {
                 newProduct.querySelector(".operation-button-wrapper > a.to-cart").href = `http://localhost:3000/add-to-cart/${product._id}`;
                 
                 showcaseArea.appendChild(newProduct);
+
+                console.log(showcaseArea)
             });
         })
 
@@ -63,9 +65,9 @@ const loadMoreProducts = (/* numberOfProducts */) => {
 
 loadMoreProducts();
 
-showMoreProducts.addEventListener("click", () => {
+showMoreProducts ? showMoreProducts.addEventListener("click", () => {
     loadMoreProducts();
-})
+}) : null;
 
 // Victor: *Simbologias estranhas*
 // Lucas: q isso vitin

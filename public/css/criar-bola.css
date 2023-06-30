@@ -45,11 +45,12 @@ label > div > div.radio-bola {
     cursor: pointer;
 }
 
-label > img {
+.option-image {
     padding: 0.5rem;
     background-color: white;
     margin: 1rem;
     width: 25rem;
+    height: 25rem;
     /* min-width: 25rem; */
     cursor: pointer;
     border-radius: 2rem;
@@ -88,36 +89,60 @@ div > input[type="radio"]:checked + label > div > div > svg > path {
     'title . . sidebar'
     'showcase showcase showcase sidebar';
     grid-template-columns: 5fr 2fr;
-    grid-template-rows: 1fr 5fr;
+    grid-template-rows: 2fr 5fr;
     width: 1349px;
     /* aspect-ratio: 1 / 1; */ /* TENTAR USAR */
     /* grid-template-columns: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
     grid-template-rows: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%; */
 }
 
-.title-creation {
-    /* grid-area: 1 / 1 / 2 / 11; */
-    grid-area: title;
-}
-
-.showcase-create{
-    /* grid-area: 2 / 1 / 10 / 11; */
-    grid-area: showcase;
-}
-
-.avancar{
-    grid-area: sidebar;
-}
-
 .color-template {
     display: grid;
     grid-template-areas:
     'title . . sidebar'
-    'color-sections color-sections color-sections sidebar';
-    grid-template-columns: 5fr 2fr;
+    'color-section color-section color-section sidebar';
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 5fr;
     width: 1349px;
 }
+
+.template-showcase-cor {
+    border-radius: 2rem;
+    display: grid;
+    grid-template-areas: 
+    'icon-container color-picker-container';
+    grid-template-columns: 1fr 1fr;
+    margin: 0 0 3.33rem 3.33rem;
+    gap: 5rem;
+}
+
+.title-creation { /* título de cada etapa */
+    /* grid-area: 1 / 1 / 2 / 11; */
+    grid-area: title;
+}
+
+.showcase-create{ /* container das páginas de esporte, material e gomos */
+    /* grid-area: 2 / 1 / 10 / 11; */
+    grid-area: showcase;
+}
+
+.avancar{ /* container da sidebar para avançar de etapa */
+    grid-area: sidebar;
+}
+
+.template-showcase-cor{ /* container da toda a etapa de cor */
+    grid-area: color-section;
+}
+
+.select { /* container da cor da etapa de cor */
+    grid-area: color-picker-container;
+}
+
+.showcase-icon-container { /* container da icone da etapa de cor */
+    grid-area: icon-container;
+}
+
+
 
 .button-avancar{
     background-color: gray;
@@ -249,43 +274,35 @@ div > input[type="radio"]:checked + label > div > div > svg > path {
     gap: 1.75rem;
 }
 
-.template-cor {
-    display: flex;
-    gap: 5rem;
-    grid-area: color-sections;
-}
-
 .showcase-icon-container {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
+    width: 30rem;
 }
 
 .showcase-cor {
     /* width: calc((74.25vw / 3) - 2.3333rem);  */
-    width: min-content;
+    width: 60rem;
+    height: 50rem;
     display: flex;
     flex-direction: column;
-    gap: 3.33rem;
     padding: 2rem;
+    gap: 2.33rem;
     border: #ffe44e solid 1px;
     border-radius: 1.5rem;
 }
 
 .preview {
-    width: 28.57rem;
+    width: 34.57rem;
 }
 
-.template-cor {
-    border-radius: 2rem;
-    display: flex;
-    margin: 0 0 3.33rem 3.33rem;
-}
+
 
 .title-cor {
     background-color: #ffe44e;
     border-radius: 1rem;
-    width: 28.57rem;
+    width: 45.57rem;
     color: #353535;
     font-size: 2.85rem;
     display: flex;
@@ -294,7 +311,7 @@ div > input[type="radio"]:checked + label > div > div > svg > path {
 }
 
 .title-cor-recessive {
-    width: 28.57rem;
+    width: 45.57rem;
     color: white;
     font-size: 1.42rem;
     display: flex;
@@ -325,7 +342,7 @@ div > input[type="radio"]:checked + label > div > div > svg > path {
 
 .select {
     
-    width: 34rem;
+    width: 60rem;
     /* width: calc((74.25vw / 3) - 2.3333rem);  */
     display: flex;
     flex-direction: column;
@@ -346,6 +363,21 @@ div > input[type="radio"]:checked + label > div > div > svg > path {
     flex-direction: column;
     gap: 4rem;
 }
+
+/* .text-final-sport {
+    color: white;
+    font-size: 2.5rem;
+}
+
+.text-final-material {
+    color: white;
+    font-size: 2.5rem;
+}
+
+.text-final-material {
+    color: white;
+    font-size: 2.5rem;
+} */
 
 .text-final {
     color: white;

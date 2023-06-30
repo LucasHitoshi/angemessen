@@ -9,10 +9,11 @@
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/pagina-inicial.css">
     <link rel="stylesheet" href="./css/side-bar.css">
+    <link rel="stylesheet" href="./css/produtos.css">
     <script src="./js/side-bar.js" defer></script>
     <script src="./js/script.js" type="text/javascript" defer></script>
     <script src="./js/carousel.js" type="text/javascript" defer></script>
-    <script src="./js/product-generator-home.js?mano=mano" defer></script>
+    <script src="./js/product-generator.js?limit=10" defer></script>
 </head>
 <body>
     <header>
@@ -132,7 +133,6 @@
                 <ul id="carousel">
                     <img src="./img/promotions/promo-1.png" alt="bg-teste" class="carousel-img">
                     <img src="./img/promotions/promo-2.png" alt="bg-teste" class="carousel-img">
-                    <!-- <img src="./img/background/background3.jpg" alt="bg-teste" class="carousel-img"> -->
                 </ul>
             </div>
             <div class="promotions-showcase">
@@ -142,33 +142,62 @@
             </div>
         </section>
         
-        <div class="showcase-index">
-                <!-- <img src="./api/images?ball_type=basquete" alt="BOLA TESTES" class="product">
-                <div class="descricao-bola">
-                    <div class="nome-bola-escolha">Bola de Basquete</div>
-                    <div>
-                        <div class="small-price">à vista</div>
-                        <div class="price">R&#36;40,99</div>
+        <div class="showcase-index-wrapper">
+            <div id="product-list" class="showcase-index">
+                <div id="product-card-template" class="product-card hide-product">
+                    <div class="product-card-header">
+                        <div class="product-sport"></div>
+                        <ul class="ball-classification">
+                            <li><img src="./assets/gomo-icon.svg" alt="Test Placeholder"></li>
+                            <li><img src="./assets/gomo-icon.svg" alt="Test Placeholder"></li>
+                            <li><img src="./assets/gomo-icon.svg" alt="Test Placeholder"></li>
+                            <li><img src="./assets/gomo-icon.svg" alt="Test Placeholder"></li>
+                            <li><img src="./assets/gomo-icon.svg" alt="Test Placeholder"></li>
+                        </ul>
                     </div>
-                </div> -->
-            <div id="product-card-template" class="product-card hide-product">
-                <div class="product-sport"></div>
-                <a href="#" class="to-product-page">
-                    <div class="img-produto">
-                        <img src="" alt="" class="product-image" loading="lazy">
-                        <img src="./img/favicon.png" alt="Carregando Imagem" class="loading">
+                    <div class="visual-showcase-wrapper">
+                        <ul class="vertical-attrs-icons">
+                            <li><img src="http://localhost:3000/assets/gomo-icon.svg" alt="Test Placeholder"></li>
+                            <li><img src="http://localhost:3000/assets/gomo-icon.svg" alt="Test Placeholder"></li>
+                            <li><img src="http://localhost:3000/assets/gomo-icon.svg" alt="Test Placeholder"></li>
+                        </ul>
+                        <a href="#" class="to-product-page">
+                            <div class="img-produto">
+                                <img src="" alt="" class="product-image" loading="lazy">
+                                <img src="./img/favicon.png" alt="Carregando Imagem" class="loading">
+                                <img src="http://localhost:3000/assets/black-more-info-icon.png" alt="Clique para mais informações" class="more-info-icon">
+                            </div>
+                        </a>
                     </div>
-                </a>
-                <div class="nome-produto"></div>
-                <div class="product-material"></div>
-                <div class="product-brand"></div>
-                <div class="price-box">
-                    <div class="money-sign"></div>
-                    <div class="price"></div>
-                    <div class="small-price">à vista</div>
+                    <div class="nome-produto"></div>
+                    <div class="product-material"></div>
+                    <div class="product-brand"></div>
+                    <div class="product-price-box">
+                        <span class="money-sign"></span>
+                        <span class="price"></span>
+                        <span class="small-price">à vista</span>
+                    </div>
+                    <ul class="horizontal-attrs-icons">
+                        <li><img src="http://localhost:3000/assets/gomo-icon.svg" alt="Test Placeholder"></li>
+                        <li><img src="http://localhost:3000/assets/gomo-icon.svg" alt="Test Placeholder"></li>
+                        <li><img src="http://localhost:3000/assets/gomo-icon.svg" alt="Test Placeholder"></li>
+                    </ul>
+                    <div class="operation-button-wrapper">
+                        <a class="buy-now">
+                            <button class="buy-now-button">
+                                <img src="./assets/green-buy-icon.png" alt="Comprar na hora">
+                                <span>Comprar</span>
+                            </button>
+                        </a>
+                        <a class="to-cart">
+                            <button class="add-to-cart-button">
+                                <img src="./assets/yellow-cart-icon.png" alt="Adicionar ao carrinho">
+                                <span>Adicionar</span>
+                            </button>
+                        </a>
+                    </div>
                 </div>
             </div>
-            
         </div>
     </main>
 

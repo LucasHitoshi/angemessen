@@ -1,10 +1,10 @@
 const express = require("express");
 const path = require("path");
-const ballsApiRouter = require(path.join(__dirname, "..", "api/balls"));
-const imagesApiRouter = require(path.join(__dirname, "..", "api/images"));
-const usersApiRouter = require(path.join(__dirname, "..", "api/users"));
-const plainImagesApiRouter = require(path.join(__dirname, "..", "api/plain-image"));
-const materialImagesApiRouter = require(path.join(__dirname, "..", "api/material"));
+const ballsApiRouter = require(path.join(__dirname, "..", "routes/api/balls"));
+const imagesApiRouter = require(path.join(__dirname, "..", "routes/api/images"));
+const usersApiRouter = require(path.join(__dirname, "..", "routes/api/users"));
+const plainImagesApiRouter = require(path.join(__dirname, "..", "routes/api/plain-image"));
+const materialImagesApiRouter = require(path.join(__dirname, "..", "routes/api/material"));
 
 const appAPI = express();
 

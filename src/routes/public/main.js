@@ -25,7 +25,7 @@ mainRouter.get("/", (req, res) => {
 
 mainRouter.get("/homepage", (req, res) => {
     try {
-        res.sendFile(path.join(__dirname, "../..", "/public/index.html"));
+        res.sendFile(path.join(__dirname, "../../..", "/public/index.html"));
     } catch (err) {
         console.log(`ERRO: ${err}`);
     }

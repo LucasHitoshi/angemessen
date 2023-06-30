@@ -18,7 +18,7 @@ materialImagesApiRouter.get("/api/material_image", (req, res) => {
             const result = materials[material];
             console.log("aaa");
             res.type("png");
-            res.sendFile(path.join(__dirname, "../..", `/public/img/${result}`));
+            res.sendFile(path.join(__dirname, "../../..", `/public/img/${result}`));
         } else {
             res.status(400);
             res.send({ "err": "400: Ball not found (Bad ball name)" });

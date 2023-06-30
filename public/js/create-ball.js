@@ -82,7 +82,7 @@ var ballConfig = {
                 "sign": "R$",
                 "value": 109.90
             },
-            "image": "/api/images?ball_type=futebol"
+            "image": "/api/material_image?material=couro"
         },
         {
             "name": "borracha",
@@ -90,7 +90,15 @@ var ballConfig = {
                 "sign": "R$",
                 "value": 49.90
             },
-            "image": "/api/images?ball_type=futebol"
+            "image": "/api/material_image?material=borracha"
+        },
+        {
+            "name": "eva",
+            "price": {
+                "sign": "R$",
+                "value": 29.90
+            },
+            "image": "/api/material_image?material=eva"
         },
         {
             "name": "madeira",
@@ -98,7 +106,7 @@ var ballConfig = {
                 "sign": "R$",
                 "value": 159.90
             },
-            "image": "/api/images?ball_type=futebol"
+            "image": "/api/material_image?material=madeira"
         }
     ],
     section: [

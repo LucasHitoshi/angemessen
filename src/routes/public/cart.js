@@ -2,13 +2,13 @@
 const fetch = (...args) => import('node-fetch').then(({ default: fetch }) => fetch(...args));
 const path = require("path");
 const express = require("express");
-const userModel = require("../database/models/user");
-const ballModel = require("../database/models/ball");
+const userModel = require("./../../database/models/user");
+const ballModel = require("./../../database/models/ball");
 const cartRouter = express.Router();
 
 cartRouter.get("/carrinho", (req, res) => {
     try {
-        res.sendFile(path.join(__dirname, "../..", "/public/carrinho.html"));
+        res.sendFile(path.join(__dirname, "../../..", "/public/carrinho.html"));
     } catch (err) {
         console.log(`ERRO: ${err}`);
     }

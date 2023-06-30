@@ -149,7 +149,7 @@
                                         </svg>
                                     </div>
                                 </div>
-                                <img src="./api/images?ball_type=futebol" alt="BOLA TESTES">
+                                <img src="./api/images?ball_type=futebol" alt="BOLA TESTES" class="option-image">
                                 <div class="descricao-bola">
                                     <div class="option-name">Bola de Futebol</div>
                                     <div>
@@ -169,7 +169,7 @@
                                         </svg>
                                     </div>
                                 </div>
-                                <img src="./api/images?ball_type=basquete" alt="BOLA TESTES">
+                                <img src="./api/images?ball_type=basquete" alt="BOLA TESTES" class="option-image">
                                 <div class="descricao-bola">
                                     <div class="option-name">Bola de Basquete</div>
                                     <div>
@@ -189,7 +189,7 @@
                                         </svg>
                                     </div>
                                 </div>
-                                <img src="./api/images?ball_type=volei" alt="BOLA TESTES">
+                                <img src="./api/images?ball_type=volei" alt="BOLA TESTES" class="option-image">
                                 <div class="descricao-bola">
                                     <div class="option-name">Bola de Vôlei</div>
                                     <div>
@@ -261,7 +261,7 @@
                                         </svg>
                                     </div>
                                 </div>
-                                <img src="./img/couro.png" alt="BOLA TESTES">
+                                <img src="./img/couro.png" alt="BOLA TESTES" class="option-image">
                                 <div class="descricao-bola">
                                     <div class="option-name">Couro</div>
                                     <div>
@@ -281,7 +281,7 @@
                                         </svg>
                                     </div>
                                 </div>
-                                <img src="./img/borracha.png" alt="BOLA TESTES">
+                                <img src="./img/borracha.png" alt="BOLA TESTES" class="option-image">
                                 <div class="descricao-bola">
                                     <div class="option-name">Borracha</div>
                                     <div>
@@ -301,9 +301,29 @@
                                         </svg>
                                     </div>
                                 </div>
-                                <img src="./img/eva.png" alt="BOLA TESTES">
+                                <img src="./img/eva.png" alt="BOLA TESTES" class="option-image">
                                 <div class="descricao-bola">
                                     <div class="option-name">EVA</div>
+                                    <div>
+                                        <div class="small-price">à vista</div>
+                                        <div class="price">R&#36;40,99</div>
+                                    </div>
+                                </div>
+                            </label>
+                        </div>
+                        <div>
+                            <input type="radio" id="madeira" name="material" class="bola-escolha-input select-material" onclick="clearRadio(this, 1)" >
+                            <label class="pai" for="madeira">
+                                <div class="absoluto">
+                                    <div class="centered radio-bola">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" >
+                                            <path d="M9 16.17l-3.59-3.58L4 14l5 5 10-10L19.41 7 9 16.17z"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <img src="./img/madeira.png" alt="BOLA TESTES" class="option-image">
+                                <div class="descricao-bola">
+                                    <div class="option-name">Madeira</div>
                                     <div>
                                         <div class="small-price">à vista</div>
                                         <div class="price">R&#36;40,99</div>
@@ -372,7 +392,7 @@
                                             </svg>
                                         </div>
                                     </div>
-                                    <img src="./api/plain_image?ball_type=basquete" alt="BOLA TESTES" style="background-color: #00000000;">
+                                    <img src="./api/plain_image?ball_type=basquete" alt="BOLA TESTES" style="background-color: #00000000;" class="option-image">
                                     <div class="descricao-bola">
                                         <div class="option-name">Clássico</div>
                                         <div>
@@ -430,7 +450,7 @@
                     <div class="title-creation" name="color">
                         Cor
                     </div>
-                    <div class="template-cor">
+                    <div class="template-showcase-cor">
                         <div class="showcase-icon-container">
                             <div class="showcase-cor"> 
                                 <div class="title-cor">Preview</div>
@@ -448,11 +468,7 @@
                         
                         <div class="select"> 
                             <div class="title-cor">Selecionar</div>
-                            <img src="./assets/bola-planificada.svg" alt="" class="bola-plana" usemap="#ball-custom">
-                            <map name="ball-custom">
-    
-                            </map>
-    
+                            <img src="./api/plain_image?ball_type=futebol" alt="" class="bola-plana">
                             <div class="title-cor">Cores</div>
                             <input type="color" name="ball-color" id="color-picker">
                             <label for="color-picker">a</label>
@@ -460,20 +476,21 @@
                         
                     </div>
                     
-                </div>
-                <div class="avancar">
-                    <div class="button-avancar">
-                        <img src="./assets/seta-avancar.svg" class="next-simbol">
-                        AVANÇAR
-                    </div>
-                    <div class="lateral-criar">
-                        <div id="nome-bola">
-                            nome bola
-                            <div id="imagem-bola">imagem Bola</div>
+                
+                    <div class="avancar">
+                        <div class="button-avancar">
+                            <img src="./assets/seta-avancar.svg" class="next-simbol">
+                            AVANÇAR
+                        </div>
+                        <div class="lateral-criar">
+                            <div id="nome-bola">
+                                nome bola
+                                <div id="imagem-bola">imagem Bola</div>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>   
+                </div>   
+            </div>
         </div>
     </div>
 
@@ -508,19 +525,15 @@
                 </div>
 
                 <div class="showcase-final">
-                    <div class="text-final"> 
+                    <div class="text-final" id="sport"> <!-- esporte -->
                         Bola de futebol
                     </div>
-                        
-                    <div class="text-final"> 
-                        Médio
-                    </div>
-                        
-                    <div class="text-final"> 
+                    
+                    <div class="text-final" id="material"> <!-- material -->
                         Couro
                     </div>
                         
-                    <div class="text-final"> 
+                    <div class="text-final" id="sections"> <!-- gomos -->
                         Pentágonos e Hexágonos
                     </div>
                 </div>

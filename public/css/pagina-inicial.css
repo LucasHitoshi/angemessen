@@ -768,21 +768,25 @@ img.big {
     font-size: 2rem;
 }
 
+.showcase-index-wrapper {
+    width: 100%;
+    height: fit-content;
+    background-color: #353535;
+    border: #ffd900 solid 1px;
+    /* border-top: #ffd900 solid 1px; */
+    /* border-bottom: #ffd900 solid 1px; */
+}
+
 .showcase-index {
     max-width: 1920px;
-    width: 1920px;
-    /* min-width: 700px; */
-    background-color: #242424;
+    width: 100%;
     border-radius: 10px;
     margin: 20px;
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    /* flex-wrap: wrap; */
-    /* justify-content: space-around; */
-    gap: 11rem;
-    /* F `max-gap`, VC SEMPRE SERÁ LEMBRADO */
-    padding: 2rem 0 2rem 0;
+    justify-content: space-between;
+    padding: 2rem;
+    overflow: hidden;
 }
 
 .hidden {

@@ -8,7 +8,7 @@ profileRouter.get("/perfil", (req, res) => {
             res.redirect("/login");
         }
         
-        res.sendFile(path.join(__dirname, "../..", "/public/profile.html"));
+        res.sendFile(path.join(__dirname, "../../..", "/public/profile.html"));
     } catch (err) {
         console.log(`ERRO: ${err}`);
     }

@@ -1,7 +1,7 @@
 const path = require("path");
 const express = require("express");
-const userModel = require("../database/models/user");
-const { validatePassword, hashPassword } = require("../validation/password");
+const userModel = require("./../../database/models/user");
+const { validatePassword, hashPassword } = require("./../../validation/password");
 const loginRouter = express.Router();
 
 loginRouter.get("/login", (req, res) => {
@@ -13,7 +13,7 @@ loginRouter.get("/login", (req, res) => {
 
         // console.log(`ROTA ACESSADA: '${req.route.path}'.`);
         // console.log(`Ver se o cara tá logado> ${req.session.email}`);
-        res.sendFile(path.join(__dirname, "../..", "/public/login.html"));
+        res.sendFile(path.join(__dirname, "../../..", "/public/login.html"));
     } catch (err) {
         console.log(`ERRO: ${err}`);
     }
