@@ -5,6 +5,7 @@ const imagesApiRouter = require(path.join(__dirname, "..", "routes/api/images"))
 const usersApiRouter = require(path.join(__dirname, "..", "routes/api/users"));
 const plainImagesApiRouter = require(path.join(__dirname, "..", "routes/api/plain-image"));
 const materialImagesApiRouter = require(path.join(__dirname, "..", "routes/api/material"));
+const ticketValidationApiRouter = require(path.join(__dirname, "..", "routes/api/ticket"));
 
 const appAPI = express();
 
@@ -17,5 +18,6 @@ appAPI.use(imagesApiRouter);
 appAPI.use(usersApiRouter);
 appAPI.use(plainImagesApiRouter);
 appAPI.use(materialImagesApiRouter);
+appAPI.use(ticketValidationApiRouter);
 
 module.exports = appAPI;

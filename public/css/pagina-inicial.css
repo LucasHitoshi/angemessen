@@ -769,6 +769,7 @@ img.big {
 }
 
 .showcase-index-wrapper {
+    padding: 3rem;
     width: 100%;
     height: fit-content;
     background-color: #353535;
@@ -781,12 +782,9 @@ img.big {
     max-width: 1920px;
     width: 100%;
     border-radius: 10px;
-    margin: 20px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 2rem;
-    overflow: hidden;
 }
 
 .hidden {
@@ -958,7 +956,6 @@ img.big {
     object-fit: fill;
     width: 100%;
     height: 100%;
-    aspect-ratio: 1 / 1;
 }
 
 .promotions-showcase > .big-one {

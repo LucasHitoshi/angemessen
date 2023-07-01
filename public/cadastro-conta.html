@@ -26,17 +26,17 @@
             
             
         }
-        body {
+        /* body {
             margin: 0;
             padding: 0;
             font-family: DMSans;
             background-color: #3d3d3d;
-        }
+        } */
 
         .login-container {
             max-width: 400px;
             margin: 10rem auto;
-            background-color: #fff;
+            background-color: #f5f5f5;
             padding: 40px;
             border-radius: 4px;
             box-shadow: 10px;
@@ -50,37 +50,84 @@
             flex-direction: column;
             padding: 5px;
             max-width: 200px;
-            /* font-family: Arial, Helvetica, sans-serif; */
             font-family: DMSans;
         }
         
-        .termos-criar-conta > a{
+        .termos-criar-conta > a {
             color: blue;
         }
         
         .text {
-            font-size: 2vh;
+            transition: all 0.1s linear;
+            position: absolute;
+            z-index: 10;
+            top: 1.25rem;
+            font-size: 3rem;
         }
 
-        .box-login{
+        .box-login-wrapper:hover > label > .text {
+            font-size: 2rem;
+            top: 0.5rem;
+        }
+
+        .fields-wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin: 0 0 2rem 0;
+        }
+
+        .box-login-wrapper {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            background-color: #f0f0f0;
+            padding: 1rem;
+            border: #AAA solid 1px;
+            border-radius: 1rem;
+            height: 7rem;
+        }
+
+        .box-login {
+            position: absolute;
+            z-index: 20;
+            top: 4rem;
+            font-size: 1.75rem;
             height: 2rem;
+            /* border: none; */
+            outline: none;
+            background-color: #00000000;
+            padding: 0 0 1.5rem 0.15rem;
             border: none;
-            border-bottom-style: solid;
+            border-bottom: #555 solid 1px;
             font-family: DMSans;
         }
 
         .button-criar-conta{
-            font-size: 1.9vh;
+            font-size: 2rem;
             font-size: DMSans;
+            height: 4rem;
             background-color: #ffd900;
             cursor: pointer;
-            border-radius: 2vh;
+            border: none;
+            border-radius: 2rem;
         }
 
         .button-criar-conta:hover {
             background-color: #e29d07;
             animation: changeBackgroundColor;
             animation-duration: 0.8s;
+        }
+
+        .signup-requirements {
+            margin: 1rem 0;
+        }
+
+        .signup-requirements > li {
+            line-height: 2rem;
+            font-size: 1.75rem;
+            list-style: circle;
+            margin: 0 0 0 3rem;
         }
     </style>
 </head>
@@ -180,51 +227,64 @@
                 </p>
             </a>
             <br>
-            <!-- <h1>Entrar</h1> -->
         </div>
         <div>
             <!-- 
-
-                {
-                    "email": email_do_cara,
-                    "nome": nome_do_cara,
-                    "sobrenome": sobrenome_do_cara,
-                    "password": password_do_cara,
-                    "confirm_password": confirm_password
-                }
-
+            const body_do_POST_do_cadastro = {
+                "email": email_do_cara,
+                "nome": nome_do_cara,
+                "sobrenome": sobrenome_do_cara,
+                "password": password_do_cara,
+                "confirm_password": confirm_password
+            }
              -->
             <form action="/sign" method="POST" class="nsei"><br>
-                <label for="email"><p class="text">Email:</p></label>
-                <input type="text" id="email" name="email" required class="box-login"><br>
-
-                <label for="nome"><p class="text">Nome:</p></label>
-                <input type="text" id="nome" name="nome" required class="box-login"><br>
-
-                <label for="sobrenome"><p class="text">Sobrenome:</p></label>
-                <input type="text" id="sobrenome" name="sobrenome" required class="box-login"><br>
-
-                <label for="password"><p class="text">Crie uma senha:</p></label>
-                <input type="password" id="password" name="password" required class="box-login"><br>
-                
-
-                <label for="confirm_password"><p class="text">Repita sua senha:</p></label>
-                <input type="password" id="confirm_password" name="confirm_password" required class="box-login"><br>
-
-                <label for=""></label>
-
-                    <div class="termos-criar-conta">
-                        Ao criar uma conta, você concorda com as 
-                        <a href="">Condições de Uso da agemessen</a>
-                        . 
-                        Por favor verifique a 
-                        <a href="">Notificação de Privacidade</a>
-                        , 
-                        <a href="">Notificação de Cookies</a>
-                        e a 
-                        <a href="">Notificação de Anúncios Baseados em Interesse</a>
-                        .
+                <div class="fields-wrapper">
+                    <div class="box-login-wrapper">
+                        <label for="email"><p class="text">Email:</p></label>
+                        <input type="text" id="email" name="email" required class="box-login">
                     </div>
+                    <div class="box-login-wrapper">
+                        <label for="nome"><p class="text">Nome:</p></label>
+                        <input type="text" id="nome" name="nome" required class="box-login">
+                    </div>
+                    <div class="box-login-wrapper">
+                        <label for="sobrenome"><p class="text">Sobrenome:</p></label>
+                        <input type="text" id="sobrenome" name="sobrenome" required class="box-login">
+                    </div>
+                    <div class="box-login-wrapper">
+                        <label for="password"><p class="text">Crie uma senha:</p></label>
+                        <input type="password" id="password" name="password" required class="box-login">
+                    </div>
+                    <div class="box-login-wrapper">
+                        <label for="confirm_password"><p class="text">Repita sua senha:</p></label>
+                        <input type="password" id="confirm_password" name="confirm_password" required class="box-login">
+                    </div>
+                </div>
+
+                <!-- <label for=""></label> -->
+
+                <div class="termos-criar-conta">
+                    Ao criar uma conta, você concorda com as 
+                    <a href="">Condições de Uso da agemessen</a>
+                    . 
+                    Por favor verifique a 
+                    <a href="">Notificação de Privacidade</a>
+                    , 
+                    <a href="">Notificação de Cookies</a>
+                    e a 
+                    <a href="">Notificação de Anúncios Baseados em Interesse</a>
+                    .
+                </div>
+                    
+                <div class="termos-criar-conta">
+                    A sua senha precisa ter:
+                    <ul class="signup-requirements">
+                        <li>Um caractere maiúsculo</li>
+                        <li>Um caractere minúsculo</li>
+                        <li>6 dígitos no mínimo</li>
+                    </ul>
+                </div>
                 <input type="submit" value="Criar conta" class="button-criar-conta"> 
             </form>
         </div>
@@ -253,3 +313,30 @@
 </body>
 </html>
 
+<script>
+    const formFields = document.querySelectorAll(".box-login");
+    for (const field of formFields) {
+        console.log("mano");
+        field.addEventListener("change", () => {
+            if (field.value !== "") {
+                /** @type {HTMLElement} */
+                const fieldText = field.querySelector("label > .text");
+                fieldText.style.fontSize = "2rem";
+                fieldText.style.top = "0.5rem";
+
+                console.log("text");
+                // font-size: 2rem;
+                // top: 0.5rem;
+            } else {
+                /** @type {HTMLElement} */
+                const fieldText = field.querySelector("label > .text");
+                fieldText.style.fontSize = "3rem";
+                fieldText.style.top = "1.25rem";
+                
+                console.log("no text");
+                // top: 1.25rem;
+                // font-size: 3rem;
+            }
+        })
+    }
+</script> 

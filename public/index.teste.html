@@ -29,14 +29,10 @@
 <body>
     <div class="forms-wrapper">
         <h1 class="form-title">Teste de submit de vários forms</h1>
-        <form method="POST" action="/test/crie" >
-            <input type="text" name="texto">
-        </form>
         <form method="POST" action="/test/crie">
-            <input type="email" name="email">
-        </form>
-        <form method="POST" action="/test/crie">
-            <input type="password" name="senha">
+            <input type="text" name="texto" placeholder="Nome">
+            <input type="email" name="email" placeholder="Email">
+            <input type="password" name="senha" placeholder="Senha">
             <input type="submit" value="Enviar Teste" name="teste" id="teste">
         </form>
         <!-- 

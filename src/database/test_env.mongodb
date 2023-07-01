@@ -5,6 +5,7 @@ use('TESTE');
 // db.drop('ballmodels');
 // db.drop('ballModels');
 
+/*
 db.createCollection("pedido", {
     validator:{
         $jsonSchema: {
@@ -105,7 +106,19 @@ db.createCollection("pedido", {
         }
     }
 })
+*/
 
+db.getCollection("ticketmodels").insertOne(
+    {
+        "code": "MANO5",
+        "promo": {
+            "type": "percent",
+            "value": 5
+        }
+    }
+)
+
+/*
 db.getCollection('ballmodels').insertMany(
     [
         {
@@ -1895,3 +1908,4 @@ db.getCollection('ballmodels').insertMany(
         }
     ]
 )
+*/
