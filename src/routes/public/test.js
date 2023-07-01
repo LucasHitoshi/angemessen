@@ -36,4 +36,8 @@ testRouter.get("/test/:id", async (req, res) => {
     }
 });
 
+testRouter.post("/test/crie", async (req, res) => {
+    console.log(req.body)
+})
+
 module.exports = testRouter;

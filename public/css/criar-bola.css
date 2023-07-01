@@ -77,7 +77,7 @@ div > input[type="radio"]:checked + label > div > div > svg > path {
     display: grid;
     grid-template-columns: 25% 25% 25% 25%;
     background-color: #353535;
-    margin: 0 21px 0 21px;
+    margin: 0 3rem 3rem 3rem;
     border-radius: 2rem;
     padding: 2rem;
     gap: 2rem;
@@ -89,7 +89,7 @@ div > input[type="radio"]:checked + label > div > div > svg > path {
     'title . . sidebar'
     'showcase showcase showcase sidebar';
     grid-template-columns: 5fr 2fr;
-    grid-template-rows: 2fr 5fr;
+    grid-template-rows: 1fr 5fr;
     width: 1349px;
     /* aspect-ratio: 1 / 1; */ /* TENTAR USAR */
     /* grid-template-columns: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
@@ -101,8 +101,9 @@ div > input[type="radio"]:checked + label > div > div > svg > path {
     grid-template-areas:
     'title . . sidebar'
     'color-section color-section color-section sidebar';
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 5fr;
+    grid-template-columns: 5fr 2fr;
+    justify-content: center;
+
     width: 1349px;
 }
 
@@ -113,7 +114,18 @@ div > input[type="radio"]:checked + label > div > div > svg > path {
     'icon-container color-picker-container';
     grid-template-columns: 1fr 1fr;
     margin: 0 0 3.33rem 3.33rem;
-    gap: 5rem;
+    gap: 2rem;
+}
+
+.final-grid {
+    display: grid;
+    grid-template-areas:
+    'title . . sidebar'
+    'showcase-final showcase-final showcase-final sidebar';
+    grid-template-columns: 5fr 2fr;
+    grid-template-rows: 1fr 5fr;
+    width: 1349px;
+    border-radius: 2rem;
 }
 
 .title-creation { /* título de cada etapa */
@@ -142,7 +154,9 @@ div > input[type="radio"]:checked + label > div > div > svg > path {
     grid-area: icon-container;
 }
 
-
+.showcase-final {
+    grid-area: showcase-final;
+}
 
 .button-avancar{
     background-color: gray;
@@ -225,7 +239,8 @@ div > input[type="radio"]:checked + label > div > div > svg > path {
     border-radius: 2rem;
 }
 
-.place-holder {
+.progress-step {
+    position: relative;
     background-color: #535353;
     width: 11.42rem;
     height: 11.42rem;
@@ -235,6 +250,25 @@ div > input[type="radio"]:checked + label > div > div > svg > path {
     align-items: center;
     justify-content: center;
     
+}
+
+.progress-step::before {
+    position: absolute;
+    z-index: 10;
+    left: -25rem;
+    content: "-";
+    background-color: #ffd900;
+    width: 22.5rem;
+    height: 1rem;
+    color: #00000000;
+}
+
+.not-active::before {
+    background-color: #535353 !important;
+}
+
+.progress-step:first-child::before {
+    content: none;
 }
 
 /* .progresso-linha{
@@ -265,13 +299,9 @@ div > input[type="radio"]:checked + label > div > div > svg > path {
     width: 4.28rem;
 }
 
-/* .option-wrapper {
-    border-radius: 2rem;
-} */
-
-.create-main-wrapper {
+.option-wrapper {
     display: flex;
-    gap: 1.75rem;
+    justify-content: center;
 }
 
 .showcase-icon-container {
@@ -284,11 +314,12 @@ div > input[type="radio"]:checked + label > div > div > svg > path {
 .showcase-cor {
     /* width: calc((74.25vw / 3) - 2.3333rem);  */
     width: 60rem;
-    height: 50rem;
+    height: fit-content;
     display: flex;
     flex-direction: column;
-    padding: 2rem;
-    gap: 2.33rem;
+    align-items: center;
+    padding: 2rem 2rem 5rem 2rem;
+    gap: 5rem;
     border: #ffe44e solid 1px;
     border-radius: 1.5rem;
 }
@@ -302,7 +333,7 @@ div > input[type="radio"]:checked + label > div > div > svg > path {
 .title-cor {
     background-color: #ffe44e;
     border-radius: 1rem;
-    width: 45.57rem;
+    width: 100%;
     color: #353535;
     font-size: 2.85rem;
     display: flex;
@@ -353,10 +384,8 @@ div > input[type="radio"]:checked + label > div > div > svg > path {
 }
 
 .showcase-final{
-    width: calc(195rem - 60.64rem);
-    height: 40rem;
     background-color: #353535;
-    margin: 3.33rem;
+    margin: 0 3rem 3rem 3rem;
     border-radius: 2rem;
     padding: 1rem;
     display: flex;

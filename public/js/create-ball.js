@@ -36,9 +36,6 @@ if (!parsedCookies.createLevelCounter) {
  * @property {string} material
  * @property {number} tamanho
  */
-// tipo: "",
-// material: "",
-// tamanho: 0
 var ballConfig = {
     sport: [
         {
@@ -58,10 +55,78 @@ var ballConfig = {
                 "sign": "R$",
                 "value": 69.90
             },
-            "view": {
-                "image": "/api/images?ball_type=basquete",
-                "plainImage": "/api/plain-image?ball_type=basquete"
-            }
+            "image": "/api/images?ball_type=basquete",
+
+
+            "material": [
+                {
+                    "name": "couro",
+                    "price": {
+                        "sign": "R$",
+                        "value": 109.90
+                    },
+                    "image": "/api/material_image?material=couro",
+                    "section": [
+                        {
+                            "name": "clássico",
+                            "image": "/api/plain-image?ball_type=basquete",
+                        }
+                    ]
+                },
+                {
+                    "name": "borracha",
+                    "price": {
+                        "sign": "R$",
+                        "value": 49.90
+                    },
+                    "image": "/api/material_image?material=borracha",
+                    "section": [
+                        {
+                            "name": "clássico",
+                            "image": "/api/plain-image?ball_type=basquete",
+                        },
+                        {
+                            "name": "moderna",
+                            "image": "/api/plain-image?ball_type=modern_basquete"
+                        }
+                    ]
+                },
+                {
+                    "name": "eva",
+                    "price": {
+                        "sign": "R$",
+                        "value": 29.90
+                    },
+                    "image": "/api/material_image?material=eva",
+                    "section": [
+                        {
+                            "name": "clássico",
+                            "image": "/api/plain-image?ball_type=basquete",
+                        },
+                    ]
+                },
+                {
+                    "name": "madeira",
+                    "price": {
+                        "sign": "R$",
+                        "value": 159.90
+                    },
+                    "image": "/api/material_image?material=madeira"
+                }
+            ],
+
+
+
+            "section": [
+                {
+                    "name": "clássico",
+                    "image": "/api/plain-image?ball_type=basquete",
+                },
+                {
+                    "name": "moderna",
+                    "image": "/api/plain-image?ball_type=modern_basquete"
+                }
+            ]
         },
         {
             "name": "Volêi",
@@ -108,21 +173,18 @@ var ballConfig = {
             },
             "image": "/api/material_image?material=madeira"
         }
-    ],
-    section: [
-        {
-            "name": "clássico",
-            "image": "/api/images?ball_type=futebol"
-        }
     ]
 };
 
-/** @type {HTMLElement} */
-var buttonsNext = document.getElementsByClassName("button-avancar");
-/** @type {HTMLElement[]} */
-var create = document.querySelectorAll(".create-level");
-/** @type {HTMLElement[]} */
-var progress = document.getElementsByClassName("place-holder");
+const buttonsNext = document.getElementsByClassName("button-avancar");
+const create = document.querySelectorAll(".create-level");
+const progress = document.getElementsByClassName("place-holder");
+const finalizeBall = document.querySelector("#create-level");
+const hiddenInputSport = document.querySelector("#hidden-input-sport");
+const hiddenInputMaterial = document.querySelector("#hidden-input-material");
+const hiddenInputSections = document.querySelector("#hidden-input-sections");
+const hiddenInputColors = document.querySelector("#hidden-input-colors");
+
 
 create[counter].style.display = "block";
 const levels = [
@@ -131,85 +193,82 @@ const levels = [
     "section",
     "color",
     "final",
-]
+];
 const radioLevels = [
     "sport",
     "material",
     "section",
-]
-for(let i = 0; i < 5; i++){
-if(radioLevels[i] !== levels[i]){
-    buttonsNext[i].style.backgroundColor = `green`
-    console.log("opa")
-    buttonsNext[i].addEventListener("click", () => {
-        create[i].style.display = "none";
-        i++
-        create[i].style.display = "block";
-        document.cookie = `createLevelCounter=${counter}`;
-        document.cookie = `ballConfig=${JSON.stringify(ballConfig)}`;
-    })
-} 
+];
+const radioLevelsObjs = [
+    hiddenInputSport,
+    hiddenInputMaterial,
+    hiddenInputSections
+];
 
-
-function clearRadio(radio, level) {
-    currRadio = currRadio ? currRadio : radio;
-    if (currRadio !== radio) {
-        currRadio.checked = 0;
-        check = 0;
-    }
-    
-    check++;
-    radio.checked = check % 2;
-    
-    
-    if (radio.checked == 1){
-        console.log(`checked ${radio.checked}`);
-        buttonsNext[level].style.backgroundColor = `green`
-        buttonsNext[level].addEventListener("click", () => {
-            counter = level;
-            console.log("nos sab mt");
-            
-            
-            // const isRadioLevel = levels[level] ? true : false;
-            
-
-            // if (isRadioLevel) {
-            //     const oneRadioIsChecked = document.querySelector(`.select-${levels[level]}:checked`);
-            //     console.log(oneRadioIsChecked);
-                
-            //     if (!oneRadioIsChecked) return;
-            // } 
-
-            const isRadioLevel = radioLevels[level] ? true : false;
-            if (isRadioLevel) {
-                const oneRadioIsChecked = document.querySelector(`.select-${levels[level]}:checked`);
-                console.log(oneRadioIsChecked);
-                
-                if (!oneRadioIsChecked) return;
-            } 
-
-
-            console.log("vdd manja mt slk", level);
-            counter++;
-            for (let i = 0; i < 5; i++) {
-                // Seta o display como "none" para todas as sessões
-                create[i].style.display = "none";
-            }
-            // Dá um display "block" pra mostrar só uma
-            console.log(create[counter]);
-            create[counter].style.display = "block";
+for(let i = 0; i < 5; i++) {
+    if(radioLevels[i] !== levels[i]) {
+        buttonsNext[i].style.backgroundColor = `green`
+        console.log("opa")
+        buttonsNext[i].addEventListener("click", () => {
+            i=counter
+            create[i].style.display = "none";
+            i++
+            create[i].style.display = "block";
             document.cookie = `createLevelCounter=${counter}`;
             document.cookie = `ballConfig=${JSON.stringify(ballConfig)}`;
         })
-        
-    } else {
-        console.log(`not checked ${radio.checked}`);
-        buttonsNext[level].style.backgroundColor = `gray`
-        
-    }
-    currRadio = radio;
+    } 
 
-}
+
+    function clearRadio(radio, level) {
+        currRadio = currRadio ? currRadio : radio;
+        if (currRadio !== radio) {
+            currRadio.checked = 0;
+            check = 0;
+        }
+        
+        check++;
+        radio.checked = check % 2;
+        
+        
+        if (radio.checked == 1){
+            console.log(`checked ${radio.checked}`);
+            buttonsNext[level].style.backgroundColor = `green`
+            buttonsNext[level].addEventListener("click", () => {
+                counter = level;
+                // console.log("nos sab mt");
+
+                const isRadioLevel = radioLevels[level] ? true : false;
+                if (isRadioLevel) {
+                    const currRadio = radioLevelsObjs[level];
+
+                    const oneRadioIsChecked = document.querySelector(`.select-${levels[level]}:checked`);
+                    currRadio.value = oneRadioIsChecked.value;
+                    // console.log(oneRadioIsChecked);
+                    // console.log(currRadio.value);
+                    
+                    if (!oneRadioIsChecked) return;
+                } 
+
+
+                console.log("vdd manja mt slk", level);
+                counter++;
+                for (let i = 0; i < 5; i++) {
+                    // Seta o display como "none" para todas as sessões
+                    create[i].style.display = "none";
+                }
+                // Dá um display "block" pra mostrar só uma
+                console.log(create[counter]);
+                create[counter].style.display = "block";
+                document.cookie = `createLevelCounter=${counter}`;
+                document.cookie = `ballConfig=${JSON.stringify(ballConfig)}`;
+            })
+        } else {
+            console.log(`not checked ${radio.checked}`);
+            buttonsNext[level].style.backgroundColor = `gray`;
+        }
+        currRadio = radio;
+    }
 }
 
 
@@ -224,18 +283,6 @@ function reset(cLevel){
     document.cookie = `ballConfig=${JSON.stringify(ballConfig)}`;
 }
 
+// finalizeBall.addEventListener("click", () => {
 
-for (let i = 0; i < buttonsNext.length; i++) {
-    // buttonsNext[i].addEventListener("click", () => {
-    //     counter++;
-    //     console.log(counter);
-    //     for (let i = 0; i < 5; i++) {
-    //         // Seta o display como "none" para todas as sessões
-    //         create[i].style.display = "none";
-    //     }
-    //     // Dá um display "block" pra mostrar só uma
-    //     create[counter].style.display = "block";
-    //     document.cookie = `createLevelCounter=${counter}`;
-    //     document.cookie = `ballConfig=${JSON.stringify(ballConfig)}`;
-    // })
-}
+// })
