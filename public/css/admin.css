@@ -1,0 +1,39 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.header-admin {
+    display: flex;
+    gap: 2rem;
+    border: 2px black solid;
+    padding: 1rem;
+}
+
+.header-admin > div {
+    border: 2px black solid;
+    cursor: pointer;
+    height: fit-content;
+}
+
+.main-admin {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+}
+
+.button-admin {
+    width: 100px;
+    aspect-ratio: 2 / 1;
+}
+
+.ball-card-admin {
+    width: 100px;
+    background-color: black;
+}
+
+.ball-card-admin > img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+}

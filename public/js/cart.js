@@ -9,15 +9,11 @@ const sepValidationError= document.querySelector("#cep-error-validation-result-b
 const cepCityAndDistrict = document.querySelector("#cep-city-n-district");
 const cepNeighborhood = document.querySelector("#cep-neighborhood");
 const selectLocationButton = document.querySelector("#select-loc-button");
+const selectedPayMethod = document.querySelector("#selected-pay-method");
+const selectedCEP = document.querySelector("#selected-cep");
 const API_URI_cartItems = "http://localhost:3000/cart/balls";
+const API_URI_userInfo = "http://localhost:3000/api/user/session";
 
-
-
-console.log(window.location.href);
-
-// cepValidationFormFog.addEventListener("click", () => {
-//     cepValidationFormFog.style.display = "none";
-// });
 
 selectLocationButton.addEventListener("click", () => {
     cepValidationFormFog.style.display = "flex";
@@ -27,12 +23,14 @@ closeCepValidationFormFog.addEventListener("click", () => {
     cepValidationFormFog.style.display = "none";
 });
 
-
 cepValidatorForm.addEventListener("submit", async (e) => {
     e.preventDefault();
 
     const cepInput = document.querySelector("#cep");
-    const cep = cepInput.value;
+    var cep = cepInput.value.toString();
+    while (/[\s|-]/.test(cep)) cep = cep.replace(/(\s|-)/, "");
+    console.log(cep);
+
     const validantionURL = `http://localhost:3000/validate-cep?cep=${cep}`;
 
     const validationResult = await (await fetch(validantionURL)).json();
@@ -41,12 +39,19 @@ cepValidatorForm.addEventListener("submit", async (e) => {
     if (cepIsValid) {
         cepValidationTip.style.display = "none";
         sepValidationSuccess.style.display = "flex";
-
+        sepValidationError.style.display = "none";
+        
         cepCityAndDistrict.innerHTML = `${validationResult.cepInfo.localidade} - ${validationResult.cepInfo.uf}`;
         cepNeighborhood.innerHTML = validationResult.cepInfo.bairro;
+        selectedCEP.innerHTML = cep;
+        selectedCEP.classList.remove("not-selected");
     } else {
         cepValidationTip.style.display = "none";
         sepValidationError.style.display = "flex";
+        sepValidationSuccess.style.display = "none";
+        
+        cepCityAndDistrict.innerHTML = "";
+        cepNeighborhood.innerHTML = "";
     }
 
     console.log(validationResult);
@@ -106,3 +111,22 @@ const products = fetch(API_URI_cartItems)
             })
         }
     })
+
+const userInfo = fetch(API_URI_userInfo)
+    .then(response => response.json())
+    .then(response => {
+        selectedPayMethod.innerHTML = response.order.payMethod
+            ? ( () => {
+                const data = response.order.payMethod;
+                selectedPayMethod.classList.remove("not-selected");
+                return data;
+            } )()
+            : "Não informado";
+        selectedCEP.innerHTML = response.endereco.cep
+            ? ( () => {
+                const data = response.endereco.cep;
+                selectedCEP.classList.remove("not-selected");
+                return data;
+            } )()
+            : "Não informado";
+    });

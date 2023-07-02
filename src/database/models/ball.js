@@ -9,7 +9,7 @@ const ballSchema = new Schema(
         sport: { type: String, required: true },
         brand: { type: String, required: true },
         size: { type: String, required: true },
-        complete: { type: Boolean },
+        complete: { type: Boolean, /** required: false */ },
         view: {
             image: { type: String, required: true },
             planImage: { type: String, required: true }
@@ -24,8 +24,8 @@ const ballSchema = new Schema(
         },
         specifications: [
             {
-                name: { type: String },
-                desc: { type: String }
+                name: { type: String, /** required: false */ },
+                desc: { type: String, /** required: false */ }
             }
         ]
     }

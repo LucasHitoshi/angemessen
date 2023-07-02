@@ -2,6 +2,7 @@ const express = require("express");
 const session = require("express-session");
 const appAPI = require("./app.api");
 const appHTTP = require("./app.http");
+const appAdmin = require("./app.admin");
 
 const app = express();
 
@@ -15,4 +16,4 @@ app.use(session({
 app.use(appAPI);
 app.use(appHTTP);
 
-module.exports = app;
+module.exports = { app, appAdmin };

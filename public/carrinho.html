@@ -188,13 +188,29 @@
                         <span class="total-parcels"><span class="bold-text">1351 vezes</span> no cartão</span>
                         <span class="total-parcels"><span class="bold-text">10%</span> de <span class="bold-text">desconto</span> no <span class="bold-text">PIX</span></span>
                     </div>
+                    <div class="selected-order-options-wrapper">
+                        <span class="selected-pay-method-title">
+                            Meio de Pagamento:
+                        </span>
+                        <span class="not-selected" id="selected-pay-method">
+                            Não informado
+                        </span>
+                        <span class="selected-cep-title">
+                            CEP do comprador:
+                        </span>
+                        <span class="not-selected" id="selected-cep">
+                            Não informado
+                        </span>
+                    </div>
                     <div class="order-buttons-wrapper">
                         <button id="select-loc-button">
                             Pesquisar endereço
                         </button>
-                        <button id="finalize-order-button">
-                            Finalizar pedido
-                        </button>
+                        <a href="http://localhost:3000/cadastrar-pagamento">
+                            <button id="set-payment-button">
+                                Ajustar pagamento
+                            </button>
+                        </a>
                     </div>
                 </div>
                 <ul class="order-balls-list">
@@ -319,6 +335,13 @@
                         </div>
                     </li>
                 </ul>
+                <div class="complete-order-wrapper">
+                    <a href="http://localhost:3000/complete-order">
+                        <button id="complete-order-button">
+                            Finalizar Compra
+                        </button>
+                    </a>
+                </div>
             </div>
         </div>
     </div>
@@ -354,25 +377,24 @@
         </div>
     </div>
 
-
     <footer class="footer-container flex-container recessive">
-        <div class="topic-box" style="overflow: auto;">
+        <div class="topic-box">
             <ul>
                 <!-- TODO: Implementar links para redes sociais -->
-                <li><a href="not-found.html"><img src="img/instagram-logo.png" alt="Instagram Angemessen" class="medium-icon"></a>
-                <li><a href="not-found.html"><img src="img/twitter-logo.png" alt="Twitter Angemessen" class="medium-icon"></a>
-                <li><a href="not-found.html"><img src="img/youtube-logo.png" alt="YouTube Angemessen" class="medium-icon"></a>
-                <li><a href="not-found.html"><img src="img/whatsapp-logo.png" alt="Whatsapp Angemessen" class="medium-icon"></a>
-                <li><a href="not-found.html"><img src="img/facebook-logo.png" alt="Facebook Angemessen" class="medium-icon"></a>
+                <li><a href="not-found.html"><img src="http://localhost:3000/img/instagram-logo.png" alt="Instagram Angemessen" class="medium-icon"></a>
+                <li><a href="not-found.html"><img src="http://localhost:3000/img/twitter-logo.png" alt="Twitter Angemessen" class="medium-icon"></a>
+                <li><a href="not-found.html"><img src="http://localhost:3000/img/youtube-logo.png" alt="YouTube Angemessen" class="medium-icon"></a>
+                <li><a href="not-found.html"><img src="http://localhost:3000/img/whatsapp-logo.png" alt="Whatsapp Angemessen" class="medium-icon"></a>
+                <li><a href="not-found.html"><img src="http://localhost:3000/img/facebook-logo.png" alt="Facebook Angemessen" class="medium-icon"></a>
             </ul>
         </div>
-        <ul class="topic-box" style="overflow: auto;">
+        <ul class="topic-box">
             <!-- TODO: Implementar links para páginas de ajuda -->
-            <li><a href="not-found.html" class="footer">Enfrentando algum problema?</a></li>
-            <li><a href="not-found.html" class="footer">Possui uma sugestão?</a></li>
-            <li><a href="not-found.html" class="footer">Encontrou um bug?</a></li>
-            <li><a href="not-found.html" class="footer">Teve alguma dúvida?</a></li>
-            <li><a href="not-found.html" class="footer">Deseja acessar o SAC?</a></li>
+            <li><a href="http://localhost:3000/not-found.html" class="footer">Enfrentando algum problema?</a></li>
+            <li><a href="http://localhost:3000/not-found.html" class="footer">Possui uma sugestão?</a></li>
+            <li><a href="http://localhost:3000/not-found.html" class="footer">Encontrou um bug?</a></li>
+            <li><a href="http://localhost:3000/not-found.html" class="footer">Teve alguma dúvida?</a></li>
+            <li><a href="http://localhost:3000/not-found.html" class="footer">Deseja acessar o SAC?</a></li>
         </ul>
     </footer>
     <div id="fog">

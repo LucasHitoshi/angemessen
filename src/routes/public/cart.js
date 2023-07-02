@@ -28,7 +28,7 @@ cartRouter.get("/add-to-cart/:id", async (req, res) => {
             req.session.cart = result.cart;
         }
 
-        res.send(req.session.cart);
+        res.redirect("/carrinho");
     } catch (err) {
         console.log(`ERRO: ${err}`);
     }
@@ -72,7 +72,8 @@ cartRouter.get("/cart/balls", async (req, res) => {
 
 cartRouter.get("/validate-cep", async (req, res) => {
     try {
-        const cep = req.query.cep;
+        var cep = req.query.cep;
+        while (/[\s|-]/.test(cep)) cep = cep.replace(/(\s|-)/, "");
         console.log(cep);
         const apiFetchURL = `http://viacep.com.br/ws/${cep}/json/`;
         const fetchOptions = { method: "GET" };
@@ -80,8 +81,15 @@ cartRouter.get("/validate-cep", async (req, res) => {
         const cepIsValid = fetchResult.statusText === "OK";
         const textResult = await fetchResult.text();
 
-        if (cepIsValid) var parsedCepInfo = JSON.parse(textResult);
-        else var parsedCepInfo = { };
+        if (cepIsValid) {
+            var parsedCepInfo = JSON.parse(textResult);
+            if (req.session.email)
+                await userModel.findOneAndUpdate
+                    ( { email: req.session.email },
+                      { endereco: { cep: cep } } );
+        } else {
+            var parsedCepInfo = { };
+        }
 
         const result = { isValid: cepIsValid, cepInfo: parsedCepInfo };
 

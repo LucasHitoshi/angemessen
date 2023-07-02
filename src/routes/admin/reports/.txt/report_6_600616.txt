@@ -1,0 +1,7 @@
+registeredUsersQtty: 10
+ballsQtty: 105
+totalBallsValue: 10775
+averageBallPrice: 102.61904761904762
+usersQtty: 6
+totalItemsOnCart: 44
+averageCartSize: 7.333333333333333

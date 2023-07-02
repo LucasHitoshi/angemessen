@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Log-In</title>
+    <link rel="icon" type="image/x-icon" href="img/favicon.png">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/pagina-inicial.css">
+    <link rel="stylesheet" href="./css/side-bar.css">
+    <script src="./js/side-bar.js" defer></script>
+    <style>
+        @keyframes changeBackgroundColor {
+            0%{
+                background-color: #ffd900;
+            }
+            100% {
+                background-color: #e29d07;
+            }
+        }
+
+        .box-log {
+            align-items: center;
+            display: flex;
+        }
+
+        .login-container {
+            width: fit-content;
+            margin: 10rem auto;
+            background-color: #f5f5f5;
+            padding: 40px;
+            border-radius: 2rem;
+            box-shadow: 1px 1px 10px 3px #555;
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form {
+            display: flex;
+            flex-direction: column;
+            padding: 5px;
+            max-width: 63rem;
+            font-family: DMSans;
+        }
+
+        .form-logo {
+            color: #202020;
+            margin: 0 0 2rem 0;
+        }
+        
+        .termos-criar-conta {
+            font-size: 1.5rem;
+            margin: 0 0 2rem 0;
+        }
+        
+        .termos-criar-conta > a {
+            font-size: inherit;
+            color: rgb(50, 125, 246);
+        }
+        
+        .text {
+            transition: all 0.1s linear;
+            position: absolute;
+            z-index: 10;
+            top: 0.25rem;
+            font-size: 2.5rem;
+            padding: 0 0.25rem;
+            background-color: #f5f5f5;
+        }
+
+        label[for="credit-card-validade"] > .text,
+        label[for="credit-card-data-nascimento"] > .text {
+            top: -1.5rem;
+            font-size: 2rem;
+        }
+
+        .box-login-wrapper:hover > label > .text {
+            top: -1.5rem;
+            font-size: 2rem;
+        }
+
+        /* aqui */
+        .fields-wrapper {
+            display: grid;
+            /* flex-direction: column; */
+            grid-template-columns: 30rem 30rem;
+            grid-template-rows: repeat(3, 1fr);
+            gap: 1.4rem;
+            margin: 0 0 2rem 0;
+        }
+
+        .big-field {
+            grid-column-start: 1;
+            grid-column-end: 3;
+        }
+
+        .box-login-wrapper {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            background-color: #f5f5f5;
+            padding: 1rem;
+            border: #AAA solid 1px;
+            border-radius: 1rem;
+            height: 5rem;
+        }
+
+        .box-login {
+            position: absolute;
+            z-index: 20;
+            top: 1.5rem;
+            font-size: 1.75rem;
+            width: calc(100% - 2rem);
+            height: 2.5rem;
+            outline: none;
+            background-color: #00000000;
+            padding: 0 0 0.5rem 0.15rem;
+            border: none;
+            border-bottom: #AAA solid 1px;
+            font-family: DMSans;
+        }
+
+        .button-criar-conta {
+            transition: all 0.15s ease-out;
+            text-transform: uppercase;
+            font-size: 2rem;
+            font-size: DMSans;
+            height: 4rem;
+            background-color: #ffd900;
+            cursor: pointer;
+            border: none;
+            border-radius: 1rem;
+        }
+
+        .button-criar-conta:hover {
+            color: #f5f5f5;
+            background-color: #e29d07;
+            /* animation: changeBackgroundColor; */
+            animation-duration: 0.15s;
+        }
+
+        .signup-requirements {
+            margin: 1rem 0;
+        }
+
+        .signup-requirements > li {
+            line-height: 2rem;
+            font-size: 1.75rem;
+            list-style: circle;
+            margin: 0 0 0 3rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <section class="flex-container dominant centered">
+            <div class="flex-container centered gapped">
+                <input type="checkbox" id="menu-hamburguer" name="menu-hamburguer">
+                <label for="menu-hamburguer">
+                    <svg viewbox="0 0 20 18" xmlns="http://www.w3.org/2000/svg" class="centered svg-hamburguer">
+                        <path d="M0 0 L20 0 L20 2 L0 2 M0 8 L20 8 L20 10 L0 10 M0 16 L20 16 L20 18 L0 18 Z" fill="#ffd900" />
+                    </svg>
+                </label>
+                <a href="/homepage">
+                    <p class="logo">
+                        Angemessen
+                    </p>
+                </a>
+            </div>
+            <div class="flex-container pos-left centered nav-bar gapped">
+                <!-- TODO: Adicionar conexão (action) com o backend -->
+                <form action="http://localhost:3000/search" class="search-bar b-spaced" method="GET">
+                    <label for="search">
+                        <div class="flex-container bar centered">
+                            <input type="text" id="search"  name="q" placeholder="Pesquisar...">
+                            <input type="submit" id="submit-search-button">
+                            <label for="submit-search-button">
+                                <img src="http://localhost:3000/assets/yellow-search-icon.png" alt="Pesquisa" class="search-icon" />
+                            </label>
+                        </div>
+                    </label>
+                </form>
+                <div class="flex-container icon-box gapped">
+                    <!-- TODO: Trocar a imagem do carrinho, colocar algo mais simples mais clean :) -->
+                    <div class="s-spaced">
+                        <a href="/carrinho">
+                            <img src="http://localhost:3000/assets/yellow-cart-icon.png" alt="Pesquisa" class="medium-icon" />
+                        </a>
+                    </div>
+                    <div class="s-spaced centered">
+                        <a href="/login">
+                            <img src="http://localhost:3000/assets/yellow-user-icon.png" alt="Usuário" class="medium-icon">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </header>
+    
+    <label id="thick-fog" for="menu-hamburguer"></label>
+    <nav id="side-bar">
+        <div class="top-section-nav-bar">
+            <span class="side-bar-title">Menu</span>
+            <label for="menu-hamburguer">
+                <img src="./assets/yellow-direction-icon.png" alt="Fechar menu lateral" class="close-menu-icon">
+            </label>
+        </div>
+        <ul class="intra-nav-menu">
+            <li>
+                <a href="http://localhost:3000/crie">
+                    Crie <span class="thin-text">sua Bola</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:3000/produtos">
+                    Produtos
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:3000/promos">
+                    Promoções
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:3000/colecoes">
+                    Coleções
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:3000/about-us">
+                    Sobre <span class="thin-text">nós</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:3000/perfil">
+                    Perfil <span class="thin-text"> e ajustes</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    
+    <div class="login-container">
+        <div class="login-header">
+            <a href="index.html">
+                <p class="logo form-logo">
+                    Angemessen
+                </p>
+            </a>
+            <br>
+        </div>
+        <div>
+            <!-- 
+            const body_do_POST_do_cadastro = {
+                nome,
+                sobrenome,
+                validade,
+                cvv,
+                cpf,
+                dataNascimento
+            }
+             -->
+            <form action="/sign" method="POST" class="form" id="credit-card-form"><br>
+                <div class="fields-wrapper">
+                    <div class="box-login-wrapper big-field">
+                        <label for="credit-card-nome"><p class="text">Nome impresso:</p></label>
+                        <input type="text" id="credit-card-nome" name="nome" required class="box-login">
+                    </div>
+                    <div class="box-login-wrapper big-field">
+                        <label for="credit-card-cpf"><p class="text">CPF do titular:</p></label>
+                        <input type="text" id="credit-card-cpf" name="cpf" required class="box-login">
+                    </div>
+                    <div class="box-login-wrapper">
+                        <label for="credit-card-sobrenome"><p class="text">Número impresso:</p></label>
+                        <input type="text" id="credit-card-sobrenome" name="sobrenome" required class="box-login">
+                    </div>
+                    <div class="box-login-wrapper">
+                        <label for="credit-card-cvv"><p class="text">CVV:</p></label>
+                        <input type="text" id="credit-card-cvv" name="cvv" required class="box-login">
+                    </div>
+                    <div class="box-login-wrapper">
+                        <label for="credit-card-validade"><p class="text">Validade:</p></label>
+                        <input type="date" id="credit-card-validade" name="validade" required class="box-login">
+                    </div>
+                    <div class="box-login-wrapper">
+                        <label for="credit-card-data-nascimento"><p class="text">Data Nascimento:</p></label>
+                        <input type="date" id="credit-card-data-nascimento" name="dataNascimento" required class="box-login">
+                    </div>
+                </div>
+
+                <div class="termos-criar-conta">
+                    Ao ajustar o pagamento, você concorda com as 
+                    <a href="http://localhost:3000/sobre-nos">Condições de Uso da agemessen</a>
+                    . 
+                    Por favor verifique a 
+                    <a href="http://localhost:3000/sobre-nos">Notificação de Privacidade</a>
+                    e a 
+                    <a href="http://localhost:3000/sobre-nos">Notificação de Cookies</a>.
+                </div>
+                
+                <input type="submit" value="Cadastrar cartão" class="button-criar-conta"> 
+            </form>
+
+            <form action="/sign" method="POST" class="form" id="credit-card-form" style="display: none;"><br>
+                <!-- <div class="fields-wrapper">
+                    <div class="box-login-wrapper">
+                        <label for="nome"><p class="text">Nome do cartão:</p></label>
+                        <input type="text" id="nome" name="nome" required class="box-login">
+                    </div>
+                    <div class="box-login-wrapper">
+                        <label for="sobrenome"><p class="text">Número do cartão:</p></label>
+                        <input type="text" id="sobrenome" name="sobrenome" required class="box-login">
+                    </div>
+                </div> -->
+
+                <div class="termos-criar-conta">
+                    Ao ajustar o pagamento, você concorda com as 
+                    <a href="">Condições de Uso da agemessen</a>
+                    . 
+                    Por favor verifique a 
+                    <a href="">Notificação de Privacidade</a>
+                    e a 
+                    <a href="">Notificação de Cookies</a>.
+                </div>
+
+                <input type="submit" value="Criar conta" class="button-criar-conta"> 
+            </form>
+        </div>
+    </div>
+
+    <footer class="footer-container flex-container recessive fixed-on-bottom">
+        <div class="topic-box" style="overflow: auto;">
+            <ul>
+                <!-- TODO: Implementar links para redes sociais -->
+                <li><a href="not-found.html"><img src="img/instagram-logo.png" alt="Instagram Angemessen" class="medium-icon"></a>
+                <li><a href="not-found.html"><img src="img/twitter-logo.png" alt="Twitter Angemessen" class="medium-icon"></a>
+                <li><a href="not-found.html"><img src="img/youtube-logo.png" alt="YouTube Angemessen" class="medium-icon"></a>
+                <li><a href="not-found.html"><img src="img/whatsapp-logo.png" alt="Whatsapp Angemessen" class="medium-icon"></a>
+                <li><a href="not-found.html"><img src="img/facebook-logo.png" alt="Facebook Angemessen" class="medium-icon"></a>
+            </ul>
+        </div>
+        <ul class="topic-box" style="overflow: auto;">
+            <!-- TODO: Implementar links para páginas de ajuda -->
+            <li><a href="not-found.html" class="footer">Enfrentando algum problema?</a></li>
+            <li><a href="not-found.html" class="footer">Possui uma sugestão?</a></li>
+            <li><a href="not-found.html" class="footer">Encontrou um bug?</a></li>
+            <li><a href="not-found.html" class="footer">Teve alguma dúvida?</a></li>
+            <li><a href="not-found.html" class="footer">Deseja acessar o SAC?</a></li>
+        </ul>
+    </footer>
+</body>
+</html>
+
+<script>
+    const formFieldWrapper = document.querySelectorAll(".box-login-wrapper");
+    console.log(formFieldWrapper);
+    for (const fieldWrapper of formFieldWrapper) {
+        console.log("mano");
+        const field = fieldWrapper.querySelector(".box-login");
+        const title = fieldWrapper.querySelector(".text");
+
+        // Se o usuário já ter escrito algo o título do campo fica preso no topo
+        field.addEventListener("input", () => {
+            if (field.value !== "") {
+                title.style.fontSize = "2rem";
+                title.style.top = "-1.5rem";
+
+                // font-size: 2rem;
+                // top: -1.5rem;
+            } else {
+                title.style.fontSize = "2.5rem";
+                title.style.top = "0.25rem";
+
+                // top: 0.25rem;
+                // font-size: 2.5rem;
+            }
+        })
+    }
+</script>
