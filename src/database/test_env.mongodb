@@ -5,6 +5,7 @@ use('TESTE');
 // db.drop('ballmodels');
 // db.drop('ballModels');
 
+
 /*
 db.createCollection("pedido", {
     validator:{
@@ -108,15 +109,14 @@ db.createCollection("pedido", {
 })
 */
 
-db.getCollection("ticketmodels").insertOne(
-    {
-        "code": "MANO5",
-        "promo": {
-            "type": "percent",
-            "value": 5
-        }
-    }
-)
+// db.getCollection("ballmodels").updateMany(
+//     { material: "cerâmica" },
+//     { $set: { material: "ceramica" } }
+// )
+// db.getCollection("ballmodels").updateMany(
+//     { material: "plástico" },
+//     { $set: { material: "plastico" } }
+// )
 
 /*
 db.getCollection('ballmodels').insertMany(

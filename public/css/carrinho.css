@@ -317,7 +317,7 @@
 }
 
 .add-to-order:hover {
-    background-color: #626262;
+    background-color: #444;
     color: #f5f5f5;
 }
 
@@ -326,7 +326,7 @@
 }
 
 .remove-from-cart:hover {
-    background-color: #626262;
+    background-color: #444;
     color: #f5f5f5;
 }
 
@@ -544,23 +544,23 @@
 }
 
 /* .selected-order-options-wrapper > span { */
-    /* background-color: red; */
-    /* } */
-    
-    .selected-pay-method-title,
-    .selected-cep-title {
-        font-size: 2rem;
-        color: #ffd900;
-    }
-    
-    .not-selected {
-        color: #e78b8b !important;
-    }
-    
-    #selected-pay-method,
-    #selected-cep {
-        text-align: right;
-        font-size: 2rem;
+/* background-color: red; */
+/* } */
+
+.selected-pay-method-title,
+.selected-cep-title {
+    font-size: 2rem;
+    color: #ffd900;
+}
+
+.not-selected {
+    color: #e78b8b !important;
+}
+
+#selected-pay-method,
+#selected-cep {
+    text-align: right;
+    font-size: 2rem;
     color: #f5f5f5;
 }
 
@@ -778,7 +778,6 @@
 }
 
 .cep-validation-tip {
-    /* display: none; */
     color: #f5f5f5;
     font-size: 2rem;
     margin: 0 0 1.5rem 0;
@@ -894,4 +893,150 @@
 #complete-order-button:hover {
     text-shadow: 0px 1px 11px #7fdb7f;
     background-color: #18a80877;
+}
+
+/* Payment validation CSS */
+#payment-validation-form-fog {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 50;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #202020a7;
+}
+
+#payment-validator-form-wrapper {
+    width: 43.5rem;
+    padding: 2rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#payment-validator-form {
+    width: inherit;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    background-color: #444;
+    border: #555 solid 1px;
+    border-radius: 2rem;
+    padding: 2rem;
+}
+
+.payment-validator-form-title {
+    font-size: 5rem;
+    font-family: Naville;
+    color: #ffd900;
+    padding: 0.5rem 0 1.25rem;
+    margin: 0 0 1rem 0;
+    border-bottom: #555 solid 1px;
+}
+
+#cep {
+    background-color: #00000000;
+    border: #ddd solid 1px;
+    border-radius: 1rem;
+    padding: 1rem;
+    font-size: 2rem;
+    color: #f5f5f5;
+}
+
+#cep::placeholder {
+    font-size: 1.75rem;
+    color: #777;
+}
+
+.payment-validator-form-buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+#submit-cep {
+    cursor: pointer;
+    width: fit-content;
+    background-color: #ffd900;
+    border: none;
+    border-radius: 1rem;
+    font-size: 2rem;
+    text-transform: uppercase;
+    color: #202020;
+    padding: 1rem 1.25rem;
+    margin: 0 0 0.75rem 0;
+}
+
+#submit-payment {
+    cursor: pointer;
+    width: fit-content;
+    background-color: #ffd900;
+    border: none;
+    border-radius: 1rem;
+    font-size: 2rem;
+    text-transform: uppercase;
+    color: #202020;
+    padding: 1rem 1.25rem;
+    margin: 0 0 0.75rem 0;
+}
+
+#exit-payment-validation-form {
+    cursor: pointer;
+    width: 7rem;
+    background-color: #ffd900;
+    border: none;
+    border-radius: 1rem;
+    font-size: 2rem;
+    text-transform: uppercase;
+    color: #202020;
+    padding: 1rem 1.25rem;
+    margin: 0 0 0.75rem 0;
+}
+
+.payment-options-wrapper {
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin: 0 auto 1.75rem;
+}
+
+.payment-option-box {
+    transition: all 0.15s ease-out;
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 0.5rem 1rem;
+    border: #555 solid 1px;
+    border-radius: 1rem;
+}
+
+.payment-option-box:hover {
+    box-shadow: 0px 0px 5px 2px #555;
+}
+
+.payment-option-icon {
+    width: 4rem;
+    aspect-ratio: 1 / 1;
+}
+
+.payment-option-name {
+    display: flex;
+    align-items: center;
+    width: 7rem;
+    text-align: left;
+    font-size: 2.25rem;
+    color: #f5f5f5;
+}
+
+.payment-option {
+    display: none;
+}
+
+.payment-option[type="radio"]:checked + .payment-option-box {
+    border: #595959 solid 1px;
+    background-color: #555;
 }

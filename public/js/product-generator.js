@@ -50,6 +50,12 @@ const loadMoreProducts = (/* numberOfProducts */) => {
                 newProduct.querySelector(".price").innerHTML = `${Math.floor(product.price.value.int*0.6)},${product.price.value.cent}`;
                 newProduct.querySelector(".money-sign").innerHTML = product.price.sign;
                 newProduct.querySelector(".to-product-page").href = `./produtos/${product._id}/desc`;
+                newProduct.querySelector(".ver-sport-icon").src = `http://localhost:3000/assets/icons/${product.sport}-icon.png`;
+                newProduct.querySelector(".ver-material-icon").src = `http://localhost:3000/assets/icons/${product.material}-icon.png`;
+                newProduct.querySelector(".ver-brand-icon").src = `http://localhost:3000/assets/icons/${product.brand}-icon.png`;
+                newProduct.querySelector(".hor-sport-icon").src = `http://localhost:3000/assets/icons/${product.sport}-icon.png`;
+                newProduct.querySelector(".hor-material-icon").src = `http://localhost:3000/assets/icons/${product.material}-icon.png`;
+                newProduct.querySelector(".hor-brand-icon").src = `http://localhost:3000/assets/icons/${product.brand}-icon.png`;
                 newProduct.querySelector(".operation-button-wrapper > a.buy-now").href = `http://localhost:3000/buy-now/${product._id}`;
                 newProduct.querySelector(".operation-button-wrapper > a.to-cart").href = `http://localhost:3000/add-to-cart/${product._id}`;
                 

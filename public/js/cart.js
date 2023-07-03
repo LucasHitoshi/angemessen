@@ -1,16 +1,24 @@
 const cartItemsWrapper = document.querySelector(".items-carrinho");
 const cepValidationFormFog = document.querySelector("#cep-validation-form-fog");
+const paymentValidationFormFog = document.querySelector("#payment-validation-form-fog");
 const closeCepValidationFormFog = document.querySelector("#exit-cep-validation-form");
+const closePaymentValidationFormFog = document.querySelector("#exit-payment-validation-form");
 const templateCartItem = document.querySelector("#item-cart-template");
 const cepValidatorForm = document.querySelector("#cep-validator-form");
+const paymentValidatorForm = document.querySelector("#payment-validator-form");
+const cardPaymentOption = document.querySelector("#card");
+const pixPaymentOption = document.querySelector("#pix");
+const ticketPaymentOption = document.querySelector("#ticket");
 const cepValidationTip = document.querySelector("#cep-validation-tip");
 const sepValidationSuccess = document.querySelector("#cep-sucess-validation-result-box");
 const sepValidationError= document.querySelector("#cep-error-validation-result-box");
 const cepCityAndDistrict = document.querySelector("#cep-city-n-district");
 const cepNeighborhood = document.querySelector("#cep-neighborhood");
 const selectLocationButton = document.querySelector("#select-loc-button");
+const selectPayMethod = document.querySelector("#set-payment-button");
 const selectedPayMethod = document.querySelector("#selected-pay-method");
 const selectedCEP = document.querySelector("#selected-cep");
+const inputCEP = document.querySelector("#cep");
 const API_URI_cartItems = "http://localhost:3000/cart/balls";
 const API_URI_userInfo = "http://localhost:3000/api/user/session";
 
@@ -19,8 +27,17 @@ selectLocationButton.addEventListener("click", () => {
     cepValidationFormFog.style.display = "flex";
 });
 
+selectPayMethod.addEventListener("click", () => {
+    paymentValidationFormFog.style.display = "flex";
+});
+
 closeCepValidationFormFog.addEventListener("click", () => {
     cepValidationFormFog.style.display = "none";
+    inputCEP.value = "";
+});
+
+closePaymentValidationFormFog.addEventListener("click", () => {
+    paymentValidationFormFog.style.display = "none";
 });
 
 cepValidatorForm.addEventListener("submit", async (e) => {
@@ -56,8 +73,6 @@ cepValidatorForm.addEventListener("submit", async (e) => {
 
     console.log(validationResult);
 });
-
-
 
 const products = fetch(API_URI_cartItems)
     .then(response => response.json())
@@ -117,7 +132,21 @@ const userInfo = fetch(API_URI_userInfo)
     .then(response => {
         selectedPayMethod.innerHTML = response.order.payMethod
             ? ( () => {
-                const data = response.order.payMethod;
+                var data = response.order.payMethod;
+                switch (data) {
+                    case "card":
+                        data = "Crédito";
+                        break;
+                    case "pix":
+                        data = "PIX";
+                        break;
+                    case "ticket":
+                        data = "Boleto";
+                        break;
+                    default:
+                        data = "Não informado"
+                        break;
+                }
                 selectedPayMethod.classList.remove("not-selected");
                 return data;
             } )()
@@ -130,3 +159,11 @@ const userInfo = fetch(API_URI_userInfo)
             } )()
             : "Não informado";
     });
+
+inputCEP.addEventListener("input", (e) => {
+    const cep = e.target.value;
+    var cleanCep = cep
+        .replace(/[^0-9]/, "")
+        .slice(0, 8);
+    e.target.value = cleanCep;
+})

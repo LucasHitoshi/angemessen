@@ -10,7 +10,149 @@
     <link rel="stylesheet" href="css/pagina-inicial.css">
     <link rel="stylesheet" href="css/login.css">
     <link rel="stylesheet" href="./css/side-bar.css">
-    <script src="./js/side-bar.js" defer></script>
+    <script src="http://localhost:3000/js/side-bar.js" defer></script>
+    <script src="http://localhost:3000/js/login.js" defer></script>
+    <style>
+        .box-log {
+            align-items: center;
+            display: flex;
+        }
+
+        .login-container {
+            width: fit-content;
+            margin: 10rem auto;
+            background-color: #f5f5f5;
+            padding: 40px;
+            border-radius: 2rem;
+            box-shadow: 1px 1px 10px 3px #555;
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .login-container > .form-wrapper {
+            width: fit-content;
+        }
+
+        .login-container > .form-wrapper > .nsei {
+            width: 62rem;
+        }
+
+        .form {
+            display: flex;
+            flex-direction: column;
+            padding: 5px;
+            max-width: 63rem;
+            font-family: DMSans;
+        }
+
+        .form-logo {
+            color: #202020;
+            margin: 0 0 2rem 0;
+        }
+        
+        .termos-criar-conta {
+            font-size: 1.5rem;
+            margin: 0 0 2rem 0;
+        }
+        
+        .termos-criar-conta > a {
+            font-size: inherit;
+            color: rgb(50, 125, 246);
+        }
+        
+        .text {
+            transition: all 0.1s linear;
+            position: absolute;
+            z-index: 10;
+            top: 0.25rem;
+            font-size: 2.5rem;
+            padding: 0 0.25rem;
+            background-color: #f5f5f5;
+        }
+
+        label[for="credit-card-validade"] > .text,
+        label[for="credit-card-data-nascimento"] > .text {
+            top: -1.5rem;
+            font-size: 2rem;
+        }
+
+        .box-login-wrapper:hover > label > .text {
+            top: -1.5rem;
+            font-size: 2rem;
+        }
+
+        .fields-wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 1.4rem;
+            margin: 0 0 2rem 0;
+        }
+
+        .big-field {
+            grid-column-start: 1;
+            grid-column-end: 3;
+        }
+
+        .box-login-wrapper {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            background-color: #f5f5f5;
+            padding: 1rem;
+            border: #AAA solid 1px;
+            border-radius: 1rem;
+            height: 5rem;
+        }
+
+        .box-login {
+            position: absolute;
+            z-index: 20;
+            top: 1.5rem;
+            font-size: 1.75rem;
+            width: calc(100% - 2rem);
+            height: 2.5rem;
+            outline: none;
+            background-color: #00000000;
+            padding: 0 0 0.5rem 0.15rem;
+            border: none;
+            border-bottom: #AAA solid 1px;
+            font-family: DMSans;
+        }
+
+        .button-criar-conta {
+            transition: all 0.15s ease-out;
+            text-transform: uppercase;
+            font-size: 2rem;
+            width: 100%;
+            height: 4rem;
+            background-color: #ffd900;
+            cursor: pointer;
+            border: none;
+            border-radius: 1rem;
+        }
+
+        .button-criar-conta:hover {
+            color: #f5f5f5;
+            background-color: #e29d07;
+            animation-duration: 0.15s;
+        }
+
+        .signup-requirements {
+            margin: 1rem 0;
+        }
+
+        .signup-requirements > li {
+            line-height: 2rem;
+            font-size: 1.75rem;
+            list-style: circle;
+            margin: 0 0 0 3rem;
+        }
+
+        .nsei {
+            width: 42rem;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -88,13 +230,30 @@
                 </a>
             </li>
             <li>
-                <a href="http://localhost:3000/about-us">
+                <a href="http://localhost:3000/sobre-nos">
                     Sobre <span class="thin-text">nós</span>
                 </a>
             </li>
             <li>
                 <a href="http://localhost:3000/perfil">
                     Perfil <span class="thin-text"> e ajustes</span>
+                </a>
+            </li>
+        </ul>
+        <ul class="intra-nav-icons">
+            <li>
+                <a href="http://localhost:3000/homepage">
+                    <img src="./assets/like-icon.png" alt="Acessar produtos favoritos">
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:3000/homepage">
+                    <img src="./assets/yellow-cart-icon.png" alt="Acessar carrinho">
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:3000/homepage">
+                    <img src="./assets/blue-config-icon.png" alt="Acessar configurações e ajustes">
                 </a>
             </li>
         </ul>
@@ -112,17 +271,20 @@
         </div>
 
         <div>
-            <form action="send-login" method="POST" class="login-form"><br>
-                <label for="email"><p class="text">Email ou telefone:</p></label>
-                <input type="text" id="email" name="email" required class="box-login"><br>
-
-                <label for="password"><p class="text">Senha:</p></label>
-                <input type="password" id="password" name="password" required class="box-login"><br>
-
-                <!-- <label for=""></label> -->
+            <form action="send-login" method="POST" class="nsei"><br>
+                <div class="fields-wrapper">
+                    <div class="box-login-wrapper">
+                        <label for="email"><p class="text">Email ou telefone:</p></label>
+                        <input type="text" id="email" name="email" required class="box-login"><br>
+                    </div> 
+                    <div class="box-login-wrapper">
+                        <label for="password"><p class="text">Senha:</p></label>
+                        <input type="password" id="password" name="password" required class="box-login"><br>
+                    </div>
+                </div>
 
                 <div class="termos-criar-conta">
-                    Ao criar uma conta, você concorda com as 
+                    Ao usar nossos serviços, você concorda com as 
                     <a href="">Condições de Uso da agemessen</a>
                     . 
                     Por favor verifique a 
@@ -133,12 +295,11 @@
                     <a href="">Notificação de Anúncios Baseados em Interesse</a>
                     .<br>
                 </div>
-
                 <input type="submit" value="Entrar" class="button-criar-conta"><br>
-
             </form>
-            <button class="button-criar-conta2"><a href="http://localhost:3000/cadastro-conta.html" class="button-criar-conta-a">Criar uma conta</a></button>
-
+            <a href="http://localhost:3000/cadastro-conta.html" style="margin-top: 2rem 0 0 0;" class="button-criar-conta-a">
+                <button class="button-criar-conta2 nsei">Criar uma conta</button>
+            </a>
         </div>
     </div>
 
@@ -164,3 +325,30 @@
     </footer>
 </body>
 </html>
+
+<script>
+    const formFieldWrapper = document.querySelectorAll(".box-login-wrapper");
+    console.log(formFieldWrapper);
+    for (const fieldWrapper of formFieldWrapper) {
+        console.log("mano");
+        const field = fieldWrapper.querySelector(".box-login");
+        const title = fieldWrapper.querySelector(".text");
+
+        // Se o usuário já ter escrito algo o título do campo fica preso no topo
+        field.addEventListener("input", () => {
+            if (field.value !== "") {
+                title.style.fontSize = "2rem";
+                title.style.top = "-1.5rem";
+
+                // font-size: 2rem;
+                // top: -1.5rem;
+            } else {
+                title.style.fontSize = "2.5rem";
+                title.style.top = "0.25rem";
+
+                // top: 0.25rem;
+                // font-size: 2.5rem;
+            }
+        })
+    }
+</script>

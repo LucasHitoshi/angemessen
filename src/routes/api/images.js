@@ -6,7 +6,7 @@ imagesApiRouter.get("/api/images", (req, res) => {
     try {
         // TODO: Trocar o 'req.param' por algo bom de vdd
         const ball = req.query.ball_type;
-        console.log(ball);
+        // console.log(ball);
         const balls = {
             "basquete": "basketball.png",
             "bocha": "bocha.png",
@@ -28,7 +28,6 @@ imagesApiRouter.get("/api/images", (req, res) => {
             res.status(400);
             res.send({ "err": "400: Ball not found (Bad ball name)" });
         }
-        
     } catch (err) {
         console.log(`ERRO: ${err}`);
     }

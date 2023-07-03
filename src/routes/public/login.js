@@ -7,13 +7,10 @@ const loginRouter = express.Router();
 loginRouter.get("/login", (req, res) => {
     try {
         if (req.session.email) {
-            res.redirect("http://localhost:3000/perfil");
-            return;
+            res.redirect("/perfil");
+        } else {
+            res.sendFile(path.join(__dirname, "../../..", "/public/login.html"));
         }
-
-        // console.log(`ROTA ACESSADA: '${req.route.path}'.`);
-        // console.log(`Ver se o cara tá logado> ${req.session.email}`);
-        res.sendFile(path.join(__dirname, "../../..", "/public/login.html"));
     } catch (err) {
         console.log(`ERRO: ${err}`);
     }
@@ -22,29 +19,35 @@ loginRouter.get("/login", (req, res) => {
 loginRouter.post("/send-login", async (req, res) => {
     try {
         if (req.session.email) {
-            res.send("Tu já tá logadu doido");
+            res.redirect("/perfil");
+            return;
+        }
+
+        const result = await userModel.findOne({ email: req.body.email });
+        
+        if (!result) {
+            res.redirect("/login?err=true");
             return;
         }
 
         const hashedPassword = hashPassword(req.body.password);
-
-        // console.log(req.body.email);
-
-        const result = await userModel.findOne({ email: req.body.email });
-
-        if (!result) {
-            res.send("Kkkkkk login errado troxa");
-            return;
-        }
         
-        // console.log(result.senha, "\n", hashedPassword);
         if (result.senha === hashedPassword) {
             req.session.email = req.body.email;
-            // console.log(req.session.email);
-            res.send("Parabains vc logou");
+            req.session.type = "user";
+            res.redirect("/login/success");
         } else {
-            res.send("Errou o login KKKKK nub");
+            res.redirect("/login?err=true");
         }
+    } catch (err) {
+        console.log(`ERRO: ${err}`);
+    }
+});
+
+loginRouter.get("/login/success", async (req, res) => {
+    try {
+        if (req.session.email) res.sendFile(path.join(__dirname, "../../..", "/public/redirect-login.html"));
+        else res.redirect("/login");
     } catch (err) {
         console.log(`ERRO: ${err}`);
     }
@@ -53,7 +56,7 @@ loginRouter.post("/send-login", async (req, res) => {
 loginRouter.get("/logout", async (req, res) => {
     try {
         if (req.session.email) req.session.destroy();
-        res.redirect("/homepage");
+        res.redirect("/homepage?logout=true");
     } catch (err) {
         console.log(`ERRO: ${err}`);
     }

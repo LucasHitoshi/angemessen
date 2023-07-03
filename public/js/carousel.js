@@ -12,8 +12,8 @@ carouselLeftButton.addEventListener("click", () => {
     // if (carouselCount < 0) return;
     carouselCount--;
     console.log(carouselCount);
-    if(carouselCount<0) {
-        carouselCount=carouselImages.length - 1;
+    if(carouselCount<0) { // Verifica se voltou mais posições do que o carrrossel possuí
+        carouselCount=carouselImages.length - 1; // Avança para a última imagem
     }
 });
 
@@ -21,8 +21,8 @@ carouselRightButton.addEventListener("click", () => {
     // if (carouselCount > carouselImages.length - 1) return;
     console.log(carouselCount);
     carouselCount++;
-    if(carouselCount==carouselImages.length) {
-        carouselCount=0;
+    if(carouselCount==carouselImages.length) { // Verifica se avançou mais posições do que o carrrossel possuí
+        carouselCount=0; // Volta para a primeira imagem
     }
 });
 

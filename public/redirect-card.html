@@ -4,14 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Produtos</title>
-    <link rel="icon" type="image/x-icon" href="img/favicon.png">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/pagina-inicial.css">
-    <link rel="stylesheet" href="css/profile.css">
-    <link rel="stylesheet" href="./css/side-bar.css">
-    <script src="./js/side-bar.js" defer></script>
-    <script src="http://localhost:3000/js/profile.js" defer></script>
+    <title>Página inicial</title>
+    <link rel="icon" type="image/x-icon" href="http://localhost:3000/img/favicon.png">
+    <link rel="stylesheet" href="http://localhost:3000/css/style.css">
+    <link rel="stylesheet" href="http://localhost:3000/css/pagina-inicial.css">
+    <link rel="stylesheet" href="http://localhost:3000/css/side-bar.css">
+    <link rel="stylesheet" href="http://localhost:3000/css/redirect-login.css">
+    <script src="http://localhost:3000/js/side-bar.js" defer></script>
 </head>
 <body>
     <header>
@@ -23,7 +22,7 @@
                         <path d="M0 0 L20 0 L20 2 L0 2 M0 8 L20 8 L20 10 L0 10 M0 16 L20 16 L20 18 L0 18 Z" fill="#ffd900" />
                     </svg>
                 </label>
-                <a href="/homepage">
+                <a href="http://localhost:3000/homepage">
                     <p class="logo">
                         Angemessen
                     </p>
@@ -45,18 +44,19 @@
                 <div class="flex-container icon-box gapped">
                     <!-- TODO: Trocar a imagem do carrinho, colocar algo mais simples mais clean :) -->
                     <div class="s-spaced">
-                        <a href="/carrinho">
+                        <a href="http://localhost:3000/carrinho">
                             <img src="http://localhost:3000/assets/yellow-cart-icon.png" alt="Pesquisa" class="medium-icon" />
                         </a>
                     </div>
                     <div class="s-spaced centered">
-                        <a href="/login">
+                        <a href="http://localhost:3000/login">
                             <img src="http://localhost:3000/assets/yellow-user-icon.png" alt="Usuário" class="medium-icon">
                         </a>
                     </div>
                 </div>
             </div>
         </section>
+        <span class="bottom"></span>
     </header>
     
     <label id="thick-fog" for="menu-hamburguer"></label>
@@ -118,54 +118,13 @@
         </ul>
     </nav>
     
-    <main class="main-profile-wrapper">
-        <figure class="user-photo">
-            <img src="http://localhost:3000/img/mano.png" alt="Test Placeholder">
-        </figure>
-        <div class="user-info-wrapper">
-            <span class="profile-area-title">Perfil do usuário</span>
-            <div class="basic-info-wrapper">
-                <span id="user-name">Mano</span>
-                <span class="user-class">Membro cadastrado</span>
-            </div>
-            <span id="user-email">el_mano_angemessiano@ggmail.com</span>
-            <div class="operation-wrapper">
-                <a href="http://localhost:3000/logout">
-                    <button id="log-out">
-                        <img src="http://localhost:3000/assets/red-power-off-icon.png" alt="Log-out">
-                        Log-out
-                    </button>
-                </a>
-                <button id="change-password">
-                    Mudar senha
-                </button>
-            </div>
-            <div class="redirection-wrapper">
-                <a href="http://localhost:3000/carrinho">
-                    <img src="./assets/carrinho-de-compras.png" alt="Ir para o carrinho">
-                </a>
-                <a href="http://localhost:3000/historico">
-                    <img src="./assets/like-icon.png" alt="Ir para a página de favoritos">
-                </a>
-                <a href="http://localhost:3000/favoritos">
-                    <img src="./assets/yellow-history-icon.png" alt="Ir para a página de histórico de compras">
-                </a>
-            </div>
-            <span class="profile-area-title">Dados pessoais</span>
-            <table class="personal-data">
-                <tr>
-                    <td class="category-title"><span class="user-cpf">CPF:</span></td>
-                    <td><span id="user-cpf">135.115.300-07</span></td>
-                </tr>
-                <tr>
-                    <td class="category-title"><span class="user-card-name">Nome do cartão:</span></td>
-                    <td><span id="user-card-name">El Manolo</span></td>
-                </tr>
-                <tr>
-                    <td class="category-title"><span class="user-card-number">Número do cartão:</span></td>
-                    <td><span id="user-card-number">5450-9080-8467-8247</span></td>
-                </tr>
-            </table>
+    <main class="main-redirect-login-wrapper">
+        <img src="http://localhost:3000/img/bola-erro-404.png" alt="A bola nomeada como mano" class="the-mano-ball">
+        <div class="login-success-msg-box">
+            <span class="login-success-msg-title">Pagamento confirmado, logo lhe enviaremos um email quando enviarmos seu pedido.</span>
+            <a href="http://localhost:3000/homepage" class="login-success-msg">
+                Volte ao campo
+            </a>
         </div>
     </main>
 
@@ -173,20 +132,20 @@
         <div class="topic-box" style="overflow: auto;">
             <ul>
                 <!-- TODO: Implementar links para redes sociais -->
-                <li><a href="not-found.html"><img src="img/instagram-logo.png" alt="Instagram Angemessen" class="medium-icon"></a>
-                <li><a href="not-found.html"><img src="img/twitter-logo.png" alt="Twitter Angemessen" class="medium-icon"></a>
-                <li><a href="not-found.html"><img src="img/youtube-logo.png" alt="YouTube Angemessen" class="medium-icon"></a>
-                <li><a href="not-found.html"><img src="img/whatsapp-logo.png" alt="Whatsapp Angemessen" class="medium-icon"></a>
-                <li><a href="not-found.html"><img src="img/facebook-logo.png" alt="Facebook Angemessen" class="medium-icon"></a>
+                <li><a href="http://localhost:3000/not-found.html"><img src="http://localhost:3000/img/instagram-logo.png" alt="Instagram Angemessen" class="medium-icon"></a>
+                <li><a href="http://localhost:3000/not-found.html"><img src="http://localhost:3000/img/twitter-logo.png" alt="Twitter Angemessen" class="medium-icon"></a>
+                <li><a href="http://localhost:3000/not-found.html"><img src="http://localhost:3000/img/youtube-logo.png" alt="YouTube Angemessen" class="medium-icon"></a>
+                <li><a href="http://localhost:3000/not-found.html"><img src="http://localhost:3000/img/whatsapp-logo.png" alt="Whatsapp Angemessen" class="medium-icon"></a>
+                <li><a href="http://localhost:3000/not-found.html"><img src="http://localhost:3000/img/facebook-logo.png" alt="Facebook Angemessen" class="medium-icon"></a>
             </ul>
         </div>
         <ul class="topic-box" style="overflow: auto;">
             <!-- TODO: Implementar links para páginas de ajuda -->
-            <li><a href="not-found.html" class="footer">Enfrentando algum problema?</a></li>
-            <li><a href="not-found.html" class="footer">Possui uma sugestão?</a></li>
-            <li><a href="not-found.html" class="footer">Encontrou um bug?</a></li>
-            <li><a href="not-found.html" class="footer">Teve alguma dúvida?</a></li>
-            <li><a href="not-found.html" class="footer">Deseja acessar o SAC?</a></li>
+            <li><a href="http://localhost:3000/not-found.html" class="footer">Enfrentando algum problema?</a></li>
+            <li><a href="http://localhost:3000/not-found.html" class="footer">Possui uma sugestão?</a></li>
+            <li><a href="http://localhost:3000/not-found.html" class="footer">Encontrou um bug?</a></li>
+            <li><a href="http://localhost:3000/not-found.html" class="footer">Teve alguma dúvida?</a></li>
+            <li><a href="http://localhost:3000/not-found.html" class="footer">Deseja acessar o SAC?</a></li>
         </ul>
     </footer>
 </body>

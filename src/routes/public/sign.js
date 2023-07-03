@@ -11,22 +11,20 @@ const { isValidObjectId } = require("mongoose");
 
 signRouter.post("/sign", async (req, res) => {
     try {
-        console.log(`ROTA ACESSADA: '${req.route.path}'.`);
-
         if (!validateEmail(req.body.email)) {
-            res.send("O email não é válido");
+            res.redirect("/cadastro-conta.html?err_email=true");
             return;
         }
-
+        
         const emailAlreadyUsed = await userModel.findOne({ "email": req.body.email });
-
+        
         if (emailAlreadyUsed !== null) {
-            res.send("O email escolhido não está disponível");
+            res.redirect("/cadastro-conta.html?err_email=true");
             return;
         }
-
+        
         if (!validatePassword(req.body.password, req.body.confirm_password)) {
-            res.send("As senhas não batem ou não são válidas");
+            res.redirect("/cadastro-conta.html?err_pw=true");
             return;
         }
         
@@ -54,13 +52,12 @@ signRouter.post("/sign", async (req, res) => {
     }
 });
 
-whAuthRouter.get("/wh-auth/:id/:authKey", async (req, res, next) => {
+whAuthRouter.get("/wh-auth/:id/:authKey", async (req, res) => {
     try {
         const _id = req.params.id;
         const authKey = req.params.authKey;
         
         if (!isValidObjectId(_id)) {
-            console.log(`só us erru man ${_id}, ${authKey} ; 1`);
             res.sendFile(path.join(__dirname, "../../..", "/public/not-found.html"));
             return;
         }
@@ -68,20 +65,16 @@ whAuthRouter.get("/wh-auth/:id/:authKey", async (req, res, next) => {
         const authResult = await authModel.findOne({ "_id": _id });
         
         if (authResult === undefined || authResult === null) {
-            console.log(`só us erru man ${_id}, ${authKey} ; 2 `);
             res.sendFile(path.join(__dirname, "../../..", "/public/not-found.html"));
             return;
         } else if (!(authResult.key === authKey)) {
-            console.log(`só us erru man ${_id}, ${authKey} ; 3`);
             res.sendFile(path.join(__dirname, "../../..", "/public/not-found.html"));
             return;
         }
 
-        const result = await userModel.create(authResult.user_info);
+        await userModel.create(authResult.user_info);
 
-        res.json(result);
-
-        // res.sendFile(path.join(__dirname, "../..", "/public/cadastro-conta.html"));
+        res.redirect("/homepage?sign=true");
     } catch (err) {
         console.log(`ERRO: ${err}`);
     }

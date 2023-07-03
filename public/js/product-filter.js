@@ -49,11 +49,9 @@ for (const sportProductInput of sportProductInputs) {
             if (productSportQuery === "all_sports") {
                 card.classList.remove("hide-product-type");
             } else if (productType === productSportQuery) {
-                // console.log("a" + productQuery)
                 card.classList.remove("hide-product-type");
             } else {
                 card.classList.add("hide-product-type");
-                // console.log("b" + productQuery)
             }
         }
     })

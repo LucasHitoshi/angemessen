@@ -91,7 +91,7 @@
                 </a>
             </li>
             <li>
-                <a href="http://localhost:3000/about-us">
+                <a href="http://localhost:3000/sobre-nos">
                     Sobre <span class="thin-text">nós</span>
                 </a>
             </li>
@@ -101,11 +101,29 @@
                 </a>
             </li>
         </ul>
+        <ul class="intra-nav-icons">
+            <li>
+                <a href="http://localhost:3000/homepage">
+                    <img src="./assets/like-icon.png" alt="Acessar produtos favoritos">
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:3000/homepage">
+                    <img src="./assets/yellow-cart-icon.png" alt="Acessar carrinho">
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:3000/homepage">
+                    <img src="./assets/blue-config-icon.png" alt="Acessar configurações e ajustes">
+                </a>
+            </li>
+        </ul>
     </nav>
-    
-    <div class="limbo"></div>
+
+    <!-- Encapsula toda uma etapa de crie -->
     <div class="create-level">
         <div>
+            <!-- Encapsula a barra de progresso -->
             <div class="create-progress">
                 <div class="progress-step" style="background-color: #ffd900;"><img src="./assets/type-ball-icon.svg" alt="" style="width: 9rem;"></div>
                 <div class="progress-step not-active"><img src="./assets/material.svg" alt="" style="width: 9rem;"></div>
@@ -115,15 +133,17 @@
             </div>
         </div>
         <div class="option-wrapper">
+            <!-- Grid de template padrão para cada etapa -->
             <div class="level-template">
+                <!-- Título da etapa -->
                 <div class="title-creation">
                     Esporte
                 </div>
-                <!-- <div class="escolha-criar"> -->
-            
+                <!-- Grid de como os produtos são apresentados -->
                 <div class="showcase-create">
+                    <!-- Encapsula um card de uma opção -->
                     <div>
-                        <input type="radio" id="soccerball" value="soccerball" name="sport" class="bola-escolha-input select-sport" onclick="clearRadio(this, 0)">
+                        <input type="radio" id="soccerball" value="futebol" name="sport" class="bola-escolha-input select-sport" onclick="clearRadio(this, 0)">
                         <label class="pai" for="soccerball">
                             <div class="absoluto">
                                 <div class="centered radio-bola">
@@ -142,8 +162,9 @@
                             </div>
                         </label>
                     </div>
+                    <!-- Encapsula um card de uma opção -->
                     <div>
-                        <input type="radio" id="basketball" value="basketball" name="sport" class="bola-escolha-input select-sport" onclick="clearRadio(this, 0)" >
+                        <input type="radio" id="basketball" value="basquete" name="sport" class="bola-escolha-input select-sport" onclick="clearRadio(this, 0)" >
                         <label class="pai" for="basketball">
                             <div class="absoluto">
                                 <div class="centered radio-bola">
@@ -162,8 +183,9 @@
                             </div>
                         </label>
                     </div>
+                    <!-- Encapsula um card de uma opção -->
                     <div>
-                        <input type="radio" id="volleyball" value="volleyball" name="sport" class="bola-escolha-input select-sport" onclick="clearRadio(this, 0)" >
+                        <input type="radio" id="volleyball" value="volei" name="sport" class="bola-escolha-input select-sport" onclick="clearRadio(this, 0)" >
                         <label class="pai" for="volleyball">
                             <div class="absoluto">
                                 <div class="centered radio-bola">
@@ -184,15 +206,18 @@
                     </div>
                 </div>
             
-                <div class="avancar">
-                    <div class="button-avancar">
+                <div class="side-bar-template">
+                    <div class="next-button">
                         <img src="./assets/seta-avancar.svg" class="next-simbol">
                         AVANÇAR
                     </div>
                     <div class="lateral-criar">
-                        <div id="nome-bola">
-                            nome bola
-                            <div id="imagem-bola">imagem Bola</div>
+                        <div class="option-desc">
+                            <img src="" id="ball-image">
+                            <div>
+                                <div id="ball-name" class="side-bar-text"></div>
+                                <div class="side-bar-price">R$40,99</div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -201,9 +226,10 @@
     </div>
 
 
-    
+    <!-- Encapsula toda uma etapa de crie -->
     <div class="create-level">
         <div>
+            <!-- Encapsula a barra de progresso -->
             <div class="create-progress">
                 <div class="progress-step" style="background-color: #ffe44e;" onclick="reset(0)"><img src="./assets/type-ball-icon.svg" alt="" style="width: 9rem;" onclick="reset(0)"></div>
                 <div class="progress-step" style="background-color: #ffd900;"><img src="./assets/material.svg" alt="" style="width: 9rem;"></div>
@@ -213,11 +239,15 @@
             </div>
         </div>
         <div class="option-wrapper">
+            <!-- Grid de template padrão para cada etapa -->
             <div class="level-template">
+                <!-- Título da etapa -->
                 <div class="title-creation">
                     Material
                 </div>
+                <!-- Grid de como os produtos são apresentados -->
                 <div class="showcase-create">
+                    <!-- Encapsula um card de uma opção -->
                     <div>
                         <input type="radio" id="couro" name="material" value="couro" class="bola-escolha-input select-material" onclick="clearRadio(this, 1)" >
                         <label class="pai" for="couro">
@@ -238,6 +268,7 @@
                             </div>
                         </label>
                     </div>
+                    <!-- Encapsula um card de uma opção -->
                     <div>
                         <input type="radio" id="borracha" name="material" value="borracha" class="bola-escolha-input select-material" onclick="clearRadio(this, 1)" >
                         <label class="pai" for="borracha">
@@ -258,6 +289,7 @@
                             </div>
                         </label>
                     </div>
+                    <!-- Encapsula um card de uma opção -->
                     <div>
                         <input type="radio" id="eva" name="material" value="eva" class="bola-escolha-input select-material" onclick="clearRadio(this, 1)" >
                         <label class="pai" for="eva">
@@ -278,6 +310,7 @@
                             </div>
                         </label>
                     </div>
+                    <!-- Encapsula um card de uma opção -->
                     <div>
                         <input type="radio" id="madeira" name="material" value="madeira" class="bola-escolha-input select-material" onclick="clearRadio(this, 1)" >
                         <label class="pai" for="madeira">
@@ -299,15 +332,18 @@
                         </label>
                     </div>
                 </div>
-                <div class="avancar">
-                    <div class="button-avancar">
+                <div class="side-bar-template">
+                    <div class="next-button">
                         <img src="./assets/seta-avancar.svg" class="next-simbol">
                         AVANÇAR
                     </div>
                     <div class="lateral-criar">
-                        <div id="nome-bola">
-                            nome bola
-                            <div id="imagem-bola">imagem Bola</div>
+                        <div class="option-desc">
+                            <img id="material-image" src="">
+                            <div>
+                                <div id="material-name" class="side-bar-text"></div>
+                                <div class="side-bar-price">R$40,99</div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -316,9 +352,10 @@
     </div>   
         
 
-
-    <div class="create-level">
+    <!-- Encapsula toda uma etapa de crie -->
+    <div class="create-level"> 
         <div>
+            <!-- Encapsula a barra de progresso -->
             <div class="create-progress">
                 <div class="progress-step" style="background-color: #ffe44e;" onclick="reset(0)"><img src="./assets/type-ball-icon.svg" alt="" style="width: 9rem;"></div>
                 <div class="progress-step" style="background-color: #ffe44e;" onclick="reset(1)"><img src="./assets/material.svg" alt="" style="width: 9rem;"></div>
@@ -328,50 +365,59 @@
             </div>
         </div>
         <div class="option-wrapper">
+             <!-- Grid de template padrão para cada etapa -->
             <div class="level-template">
-                    <div class="title-creation">
-                        Gomos
-                    </div>
-                    <div class="showcase-create">
-                        <div>
-                            <input type="radio" id="pentHex" name="section" value="classic" class="bola-escolha-input select-section" onclick="clearRadio(this,2)" >
-                            <label class="pai" for="pentHex">
-                                <div class="absoluto">
-                                    <div class="centered radio-bola">
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" >
-                                            <path d="M9 16.17l-3.59-3.58L4 14l5 5 10-10L19.41 7 9 16.17z"/>
-                                        </svg>
-                                    </div>
+                <!-- Título da etapa -->
+                <div class="title-creation">
+                    Gomos
+                </div>
+                <!-- Grid de como os produtos são apresentados -->
+                <div class="showcase-create">
+                    <!-- Encapsula um card de uma opção -->
+                    <div>
+                        <input type="radio" id="pentHex" name="section" value="classico" class="bola-escolha-input select-section" onclick="clearRadio(this,2)" >
+                        <label class="pai" for="pentHex">
+                            <div class="absoluto">
+                                <div class="centered radio-bola">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" >
+                                        <path d="M9 16.17l-3.59-3.58L4 14l5 5 10-10L19.41 7 9 16.17z"/>
+                                    </svg>
                                 </div>
-                                <img src="./api/plain_image?ball_type=basquete" alt="BOLA TESTES" style="background-color: #00000000;" class="option-image">
-                                <div class="descricao-bola">
-                                    <div class="option-name">Clássico</div>
-                                    <div>
-                                        <div class="small-price">à vista</div>
-                                        <div class="price">R&#36;40,99</div>
-                                    </div>
+                            </div>
+                            <img src="" alt="BOLA TESTES" style="background-color: #00000000;" class="option-image" id="option-image-section">
+                            <div class="descricao-bola">
+                                <div class="option-name">Clássico</div>
+                                <div>
+                                    <div class="small-price">à vista</div>
+                                    <div class="price">R&#36;40,99</div>
                                 </div>
-                            </label>
-                        </div>
+                            </div>
+                        </label>
                     </div>
-                    <div class="avancar">
-                    <div class="button-avancar">
+                </div>
+                <div class="side-bar-template">
+                    <div class="next-button">
                         <img src="./assets/seta-avancar.svg" class="next-simbol">
                         AVANÇAR
                     </div>
                     <div class="lateral-criar">
-                        <div id="nome-bola">
-                            nome bola
-                            <div id="imagem-bola">imagem Bola</div>
+                        <div class="option-desc">
+                            <img id="section-image" style="background-color: #00000000;">
+                            <div>
+                                <div id="section-name" class="side-bar-text"></div>
+                                <div class="side-bar-price">R$40,99</div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>      
     </div>
-    
-    <div class="create-level">
-        <div>
+
+    <!-- Encapsula toda uma etapa de crie -->
+    <div class="create-level"> 
+
+            <!-- Encapsula a barra de progresso -->
             <div class="create-progress">
                 <div class="progress-step" style="background-color: #ffe44e;" onclick="reset(0)"><img src="./assets/type-ball-icon.svg" alt="" style="width: 9rem;"></div>
                 <div class="progress-step" style="background-color: #ffe44e;" onclick="reset(1)"><img src="./assets/material.svg" alt="" style="width: 9rem;"></div>
@@ -379,9 +425,10 @@
                 <div class="progress-step" style="background-color: #ffd900;"><img src="./assets/black-palette-icon.png" alt="" style="width: 9rem;"></div>
                 <div class="progress-step not-active"></div>
             </div>
-        </div>
         <div class="option-wrapper">
+            <!-- Grid para a etapa de cor -->
             <div class="color-template">
+                <!-- Título da etapa -->
                 <div class="title-creation" name="color">
                     Cor
                 </div>
@@ -391,7 +438,6 @@
                             <div class="title-cor">Preview</div>
                             <img src="./img/mano.png" alt="preview" class="preview">
                         </div>
-                        
                         <div class="showcase-cor"> 
                             <div>
                                 <div class="title-cor">Upload de imagem</div>
@@ -400,36 +446,27 @@
                             </div>
                         </div>
                     </div>
-                    
                     <div class="select"> 
                         <div class="title-cor">Selecionar</div>
                         <img src="./api/plain_image?ball_type=futebol" alt="" class="bola-plana">
                         <div class="title-cor">Cores</div>
                         <input type="color" name="ball-color" id="color-picker">
-                        <label for="color-picker">a</label>
                     </div>
-                    
                 </div>
-                
-            
-                <div class="avancar">
-                    <div class="button-avancar">
+                <div class="side-bar-template">
+                    <div class="next-button">
                         <img src="./assets/seta-avancar.svg" class="next-simbol">
                         AVANÇAR
-                    </div>
-                    <div class="lateral-criar">
-                        <div id="nome-bola">
-                            nome bola
-                            <div id="imagem-bola">imagem Bola</div>
-                        </div>
                     </div>
                 </div>
             </div>   
         </div>
     </div>
 
+    <!-- Encapsula toda uma etapa de crie -->
     <div class="create-level">
         <div>
+            <!-- Encapsula a barra de progresso -->
             <div class="create-progress">
                 <div class="progress-step" style="background-color: #ffe44e;" onclick="reset(0)"><img src="./assets/type-ball-icon.svg" alt="" style="width: 9rem;"></div>
                 <div class="progress-step" style="background-color: #ffe44e;" onclick="reset(1)"><img src="./assets/material.svg" alt="" style="width: 9rem;"></div>
@@ -439,43 +476,69 @@
             </div>
         </div>
         <div class="option-wrapper">
+            <!-- Grid para o final -->
             <div class="final-grid">
+                <!-- Título da etapa -->
                 <div class="title-creation" name="final">
                     Revisão
                 </div>
 
                 <div class="showcase-final">
-                    <div class="text-final" id="sport"> <!-- esporte -->
-                        Bola de futebol
+                    <div class="ball-images-final-wrapper">
+                        <img src="http://localhost:3000/assets/gomo-icon.svg" id="final-ball-image" alt="Bola final">
+                        <img src="http://localhost:3000/assets/gomo-icon.svg" id="final-plain-ball-image" alt="Bola final">
                     </div>
-                    
-                    <div class="text-final" id="material"> <!-- material -->
-                        Couro
-                    </div>
-                        
-                    <div class="text-final" id="sections"> <!-- gomos -->
-                        Pentágonos e Hexágonos
+                    <div class="ball-info-showcase-wrapper">
+                        <div class="ball-info-showcase-box">
+                            <span class="title-final">
+                                Nome do Esporte
+                            </span>
+                            <span class="text-final" id="sport"> <!-- esporte -->
+                                Bola de futebol
+                            </span>
+                        </div>
+                        <div class="ball-info-showcase-box">
+                            <span class="title-final">
+                                Material
+                            </span>
+                            <span class="text-final" id="material"> <!-- material -->
+                                Couro
+                            </span>
+                        </div>
+                        <div class="ball-info-showcase-box">
+                            <span class="title-final">
+                                Formato dos gomos
+                            </span>
+                            <span class="text-final" id="sections"> <!-- gomos -->
+                                Pentágonos e Hexágonos
+                            </span>
+                        </div>
+                        <div class="ball-info-showcase-box">
+                            <span class="price-title-final">
+                                Preço final da bola
+                            </span>
+                            <span class="price-value-final" id="sections"> <!-- gomos -->
+                                123,99
+                            </span>
+                        </div>
                     </div>
                 </div>
 
-                <div class="avancar">
-                    <form action="/create-ball" method="post">
-                        <input class="button-avancar" id="finalize-ball" type="submit">
-                        <label for="finalize-ball">
+                <div class="side-bar-template">
+                    <form class="form-post" action="/create-ball" method="post">
+                        
+                        <!-- <input class="button-none" id="finalize-ball" type="submit"> -->
+                        <!-- <label for="finalize-ball" class="finalize-ball"> -->
+                        <a href="http://localhost:3000/redirect-card.html" class="finalize-ball">
                             <img src="./assets/seta-avancar.svg" class="next-simbol">
-                            <span>CRIAR BOLA</span>
-                        </label>
+                            <span class="side-bar-text">CRIAR BOLA</span>
+                        </a>
+                        <!-- </label> -->
                         <input id="hidden-input-sport" type="hidden" name="sport">
                         <input id="hidden-input-material" type="hidden" name="material">
                         <input id="hidden-input-sections" type="hidden" name="sections">
                         <input id="hidden-input-colors" type="hidden" name="colors">
                     </form>
-                    <div class="lateral-criar">
-                        <div id="nome-bola">
-                            nome bola
-                            <div id="imagem-bola">imagem Bola</div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>

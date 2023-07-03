@@ -6,10 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página de Log-In</title>
     <link rel="icon" type="image/x-icon" href="img/favicon.png">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/pagina-inicial.css">
-    <link rel="stylesheet" href="./css/side-bar.css">
-    <script src="./js/side-bar.js" defer></script>
+    <link rel="stylesheet" href="http://localhost:3000/css/style.css">
+    <link rel="stylesheet" href="http://localhost:3000/css/pagina-inicial.css">
+    <link rel="stylesheet" href="http://localhost:3000/css/side-bar.css">
+    <script src="http://localhost:3000/js/login.js" type="text/javascript" defer></script>
+    <script src="http://localhost:3000/js/side-bar.js" type="text/javascript" defer></script>
     <style>
         @keyframes changeBackgroundColor {
             0%{
@@ -20,67 +21,136 @@
             }
         }
 
-        .box-log{
+        .box-log {
             align-items: center;
             display: flex;
-            
-            
-        }
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: DMSans;
-            background-color: #3d3d3d;
         }
 
         .login-container {
-            max-width: 400px;
+            width: fit-content;
             margin: 10rem auto;
-            background-color: #fff;
+            background-color: #f5f5f5;
             padding: 40px;
-            border-radius: 4px;
-            box-shadow: 10px;
+            border-radius: 2rem;
+            box-shadow: 1px 1px 10px 3px #555;
             align-items: center;
             display: flex;
             flex-direction: column;
         }
 
-        .nsei {
+        .form {
             display: flex;
             flex-direction: column;
             padding: 5px;
-            max-width: 200px;
-            /* font-family: Arial, Helvetica, sans-serif; */
+            max-width: 63rem;
             font-family: DMSans;
         }
+
+        .form-logo {
+            color: #202020;
+            margin: 0 0 2rem 0;
+        }
         
-        .termos-criar-conta > a{
-            color: blue;
+        .termos-criar-conta {
+            font-size: 1.5rem;
+            margin: 0 0 2rem 0;
+        }
+        
+        .termos-criar-conta > a {
+            font-size: inherit;
+            color: rgb(50, 125, 246);
         }
         
         .text {
-            font-size: 2vh;
+            transition: all 0.1s linear;
+            position: absolute;
+            z-index: 10;
+            top: 0.25rem;
+            font-size: 2.5rem;
+            padding: 0 0.25rem;
+            background-color: #f5f5f5;
         }
 
-        .box-login{
-            height: 2rem;
+        label[for="credit-card-validade"] > .text,
+        label[for="credit-card-data-nascimento"] > .text {
+            top: -1.5rem;
+            font-size: 2rem;
+        }
+
+        .box-login-wrapper:hover > label > .text {
+            top: -1.5rem;
+            font-size: 2rem;
+        }
+
+        /* aqui */
+        .fields-wrapper {
+            display: grid;
+            /* flex-direction: column; */
+            grid-template-columns: 30rem 30rem;
+            grid-template-rows: repeat(3, 1fr);
+            gap: 1.4rem;
+            margin: 0 0 2rem 0;
+        }
+
+        .big-field {
+            grid-column-start: 1;
+            grid-column-end: 3;
+        }
+
+        .box-login-wrapper {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            background-color: #f5f5f5;
+            padding: 1rem;
+            border: #AAA solid 1px;
+            border-radius: 1rem;
+            height: 5rem;
+        }
+
+        .box-login {
+            position: absolute;
+            z-index: 20;
+            top: 1.5rem;
+            font-size: 1.75rem;
+            width: calc(100% - 2rem);
+            height: 2.5rem;
+            outline: none;
+            background-color: #00000000;
+            padding: 0 0 0.5rem 0.15rem;
             border: none;
-            border-bottom-style: solid;
+            border-bottom: #AAA solid 1px;
             font-family: DMSans;
         }
 
-        .button-criar-conta{
-            font-size: 1.9vh;
+        .button-criar-conta {
+            transition: all 0.15s ease-out;
+            text-transform: uppercase;
+            font-size: 2rem;
             font-size: DMSans;
+            height: 4rem;
             background-color: #ffd900;
             cursor: pointer;
-            border-radius: 2vh;
+            border: none;
+            border-radius: 1rem;
         }
 
         .button-criar-conta:hover {
+            color: #f5f5f5;
             background-color: #e29d07;
-            animation: changeBackgroundColor;
-            animation-duration: 0.8s;
+            /* animation: changeBackgroundColor; */
+            animation-duration: 0.15s;
+        }
+
+        .signup-requirements {
+            margin: 1rem 0;
+        }
+
+        .signup-requirements > li {
+            line-height: 2rem;
+            font-size: 1.75rem;
+            list-style: circle;
+            margin: 0 0 0 3rem;
         }
     </style>
 </head>
@@ -160,13 +230,30 @@
                 </a>
             </li>
             <li>
-                <a href="http://localhost:3000/about-us">
+                <a href="http://localhost:3000/sobre-nos">
                     Sobre <span class="thin-text">nós</span>
                 </a>
             </li>
             <li>
                 <a href="http://localhost:3000/perfil">
                     Perfil <span class="thin-text"> e ajustes</span>
+                </a>
+            </li>
+        </ul>
+        <ul class="intra-nav-icons">
+            <li>
+                <a href="http://localhost:3000/homepage">
+                    <img src="./assets/like-icon.png" alt="Acessar produtos favoritos">
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:3000/homepage">
+                    <img src="./assets/yellow-cart-icon.png" alt="Acessar carrinho">
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:3000/homepage">
+                    <img src="./assets/blue-config-icon.png" alt="Acessar configurações e ajustes">
                 </a>
             </li>
         </ul>
@@ -241,3 +328,29 @@
 </body>
 </html>
 
+<script>
+    const formFieldWrapper = document.querySelectorAll(".box-login-wrapper");
+    console.log(formFieldWrapper);
+    for (const fieldWrapper of formFieldWrapper) {
+        console.log("mano");
+        const field = fieldWrapper.querySelector(".box-login");
+        const title = fieldWrapper.querySelector(".text");
+
+        // Se o usuário já ter escrito algo o título do campo fica preso no topo
+        field.addEventListener("input", () => {
+            if (field.value !== "") {
+                title.style.fontSize = "2rem";
+                title.style.top = "-1.5rem";
+
+                // font-size: 2rem;
+                // top: -1.5rem;
+            } else {
+                title.style.fontSize = "2.5rem";
+                title.style.top = "0.25rem";
+
+                // top: 0.25rem;
+                // font-size: 2.5rem;
+            }
+        })
+    }
+</script>

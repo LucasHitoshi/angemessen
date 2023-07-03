@@ -48,7 +48,8 @@
     position: relative;
     background-color: rgba(0, 0, 0, 0);
     width: 35rem;
-    height: 54.5rem;
+    min-width: 35rem;
+    height: 55rem;
     padding: 1.5rem;
     /* border: #aaa solid 1px; */
     border: #555 solid 1px;
@@ -321,13 +322,11 @@
 
 .price {
     color: #ffd900;
-    /* text-align: center; */
     font-size: 4rem;
 }
 
 .small-price {
-    color: #aaa;
-    /* text-align: center; */
+    color: #ffd900;
     font-size: 2rem;
 }
 
@@ -353,6 +352,14 @@
     background-color: white;
     border-radius: 1rem;
     cursor: pointer;
+}
+
+li > img:not(.ball-star) {
+    margin: 0.3rem 0 0 0;
+    padding: 1rem;
+    border: #8b8143 solid 1px;
+    /* border: #555 solid 1px; */
+    border-radius: 0.5rem;
 }
 
 .nome-produto {
@@ -394,7 +401,7 @@
 }
 
 .product-sport {
-    color: #fff;
+    color: #f5f5f5;
     text-transform: uppercase;
     font-size: 3rem;
     margin: 0 0 1rem 0;
@@ -515,6 +522,18 @@
     gap: 1rem;
 }
 
-/* #product-list {
-    gap: 1rem;
-} */
+.showcase-index-wrapper {
+    border-top: #555 solid 1px;
+    border-bottom: #555 solid 1px;
+    border-left: none;
+    border-right: none;
+    margin: 10rem 0;
+}
+
+.hor-product-list {
+    width: 100%;
+    flex-wrap: nowrap;
+    gap: 5rem;
+    border: none;
+    overflow-x: scroll;
+}

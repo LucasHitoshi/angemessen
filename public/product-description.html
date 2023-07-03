@@ -6,12 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página inicial</title>
     <link rel="icon" type="image/x-icon" href="img/favicon.png">
-    <link rel="stylesheet" href="./../../css/style.css">
-    <link rel="stylesheet" href="./../../css/pagina-inicial.css">
-    <link rel="stylesheet" href="./../../css/descricao-produto.css">
-    <link rel="stylesheet" href="./../../css/side-bar.css">
-    <script src="./../../js/side-bar.js" defer></script>
-    <script src="./../../js/product-description.js" type="text/javascript" defer></script>
+    <link rel="stylesheet" href="http://localhost:3000/css/style.css">
+    <link rel="stylesheet" href="http://localhost:3000/css/pagina-inicial.css">
+    <link rel="stylesheet" href="http://localhost:3000/css/descricao-produto.css">
+    <link rel="stylesheet" href="http://localhost:3000/css/side-bar.css">
+    <script src="http://localhost:3000/js/side-bar.js" defer></script>
+    <script src="http://localhost:3000/js/product-description.js" type="text/javascript" defer></script>
 </head>
 <body>
     <header>
@@ -64,7 +64,7 @@
         <div class="top-section-nav-bar">
             <span class="side-bar-title">Menu</span>
             <label for="menu-hamburguer">
-                <img src="http://localhost:3000/assets/yellow-direction-icon.png" alt="Fechar menu lateral" class="close-menu-icon">
+                <img src="./assets/yellow-direction-icon.png" alt="Fechar menu lateral" class="close-menu-icon">
             </label>
         </div>
         <ul class="intra-nav-menu">
@@ -89,13 +89,30 @@
                 </a>
             </li>
             <li>
-                <a href="http://localhost:3000/about-us">
+                <a href="http://localhost:3000/sobre-nos">
                     Sobre <span class="thin-text">nós</span>
                 </a>
             </li>
             <li>
                 <a href="http://localhost:3000/perfil">
                     Perfil <span class="thin-text"> e ajustes</span>
+                </a>
+            </li>
+        </ul>
+        <ul class="intra-nav-icons">
+            <li>
+                <a href="http://localhost:3000/homepage">
+                    <img src="./assets/like-icon.png" alt="Acessar produtos favoritos">
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:3000/homepage">
+                    <img src="./assets/yellow-cart-icon.png" alt="Acessar carrinho">
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:3000/homepage">
+                    <img src="./assets/blue-config-icon.png" alt="Acessar configurações e ajustes">
                 </a>
             </li>
         </ul>
@@ -154,13 +171,6 @@
                         Libero voluptas voluptates sequi veritatis.
                     </p>
                 </li>
-                <!-- <li>
-                    <h1>Info</h1>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Libero voluptas voluptates sequi veritatis.
-                    </p>
-                </li>
                 <li>
                     <h1>Info</h1>
                     <p>
@@ -188,33 +198,36 @@
                         Lorem ipsum dolor sit amet consectetur adipisicing elit.
                         Libero voluptas voluptates sequi veritatis.
                     </p>
-                </li> -->
+                </li>
+                <li>
+                    <h1>Info</h1>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Libero voluptas voluptates sequi veritatis.
+                    </p>
+                </li>
             </ul>
         </div>
     </div>
-    
-    
-    
-    
     
     <footer class="footer-container flex-container recessive fixed">
         <div class="topic-box" style="overflow: auto;">
             <ul>
                 <!-- TODO: Implementar links para redes sociais -->
-                <li><a href="not-found.html"><img src="img/instagram-logo.png" alt="Instagram Angemessen" class="medium-icon"></a>
-                <li><a href="not-found.html"><img src="img/twitter-logo.png" alt="Twitter Angemessen" class="medium-icon"></a>
-                <li><a href="not-found.html"><img src="img/youtube-logo.png" alt="YouTube Angemessen" class="medium-icon"></a>
-                <li><a href="not-found.html"><img src="img/whatsapp-logo.png" alt="Whatsapp Angemessen" class="medium-icon"></a>
-                <li><a href="not-found.html"><img src="img/facebook-logo.png" alt="Facebook Angemessen" class="medium-icon"></a>
+                <li><a href="http://localhost:3000/not-found.html"><img src="http://localhost:3000/img/instagram-logo.png" alt="Instagram Angemessen" class="medium-icon"></a>
+                <li><a href="http://localhost:3000/not-found.html"><img src="http://localhost:3000/img/twitter-logo.png" alt="Twitter Angemessen" class="medium-icon"></a>
+                <li><a href="http://localhost:3000/not-found.html"><img src="http://localhost:3000/img/youtube-logo.png" alt="YouTube Angemessen" class="medium-icon"></a>
+                <li><a href="http://localhost:3000/not-found.html"><img src="http://localhost:3000/img/whatsapp-logo.png" alt="Whatsapp Angemessen" class="medium-icon"></a>
+                <li><a href="http://localhost:3000/not-found.html"><img src="http://localhost:3000/img/facebook-logo.png" alt="Facebook Angemessen" class="medium-icon"></a>
             </ul>
         </div>
         <ul class="topic-box" style="overflow: auto;">
             <!-- TODO: Implementar links para páginas de ajuda -->
-            <li><a href="not-found.html" class="footer">Enfrentando algum problema?</a></li>
-            <li><a href="not-found.html" class="footer">Possui uma sugestão?</a></li>
-            <li><a href="not-found.html" class="footer">Encontrou um bug?</a></li>
-            <li><a href="not-found.html" class="footer">Teve alguma dúvida?</a></li>
-            <li><a href="not-found.html" class="footer">Deseja acessar o SAC?</a></li>
+            <li><a href="http://localhost:3000/not-found.html" class="footer">Enfrentando algum problema?</a></li>
+            <li><a href="http://localhost:3000/not-found.html" class="footer">Possui uma sugestão?</a></li>
+            <li><a href="http://localhost:3000/not-found.html" class="footer">Encontrou um bug?</a></li>
+            <li><a href="http://localhost:3000/not-found.html" class="footer">Teve alguma dúvida?</a></li>
+            <li><a href="http://localhost:3000/not-found.html" class="footer">Deseja acessar o SAC?</a></li>
         </ul>
     </footer>
 </body>

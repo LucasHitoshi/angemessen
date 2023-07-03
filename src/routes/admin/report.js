@@ -1,6 +1,12 @@
+const path = require("path");
 const express = require("express");
-const { getBallsInfo, getRegistersInfo, getUsersInfo, genReportFile } = require("./reports/gen");
 const reportRouter = express.Router();
+const {
+    getBallsInfo,
+    getRegistersInfo,
+    getUsersInfo,
+    genReportFile
+} = require(path.join(__dirname, "../..", "reports/gen"));
 
 reportRouter.get("/relatory/generate", async (req, res) => {
     try {
@@ -8,29 +14,23 @@ reportRouter.get("/relatory/generate", async (req, res) => {
         const ballsData = await getBallsInfo();
         const usersData = await getUsersInfo();
 
-        console.log("a");
         const result = {
             ...authsData,
             ...ballsData,
             ...usersData
         }
         
-        console.log("a");
-        var data = [];
+        var dataArray = [];
         
         for (const prop in result) {
-            data.push(`${prop}: ${result[prop]}`);
+            dataArray.push(`${prop}: ${result[prop]}`);
         }
-        console.log("a");
         
-        const parsedData = data.join("\n");
-        console.log("a");
+        const parsedData = dataArray.join("\n");
         
         genReportFile(parsedData);
-        console.log("a");
         
         res.send(parsedData);
-        console.log("a");
     } catch (err) {
         console.log(`ERRO: ${err}`);
     }
@@ -38,8 +38,8 @@ reportRouter.get("/relatory/generate", async (req, res) => {
 
 reportRouter.get("/relatory/test/generate", async (req, res) => {
     try {
-        console.log("TESTE DE CRIAÇÃO DE RELATÓRIOS.");
-        const data = "ain nobruzera";
+        console.log("TESTE DE CRIAÇÃO DE RELATÓRIOS EXECUTADO.");
+        const data = "CONTEÚDO DE TESTE";
         genReportFile(data);
         res.send(data);
     } catch (err) {

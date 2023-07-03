@@ -21,9 +21,6 @@ plainImagesApiRouter.get("/api/plain_image", (req, res) => {
             res.status(400);
             res.send({ "err": "400: Ball not found (Bad ball name)" });
         }
-
-        
-        
     } catch (err) {
         console.log(`ERRO: ${err}`);
     }

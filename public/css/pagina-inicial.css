@@ -812,9 +812,11 @@ img.big {
     transform: translateX(0);
 }
 
+
 .product {
     width: 28rem;
 }
+
 
 .price {
     color: #ffe44e;
@@ -822,11 +824,13 @@ img.big {
     font-size: 4rem;
 }
 
+
 .small-price {
     color: #ffe44e;
     /* text-align: center; */
     font-size: 2rem;
 }
+
 
 .price-box {
     transition: all 0.25s ease-out;
@@ -836,12 +840,14 @@ img.big {
     gap: 0;
 }
 
+
 .img-produto > .loading {
     width: 10rem;
     aspect-ratio: 1 / 1;
     animation: slow-spin 10s infinite linear;
     position: absolute;
 }
+
 
 .img-produto > .product-image {
     visibility: hidden;
@@ -852,6 +858,7 @@ img.big {
     cursor: pointer;
 }
 
+
 .nome-produto{
     padding: 0.5rem 0 0 0;
     line-height: 1;
@@ -859,6 +866,7 @@ img.big {
     /* text-align: center; */
     font-size: 3rem;
 }
+
 
 .product-material{
     transition: all 0.25s ease-out;
@@ -869,12 +877,14 @@ img.big {
     font-size: 1.8rem;
 }
 
+
 .product-sport{
     color: #fff;
     text-transform: uppercase;
     /* text-align: center; */
     font-size: 3rem;
 }
+
 
 .product-brand{
     transition: all 0.25s ease-out;
@@ -885,11 +895,13 @@ img.big {
     font-size: 1.2rem;
 }
 
+
 .price {
     line-height: 3.75rem;
     color: #ffe44e;
     font-size: 4rem;
 }
+
 
 .price-pro {
     text-decoration: line-through;
@@ -898,6 +910,7 @@ img.big {
     font-size: 2.5rem;
     font-style: italic;
 }
+
 
 .price-pro::before {
     text-decoration: none;
@@ -908,6 +921,7 @@ img.big {
     font-style: italic;
 }
 
+
 .price-pro::after {
     text-decoration: none;
     color: rgb(206, 75, 35);
@@ -917,16 +931,19 @@ img.big {
     font-style: italic;
 }
 
+
 .money-sign {
     font-size: 3rem;
     color: #ffe44e;
     /* content: "R$ "; */
 }
 
+
 .to-product-page {
     width: fit-content;
     height: fit-content;
 }
+
 
 .promotions-wrapper {
     width: 100%;
@@ -935,6 +952,7 @@ img.big {
     align-items: center;
     gap: 1rem;
 }
+
 
 .promotions-showcase {
     width: 65%;
@@ -947,10 +965,12 @@ img.big {
     /* padding: 0 30rem; */
 }
 
+
 .promotions-showcase > div {
     background-color: aqua;
     margin: 1rem;
 }
+
 
 .promotions-showcase > div > img {
     object-fit: fill;
@@ -958,24 +978,27 @@ img.big {
     height: 100%;
 }
 
+
 .promotions-showcase > .big-one {
-    background-color: red;
+    background-color: #00000000;
     grid-column-start: 1;
     grid-column-end: 4;
     grid-row-start: 1;
     grid-row-end: 4;
 }
 
+
 .promotions-showcase > .small-one {
-    background-color: green;
+    background-color: #00000000;
     grid-column-start: 4;
     grid-column-end: 7;
     grid-row-start: 1;
     grid-row-end: 2;
 }
 
+
 .promotions-showcase > .medium-one {
-    background-color: purple;
+    background-color: #353535;
     grid-column-start: 4;
     grid-column-end: 7;
     grid-row-start: 2;

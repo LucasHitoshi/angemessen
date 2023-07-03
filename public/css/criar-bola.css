@@ -78,6 +78,7 @@ div > input[type="radio"]:checked + label > div > div > svg > path {
     grid-template-columns: 25% 25% 25% 25%;
     background-color: #353535;
     margin: 0 3rem 3rem 3rem;
+    border: #555 solid 1px;
     border-radius: 2rem;
     padding: 2rem;
     gap: 2rem;
@@ -123,7 +124,7 @@ div > input[type="radio"]:checked + label > div > div > svg > path {
     'title . . sidebar'
     'showcase-final showcase-final showcase-final sidebar';
     grid-template-columns: 5fr 2fr;
-    grid-template-rows: 1fr 5fr;
+    /* grid-template-rows: 1fr 5fr; */
     width: 1349px;
     border-radius: 2rem;
 }
@@ -138,7 +139,7 @@ div > input[type="radio"]:checked + label > div > div > svg > path {
     grid-area: showcase;
 }
 
-.avancar{ /* container da sidebar para avançar de etapa */
+.side-bar-template{ /* container da sidebar para avançar de etapa */
     grid-area: sidebar;
 }
 
@@ -158,12 +159,13 @@ div > input[type="radio"]:checked + label > div > div > svg > path {
     grid-area: showcase-final;
 }
 
-.button-avancar{
+.next-button{
     background-color: gray;
     width: 44.88rem;
     height: 70px;
     /* margin: 21px 21px 0 21px; */
     border-radius: 2rem;
+    border-color: #00000000;
     font-size: 3.14rem;
     color: white;
     display: flex;
@@ -172,7 +174,11 @@ div > input[type="radio"]:checked + label > div > div > svg > path {
     cursor: pointer;
 }
 
-.avancar{
+.button-none {
+    display: none;
+}
+
+.side-bar-template{
     position: -webkit-sticky;  /* Safari */
     position: sticky;
     top: 20px;
@@ -187,14 +193,57 @@ div > input[type="radio"]:checked + label > div > div > svg > path {
 
 .lateral-criar {
     width: 314.16px;
-    height: 411.11px;
-    background-color: #353535;
+    height: fit-content;
+    /* background-color: #353535; */
     display: flex;
     justify-content: space-around;
     border-radius: 2rem;
 }
 
-.lateral-criar > div > div {
+.lateral-criar > div{
+    width: 58.54rem;
+    height: fit-content;
+    background-color: #353535;
+    /* border: 1rem #353535 solid; */
+    border: #555 solid 1px;
+    padding: 2rem;
+    font-size: 3rem;
+    border-radius: 2rem;
+    display: none;
+}
+
+.side-bar-text {
+    font-size: 3.14rem;
+    color: white;
+}
+
+.side-bar-price {
+    font-size: 3.14rem;
+    color: #ffd900;
+}
+
+.option-desc {
+    display: flex;
+    gap: 3px;
+}
+
+
+.finalize-ball {
+    background-color: green;
+    width: 44.88rem;
+    height: 70px;
+    /* margin: 21px 21px 0 21px; */
+    border-radius: 2rem;
+    border-color: #00000000;
+    /* font-size: 3.14rem; */
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.lateral-criar > div > img {
     width: 15rem;
     height: 15rem;
     background-color: white;
@@ -216,18 +265,7 @@ div > input[type="radio"]:checked + label > div > div > svg > path {
     gap: 2rem;
 }
 
-.lateral-criar > div{
-    width: 58.54rem;
-    height: fit-content;
-    background-color: gray;
-    margin: 3rem;
-    padding: 2rem;
-    font-size: 3rem;
-    border-radius: 2rem;
-}
-
 .create-progress{
-    /* display: flex; */
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     align-items: center;
@@ -236,6 +274,7 @@ div > input[type="radio"]:checked + label > div > div > svg > path {
     width: calc(190.26rem - 3px);
     height: 20rem;
     margin: 0 auto;
+    border: #555 solid 1px;
     border-radius: 2rem;
 }
 
@@ -283,6 +322,7 @@ div > input[type="radio"]:checked + label > div > div > svg > path {
 
 .create-level{
     display: none;
+    margin: 2rem 0 0 0;
 }
 
 .title-creation {
@@ -361,10 +401,9 @@ div > input[type="radio"]:checked + label > div > div > svg > path {
 }
 
 #color-picker { 
-    width: 28.57rem;
     height: 18.57rem;
-    border-radius: 10rem;
-    display: none;
+    border-radius: 1rem;
+
 }
 
 .bola-plana {
@@ -383,32 +422,76 @@ div > input[type="radio"]:checked + label > div > div > svg > path {
     border-radius: 1rem;
 }
 
-.showcase-final{
+.showcase-final {
+    height: fit-content;
     background-color: #353535;
     margin: 0 3rem 3rem 3rem;
     border-radius: 2rem;
     padding: 1rem;
+    border: #555 solid 1px;
     display: flex;
-    flex-direction: column;
     gap: 4rem;
 }
 
-/* .text-final-sport {
-    color: white;
-    font-size: 2.5rem;
-}
-
-.text-final-material {
-    color: white;
-    font-size: 2.5rem;
-}
-
-.text-final-material {
-    color: white;
-    font-size: 2.5rem;
-} */
-
 .text-final {
-    color: white;
+    color: #f5f5f5;
+    font-size: 3rem;
+}
+
+.form-post {
+    display: flex;
+}
+
+.ball-images-final-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.final-plain-ball-image,
+.final-ball-image {
+    width: 30rem;
+    aspect-ratio: 1 / 1;
+    padding: 3rem;
+}
+
+.ball-info-showcase-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.title-final {
+    font-size: 2.25rem;
+    text-transform: uppercase;
+    color: #ffd900;
+}
+
+.ball-info-showcase-box {
+    display: flex;
+    flex-direction: column;
+}
+
+.price-title-final {
+    color: green;
     font-size: 2.5rem;
+    text-transform: uppercase;
+}
+
+.price-value-final {
+    color: #f5f5f5;
+    font-size: 3rem;
+}
+
+.price-value-final::before {
+    content: "R$";
+    color: #f5f5f5;
+    font-size: 2.5rem;
+}
+
+#color-picker {
+    border: none;
+    display: block;
+    width: 100%;
+    padding: 0 2rem;
 }
